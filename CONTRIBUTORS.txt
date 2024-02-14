@@ -8,4 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-- Rafael Corchuelo (corchu@us.es)
+- Ignacio Blanquero Blanco (ignblabla@alum.us.es)
+- Adrián Cabello Martín (adrcabmar@alum.us.es)
+- María de la Salud Carrera Talaverón (marcartal1@alum.us.es)
+- Joaquín González Ganfornina (joagongan@alum.us.es)
+- Natalia Olmo Villegas (natolmvil@alum.us.es)
