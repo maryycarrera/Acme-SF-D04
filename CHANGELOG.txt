@@ -9,3 +9,5 @@
 # they accept any liabilities with respect to them.
 
 24.1.0	This is the initial version of our project
+
+24.1.1 Our favourite websites are linked to our DNI in the menu anonymous
