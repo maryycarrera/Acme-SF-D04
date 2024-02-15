@@ -18,8 +18,8 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link-adrcabmar = 77824121X: Cabello Martin, Adrian
 master.menu.anonymous.favourite-link-natolmvil = 30216428V: Olmo Villegas, Natalia
+master.menu.anonymous.favourite-link-adrcabmar = 77824121X: Cabello Martin, Adrian
 
 
 # master.menu.administrator ###################################################
