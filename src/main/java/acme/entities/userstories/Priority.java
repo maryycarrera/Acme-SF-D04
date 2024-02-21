@@ -1,5 +1,5 @@
 
-package acme.datatypes;
+package acme.entities.userstories;
 
 public enum Priority {
 
