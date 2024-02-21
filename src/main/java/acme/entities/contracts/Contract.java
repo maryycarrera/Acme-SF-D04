@@ -1,5 +1,5 @@
 
-package acme.entities;
+package acme.entities.contracts;
 
 import java.util.Date;
 
@@ -15,42 +15,47 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
-import org.abego.treelayout.internal.util.Contract;
 import org.hibernate.validator.constraints.Length;
 
 import acme.client.data.AbstractEntity;
+import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class ProgressLog extends AbstractEntity {
+
+public class Contract extends AbstractEntity {
 
 	private final static long	serialVersionUID	= 1L;
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "PG-[A-Z]{1,2}-[0-9]{4}")
-	private String				recordId;
-
-	@Min(0)
-	private Double				completeness;
-
-	@NotBlank
-	@Length(max = 100)
-	private String				comment;
+	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
+	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private Date				registrationMoment;
+	private Date				instantiationMoment;
 
 	@NotBlank
 	@Length(max = 75)
-	private String				responsiblePerson;
+	private String				providerName;
+
+	@NotBlank
+	@Length(max = 75)
+	private String				customerName;
+
+	@NotBlank
+	@Length(max = 100)
+	private String				goals;
+
+	@Min(0)
+	private Double				budget;
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Contract			contract;
+	private Project				project;
 }
