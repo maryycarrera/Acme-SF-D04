@@ -15,8 +15,12 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
 import acme.roles.Manager;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Project extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
