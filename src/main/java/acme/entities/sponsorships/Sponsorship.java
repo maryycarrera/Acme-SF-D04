@@ -1,7 +1,7 @@
 
 package acme.entities.sponsorships;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -42,17 +42,17 @@ public class Sponsorship extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	@Past
-	private LocalDateTime		moment;
+	private Date				moment;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private LocalDateTime		startTimeDuration;
+	private Date				startTimeDuration;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private LocalDateTime		finishTimeDuration;
+	private Date				finishTimeDuration;
 
 	@NotNull
 	@Positive
