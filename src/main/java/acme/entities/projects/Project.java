@@ -15,7 +15,11 @@ import org.hibernate.validator.constraints.URL;
 import acme.client.data.AbstractEntity;
 import acme.datatypes.SystemCurrency;
 import acme.roles.Manager;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 public class Project extends AbstractEntity {
 

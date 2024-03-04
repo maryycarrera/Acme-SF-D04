@@ -37,6 +37,7 @@ public class Contract extends AbstractEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
+	@NotNull
 	private Date				instantiationMoment;
 
 	@NotBlank
@@ -52,10 +53,12 @@ public class Contract extends AbstractEntity {
 	private String				goals;
 
 	@Min(0)
+	@NotNull
 	private Double				budget;
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	private Project				project;
+
 }
