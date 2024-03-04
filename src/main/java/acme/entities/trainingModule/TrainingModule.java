@@ -1,7 +1,7 @@
 
 package acme.entities.trainingModule;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
@@ -30,27 +30,29 @@ public class TrainingModule extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "PG-[A-Z]{1,2}-[0-9]{4}")
+	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private LocalDateTime		creationMoment;
+	@NotBlank //no se si hay que ponérselo
+	private Date				creationMoment;
 
 	@NotBlank
 	@Length(max = 100)
 	private String				details;
 
-	@NotNull
+	@NotBlank
 	private DifficultyLevel		difficultyLevel;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private LocalDateTime		updateMoment;
+	private Date				updateMoment;
 
 	@URL
 	private String				link;
 
-	@NotNull
+	//@NotNull
 	@Min(0)
 	private Integer				estimatedTotalTime;
 
