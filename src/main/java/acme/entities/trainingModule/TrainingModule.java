@@ -20,7 +20,7 @@ import org.hibernate.validator.constraints.URL;
 import acme.client.data.AbstractEntity;
 import acme.entities.projects.Project;
 
-public class TrainingActivities extends AbstractEntity {
+public class TrainingModule extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
