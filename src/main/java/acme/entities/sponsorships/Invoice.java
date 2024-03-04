@@ -1,8 +1,7 @@
 
 package acme.entities.sponsorships;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -41,11 +40,17 @@ public class Invoice extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	@Past
-	private LocalDateTime		registrationTime;
+	private Date				registrationTime;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	//ToDo
-	private Duration			dueDate;
+	@Past
+	private Date				startDate;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	@Past
+	private Date				finishDate;
 
 	@NotNull
 	@Positive
