@@ -35,14 +35,14 @@ public class TrainingModule extends AbstractEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	@NotBlank //no se si hay que ponérselo
+	@NotNull
 	private Date				creationMoment;
 
 	@NotBlank
 	@Length(max = 100)
 	private String				details;
 
-	@NotBlank
+	@NotNull
 	private DifficultyLevel		difficultyLevel;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -52,7 +52,7 @@ public class TrainingModule extends AbstractEntity {
 	@URL
 	private String				link;
 
-	//@NotNull
+	@NotNull
 	@Min(0)
 	private Integer				estimatedTotalTime;
 
