@@ -1,5 +1,5 @@
 
-package acme.entities.objective;
+package acme.entities.objectives;
 
 import java.util.Date;
 
@@ -16,7 +16,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.client.data.accounts.Principal;
+import acme.client.data.accounts.UserAccount;
 import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
@@ -71,7 +71,7 @@ public class Objective extends AbstractEntity {
 	@NotNull
 	@Valid
 	@OneToOne(optional = false)
-	private Principal			principal;
+	private UserAccount			principal;
 
 	@NotNull
 	@Valid
