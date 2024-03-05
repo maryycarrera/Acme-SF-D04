@@ -1,5 +1,5 @@
 
-package acme.entities;
+package acme.entities.progresslogs;
 
 import java.util.Date;
 
