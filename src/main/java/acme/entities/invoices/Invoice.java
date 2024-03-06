@@ -37,7 +37,7 @@ public class Invoice extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
+	@Pattern(regexp = "IN-[0-9]{4}-[0-9]{4}")
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
