@@ -177,7 +177,7 @@ Banner
       <w>90</w>
       <h>140</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
+    <panel_attributes>lt=x-&gt;
 m1=0..n
 m2=1
 Creates &gt;</panel_attributes>
