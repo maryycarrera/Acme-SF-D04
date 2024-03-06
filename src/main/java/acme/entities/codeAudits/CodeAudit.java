@@ -51,6 +51,7 @@ public class CodeAudit extends AbstractEntity {
 	@Length(max = 100)
 	private String				correctiveActions;
 
+	@NotNull
 	@Pattern(regexp = "A\\+|A|B|C|F|F-")
 	private String				markMode;
 
