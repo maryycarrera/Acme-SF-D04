@@ -17,7 +17,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.entities.codeAudits.CodeAudits;
+import acme.entities.codeAudits.CodeAudit;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,7 +34,7 @@ public class AuditRecord extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "“[A-Z]{1,3}-[0-9]{3}")
+	@Pattern(regexp = "AU-[0-9]{4}-[0-9]{3}")
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -60,5 +60,5 @@ public class AuditRecord extends AbstractEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private CodeAudits			codeAudit;
+	private CodeAudit			codeAudit;
 }
