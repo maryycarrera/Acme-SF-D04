@@ -26,7 +26,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class CodeAudits extends AbstractEntity {
+public class CodeAudit extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -36,7 +36,7 @@ public class CodeAudits extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "“[A-Z]{1,3}-[0-9]{3}")
+	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
