@@ -1,27 +1,26 @@
 
-package acme.entities.projects;
+package acme.entities.userstories;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.datatypes.SystemCurrency;
+import acme.entities.projects.Project;
 import acme.roles.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
-@Entity
-public class Project extends AbstractEntity {
+public class UserStory extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -29,30 +28,27 @@ public class Project extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@Column(unique = true)
-	@NotBlank
-	@Pattern(regexp = "[A-Z]{3}-[0-9]{4}")
-	private String				code;
-
 	@NotBlank
 	@Length(max = 75)
 	private String				title;
 
 	@NotBlank
 	@Length(max = 100)
-	private String				abstractDescription;
+	private String				description;
 
 	@NotNull
-	private Boolean				hasFatalErrors;
+	@Min(1)
+	private Integer				estimatedCost;
+
+	@NotBlank
+	@Length(max = 100)
+	private String				acceptanceCriteria;
 
 	@NotNull
-	private SystemCurrency		cost;
+	private Priority			priority;
 
 	@URL
 	private String				link;
-
-	@NotNull
-	private Boolean				draftMode;
 
 	// Derived attributes -----------------------------------------------------
 
@@ -62,4 +58,9 @@ public class Project extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Manager				manager;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Project				project;
 }
