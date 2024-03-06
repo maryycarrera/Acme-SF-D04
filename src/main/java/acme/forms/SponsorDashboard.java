@@ -21,20 +21,20 @@ public class SponsorDashboard extends AbstractForm {
 
 	public int					numberOfSponsorshipsWithLink;
 
-	public double				averageAmountSponsorship;
+	public double				averageAmountSponsorships;
 
-	public double				deviationAmountSponsorship;
+	public double				deviationAmountSponsorships;
 
-	public double				minimumAmountSponsorship;
+	public double				minimumAmountSponsorships;
 
-	public double				maximumAmountSponsorship;
+	public double				maximumAmountSponsorships;
 
-	public double				averageQuantitySponsorship;
+	public double				averageQuantityInvoices;
 
-	public double				deviationQuantitySponsorship;
+	public double				deviationQuantityInvoices;
 
-	public double				minimumQuantitySponsorship;
+	public double				minimumQuantityInvoices;
 
-	public double				maximumQuantitySponsorship;
+	public double				maximumQuantityInvoices;
 
 }
