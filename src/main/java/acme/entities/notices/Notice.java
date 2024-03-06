@@ -4,10 +4,8 @@ package acme.entities.notices;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -16,8 +14,7 @@ import javax.validation.constraints.Past;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.client.data.accounts.UserAccount;
-import acme.datatypes.Author;
+import acme.client.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +22,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Notice {
+public class Notice extends AbstractEntity {
 
 	private final static long	serialVersionUID	= 1L;
 
@@ -40,7 +37,7 @@ public class Notice {
 
 	@NotBlank
 	@Length(max = 75)
-	private Author				author;
+	private String				author;
 
 	@NotBlank
 	@Length(max = 100)
@@ -52,8 +49,4 @@ public class Notice {
 	@URL
 	private String				link;
 
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	private UserAccount			userAccount;
 }
