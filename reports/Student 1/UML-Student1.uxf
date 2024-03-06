@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>256</x>
+      <y>72</y>
+      <w>248</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Manager
+--
++degree: String{NotBlank, Length(1,75)}
++overview: String{NotBlank, Length(1,100)}
++certifications: String{NotBlank, Length(1,100)}
++link: String{URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8</x>
+      <y>288</y>
+      <w>352</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Project
+--
++code: String{Unique, NotBlank, Pattern(regexp="[A-Z]{3}-[0-9]{4}")}
++title: String{NotBlank, Length(1,75)}
++abstractDescription: String{NotBlank, Length(1,100)}
++hasFatalErrors: boolean{NotNull}
++cost: int{NotNull, Min(0)}
++link: String{URL}
++draftMode: boolean{NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>152</x>
+      <y>160</y>
+      <w>176</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=0..*
+m2=1
+&lt; Has</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;70.0;190.0;70.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>304</x>
+      <y>192</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+manager
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>56</x>
+      <y>464</y>
+      <w>152</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>draftMode
+If the project has fatal errors,
+draftMode must be true
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>56</x>
+      <y>416</y>
+      <w>88</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>296</y>
+      <w>280</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+User Story
+--
++title: String{NotBlank, Length(1,75)}
++description: String{NotBlank, Length(1,100)}
++estimatedCost: int{NotNull, Min(1)}
++acceptanceCriteria: String{NotBlank, Length(1,100)}
++priority: Priority
++link: String{URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>432</y>
+      <w>80</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Priority
+--
+Values:
+-- MUST
+-- COULD
+-- SHOULD
+-- WONT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>160</y>
+      <w>176</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=0..*
+m2=1
+Elicits &gt;</panel_attributes>
+    <additional_attributes>180.0;170.0;180.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>456</x>
+      <y>216</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+manager
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>352</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-x
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>344</x>
+      <y>480</y>
+      <w>152</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>All the user stories of a
+project must be elicited by
+the same manager
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>408</y>
+      <w>96</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>296</x>
+      <y>416</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>360</x>
+      <y>336</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+project
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>72</y>
+      <w>192</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Manager Dashboard
+--
++numberOfMustUserStories: int
++numberOfShouldUserStories: int
++numberOfCouldUserStories: int
++numberOfWontUserStories: int
++averageCostUserStories: Double
++deviationCostUserStories: Double
++minimumCostUserStories: Double
++maximumCostUserStories: Double
++averageCostProjects: Double
++deviationCostProjects: Double
++minimumCostProjects: Double
++maximumCostProjects: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
