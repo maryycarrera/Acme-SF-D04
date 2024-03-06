@@ -13,7 +13,7 @@
 package acme.datatypes;
 
 import javax.persistence.Embeddable;
-import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
 import acme.client.data.AbstractDatatype;
@@ -31,7 +31,7 @@ public class SystemCurrency extends AbstractDatatype {
 
 	// Attributes -------------------------------------------------------------
 
-	@Digits(integer = 10, fraction = 2)
+	@Min(0)
 	private Double				amount;
 
 	@NotBlank

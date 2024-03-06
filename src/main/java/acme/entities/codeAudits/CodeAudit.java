@@ -1,5 +1,5 @@
 
-package acme.entities.trainingModule;
+package acme.entities.codeAudits;
 
 import java.util.Date;
 
@@ -18,19 +18,19 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.entities.auditRecords.CodeMark;
 import acme.entities.projects.Project;
-import acme.roles.Developer;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class TrainingModule extends AbstractEntity {
+public class CodeAudit extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
-	private final static long	serialVersionUID	= 1L;
+	private static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
@@ -40,37 +40,29 @@ public class TrainingModule extends AbstractEntity {
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Past
 	@NotNull
-	private Date				creationMoment;
+	@Past
+	private Date				executionDate;
+
+	@NotNull
+	private CodeType			type;
 
 	@NotBlank
 	@Length(max = 100)
-	private String				details;
+	private String				correctiveActions;
 
 	@NotNull
-	private DifficultyLevel		difficultyLevel;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@Past
-	private Date				updateMoment;
+	private CodeMark			mark;
 
 	@URL
 	private String				link;
 
-	@NotNull
-	private Integer				estimatedTotalTime;
+	// Derived attributes -----------------------------------------------------
 
-	// Relationships ----------------------------------------------------------
+	//	// Relationships ----------------------------------------------------------
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	private Project				project;
-
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	private Developer			developer;
-
 }

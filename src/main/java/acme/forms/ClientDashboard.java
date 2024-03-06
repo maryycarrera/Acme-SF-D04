@@ -15,7 +15,7 @@ public class ClientDashboard extends AbstractForm {
 	int							progressLogsCompletenessBetween25And50;
 	int							progressLogsCompletenessBetween50And75;
 	int							progressLogsCompletenessAbove75;
-	double						averageBudgetOfContracts;
+	Double						averageBudgetOfContracts;
 	double						deviationBudgetOfContracts;
 	double						minimumBudgetOfContracts;
 	double						maximumBudgetOfContracts;

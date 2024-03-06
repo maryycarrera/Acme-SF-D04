@@ -1,5 +1,5 @@
 
-package acme.entities.sponsorships;
+package acme.entities.invoices;
 
 import java.util.Date;
 
@@ -8,17 +8,19 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.client.data.datatypes.Money;
+import acme.entities.sponsorships.Sponsorship;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,7 +37,7 @@ public class Invoice extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "“[A-Z]{1,3}-[0-9]{3}")
+	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -45,17 +47,15 @@ public class Invoice extends AbstractEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	@Past
 	private Date				startDate;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	@Past
 	private Date				finishDate;
 
 	@NotNull
-	@Positive
-	private Double				quantity;
+	@Min(1)
+	private Money				quantity;
 
 	@NotNull
 	@Min(0)
@@ -66,18 +66,14 @@ public class Invoice extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
-	private Double				totalAmount;
 
+	@Transient
+	private Double totalAmount() {
+		Double total;
 
-	public Double getTotalAmount() {
-		if (this.tax != null && this.quantity != null)
-			return this.tax + this.quantity;
-		else
-			return null;
-	}
+		total = this.quantity.getAmount() + this.tax * this.quantity.getAmount();
 
-	public void setTotalAmount(final Double totalAmount) {
-		this.setTotalAmount(totalAmount);
+		return total;
 	}
 
 	// Relationships ----------------------------------------------------------

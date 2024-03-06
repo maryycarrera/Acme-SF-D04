@@ -9,16 +9,17 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
-import org.abego.treelayout.internal.util.Contract;
 import org.hibernate.validator.constraints.Length;
 
 import acme.client.data.AbstractEntity;
+import acme.entities.contracts.Contract;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,6 +36,7 @@ public class ProgressLog extends AbstractEntity {
 	private String				recordId;
 
 	@Min(0)
+	@Max(100)
 	private Double				completeness;
 
 	@NotBlank
