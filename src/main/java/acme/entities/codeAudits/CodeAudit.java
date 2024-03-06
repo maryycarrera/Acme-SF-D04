@@ -18,8 +18,8 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.entities.auditRecords.CodeMark;
 import acme.entities.projects.Project;
+import acme.roles.Auditor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -51,13 +51,13 @@ public class CodeAudit extends AbstractEntity {
 	@Length(max = 100)
 	private String				correctiveActions;
 
-	@NotNull
-	private CodeMark			mark;
+	@Pattern(regexp = "A\\+|A|B|C|F|F-")
+	private String				markMode;
 
 	@URL
 	private String				link;
 
-	// Derived attributes -----------------------------------------------------
+	// Derived attributes -----------------------------------------------------	
 
 	//	// Relationships ----------------------------------------------------------
 
@@ -65,4 +65,9 @@ public class CodeAudit extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Project				project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Auditor				auditor;
 }
