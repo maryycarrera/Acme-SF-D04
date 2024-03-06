@@ -46,12 +46,10 @@ public class Invoice extends AbstractEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	@Past
 	private Date				startDate;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	@Past
 	private Date				finishDate;
 
 	@NotNull
