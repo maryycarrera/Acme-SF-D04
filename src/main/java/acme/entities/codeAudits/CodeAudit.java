@@ -1,5 +1,5 @@
 
-package acme.entities.sponsorships;
+package acme.entities.codeAudits;
 
 import java.util.Date;
 
@@ -9,16 +9,16 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.entities.auditRecords.CodeMark;
 import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,7 +26,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Sponsorship extends AbstractEntity {
+public class CodeAudit extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -42,25 +42,17 @@ public class Sponsorship extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	@Past
-	private Date				moment;
+	private Date				executionDate;
 
 	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				startTimeDuration;
+	private CodeType			type;
+
+	@NotBlank
+	@Length(max = 100)
+	private String				correctiveActions;
 
 	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				finishTimeDuration;
-
-	@NotNull
-	@Positive
-	private Integer				amount;
-
-	@NotNull
-	private TypeSponsorship		type;
-
-	@Email
-	private String				contact;
+	private CodeMark			mark;
 
 	@URL
 	private String				link;
@@ -73,5 +65,4 @@ public class Sponsorship extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Project				project;
-
-};
+}
