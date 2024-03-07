@@ -1,5 +1,5 @@
 
-package acme.entities.objectives;
+package acme.entities.banners;
 
 import java.util.Date;
 
@@ -20,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Objective extends AbstractEntity {
+public class Banner extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -28,34 +28,30 @@ public class Objective extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
+	@NotNull
 	private Date				instantiationMoment;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	private Date				startDate;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	private Date				finishDate;
+
+	@NotBlank
+	@URL
+	private String				picture;
 
 	@NotBlank
 	@Length(max = 75)
-	private String				title;
+	private String				slogan;
 
 	@NotBlank
-	@Length(max = 100)
-	private String				description;
-
-	@NotNull
-	private Priority			priority;
-
-	private boolean				status;
-
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				startTimeDuration;
-
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				finishTimeDuration;
-
 	@URL
-	private String				link;
+	private String				targetWebDocument;
 
 	// Derived attributes -----------------------------------------------------
 
