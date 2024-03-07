@@ -54,7 +54,6 @@ public class Invoice extends AbstractEntity {
 	private Date				finishDate;
 
 	@NotNull
-	@Min(1)
 	private Money				quantity;
 
 	@NotNull
