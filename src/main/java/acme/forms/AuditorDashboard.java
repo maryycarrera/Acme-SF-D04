@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class DeveloperDashboard extends AbstractForm {
+public class AuditorDashboard extends AbstractForm {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -15,12 +15,16 @@ public class DeveloperDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	int							totalTrainingModulesWithUpdateMoment;
-	int							totalTrainingSessionsWithLink;
-	Double						averageTrainingModuleTime;
-	Double						deviationTrainingModuleTime;
-	Double						minimumTrainingModuleTime;
-	Double						maximumTrainingModuleTime;
+	int							totalStaticCodeAudits;
+	int							totalDynamicCodeAudits;
+	Double						averageNumberOfAuditRecords;
+	Double						deviationNumberOfAuditRecords;
+	Integer						minumumNumberOfAuditRecords;
+	Integer						maximumNumberOfAuditRecords;
+	Double						averagePeriodLengthOfAuditRecords;
+	Double						deviationPeriodLengthOfAuditRecords;
+	Double						minumumPeriodLengthOfAuditRecords;
+	Double						maximumPeriodLengthOfAuditRecords;
 
 	// Derived attributes -----------------------------------------------------
 

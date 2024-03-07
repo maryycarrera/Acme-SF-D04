@@ -1,5 +1,5 @@
 
-package acme.entities.invoices;
+package acme.entities.auditRecords;
 
 import java.util.Date;
 
@@ -8,9 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -19,15 +17,14 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.client.data.datatypes.Money;
-import acme.entities.sponsorships.Sponsorship;
+import acme.entities.codeAudits.CodeAudit;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Invoice extends AbstractEntity {
+public class AuditRecord extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -37,51 +34,32 @@ public class Invoice extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "IN-[0-9]{4}-[0-9]{4}")
+	@Pattern(regexp = "AU-[0-9]{4}-[0-9]{3}")
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	@Past
-	private Date				registrationTime;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@NotNull
 	private Date				startDate;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
+	@Past
 	private Date				finishDate;
 
 	@NotNull
-	@Min(1)
-	private Money				quantity;
-
-	@NotNull
-	@Min(0)
-	private Double				tax;
+	@Pattern(regexp = "A\\+|A|B|C|F|F-")
+	private String				mark;
 
 	@URL
 	private String				link;
 
 	// Derived attributes -----------------------------------------------------
 
-
-	@Transient
-	private Double totalAmount() {
-		Double total;
-
-		total = this.quantity.getAmount() + this.tax * this.quantity.getAmount();
-
-		return total;
-	}
-
-	// Relationships ----------------------------------------------------------
-
+	//	// Relationships ----------------------------------------------------------
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Sponsorship sponsorship;
-
-};
+	private CodeAudit			codeAudit;
+}
