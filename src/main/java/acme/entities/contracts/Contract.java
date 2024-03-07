@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -54,6 +55,7 @@ public class Contract extends AbstractEntity {
 	private String				goals;
 
 	@Min(0)
+	@Max(value = 1_000_000_000_000L)
 	private int					budget;
 
 	@NotNull
