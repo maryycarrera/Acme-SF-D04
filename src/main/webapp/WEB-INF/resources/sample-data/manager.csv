@@ -1,3 +1,5 @@
 key,key:userAccount,degree,overview,certifications,link
 manager-01,user-account-manager-01,Software Engineer,Project Manager specialised in Software Engineering,"C1 English, Business Diploma",
 manager-02,user-account-manager-02,Business,Project Manager specialised in Business,"C1 English, Project Managing Diploma",http://www.example.com
+manager-03,user-account-manager-03,"BEng in Civil Engineering, Massachusetts Institute of Technology...........",This is a one-hundred-character-long overview.......................................................,"certification 1, certification 2, certification 3, certification 4, certification 5, certification 6",null
+manager-04,user-account-manager-04,A,B,C,http://www.example2.es
