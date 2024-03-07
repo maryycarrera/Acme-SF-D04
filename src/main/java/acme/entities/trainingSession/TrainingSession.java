@@ -12,7 +12,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
@@ -42,12 +41,10 @@ public class TrainingSession extends AbstractEntity {
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@Past
 	private Date				startPeriodDate;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@Past
 	private Date				finishPeriodDate;
 
 	@NotBlank
