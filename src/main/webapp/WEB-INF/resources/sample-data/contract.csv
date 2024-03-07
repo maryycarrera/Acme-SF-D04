@@ -1,26 +1,26 @@
 key,code,instantiationMoment,providerName,customerName,goals,budget,key:project,key:client
-contract-01,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,1200,project-01,client-01
-contract-02,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,0,project-01,client-01
-contract-03,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,1000000000000,project-01,client-02
-contract-04,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,999999999999,project-01,client-06
-contract-05,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,1,project-01,client-01
-contract-06,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,Cumplimiento de Plazos Entregables correctos Calidad del Trabajo Seguir Presupuesto Comunicación clara NoProblem,1200,project-01,client-03
-contract-07,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,Cumplimiento de Plazos Entregables correctos Calidad del Trabajo Seguir Presupuesto Comunicación clara NoProble,1200,project-01,client-03
-contract-08,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,C,1200,project-01,client-17
-contract-09,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,efectividad,1200,project-01,client-06
-contract-10,AC-123,2000/12/11,Roberto Olmo,María del Carmen Doloroso de todos Los Santos de lla Fuente González Martín,bueno bonito barato,1200,project-01,client-01
-contract-11,AC-123,2000/12/11,Roberto Olmo,María del Carmen Doloroso de todos Los Santos de la Fuente González Martín,bueno bonito barato,1200,project-01,client-01
-contract-12,AC-123,2000/12/11,Roberto Olmo,M,bueno bonito barato,1200,project-01,client-02
-contract-13,AC-123,2000/12/11,Roberto Olmo,Rodrigo Rodriguez,bueno bonito barato,1200,project-01,client-01
-contract-14,AC-123,2000/12/11,Jesús Manuel de todos Los Santos del Rocío de lla Fuente González Martínezz,María del Carmen Doloroso de todos Los Santos de lla Fuente González Martín,bueno bonito barato,1200,project-01,client-09
-contract-15,AC-123,2000/12/11,Jesús Manuel de todos Los Santos del Rocío de lla Fuente González Martínez,Pepe Martín,bueno bonito barato,1200,project-01,client-01
-contract-16,AC-123,2000/12/11,R,Pepe Martín,bueno bonito barato,1200,project-01,client-01
-contract-17,AC-123,2000/12/11,Rita Pérez Pérez,Pepe Martín,bueno bonito barato,1200,project-01,client-01
-contract-18,AC-123,2024/03/06,Roberto Olmo,Pepe Martín,bueno bonito barato,1200,project-01,client-01
-contract-19,AC-123,2024/03/05,Roberto Olmo,Pepe Martín,bueno bonito barato,1200,project-01,client-10
-contract-20,AC-123,2011/11/11,Roberto Olmo,Pepe Martín,bueno bonito barato,1200,project-01,client-01
-contract-21,AC-123,2003/04/17,Roberto Olmo,Pepe Martín,bueno bonito barato,1200,project-01,client-12
-contract-22,A-000,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,1200,project-01,client-01
-contract-23,ABC-492,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,1200,project-01,client-01
-contract-24,AZ-101,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,1200,project-01,client-12
-contract-25,Z-333,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,1200,project-01,client-14
+contract-01,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-02,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,"EUR 1,000,000.00",project-01,client-01
+contract-03,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,"GBP 1,000,000.00",project-01,client-02
+contract-04,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,"EUR 2,000,500.00",project-01,client-06
+contract-05,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,"GBP 15,045,000.00",project-01,client-01
+contract-06,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,Cumplimiento de Plazos Entregables correctos Calidad del Trabajo Seguir Presupuesto Comunicación clara NoProblem,"USD 1,000,000.00",project-01,client-03
+contract-07,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,Cumplimiento de Plazos Entregables correctos Calidad del Trabajo Seguir Presupuesto Comunicación clara NoProble,"USD 1,000,000.00",project-01,client-03
+contract-08,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,C,"USD 1,000,000.00",project-01,client-17
+contract-09,AC-123,2000/12/11,Roberto Olmo,Pepe Martín,efectividad,"USD 1,000,000.00",project-01,client-06
+contract-10,AC-123,2000/12/11,Roberto Olmo,María del Carmen Doloroso de todos Los Santos de lla Fuente González Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-11,AC-123,2000/12/11,Roberto Olmo,María del Carmen Doloroso de todos Los Santos de la Fuente González Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-12,AC-123,2000/12/11,Roberto Olmo,M,bueno bonito barato,"USD 1,000,000.00",project-01,client-02
+contract-13,AC-123,2000/12/11,Roberto Olmo,Rodrigo Rodriguez,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-14,AC-123,2000/12/11,Jesús Manuel de todos Los Santos del Rocío de lla Fuente González Martínezz,María del Carmen Doloroso de todos Los Santos de lla Fuente González Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-09
+contract-15,AC-123,2000/12/11,Jesús Manuel de todos Los Santos del Rocío de lla Fuente González Martínez,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-16,AC-123,2000/12/11,R,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-17,AC-123,2000/12/11,Rita Pérez Pérez,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-18,AC-123,2024/03/06,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-19,AC-123,2024/03/05,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-10
+contract-20,AC-123,2011/11/11,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-21,AC-123,2003/04/17,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-12
+contract-22,A-000,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-23,ABC-492,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-01
+contract-24,AZ-101,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-12
+contract-25,Z-333,2000/12/11,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",project-01,client-14
