@@ -36,7 +36,7 @@ Contract
 +providerName: String{NotBlank, Length(1,75)}
 +customerName: String{NotBlank, Length(1,75)}
 +goals: String{NotBlank, Length(1,100)}
-+budget: int{NotNull, Min(0)}
++budget: Money{NotNull, Min(0)}
 bg=CYAN</panel_attributes>
     <additional_attributes/>
   </element>
