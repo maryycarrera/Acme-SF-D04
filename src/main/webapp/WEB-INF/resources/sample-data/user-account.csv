@@ -25,4 +25,3 @@ user-account-client-01,true,"UserIdentity{name: 'Natalia', surname: 'Olmo', emai
 user-account-client-02,true,"UserIdentity{name: 'María', surname: 'Carrera', email: 'mariacarrera@acme.com'}",client2,client2
 user-account-developer-01,true,"UserIdentity{name: 'Isais', surname: 'Pérez', email: 'isais@acme.com'}",developer1,developer1
 user-account-developer-02,true,"UserIdentity{name: 'Ángela', surname: 'García', email: 'angygarcia@acme.com'}",developer2,developer2
-
