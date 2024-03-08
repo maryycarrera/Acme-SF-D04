@@ -17,7 +17,7 @@ Client
 +type: TypeClient
 +email: String{NotBlank, Email}
 +link: String{URL}
-bg=CYAN</panel_attributes>
+bg=YELLOW</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
