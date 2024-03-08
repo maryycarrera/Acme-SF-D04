@@ -47,11 +47,7 @@ public class Invoice extends AbstractEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	private Date				startDate;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@NotNull
-	private Date				finishDate;
+	private Date				dueDate;
 
 	@NotNull
 	private Money				quantity;
@@ -68,11 +64,11 @@ public class Invoice extends AbstractEntity {
 
 	@Transient
 	private Double totalAmount() {
-		Double total;
+		Double totalA;
 
-		total = this.quantity.getAmount() + this.tax * this.quantity.getAmount();
+		totalA = this.quantity.getAmount() + this.tax * this.quantity.getAmount();
 
-		return total;
+		return totalA;
 	}
 
 	// Relationships ----------------------------------------------------------

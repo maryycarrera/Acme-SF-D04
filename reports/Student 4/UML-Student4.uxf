@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>528</x>
-      <y>48</y>
+      <y>64</y>
       <w>248</w>
       <h>96</h>
     </coordinates>
@@ -22,7 +22,7 @@ Sponsor
     <id>UMLClass</id>
     <coordinates>
       <x>280</x>
-      <y>256</y>
+      <y>272</y>
       <w>352</w>
       <h>144</h>
     </coordinates>
@@ -43,7 +43,7 @@ Sponsorship
     <id>Relation</id>
     <coordinates>
       <x>424</x>
-      <y>136</y>
+      <y>152</y>
       <w>176</w>
       <h>136</h>
     </coordinates>
@@ -57,7 +57,7 @@ m2=1
     <id>Text</id>
     <coordinates>
       <x>224</x>
-      <y>192</y>
+      <y>208</y>
       <w>80</w>
       <h>56</h>
     </coordinates>
@@ -70,7 +70,7 @@ fg=GRAY</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>264</x>
-      <y>440</y>
+      <y>456</y>
       <w>200</w>
       <h>32</h>
     </coordinates>
@@ -83,7 +83,7 @@ bg=ORANGE</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>328</x>
-      <y>392</y>
+      <y>408</y>
       <w>24</w>
       <h>64</h>
     </coordinates>
@@ -94,7 +94,7 @@ bg=ORANGE</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>752</x>
-      <y>264</y>
+      <y>280</y>
       <w>280</w>
       <h>144</h>
     </coordinates>
@@ -103,8 +103,7 @@ Invoice
 --
 +code: String{Unique, NotBlank, Pattern(regexp="IN-[0-9]{4}-[0-9]{4}")}
 +registrationTime: DateDate{Past, NotNull, Tempporal(TIMESTAMP)}
-+startDtae: Date{NotNull, Tempporal(TIMESTAMP)}
-+finishDate: Date{NotNull, Tempporal(TIMESTAMP)}
++dueDate: Date{NotNull, Tempporal(TIMESTAMP)}
 +quantity: Money{NotNull,Min(1)}
 +tax: Double{NotNull,Min(0)}
 +link: String{URL}
@@ -115,7 +114,7 @@ Invoice
     <id>UMLClass</id>
     <coordinates>
       <x>528</x>
-      <y>408</y>
+      <y>424</y>
       <w>112</w>
       <h>80</h>
     </coordinates>
@@ -132,7 +131,7 @@ Values:
     <id>Text</id>
     <coordinates>
       <x>632</x>
-      <y>304</y>
+      <y>320</y>
       <w>96</w>
       <h>56</h>
     </coordinates>
@@ -145,7 +144,7 @@ fg=GRAY</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>968</x>
-      <y>40</y>
+      <y>56</y>
       <w>240</w>
       <h>168</h>
     </coordinates>
@@ -169,7 +168,7 @@ Sponsor Dashboard
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>32</y>
+      <y>48</y>
       <w>352</w>
       <h>136</h>
     </coordinates>
@@ -189,7 +188,7 @@ Project
     <id>Relation</id>
     <coordinates>
       <x>208</x>
-      <y>160</y>
+      <y>176</y>
       <w>88</w>
       <h>192</h>
     </coordinates>
@@ -203,7 +202,7 @@ m2=1
     <id>Text</id>
     <coordinates>
       <x>592</x>
-      <y>176</y>
+      <y>192</y>
       <w>80</w>
       <h>56</h>
     </coordinates>
@@ -213,24 +212,10 @@ fg=GRAY</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>624</x>
-      <y>320</y>
-      <w>144</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=x-&gt;
-m1=0..*
-m2=1
-&lt; Has</panel_attributes>
-    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLNote</id>
     <coordinates>
       <x>384</x>
-      <y>520</y>
+      <y>536</y>
       <w>200</w>
       <h>48</h>
     </coordinates>
@@ -244,11 +229,49 @@ bg=ORANGE</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>480</x>
-      <y>392</y>
+      <y>408</y>
       <w>24</w>
       <h>136</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>352</y>
+      <w>144</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..*
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>768</x>
+      <y>520</y>
+      <w>200</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>dueDate
+Tiene que ser minimo un mes despues
+de la fecha de registrionTime
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>416</y>
+      <w>24</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
 </diagram>
