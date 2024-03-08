@@ -44,17 +44,14 @@ public class Project extends AbstractEntity {
 	@Length(max = 100)
 	private String				abstractDescription;
 
-	@NotNull
 	private boolean				hasFatalErrors;
 
-	@NotNull
 	@Min(0)
 	private int					cost;
 
 	@URL
 	private String				link;
 
-	@NotNull
 	private boolean				draftMode;
 
 	// Derived attributes -----------------------------------------------------
