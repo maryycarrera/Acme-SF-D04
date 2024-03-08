@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AdministartorDashboard extends AbstractForm {
+public class AdministratorDashboard extends AbstractForm {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -25,14 +25,14 @@ public class AdministartorDashboard extends AbstractForm {
 	Double						ratioOfNoticesWithEmailAndLink;
 	Double						ratioCriticalObjectives;
 	Double						ratioNonCriticalObjectives;
-	double						averageValueInRisks;
-	double						deviationValueInRisks;
-	int							minumumValueInRisks;
-	int							maximumValueInRisks;
-	double						averageNumberOfClaimPostedOver10weeks;
-	double						deviationNumberOfClaimPostedOver10weeks;
-	int							minumumNumberOfClaimPostedOver10weeks;
-	int							maximumNumberOfClaimPostedOver10weeks;
+	Double						averageValueInRisks;
+	Double						deviationValueInRisks;
+	Integer						minumumValueInRisks;
+	Integer						maximumValueInRisks;
+	Double						averageNumberOfClaimPostedOver10weeks;
+	Double						deviationNumberOfClaimPostedOver10weeks;
+	Integer						minumumNumberOfClaimPostedOver10weeks;
+	Integer						maximumNumberOfClaimPostedOver10weeks;
 
 	// Derived attributes -----------------------------------------------------
 
