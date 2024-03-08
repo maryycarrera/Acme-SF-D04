@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>204</x>
-      <y>96</y>
+      <x>234</x>
+      <y>24</y>
       <w>264</w>
       <h>108</h>
     </coordinates>
@@ -25,8 +25,8 @@ Objective
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>582</x>
-      <y>396</y>
+      <x>234</x>
+      <y>456</y>
       <w>252</w>
       <h>96</h>
     </coordinates>
@@ -45,8 +45,8 @@ Risk
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>204</x>
-      <y>252</y>
+      <x>234</x>
+      <y>180</y>
       <w>264</w>
       <h>90</h>
     </coordinates>
@@ -64,8 +64,8 @@ Notice
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>582</x>
-      <y>96</y>
+      <x>546</x>
+      <y>24</y>
       <w>264</w>
       <h>96</h>
     </coordinates>
@@ -84,8 +84,8 @@ Claim
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>204</x>
-      <y>402</y>
+      <x>234</x>
+      <y>318</y>
       <w>264</w>
       <h>90</h>
     </coordinates>
@@ -103,8 +103,8 @@ Banner
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>54</x>
-      <y>150</y>
+      <x>84</x>
+      <y>78</y>
       <w>114</w>
       <h>48</h>
     </coordinates>
@@ -118,8 +118,8 @@ bg=ORANGE</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>162</x>
-      <y>168</y>
+      <x>192</x>
+      <y>96</y>
       <w>54</w>
       <h>18</h>
     </coordinates>
@@ -129,8 +129,8 @@ bg=ORANGE</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>570</x>
-      <y>522</y>
+      <x>222</x>
+      <y>588</y>
       <w>114</w>
       <h>48</h>
     </coordinates>
@@ -144,19 +144,19 @@ bg=ORANGE</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>612</x>
-      <y>486</y>
+      <x>264</x>
+      <y>546</y>
       <w>18</w>
-      <h>48</h>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>6</x>
-      <y>252</y>
+      <x>36</x>
+      <y>180</y>
       <w>162</w>
       <h>78</h>
     </coordinates>
@@ -173,8 +173,8 @@ bg=ORANGE</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>162</x>
-      <y>294</y>
+      <x>192</x>
+      <y>222</y>
       <w>54</w>
       <h>18</h>
     </coordinates>
@@ -184,8 +184,8 @@ bg=ORANGE</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>18</x>
-      <y>408</y>
+      <x>48</x>
+      <y>324</y>
       <w>150</w>
       <h>78</h>
     </coordinates>
@@ -202,8 +202,8 @@ bg=ORANGE</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>162</x>
-      <y>444</y>
+      <x>192</x>
+      <y>360</y>
       <w>54</w>
       <h>18</h>
     </coordinates>
@@ -213,15 +213,32 @@ bg=ORANGE</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>582</x>
-      <y>252</y>
-      <w>282</w>
-      <h>90</h>
+      <x>546</x>
+      <y>180</y>
+      <w>216</w>
+      <h>204</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 Administrator Dashboard
 --
-...</panel_attributes>
++numberOfAuditor: int
++numberOfClient: int
++numberOfConsumer: int
++numberOfDeveloper: int
++numberOfManager: int
++numberOfProvider: int
++numberOfSponsor: int
++ratioOfNoticesWithEmailAndLink: Double
++ratioCriticalObjectives: Double
++ratioNonCriticalObjectives: Double
++averageValueInRisks: double
++deviationValueInRisks: double
++minumumValueInRisks: int
++maximumValueInRisks: int
++averageNumberOfClaimPostedOver10weeks: double
++deviationNumberOfClaimPostedOver10weeks: double
++minumumNumberOfClaimPostedOver10weeks: int
++maximumNumberOfClaimPostedOver10weeks: int</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
