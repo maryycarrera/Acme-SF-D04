@@ -1,0 +1,6 @@
+key,key:userAccount,firm,professionalId,certifications,link
+auditor-01,user-account-auditor-01,A,a,a,http://www.example.com
+auditor-02,user-account-auditor-02,Auditor 2 firm,1234abcd,"Certificacion 1, Certification 2",http://www.example2.com
+auditor-03,user-account-auditor-03,75 characters..............................................................,25 characters............,100 characters......................................................................................, null
+auditor-04,user-account-auditor-04,74 characters.............................................................,24 characters...........,99 characters.....................................................................................,
+auditor-05,user-account-auditor-05,ab,ab,AB,
