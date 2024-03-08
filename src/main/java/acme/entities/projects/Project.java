@@ -18,9 +18,9 @@ import acme.roles.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
-@Entity
 public class Project extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------

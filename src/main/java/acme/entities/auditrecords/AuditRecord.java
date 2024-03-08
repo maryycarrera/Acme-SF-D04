@@ -1,5 +1,5 @@
 
-package acme.entities.codeAudits;
+package acme.entities.auditrecords;
 
 import java.util.Date;
 
@@ -14,19 +14,17 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.entities.projects.Project;
-import acme.roles.Auditor;
+import acme.entities.codeaudits.CodeAudit;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class CodeAudit extends AbstractEntity {
+public class AuditRecord extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -36,39 +34,32 @@ public class CodeAudit extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
+	@Pattern(regexp = "AU-[0-9]{4}-[0-9]{3}")
 	private String				code;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	@Past
-	private Date				executionDate;
+	private Date				startDate;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	private CodeType			type;
-
-	@NotBlank
-	@Length(max = 100)
-	private String				correctiveActions;
+	@Past
+	private Date				finishDate;
 
 	@NotNull
 	@Pattern(regexp = "A\\+|A|B|C|F|F-")
-	private String				markMode;
+	private String				mark;
 
 	@URL
 	private String				link;
 
-	// Derived attributes -----------------------------------------------------	
+	// Derived attributes -----------------------------------------------------
 
 	//	// Relationships ----------------------------------------------------------
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Project				project;
-
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	private Auditor				auditor;
+	private CodeAudit			codeAudit;
 }

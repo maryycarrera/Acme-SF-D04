@@ -1,3 +1,18 @@
 key,key:userAccount,identification,companyName,type,email,link
 client-01,user-account-client-01,CLI-8236,Diseños Nataly,COMPANY,natalydesigns@gmail.com,https://www.disenosnataly.es/
 client-02,user-account-client-02,CLI-1234,Mantones Concha,INDIVIDUAL,conchamantones@gmail.com,null
+client-03,user-account-client-01,CLI-8237,Diseños Nataly,COMPANY,natalydesigns@gmail.com,https://www.example.es/
+client-04,user-account-client-02,CLI-8238,Diseños Nataly,INDIVIDUAL,natalydesigns@gmail.com,https://www.example-1234.es/
+client-05,user-account-client-01,CLI-8239,Diseños Nataly,COMPANY,natalydesigns@gmail.com,https://www.zara.es/
+client-06,user-account-client-02,CLI-8240,Diseños Nataly,INDIVIDUAL,nati.03@gmail.com,https://www.zara.es/
+client-07,user-account-client-01,CLI-8241,Diseños Nataly,COMPANY,pepa_moreno@gmail.com,https://www.zara.es/
+client-08,user-account-client-02,CLI-8242,Diseños Nataly,COMPANY,manolitoingeniero@gmail.com,https://www.zara.es/
+client-09,user-account-client-01,CLI-8243,Diseños Nataly,COMPANY,barbieinformatica@gmail.com,https://www.zara.es/
+client-10,user-account-client-02,CLI-8244,Empresa Internacional de Inteligencia Artificial PHYSICS Association and co,INDIVIDUAL,nati.03@gmail.com,https://www.zara.es/
+client-11,user-account-client-01,CLI-8245,Empresa Internacional de Inteligencia Artificial PHYSICS Association and c,COMPANY,nati.03@gmail.com,https://www.zara.es/
+client-12,user-account-client-02,CLI-8246,D,COMPANY,nati.03@gmail.com,https://www.zara.es/
+client-13,user-account-client-01,CLI-0000,DiseñosSoftware,COMPANY,nati.03@gmail.com,https://www.zara.es/
+client-14,user-account-client-02,CLI-9999,DiseñosSoftware,COMPANY,nati.03@gmail.com,https://www.zara.es/
+client-15,user-account-client-01,CLI-7539,DiseñosSoftware,INDIVIDUAL,nati.03@gmail.com,https://www.zara.es/
+client-16,user-account-client-02,CLI-0104,DiseñosSoftware,COMPANY,nati.03@gmail.com,https://www.zara.es/
+client-17,user-account-client-01,CLI-6782,DiseñosSoftware,INDIVIDUAL,nati.03@gmail.com,https://www.zara.es/

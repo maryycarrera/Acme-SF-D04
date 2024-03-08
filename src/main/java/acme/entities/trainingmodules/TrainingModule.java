@@ -1,5 +1,5 @@
 
-package acme.entities.trainingSession;
+package acme.entities.trainingmodules;
 
 import java.util.Date;
 
@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -19,59 +19,62 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.entities.trainingModule.TrainingModule;
+import acme.entities.projects.Project;
+import acme.roles.Developer;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-
-public class TrainingSession extends AbstractEntity {
+public class TrainingModule extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
-	private static final long	serialVersionUID	= 1L;
+	private final static long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "TS-[A-Z]{1,3}-[0-9]{3}")
+	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
 	private String				code;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private Date				startPeriodDate;
+	@NotNull
+	private Date				creationMoment;
+
+	@NotBlank
+	@Length(max = 100)
+	private String				details;
 
 	@NotNull
+	private DifficultyLevel		difficultyLevel;
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private Date				finishPeriodDate;
-
-	@NotBlank
-	@Length(max = 75)
-	private String				location;
-
-	@NotBlank
-	@Length(max = 75)
-	private String				instructor;
-
-	@NotBlank
-	@Email
-	private String				contactEmail;
+	private Date				updateMoment;
 
 	@URL
 	private String				link;
 
-	// Derived attributes -----------------------------------------------------
+	@NotNull
+	@Min(1)
+	private int					estimatedTotalTime;
+
+	private boolean				draftMode;
 
 	// Relationships ----------------------------------------------------------
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private TrainingModule		trainingModule;
+	private Project				project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Developer			developer;
 
 }
