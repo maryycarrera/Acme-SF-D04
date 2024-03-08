@@ -1,5 +1,5 @@
 
-package acme.entities.trainingModule;
+package acme.entities.trainingmodules;
 
 import java.util.Date;
 
