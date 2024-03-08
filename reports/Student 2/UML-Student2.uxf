@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8</x>
+      <y>24</y>
+      <w>368</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Client
+--
++identification: String{Unique, NotBlank, Pattern(regexp = "CLI-[0-9]{4}")}
++companyName: String{NotBlank, Length(1,75)}
++type: TypeClient
++email: String{NotBlank, Email}
++link: String{URL}
+bg=YELLOW</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8</x>
+      <y>384</y>
+      <w>352</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Contract
+--
++code: String{Unique, NotBlank, Pattern(regexp="[A-Z]{1,3}-[0-9]{3}")}
++instantiationMoment: Date{NotNull,Past,Temporal(TIMESTAMP)}
++providerName: String{NotBlank, Length(1,75)}
++customerName: String{NotBlank, Length(1,75)}
++goals: String{NotBlank, Length(1,100)}
++budget: Money{NotNull}
+bg=CYAN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>88</x>
+      <y>120</y>
+      <w>88</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=1..*
+m2=1
+&lt; Is decided</panel_attributes>
+    <additional_attributes>10.0;330.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>104</x>
+      <y>336</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+client
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>376</x>
+      <y>240</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>The budget must be less 
+than or equal to the 
+corresponding project cost
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>288</y>
+      <w>104</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;120.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>392</y>
+      <w>400</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+ProgressLog
+--
++recordId: String{Unique, NotBlank, Pattern(regexp="PG-[A-Z]{1,2}-[0-9]{4}")}
++completeness: double{Min(0), Max(100)}
++comment: String{NotBlank, Length(1,100)}
++registrationMoment: Date{NotNull,Past,Temporal(TIMESTAMP)}
++responsiblePerson: String{NotBlank, Length(1,75)}
+bg=CYAN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>72</y>
+      <w>80</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+TypeClient
+--
+Values:
+-- COMPANY
+-- INDIVIDUAL
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>448</y>
+      <w>168</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-x
+m2=0..*
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>376</x>
+      <y>432</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+contract
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>584</x>
+      <y>208</y>
+      <w>272</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+ClientDashboard
+--
++progressLogsCompletenessBelow25: int
++progressLogsCompletenessBetween25And50: int
++progressLogsCompletenessBetween50And75: int
++progressLogsCompletenessAbove75: int
++averageBudgetOfContracts: Double
++deviationBudgetOfContracts:Double
++minimumBudgetOfContracts:Double
++maximumBudgetOfContracts:Double
+
+bg=MAGENTA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>56</y>
+      <w>360</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Project
+--
++code: String{Unique, NotBlank, Pattern(regexp = "[A-Z]{3}-[0-9]{4}")}
++title: String{NotBlank, Length(1,75)}
++abstractDescription: String{NotBlank, Length(1,100)}
++hasFatalErrors:Boolean{NotNull}
++cost:int
++link: String{URL}
++draftMode:Boolean{NotNull}
+bg=CYAN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>144</y>
+      <w>224</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=0..*
+m2=1
+&lt; Involve the development of</panel_attributes>
+    <additional_attributes>10.0;300.0;10.0;10.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>264</x>
+      <y>336</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+project
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>176</y>
+      <w>32</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;80.0;20.0;10.0</additional_attributes>
+  </element>
+</diagram>
