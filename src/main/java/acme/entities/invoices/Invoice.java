@@ -47,11 +47,7 @@ public class Invoice extends AbstractEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	private Date				startDate;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@NotNull
-	private Date				finishDate;
+	private Date				dueDate;
 
 	@NotNull
 	private Money				quantity;
