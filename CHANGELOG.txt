@@ -8,5 +8,6 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-1.1 Our favourite websites are linked to our DNI in the menu anonymous
-1.0	This is the initial version of our project
+2.0 All the required entities, roles and forms are implemented. There is sample data for each of them.
+1.1 Our favourite websites are linked to our DNI in the menu anonymous.
+1.0	This is the initial version of our project.
