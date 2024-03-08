@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>441</x>
+      <y>112</y>
+      <w>217</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Auditor
+--
++firm: String{NotBlank, Length(1,75)}
++professionalId: String{NotBlank, Length(1,25)}
++certifications: String{NotBlank, Length(1,100)}
++link: String{URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>350</y>
+      <w>308</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+CodeAudit
+--
++code: String{Unique, NotBlank, Pattern(regexp="[A-Z]{1,3}-[0-9]{3}")}
++executionDate: Date{NotNull, Past}
++type: CodeType {NotNull}
++correctiveActions: String{NotBlank, Lenght(1, 100)}
++markMode: String{Pattern(regexp="A\\+|A|B|C|F|F-"}
++link: String{URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>189</y>
+      <w>49</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=0..*
+m2=1
+&lt; Has</panel_attributes>
+    <additional_attributes>10.0;230.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>504</x>
+      <y>252</y>
+      <w>70</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>+auditor
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>623</x>
+      <y>490</y>
+      <w>70</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+CodeType
+--
+Values:
+-- STATIC
+-- DYNAMIC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>112</y>
+      <w>231</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Auditor Dashboard
+--
++totalStaticCodeAudits: int
++totalDynamicCodeAudits: int
++averageNumberOfAuditRecords: Double
++deviationNumberOfAuditRecords: Double
++minumumNumberOfAuditRecords: Integer
++maximumNumberOfAuditRecords: Integer
++averagePeriodLengthOfAuditRecords: Double
++deviationPeriodLengthOfAuditRecords: Double
++minumumPeriodLengthOfAuditRecords: Double
++maximumPeriodLengthOfAuditRecords: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>98</x>
+      <y>91</y>
+      <w>308</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Project
+--
++code: String{Unique, NotBlank, Pattern(regexp="[A-Z]{3}-[0-9]{4}")}
++title: String{NotBlank, Length(1,75)}
++abstractDescription: String{NotBlank, Length(1,100)}
++hasFatalErrors: boolean{NotNull}
++cost: int{NotNull, Min(0)}
++link: String{URL}
++draftMode: boolean{NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>203</y>
+      <w>175</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=0..*
+m2=1
+&lt; Has</panel_attributes>
+    <additional_attributes>230.0;300.0;10.0;300.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>238</x>
+      <y>238</y>
+      <w>70</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>+project
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>791</x>
+      <y>350</y>
+      <w>245</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+AuditRecord
+--
++code: String{Unique, NotBlank, Pattern(regexp="AU-[0-9]{4}-[0-9]{3}")}
++startDate: Date{Past, NotNull, Tempporal(TIMESTAMP)}
++finishDate: Date{Past, NotNull, Tempporal(TIMESTAMP)}
++mark: String{Pattern(regexp="A\\+|A|B|C|F|F-"}
++link: String{URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>693</x>
+      <y>406</y>
+      <w>112</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..*
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>707</x>
+      <y>378</y>
+      <w>70</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>+codeAudit
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>805</x>
+      <y>518</y>
+      <w>175</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>finishDate
+Tiene que ser una hora despues de startDate
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
