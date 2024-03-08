@@ -1,0 +1,20 @@
+key,code,title,abstractDescription,hasFatalErrors,cost,link,draftMode,key:manager
+project-01,AAA-0000,Sample title,This is a sample abstract,false,37,http://www.samplelink.com,false,manager-01
+project-02,AAA-0001,S,This is a sample abstract,false,37,http://www.samplelink.com,false,manager-01
+project-03,AAA-0002,Sa,This is a sample abstract,false,37,http://www.samplelink.com,false,manager-01
+project-04,AAA-0003,Sample title...............................................................,This is a sample abstract,false,37,http://www.samplelink.com,false,manager-01
+project-05,AAA-0004,Sample title...........................................................,This is a sample abstract,false,37,http://www.samplelink.com,false,manager-01
+project-06,AAA-0005,Sample title,T,false,37,http://www.samplelink.com,false,manager-02
+project-07,AAA-0006,Sample title,This,false,37,http://www.samplelink.com,false,manager-02
+project-08,AAA-0007,Sample title,This is a sample abstract...........................................................................,false,37,http://www.samplelink.com,false,manager-02
+project-09,AAA-0008,Sample title,This is a sample abstract.........................................................................,false,37,http://www.samplelink.com,false,manager-02
+project-10,AAA-0009,Sample title,This is a sample abstract,true,37,http://www.samplelink.com,true,manager-02
+project-11,AAA-0010,Sample title,This is a sample abstract,false,0,http://www.samplelink.com,false,manager-02
+project-12,AAA-0011,Sample title,This is a sample abstract,false,1000000000,http://www.samplelink.com,false,manager-02
+project-13,AAA-0012,Sample title,This is a sample abstract,false,1,http://www.samplelink.com,false,manager-02
+project-14,AAA-0013,Sample title,This is a sample abstract,false,999999999,http://www.samplelink.com,false,manager-02
+project-15,AAA-0014,Sample title,This is a sample abstract,false,37,,false,manager-03
+project-16,AAA-0015,Sample title,This is a sample abstract,false,37,null,false,manager-01
+project-17,AAA-0016,Sample title,This is a sample abstract,false,37,https://www.twitch.tv/videos/2082116063,false,manager-01
+project-18,AAA-0017,Sample title,This is a sample abstract,false,37,https://www.sephora.es/marcas/marcas-de-a-z/rare-beauty-rare/?scgid=C301,false,manager-01
+project-19,AAA-0018,Sample title,This is a sample abstract,false,37,http://www.samplelink.com,true,manager-01

@@ -4,6 +4,7 @@ package acme.entities.trainingModule;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,7 +20,13 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
 import acme.entities.projects.Project;
+import acme.roles.Developer;
+import lombok.Getter;
+import lombok.Setter;
 
+@Entity
+@Getter
+@Setter
 public class TrainingModule extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
@@ -53,8 +60,10 @@ public class TrainingModule extends AbstractEntity {
 	private String				link;
 
 	@NotNull
-	@Min(0)
-	private Integer				estimatedTotalTime;
+	@Min(1)
+	private int					estimatedTotalTime;
+
+	private boolean				draftMode;
 
 	// Relationships ----------------------------------------------------------
 
@@ -62,5 +71,10 @@ public class TrainingModule extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Project				project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Developer			developer;
 
 }
