@@ -1,0 +1,14 @@
+key,code,registrationTime,startDate,finishDate,quantity,tax,link,key:sponsorship
+invoice-01,IN-1009-1008,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,23.00 EUR,0.1,https://invoice,sponsorship-01
+invoice-02,IN-1209-1008,2022/7/29 23:59,2023/12/28 16:00,2024/11/28 15:00,23.00 EUR,0.1,https://invoice,sponsorship-01
+invoice-03,IN-1109-1008,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,0.01 EUR,0.01,https://invoice,sponsorship-01
+invoice-04,IN-1309-1008,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,342342342 EUR,0.01,https://invoice,sponsorship-01
+invoice-06,IN-1409-1008,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,342342342 USD,0.01,https://invoice,sponsorship-01
+invoice-07,IN-1509-1008,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,234 EUR,1,https://invoice,sponsorship-01
+invoice-08,IN-1609-1008,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,234 EUR,0.5,https://invoice,sponsorship-01
+invoice-09,IN-1709-1008,2022/7/29 23:59,2023/12/28 16:00,2024/11/28 15:00,23.00 EUR,0.9,https://n,sponsorship-01
+invoice-10,IN-1809-1008,2022/7/29 23:59,2023/12/28 16:00,2024/11/28 15:00,23.00 EUR,0.1,,sponsorship-01
+invoice-11,IN-1909-1008,2022/7/29 23:59,2023/12/28 16:00,2024/11/28 15:00,23.00 EUR,0.1,null,sponsorship-01
+invoice-12,IN-1999-1008,2022/7/29 23:59,2023/12/28 16:00,2024/11/28 15:00,23.00 EUR,0.1,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp=Egxnd3Mt,sponsorship-01
+invoice-13,IN-1889-1008,2022/7/29 23:59,2023/12/28 16:00,2024/11/28 15:00,23.00 EUR,0.1,https://github.com/users/maryycarrera/projects/2/views/1?filterQuery=assignee%3AAdrcabmar,sponsorship-01
+invoice-14,IN-1449-1008,2022/7/29 23:59,2023/12/28 16:00,2024/11/28 15:00,23.00 EUR,0.1,https://www.sponsorship1.es/,sponsorship-02

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>48</y>
+      <w>248</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Sponsor
+--
++name: String{NotBlank, Length(1,75)}
++benefits: String{NotBlank, Length(1,100)}
++email: String{Email}
++link: String{URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>256</y>
+      <w>352</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Sponsorship
+--
++code: String{Unique, NotBlank, Pattern(regexp="[A-Z]{1,3}-[0-9]{3}")}
++moment: Date{Past, NotNull, Tempporal(TIMESTAMP)}
++startTimeDuration: Date{NotNull, Tempporal(TIMESTAMP)}
++finishTimeDuration: Date{NotNull, Tempporal(TIMESTAMP)}
++amount: Money{NotNull,Min(1)}
++type: TypeSponsorship{NotNull}
++contact: String{Email}
++link: String{URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>424</x>
+      <y>136</y>
+      <w>176</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=0..*
+m2=1
+&lt; Has</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;60.0;190.0;60.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>224</x>
+      <y>192</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+project
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>264</x>
+      <y>440</y>
+      <w>200</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>startTimeDuration
+Tiene que ser despues de moment
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>328</x>
+      <y>392</y>
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>752</x>
+      <y>264</y>
+      <w>280</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Invoice
+--
++code: String{Unique, NotBlank, Pattern(regexp="IN-[0-9]{4}-[0-9]{4}")}
++registrationTime: DateDate{Past, NotNull, Tempporal(TIMESTAMP)}
++startDtae: Date{NotNull, Tempporal(TIMESTAMP)}
++finishDate: Date{NotNull, Tempporal(TIMESTAMP)}
++quantity: Money{NotNull,Min(1)}
++tax: Double{NotNull,Min(0)}
++link: String{URL}
++/totalAmount: Double{Transient}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>408</y>
+      <w>112</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+TypeSponsorship
+--
+Values:
+-- FINANCIAL
+-- INKIND
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>632</x>
+      <y>304</y>
+      <w>96</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+sponsorship
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>968</x>
+      <y>40</y>
+      <w>240</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Sponsor Dashboard
+--
++ numberOfInvoicesTaxLessOrEqual21: int
++ numberOfSponsorshipsWithLink: int
++ averageAmountSponsorships: Double
++ deviationAmountSponsorships: Double
++ minimumAmountSponsorships: Double
++ maximumAmountSponsorships: Double
++ averageQuantityInvoices: Double
++ deviationQuantityInvoices: Double
++ minimumQuantityInvoices: Double
++ maximumQuantityInvoices: Double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>32</y>
+      <w>352</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Project
+--
++code: String{Unique, NotBlank, Pattern(regexp="[A-Z]{3}-[0-9]{4}")}
++title: String{NotBlank, Length(1,75)}
++abstractDescription: String{NotBlank, Length(1,100)}
++hasFatalErrors: boolean{NotNull}
++cost: int{NotNull, Min(0)}
++link: String{URL}
++draftMode: boolean{NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>160</y>
+      <w>88</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=0..*
+m2=1
+&lt; Has</panel_attributes>
+    <additional_attributes>90.0;210.0;10.0;210.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>592</x>
+      <y>176</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+sponsor
+style=wordwrap
+fg=GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>320</y>
+      <w>144</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=0..*
+m2=1
+&lt; Has</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>384</x>
+      <y>520</y>
+      <w>200</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>finishTimeDuration
+Tiene que ser minimo un mes despues
+de la fecha de startTimeDuration
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>392</y>
+      <w>24</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+</diagram>
