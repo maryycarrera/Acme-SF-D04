@@ -1,0 +1,6 @@
+key,code,startDate,finishDate,mark,link,key:codeAudit
+audit-record-01,AU-0000-000,2000/01/01 00:00,2000/01/01 01:00,A+,http://www.example.com,code-audit-01
+audit-record-02,AU-9999-999,2000/01/1 01:00,2000/01/01 02:00,F-,null,code-audit-01
+audit-record-03,AU-1111-111,2022/05/23 16:00,2022/05/24 16:00,B,,code-audit-01
+audit-record-04,AU-1111-112,2022/07/29 22:59,2022/07/29 23:59,B,,code-audit-01
+audit-record-05,AU-1111-113,2022/07/29 21:59,2022/07/29 22:59,B,,code-audit-02
