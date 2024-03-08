@@ -1,33 +1,26 @@
 
-package acme.entities.invoices;
+package acme.entities.banners;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
-import javax.validation.Valid;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
-import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.client.data.datatypes.Money;
-import acme.entities.sponsorships.Sponsorship;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Invoice extends AbstractEntity {
+public class Banner extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -35,15 +28,10 @@ public class Invoice extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotBlank
-	@Column(unique = true)
-	@Pattern(regexp = "IN-[0-9]{4}-[0-9]{4}")
-	private String				code;
-
 	@Temporal(TemporalType.TIMESTAMP)
-	@NotNull
 	@Past
-	private Date				registrationTime;
+	@NotNull
+	private Date				instantiationMoment;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
@@ -53,34 +41,20 @@ public class Invoice extends AbstractEntity {
 	@NotNull
 	private Date				finishDate;
 
-	@NotNull
-	private Money				quantity;
-
-	@NotNull
-	@Min(0)
-	private Double				tax;
-
+	@NotBlank
 	@URL
-	private String				link;
+	private String				picture;
+
+	@NotBlank
+	@Length(max = 75)
+	private String				slogan;
+
+	@NotBlank
+	@URL
+	private String				targetWebDocument;
 
 	// Derived attributes -----------------------------------------------------
 
-
-	@Transient
-	private Double totalAmount() {
-		Double total;
-
-		total = this.quantity.getAmount() + this.tax * this.quantity.getAmount();
-
-		return total;
-	}
-
 	// Relationships ----------------------------------------------------------
 
-
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	private Sponsorship sponsorship;
-
-};
+}

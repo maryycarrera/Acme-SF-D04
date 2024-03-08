@@ -1,11 +1,7 @@
 
 package acme.forms;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import acme.client.data.AbstractForm;
-import acme.roles.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,10 +15,6 @@ public class ManagerDashboard extends AbstractForm {
 
 	// Query attributes -------------------------------------------------------
 
-	@NotNull
-	@Valid
-	public Manager				manager;
-
 	// Response attributes ----------------------------------------------------
 
 	public int					numberOfMustUserStories;
@@ -33,20 +25,20 @@ public class ManagerDashboard extends AbstractForm {
 
 	public int					numberOfWontUserStories;
 
-	public double				averageCostUserStories;
+	public Double				averageCostUserStories;
 
-	public double				deviationCostUserStories;
+	public Double				deviationCostUserStories;
 
-	public double				minimumCostUserStories;
+	public Double				minimumCostUserStories;
 
-	public double				maximumCostUserStories;
+	public Double				maximumCostUserStories;
 
-	public double				averageCostProjects;
+	public Double				averageCostProjects;
 
-	public double				deviationCostProjects;
+	public Double				deviationCostProjects;
 
-	public double				minimumCostProjects;
+	public Double				minimumCostProjects;
 
-	public double				maximumCostProjects;
+	public Double				maximumCostProjects;
 
 }
