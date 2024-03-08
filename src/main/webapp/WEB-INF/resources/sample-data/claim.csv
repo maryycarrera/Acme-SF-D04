@@ -4,3 +4,8 @@ claim-02,C-0001,2000/01/01 00:01,ab,ab,ab,null,null
 claim-03,C-0002,2010/01/01 16:00,Heading,Description,Department,,
 claim-04,C-0003,2022/07/29 23:59,75 characters..............................................................,100 characters......................................................................................,100 characters......................................................................................,,
 claim-05,C-0004,2022/07/29 22:59,74 characters.............................................................,99 characters......................................................................................,99 characters......................................................................................,,
+claim-06,C-0005,2022/07/29 21:59,New Heading 1,Enhanced Description 1,Marketing,claim6@acme.com,null
+claim-07,C-0006,2022/07/29 20:59,Innovative Heading,Creative Description,Research and Development,claim7@acme.com,null
+claim-08,C-0007,2022/07/29 19:59,Exciting Heading,Informative Description,Finance,claim8@acme.com,null
+claim-09,C-0008,2022/07/29 18:59,Inspiring Heading,Dynamic Description,Technology,claim9@acme.com,null
+claim-10,C-0009,2022/07/29 17:59,Captivating Heading,Engaging Description,Human Resources,claim10@acme.com,null
