@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>273</x>
+      <y>329</y>
+      <w>273</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Training Module
+--
++code: String {pattern “[A-Z]{1,3}-[0-9]{3}”, NotBlank, Unique}
++creationMoment: Date {Past, NotNull}
++details: String {NotBlank, Length(1,100)}
++difficultyLevel: DifficultyLevel {NotNull}
++updateMoment: Date {Past}
++link: String {URL}
++totalTime: Integer {NotNull, Min(1)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>609</x>
+      <y>329</y>
+      <w>294</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+TrainingSession
+--
++code: String {pattern “TS-[A-Z]{1,3}-[0-9]{3}”, NotBlank, Unique}
++startPeriodDate: Date {NotNull, Temporal(TIMESTAMP)}
++finishPeriodDate: Date {NotNull, Temporal(TIMESTAMP)}
++location: String {NotBlank, Length(0,75)}
++instructor: String {NotBlank, Length(0,75)}
++contactEmail: String {NotBlank, Email}
++link: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>546</y>
+      <w>210</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Developer Dashboard
+--
++totalTrainingModulesWithUpdateMoment: int
++totalTrainingSessionsWithLink: int
++averageTrainingModuleTime: Double
++deviationTrainingModuleTime: Double
++minimumTrainingModuleTime: Double
++maximumTrainingModuleTime: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>553</y>
+      <w>224</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Developer
+--
++degree: String {NotBlank, Length(0,75)}
++specialisation: String {NotBlank, Length(0,100)}
++skills: String {NotBlank, Length(0,100)}
++email: String {NotBlank, Email}
++link: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>882</x>
+      <y>231</y>
+      <w>140</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>The period must be at least
+one week ahead of the training
+module creation moment,
+and at least one week long.
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>896</x>
+      <y>280</y>
+      <w>63</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;160.0;70.0;160.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>539</x>
+      <y>385</y>
+      <w>84</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>84</y>
+      <w>308</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Project
+--
++code: String{Unique, NotBlank, Pattern(regexp="[A-Z]{3}-[0-9]{4}")}
++title: String{NotBlank, Length(1,75)}
++abstractDescription: String{NotBlank, Length(1,100)}
++hasFatalErrors: boolean{NotNull}
++cost: int{NotNull, Min(0)}
++link: String{URL}
++draftMode: boolean{NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>581</x>
+      <y>371</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>1.. *
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>147</x>
+      <y>329</y>
+      <w>91</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+DifficultyLevel
+--
+- BASIC
+- INTERMEDIATE
+- ADVANCED
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>133</y>
+      <w>133</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>434</y>
+      <w>84</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1</panel_attributes>
+    <additional_attributes>100.0;240.0;10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>392</x>
+      <y>469</y>
+      <w>70</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>1..*
+style=wordwrap
+fg=BLACK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>399</x>
+      <y>133</y>
+      <w>77</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1= 1
+m2= 1..*</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>420</y>
+      <w>77</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>154</x>
+      <y>588</y>
+      <w>168</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>El momento de actualización
+debe estar en el pasado,
+después del momento de creación.
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>385</x>
+      <y>553</y>
+      <w>70</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>+developer
+style=wordwrap
+bg=LIGHT_GRAY
+fg=LIGHT_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>357</x>
+      <y>154</y>
+      <w>70</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>+project
+style=wordwrap
+bg=LIGHT_GRAY
+fg=LIGHT_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
