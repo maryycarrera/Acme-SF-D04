@@ -34,3 +34,5 @@ user-account-auditor-02,true,"UserIdentity{name: 'Auditor2', surname: 'Prueba', 
 user-account-auditor-03,true,"UserIdentity{name: 'Auditor3', surname: 'Prueba', email: 'auditor3@acme.com'}",auditor3,auditor3
 user-account-auditor-04,true,"UserIdentity{name: 'Auditor4', surname: 'Prueba', email: 'auditor4@acme.com'}",auditor4,auditor4
 user-account-auditor-05,true,"UserIdentity{name: 'Auditor5', surname: 'Prueba', email: 'auditor5@acme.com'}",auditor5,auditor5
+user-account-administrator-02,true,"UserIdentity{name: 'Administrator1', surname: 'Prueba', email: 'administrator1@acme.com'}",administrator1,administrator1
+user-account-administrator-03,true,"UserIdentity{name: 'Administrator2', surname: 'Prueba', email: 'administrator2@acme.com'}",administrator2,administrator2
