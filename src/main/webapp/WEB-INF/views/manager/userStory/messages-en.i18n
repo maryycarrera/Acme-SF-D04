@@ -16,3 +16,10 @@ manager.user-story.form.label.estimatedCost = Estimated Cost:
 manager.user-story.form.label.acceptanceCriteria = Acceptance Criteria:
 manager.user-story.form.label.priority = Priority:
 manager.user-story.form.label.link = Link:
+
+manager.user-story.list.label.title = Title
+manager.user-story.list.label.description = Description
+manager.user-story.list.label.estimatedCost = Estimated Cost
+manager.user-story.list.label.acceptanceCriteria = Acceptance Criteria
+manager.user-story.list.label.priority = Priority
+manager.user-story.list.label.link = Link
