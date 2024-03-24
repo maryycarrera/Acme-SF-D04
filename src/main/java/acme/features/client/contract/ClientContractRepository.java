@@ -15,11 +15,10 @@ public interface ClientContractRepository extends AbstractRepository {
 	@Query("select c from Contract c where c.client.id = :id")
 	Collection<Contract> findContractsByClientId(int id);
 
+	@Query("select c from Contract c where c.id = :id")
+	Contract findContractById(int id);
+
 	/**
-	 * 
-	 * @Query("select c from Contract c where c.id = :id")
-	 * Contract findContractById(int id);
-	 * 
 	 * @Query("select c from Client c where c.id = :id")
 	 * Client findOneClientById(int id);
 	 * 
