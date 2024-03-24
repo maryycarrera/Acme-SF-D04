@@ -23,19 +23,4 @@
 	<acme:input-textbox code="client.contract.form.label.customerName" path="customerName"/>
 	<acme:input-textbox code="client.contract.form.label.goals" path="goals"/>
 	<acme:input-money code="client.contract.form.label.budget" path="budget"/>
-
-
-	<jstl:choose>	 
-		<jstl:when test="${_command == 'show'}">
-			<acme:button code="client.contract.form.button.progressLogs" action="/client/progressLog/list?masterId=${id}"/>			
-		</jstl:when>
-		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') }">
-			<acme:button code="client.contract.form.button.progressLogs" action="/client/progressLog/list?masterId=${id}"/>
-			<acme:submit code="client.contract.form.button.update" action="/client/contract/update"/>
-			<acme:submit code="client.contract.form.button.delete" action="/client/contract/delete"/>
-		</jstl:when>
-		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="client.contract.form.button.create" action="/client/contract/create"/>
-		</jstl:when>		
-	</jstl:choose>
 </acme:form>

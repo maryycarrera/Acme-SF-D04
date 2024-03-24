@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-client.contract.form.title = Detalles de contrato
+client.contract.form.code = Detalles de contrato
 client.contract.list.code = Lista de contratos
 
 client.contract.form.label.code = Código:
@@ -19,14 +19,6 @@ client.contract.form.label.customerName = Nombre del cliente:
 client.contract.form.label.goals = Objetivos:
 client.contract.form.label.budget = Presupuesto:
 
-		
-client.contract.form.button.progressLogs = Informes de progreso
-client.contract.form.button.update = Actualizar
-client.contract.form.button.delete = Eliminar
-client.contract.form.button.create = Crear
-
 client.contract.list.label.providerName = Nombre del proveedor
 client.contract.list.label.customerName = Nombre del cliente
 client.contract.list.label.code = Código
-
-client.contract.list.button.create = Crear

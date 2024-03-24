@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.contracts.Contract;
@@ -24,30 +25,31 @@ public class ClientContractListService extends AbstractService<Client, Contract>
 
 	@Override
 	public void authorise() {
-		boolean status;
-		int clientId;
-		Collection<Contract> contracts;
-
-		clientId = super.getRequest().getData("id", int.class);
-		contracts = this.repository.findContractsByClientId(clientId);
-		status = contracts != null;
-		super.getResponse().setAuthorised(status);
+		/**
+		 * boolean status;
+		 * int clientId;
+		 * Collection<Contract> contracts;
+		 * 
+		 * clientId = super.getRequest().getData("id", int.class);
+		 * contracts = this.repository.findContractsByClientId(clientId);
+		 * status = contracts != null;
+		 */
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
 	public void load() {
 		Collection<Contract> objects;
-		int clientId;
+		Principal principal;
 
-		clientId = super.getRequest().getPrincipal().getActiveRoleId();
-		objects = this.repository.findContractsByClientId(clientId);
+		principal = super.getRequest().getPrincipal();
+		objects = this.repository.findContractsByClientId(principal.getActiveRoleId());
 
 		super.getBuffer().addData(objects);
 	}
 
 	@Override
 	public void unbind(final Contract object) {
-		//TODO: comprobar si hay que formatear los datos antes de meterlos en el dataset
 		assert object != null;
 
 		Dataset dataset;
