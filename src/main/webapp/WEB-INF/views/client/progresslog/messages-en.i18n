@@ -1,0 +1,21 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+client.progresslog.form.recordId = ProgressLog form
+client.progresslog.list.recordId = Listing of progresslogs
+
+client.progresslog.form.label.recordId = RecordId:
+client.progresslog.form.label.completeness = Completeness:
+client.progresslog.form.label.comment = Comment:
+client.progresslog.form.label.registrationMoment = RegistrationMoment:
+client.progresslog.form.label.responsiblePerson = ResponsiblePerson:
+
+client.progresslog.list.label.responsiblePerson = ResponsiblePerson
+client.progresslog.list.label.completeness = Completeness
