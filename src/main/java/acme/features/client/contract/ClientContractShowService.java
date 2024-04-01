@@ -50,7 +50,8 @@ public class ClientContractShowService extends AbstractService<Client, Contract>
 		assert object != null;
 		Dataset dataset;
 
-		dataset = super.unbind(object, "code", "instantiationMoment", "providerName", "customerName", "goals", "budget", "project");
+		dataset = super.unbind(object, "code", "instantiationMoment", "providerName", "customerName", "goals", "budget");
+		dataset.put("projectCode", object.getProject().getCode());
 
 		super.getResponse().addData(dataset);
 	}
