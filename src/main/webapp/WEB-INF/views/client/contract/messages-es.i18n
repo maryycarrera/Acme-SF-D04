@@ -12,13 +12,23 @@ client.contract.form.title = Detalles de contrato
 client.contract.list.title = Lista de contratos
 
 client.contract.form.label.code = Código:
-client.contract.form.label.projectCode = Proyecto: 
+client.contract.form.label.project = Proyecto: 
 client.contract.form.label.instantiationMoment = Momento de instanciación:
 client.contract.form.label.providerName = Nombre del proveedor:
 client.contract.form.label.customerName = Nombre del cliente:
 client.contract.form.label.goals = Objetivos:
 client.contract.form.label.budget = Presupuesto:
 
+client.contract.form.button.create = Crear
+client.contract.form.button.update = Actualizar
+client.contract.form.button.delete = Borrar
+
+client.contract.form.error.duplicated = Este código ya se ha usado
+employer.job.form.error.negative-salary = El salario debe ser positivo
+client.contract.form.error.bugdet-major-project-cost = El presupuesto debe ser menor o igual que el coste del proyecto
+
 client.contract.list.label.providerName = Nombre del proveedor
 client.contract.list.label.customerName = Nombre del cliente
 client.contract.list.label.code = Código
+
+client.contract.list.button.create = Crear

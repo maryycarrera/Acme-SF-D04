@@ -14,25 +14,26 @@ import acme.entities.projects.Project;
 import acme.roles.Client;
 
 @Service
-public class ClientContractShowService extends AbstractService<Client, Contract> {
+public class ClientContractUpdateService extends AbstractService<Client, Contract> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	private ClientContractRepository repository;
 
+
 	// AbstractService interface ----------------------------------------------
-
-
 	@Override
 	public void authorise() {
 		boolean status;
-		int contractId;
+		int masterId;
 		Contract contract;
+		Client client;
 
-		contractId = super.getRequest().getData("id", int.class);
-		contract = this.repository.findContractById(contractId);
-		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
+		masterId = super.getRequest().getData("id", int.class);
+		contract = this.repository.findContractById(masterId);
+		client = contract == null ? null : contract.getClient();
+		status = contract != null && super.getRequest().getPrincipal().hasRole(client);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -46,6 +47,34 @@ public class ClientContractShowService extends AbstractService<Client, Contract>
 		object = this.repository.findContractById(id);
 
 		super.getBuffer().addData(object);
+	}
+
+	@Override
+	public void bind(final Contract object) {
+		//TODO: Aquí hay que hacer las reglas de negocio
+		assert object != null;
+
+		int projectId;
+		Project project;
+
+		projectId = super.getRequest().getData("project", int.class);
+		project = this.repository.findOneProjectById(projectId);
+
+		super.bind(object, "instantiationMoment", "providerName", "customerName", "goals", "budget");
+		object.setProject(project);
+		;
+	}
+
+	@Override
+	public void validate(final Contract object) {
+		assert object != null;
+	}
+
+	@Override
+	public void perform(final Contract object) {
+		assert object != null;
+
+		this.repository.save(object);
 	}
 
 	@Override
@@ -64,5 +93,7 @@ public class ClientContractShowService extends AbstractService<Client, Contract>
 		dataset.put("projects", choices);
 
 		super.getResponse().addData(dataset);
+
 	}
+
 }
