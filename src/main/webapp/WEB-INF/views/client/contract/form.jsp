@@ -25,6 +25,15 @@
 	<acme:input-money code="client.contract.form.label.budget" path="budget"/>
 	
 	<jstl:choose>
+		<jstl:when test="${_command == 'show' && draftMode == false}">
+		    <acme:input-textbox code="client.contract.form.label.code" path="code" readonly="true"/>
+            <acme:input-select code="client.contract.form.label.project" path="project" choices="${projects}" readonly="true"/>
+            <acme:input-moment code="client.contract.form.label.instantiationMoment" path="instantiationMoment" readonly="true"/>
+            <acme:input-textbox code="client.contract.form.label.providerName" path="providerName" readonly="true"/>
+            <acme:input-textbox code="client.contract.form.label.customerName" path="customerName" readonly="true"/>
+            <acme:input-textbox code="client.contract.form.label.goals" path="goals" readonly="true"/>
+            <acme:input-money code="client.contract.form.label.budget" path="budget" readonly="true"/>		
+		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:submit code="client.contract.form.button.update" action="/client/contract/update"/>
 			<acme:submit code="client.contract.form.button.delete" action="/client/contract/delete"/>
