@@ -25,15 +25,6 @@ public class ClientContractListService extends AbstractService<Client, Contract>
 
 	@Override
 	public void authorise() {
-		/**
-		 * boolean status;
-		 * int clientId;
-		 * Collection<Contract> contracts;
-		 * 
-		 * clientId = super.getRequest().getData("id", int.class);
-		 * contracts = this.repository.findContractsByClientId(clientId);
-		 * status = contracts != null;
-		 */
 		super.getResponse().setAuthorised(true);
 	}
 
