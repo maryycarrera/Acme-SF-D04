@@ -9,6 +9,7 @@
 # they accept any liabilities with respect to them.
 
 manager.user-story.form.title = User Story form
+manager.user-story.list.title = Listing of User Stories
 
 manager.user-story.form.label.title = Title: 
 manager.user-story.form.label.description = Description:

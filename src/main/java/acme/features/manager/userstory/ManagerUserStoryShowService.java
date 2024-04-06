@@ -23,15 +23,13 @@ public class ManagerUserStoryShowService extends AbstractService<Manager, UserSt
 	@Override
 	public void authorise() {
 		boolean status;
-		int managerId;
 		int userStoryId;
 		UserStory userStory;
 
-		managerId = super.getRequest().getPrincipal().getActiveRoleId();
 		userStoryId = super.getRequest().getData("id", int.class);
 		userStory = this.repository.findOneUserStoryById(userStoryId);
 
-		status = super.getRequest().getPrincipal().hasRole(Manager.class) && userStory.getManager().getId() == managerId;
+		status = userStory != null && super.getRequest().getPrincipal().hasRole(Manager.class);
 
 		super.getResponse().setAuthorised(status);
 	}

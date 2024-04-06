@@ -43,6 +43,11 @@ master.menu.provider.favourite-link = Favourite Link
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Favourite Link
 
+# master.menu.manager ########################################################
+
+master.menu.manager = Gerente
+master.menu.manager.all-user-stories = Listar todas mis historias de usuario
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
