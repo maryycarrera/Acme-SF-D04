@@ -48,12 +48,18 @@ public class AuthenticatedClientUpdateService extends AbstractService<Authentica
 	public void bind(final Client object) {
 		assert object != null;
 
-		super.bind(object, "qualifications", "skills");
+		super.bind(object, "identification", "companyName", "type", "email", "link");
 	}
 
 	@Override
 	public void validate(final Client object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("identification")) {
+			Client existing;
+
+			existing = this.repository.findOneClientByIdentification(object.getIdentification());
+			super.state(existing == null, "code", "client.form.error.duplicated");
+		}
 	}
 
 	@Override
@@ -69,7 +75,7 @@ public class AuthenticatedClientUpdateService extends AbstractService<Authentica
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "qualifications", "skills");
+		dataset = super.unbind(object, "identification", "companyName", "type", "email", "link");
 
 		super.getResponse().addData(dataset);
 	}

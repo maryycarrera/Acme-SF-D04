@@ -10,8 +10,13 @@
 
 authenticated.client.form.title = Datos de cliente
 
-authenticated.client.form.label.area = Área: 
-authenticated.client.form.label.sector = Sector:
+authenticated.client.form.label.identification = Identificación: 
+authenticated.client.form.label.companyName = Nombre de la compañía:
+authenticated.client.form.label.type = Tipo de cliente:
+authenticated.client.form.label.email = Email:
+authenticated.client.form.label.link = Link:
 
 authenticated.client.form.button.create = Registrar
 authenticated.client.form.button.update = Actualizar
+
+client.form.error.duplicated = Esta referencia ya está cogida

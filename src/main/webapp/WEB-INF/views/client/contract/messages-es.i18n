@@ -22,6 +22,7 @@ client.contract.form.label.budget = Presupuesto:
 client.contract.form.button.create = Crear
 client.contract.form.button.update = Actualizar
 client.contract.form.button.delete = Borrar
+client.contract.form.button.publish = Publicar
 
 client.contract.form.error.duplicated = Este código ya se ha usado
 employer.job.form.error.negative-salary = El salario debe ser positivo

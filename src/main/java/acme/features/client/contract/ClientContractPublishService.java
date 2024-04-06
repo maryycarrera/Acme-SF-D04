@@ -10,29 +10,28 @@ import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.contracts.Contract;
-import acme.entities.progresslogs.ProgressLog;
 import acme.entities.projects.Project;
 import acme.roles.Client;
 
 @Service
-public class ClientContractDeleteService extends AbstractService<Client, Contract> {
-
+public class ClientContractPublishService extends AbstractService<Client, Contract> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	private ClientContractRepository repository;
 
-
 	// AbstractService interface ----------------------------------------------
+
+
 	@Override
 	public void authorise() {
 		boolean status;
-		int masterId;
+		int contractId;
 		Contract contract;
 		Client client;
 
-		masterId = super.getRequest().getData("id", int.class);
-		contract = this.repository.findContractById(masterId);
+		contractId = super.getRequest().getData("id", int.class);
+		contract = this.repository.findContractById(contractId);
 		client = contract == null ? null : contract.getClient();
 		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(client);
 
@@ -52,7 +51,6 @@ public class ClientContractDeleteService extends AbstractService<Client, Contrac
 
 	@Override
 	public void bind(final Contract object) {
-		//TODO: Aquí hay que hacer las reglas de negocio
 		assert object != null;
 
 		int projectId;
@@ -63,23 +61,35 @@ public class ClientContractDeleteService extends AbstractService<Client, Contrac
 
 		super.bind(object, "code", "instantiationMoment", "providerName", "customerName", "goals", "budget");
 		object.setProject(project);
-		;
 	}
 
 	@Override
 	public void validate(final Contract object) {
 		assert object != null;
+
+		if (!super.getBuffer().getErrors().hasErrors("budget")) {
+			super.state(object.getBudget().getAmount() > 0, "budget", "client.contract.form.error.negative-budget");
+			super.state(object.getBudget().getAmount() <= object.getProject().getCost(), "budget", "client.contract.form.error.bugdet-major-project-cost");
+		}
+
+		{
+			double allBudgets = 0.0;
+			Collection<Contract> contracts;
+
+			contracts = this.repository.findContractsByClientId(object.getId());
+			for (Contract c : contracts)
+				allBudgets += c.getBudget().getAmount();
+
+			super.state(allBudgets <= object.getProject().getCost(), "*", "employer.job.form.error.bad-work-load");
+		}
 	}
 
 	@Override
 	public void perform(final Contract object) {
 		assert object != null;
 
-		Collection<ProgressLog> progressLogs;
-
-		progressLogs = this.repository.findProgressLogsByContractId(object.getId());
-		this.repository.deleteAll(progressLogs);
-		this.repository.delete(object);
+		object.setDraftMode(false);
+		this.repository.save(object);
 	}
 
 	@Override
@@ -98,7 +108,5 @@ public class ClientContractDeleteService extends AbstractService<Client, Contrac
 		dataset.put("projects", choices);
 
 		super.getResponse().addData(dataset);
-
 	}
-
 }

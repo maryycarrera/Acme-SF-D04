@@ -1,5 +1,3 @@
-form.jsp
-
 <%--
 - form.jsp
 -
@@ -18,8 +16,11 @@ form.jsp
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-textbox code="authenticated.client.form.label.area" path="area"/>
-	<acme:input-textbox code="authenticated.client.form.label.sector" path="sector"/>
+	<acme:input-textbox code="authenticated.client.form.label.identification" path="identification"/>
+	<acme:input-textbox code="authenticated.client.form.label.companyName" path="companyName"/>
+	<acme:input-textbox code="authenticated.client.form.label.type" path="type"/>
+	<acme:input-email code="authenticated.client.form.label.email" path="email"/>
+	<acme:input-url code="authenticated.client.form.label.link" path="link"/>
 	
 	<acme:submit test="${_command == 'create'}" code="authenticated.client.form.button.create" action="/authenticated/client/create"/>
 	<jstl:if test="${_command == 'update'}">
