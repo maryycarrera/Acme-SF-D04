@@ -38,10 +38,18 @@ master.menu.administrator.shut-down = Parar el sistema
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Favourite Link
 
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Favourite Link
+
+
+# master.menu.manager ##########################################################
+
+master.menu.manager = Gerente
+master.menu.manager.all-projects = Listar mis proyectos
+
 
 # master.menu.user-account ####################################################
 
