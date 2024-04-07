@@ -40,11 +40,12 @@ public class ClientProgressLogListService extends AbstractService<Client, Progre
 		Collection<ProgressLog> objects;
 		int masterId;
 
-		masterId = super.getRequest().getPrincipal().getActiveRoleId();
+		masterId = super.getRequest().getData("masterId", int.class);
 		objects = this.repository.findManyProgressLogsByMasterId(masterId);
 
 		super.getBuffer().addData(objects);
 	}
+
 	@Override
 	public void unbind(final ProgressLog object) {
 		assert object != null;

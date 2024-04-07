@@ -17,5 +17,13 @@ client.progress-log.form.label.comment = Comment:
 client.progress-log.form.label.registrationMoment = RegistrationMoment:
 client.progress-log.form.label.responsiblePerson = ResponsiblePerson:
 
+client.progress-log.form.button.create = Create		
+client.progress-log.form.button.update = Update
+client.progress-log.form.button.delete = Delete
+
+client.progress-log.form.placeholder.completeness = 0.00 - 100.00
+
 client.progress-log.list.label.responsiblePerson = ResponsiblePerson
 client.progress-log.list.label.completeness = Completeness
+
+client.progress-log.list.button.create = Create
