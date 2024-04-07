@@ -8,14 +8,14 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-client.progresslog.form.recordId = ProgressLog form
-client.progresslog.list.recordId = Listing of progresslogs
+client.progress-log.form.title = ProgressLog form
+client.progress-log.list.title = Listing of Progress logs
 
-client.progresslog.form.label.recordId = RecordId:
-client.progresslog.form.label.completeness = Completeness:
-client.progresslog.form.label.comment = Comment:
-client.progresslog.form.label.registrationMoment = RegistrationMoment:
-client.progresslog.form.label.responsiblePerson = ResponsiblePerson:
+client.progress-log.form.label.recordId = RecordId:
+client.progress-log.form.label.completeness = Completeness:
+client.progress-log.form.label.comment = Comment:
+client.progress-log.form.label.registrationMoment = RegistrationMoment:
+client.progress-log.form.label.responsiblePerson = ResponsiblePerson:
 
-client.progresslog.list.label.responsiblePerson = ResponsiblePerson
-client.progresslog.list.label.completeness = Completeness
+client.progress-log.list.label.responsiblePerson = ResponsiblePerson
+client.progress-log.list.label.completeness = Completeness

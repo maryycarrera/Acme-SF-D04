@@ -16,10 +16,10 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-textbox code="client.progresslog.form.label.recordId" path="recordId"/>
-	<acme:input-double code="client.progresslog.form.label.completeness" path="completeness" placeholder="client.progresslog.form.placeholder.completeness"/>
-	<acme:input-textbox code="client.progresslog.form.label.comment" path="comment"/>
-	<acme:input-moment code="client.contract.form.label.registrationMoment" path="registrationMoment"/>
-	<acme:input-textbox code="client.progresslog.form.label.responsiblePerson" path="responsiblePerson"/>
+	<acme:input-textbox code="client.progress-log.form.label.recordId" path="recordId"/>
+	<acme:input-double code="client.progress-log.form.label.completeness" path="completeness" placeholder="client.progress-log.form.placeholder.completeness"/>
+	<acme:input-textbox code="client.progress-log.form.label.comment" path="comment"/>
+	<acme:input-moment code="client.progress-log.form.label.registrationMoment" path="registrationMoment"/>
+	<acme:input-textbox code="client.progress-log.form.label.responsiblePerson" path="responsiblePerson"/>
 </acme:form>
 
