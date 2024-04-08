@@ -23,6 +23,9 @@ client.progress-log.form.button.delete = Delete
 
 client.progress-log.form.placeholder.completeness = 0.00 - 100.00
 
+client.progress-log.form.error.negative-completeness = This progress-log is negative
+client.progress-log.form.error.major100-completeness= This progress-log is bigger than 100
+
 client.progress-log.list.label.responsiblePerson = ResponsiblePerson
 client.progress-log.list.label.completeness = Completeness
 

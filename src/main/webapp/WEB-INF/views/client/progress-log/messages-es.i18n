@@ -23,6 +23,9 @@ client.progress-log.form.button.delete = Eliminar
 
 client.progress-log.form.placeholder.completeness = 0.00 - 100.00
 
+client.progress-log.form.error.negative-completeness = Este informe de progreso es negativo
+client.progress-log.form.error.major100-completeness= Este informe de progreso es mayor de 100
+
 client.progress-log.list.label.responsiblePerson = Persona responsable
 client.progress-log.list.label.completeness = Grado de completitud
 
