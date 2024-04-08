@@ -55,6 +55,10 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 	@Override
 	public void validate(final ProgressLog object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("completeness")) {
+			super.state(object.getCompleteness() > 0, "completeness", "client.progress-log.form.error.negative-completeness");
+			super.state(object.getCompleteness() <= 100, "completeness", "client.progress-log.form.error.major100-completeness");
+		}
 	}
 
 	@Override
