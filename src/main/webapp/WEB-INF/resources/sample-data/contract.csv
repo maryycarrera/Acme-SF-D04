@@ -1,7 +1,7 @@
 key,code,instantiationMoment,providerName,customerName,goals,budget,draft-mode,key:project,key:client
 contract-01,AC-123,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",false,project-01,client-01
 contract-02,AC-124,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"EUR 1,000,000.00",false,project-01,client-01
-contract-03,AC-125,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"GBP 1,000,000.00",false,project-01,client-02
+contract-03,AC-125,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"GBP 1.00",false,project-01,client-02
 contract-04,AC-126,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"EUR 2,000,500.00",false,project-01,client-02
 contract-05,AC-127,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"GBP 15,045,000.00",false,project-01,client-02
 contract-06,AC-128,2000/12/11 00:00,Roberto Olmo,Pepe Martín,Cumplimiento de Plazos Entregables correctos Calidad del Trabajo Seguir Presupuesto Comunicación cla,"USD 1,000,000.00",false,project-01,client-01

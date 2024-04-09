@@ -12,10 +12,10 @@ public interface ClientDashboardRepository extends AbstractRepository {
 	@Query("select count(p) from ProgressLog p where p.completeness<25")
 	int progressLogsCompletenessBelow25();
 
-	@Query("select count(p) from ProgressLog p where p.completeness<=25 and p.completeness>=50")
+	@Query("select count(p) from ProgressLog p where p.completeness>=25 and p.completeness<=50")
 	int progressLogsCompletenessBetween25And50();
 
-	@Query("select count(p) from ProgressLog p where p.completeness<=50 and p.completeness>=75")
+	@Query("select count(p) from ProgressLog p where p.completeness>=50 and p.completeness<=75")
 	int progressLogsCompletenessBetween50And75();
 
 	@Query("select count(p) from ProgressLog p where p.completeness>75")
