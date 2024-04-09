@@ -48,6 +48,7 @@ master.menu.consumer.favourite-link = Favourite Link
 
 master.menu.client = Cliente
 master.menu.client.all-contracts = Listar todos los contratos
+master.menu.client.client-dashboard = Panel de control del cliente
 
 # master.menu.manager ########################################################
 
