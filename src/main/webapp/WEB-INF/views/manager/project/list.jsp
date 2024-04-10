@@ -22,3 +22,7 @@
 	<acme:list-column code="manager.project.list.label.abstractDescription" path="abstractDescription" width="40%"/>
 	<acme:list-column code="manager.project.list.label.draftMode" path="draftMode" width="20%"/>
 </acme:list>
+
+<jstl:if test="${_command == 'list'}">
+	<acme:button code="manager.project.list.button.create" action="/manager/project/create"/>
+</jstl:if>
