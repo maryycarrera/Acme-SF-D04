@@ -18,7 +18,6 @@ manager.project.form.label.hasFatalErrors = Tiene Errores Fatales:
 manager.project.form.label.cost = Coste:
 manager.project.form.label.link = Enlace:
 
-manager.project.form.button.userStories = Historias de Usuario
 manager.project.form.button.update = Actualizar
 manager.project.form.button.delete = Eliminar
 manager.project.form.button.publish = Publicar

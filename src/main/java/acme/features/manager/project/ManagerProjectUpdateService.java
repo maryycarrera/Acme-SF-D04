@@ -60,7 +60,7 @@ public class ManagerProjectUpdateService extends AbstractService<Manager, Projec
 			Project existing;
 
 			existing = this.repository.findOneProjectByCode(object.getCode());
-			super.state(existing == null, "code", "manager.project.form.error.duplicated");
+			super.state(existing == null || existing.getId() == object.getId(), "code", "manager.project.form.error.duplicated");
 		}
 	}
 
