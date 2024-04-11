@@ -30,9 +30,9 @@
 		path="finishTimeDuration" />
 	<acme:input-money code="sponsor.sponsorship.form.label.amount"
 		path="amount" />
-	<acme:input-textbox code="sponsor.sponsorship.form.label.type"
+	<acme:input-select code="sponsor.sponsorship.form.label.type"
 		path="type" 
-		placeholder="FINANCIAL o INKIND" />
+		choices="${types}" />
 	<acme:input-textbox code="sponsor.sponsorship.form.label.contact"
 		path="contact" />
 	<acme:input-textbox code="sponsor.sponsorship.form.label.link"
