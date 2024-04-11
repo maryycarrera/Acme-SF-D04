@@ -19,12 +19,12 @@
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|delete')}">
 			<acme:input-select code="manager.assignation.form.label.project" path="project" choices="${projects }" readonly="true"/>
-			<acme:input-select code="manager.assignation.form.label.user-story" path="user-story" choices="${userStories }" readonly="true"/>
+			<acme:input-select code="manager.assignation.form.label.user-story" path="userStory" choices="${userStories }" readonly="true"/>
 			<acme:submit code="manager.assignation.form.button.delete" action="/manager/assignation/delete"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:input-select code="manager.assignation.form.label.project" path="project" choices="${projects }"/>
-			<acme:input-select code="manager.assignation.form.label.user-story" path="user-story" choices="${userStories }"/>
+			<acme:input-select code="manager.assignation.form.label.user-story" path="userStory" choices="${userStories }"/>
 			<acme:submit code="manager.assignation.form.button.create" action="/manager/assignation/create"/>
 		</jstl:when>
 	</jstl:choose>
