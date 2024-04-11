@@ -1,0 +1,32 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+manager.manager-dashboard.form.title = Panel de Gerente
+
+manager.manager-dashboard.form.title.operations-projects = Costes de mis Proyectos
+
+manager.manager-dashboard.form.label.average-cost-projects = Coste medio
+manager.manager-dashboard.form.label.deviation-cost-projects = Desviación del coste
+manager.manager-dashboard.form.label.minimum-cost-projects = Coste mínimo
+manager.manager-dashboard.form.label.maximum-cost-projects = Coste máximo
+
+manager.manager-dashboard.form.title.user-stories-by-priority = Mis Historias de Usuario en función de su Prioridad
+
+manager.manager-dashboard.form.label.must-user-stories = Número de Historias de Usuario MUST
+manager.manager-dashboard.form.label.should-user-stories = Número de Historias de Usuario SHOULD
+manager.manager-dashboard.form.label.could-user-stories = Número de Historias de Usuario COULD
+manager.manager-dashboard.form.label.wont-user-stories = Número de Historias de Usuario WONT
+
+manager.manager-dashboard.form.title.operations-user-stories = Costes de mis Historias de Usuario
+
+manager.manager-dashboard.form.label.average-cost-user-stories = Coste medio
+manager.manager-dashboard.form.label.deviation-cost-user-stories = Desviación del coste
+manager.manager-dashboard.form.label.minimum-cost-user-stories = Coste mínimo
+manager.manager-dashboard.form.label.maximum-cost-user-stories = Coste máximo
