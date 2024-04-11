@@ -11,6 +11,7 @@ import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.projects.Project;
 import acme.entities.sponsorships.Sponsorship;
+import acme.entities.sponsorships.TypeSponsorship;
 import acme.roles.Sponsor;
 
 @Service
@@ -60,9 +61,14 @@ public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Spon
 		projects = this.repository.findAllProjects();
 		choices = SelectChoices.from(projects, "title", object.getProject());
 
-		dataset = super.unbind(object, "code", "moment", "startTimeDuration", "finishTimeDuration", "amount", "type", "contact", "link", "draftMode");
+		SelectChoices choicesType;
+		choicesType = SelectChoices.from(TypeSponsorship.class, object.getType());
+
+		dataset = super.unbind(object, "code", "moment", "startTimeDuration", "finishTimeDuration", "amount", "contact", "link", "draftMode");
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);
+		dataset.put("types", choicesType);
+		dataset.put("type", choicesType.getSelected().getKey());
 
 		super.getResponse().addData(dataset);
 	}
