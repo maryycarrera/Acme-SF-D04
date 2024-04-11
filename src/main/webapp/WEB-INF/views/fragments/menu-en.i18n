@@ -44,16 +44,12 @@ master.menu.provider.favourite-link = Favourite Link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite Link
 
-# master.menu.manager ########################################################
-
-master.menu.manager = Manager
-master.menu.manager.all-user-stories = List my user stories
-
-
 # master.menu.manager ##########################################################
 
 master.menu.manager = Manager
 master.menu.manager.all-projects = List my projects
+master.menu.manager.all-user-stories = List my user stories
+master.menu.manager.all-assignations = List my assignations
 
 
 # master.menu.user-account ####################################################

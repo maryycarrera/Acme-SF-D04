@@ -12,7 +12,7 @@ import acme.entities.userstories.UserStory;
 import acme.roles.Manager;
 
 @Service
-public class ManagerUserStoryShowService extends AbstractService<Manager, UserStory> {
+public class ManagerUserStoryCreateService extends AbstractService<Manager, UserStory> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -25,13 +25,8 @@ public class ManagerUserStoryShowService extends AbstractService<Manager, UserSt
 	@Override
 	public void authorise() {
 		boolean status;
-		int userStoryId;
-		UserStory userStory;
 
-		userStoryId = super.getRequest().getData("id", int.class);
-		userStory = this.repository.findOneUserStoryById(userStoryId);
-
-		status = userStory != null && super.getRequest().getPrincipal().hasRole(Manager.class);
+		status = super.getRequest().getPrincipal().hasRole(Manager.class);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -39,12 +34,33 @@ public class ManagerUserStoryShowService extends AbstractService<Manager, UserSt
 	@Override
 	public void load() {
 		UserStory object;
-		int id;
+		Manager manager;
 
-		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findOneUserStoryById(id);
+		manager = this.repository.findOneManagerById(super.getRequest().getPrincipal().getActiveRoleId());
+		object = new UserStory();
+		object.setDraftMode(true);
+		object.setManager(manager);
 
 		super.getBuffer().addData(object);
+	}
+
+	@Override
+	public void bind(final UserStory object) {
+		assert object != null;
+
+		super.bind(object, "title", "description", "estimatedCost", "acceptanceCriteria", "priority", "link");
+	}
+
+	@Override
+	public void validate(final UserStory object) {
+		assert object != null;
+	}
+
+	@Override
+	public void perform(final UserStory object) {
+		assert object != null;
+
+		this.repository.save(object);
 	}
 
 	@Override

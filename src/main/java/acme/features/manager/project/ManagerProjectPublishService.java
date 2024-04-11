@@ -44,6 +44,7 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findOneProjectById(id);
+		object.setDraftMode(false);
 
 		super.getBuffer().addData(object);
 	}
@@ -52,7 +53,7 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 	public void bind(final Project object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "abstractDescription", "hasFatalErrors", "cost", "link", "draftMode");
+		super.bind(object, "code", "title", "abstractDescription", "hasFatalErrors", "cost", "link");
 	}
 
 	@Override
@@ -71,8 +72,8 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors()) {
-			super.state(!userStories.isEmpty(), "", "manager.project.form.error.no-user-stories");
-			super.state(userStories.stream().allMatch(us -> !us.isDraftMode()), "", "manager.project.form.error.user-stories-not-published");
+			super.state(!userStories.isEmpty(), "code", "manager.project.form.error.no-user-stories");
+			super.state(userStories.stream().allMatch(us -> !us.isDraftMode()), "code", "manager.project.form.error.user-stories-not-published");
 		}
 	}
 

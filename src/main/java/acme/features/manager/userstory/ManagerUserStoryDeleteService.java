@@ -1,5 +1,5 @@
 
-package acme.features.manager.project;
+package acme.features.manager.userstory;
 
 import java.util.Collection;
 
@@ -8,30 +8,32 @@ import org.springframework.stereotype.Service;
 
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
+import acme.client.views.SelectChoices;
 import acme.entities.assignations.Assignation;
-import acme.entities.projects.Project;
+import acme.entities.userstories.Priority;
+import acme.entities.userstories.UserStory;
 import acme.roles.Manager;
 
 @Service
-public class ManagerProjectDeleteService extends AbstractService<Manager, Project> {
+public class ManagerUserStoryDeleteService extends AbstractService<Manager, UserStory> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private ManagerProjectRepository repository;
+	private ManagerUserStoryRepository repository;
 
-	// AbstractService<Manager, Project> ---------------------------
+	// AbstractService<Manager, UserStory> ---------------------------
 
 
 	@Override
 	public void authorise() {
 		boolean status;
 		int masterId;
-		Project project;
+		UserStory project;
 		Manager manager;
 
 		masterId = super.getRequest().getData("id", int.class);
-		project = this.repository.findOneProjectById(masterId);
+		project = this.repository.findOneUserStoryById(masterId);
 		manager = project == null ? null : project.getManager();
 		status = project != null && project.isDraftMode() && super.getRequest().getPrincipal().hasRole(manager);
 
@@ -40,46 +42,51 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 
 	@Override
 	public void load() {
-		Project object;
+		UserStory object;
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findOneProjectById(id);
+		object = this.repository.findOneUserStoryById(id);
 
 		super.getBuffer().addData(object);
 	}
 
 	@Override
-	public void bind(final Project object) {
+	public void bind(final UserStory object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "abstractDescription", "hasFatalErrors", "cost", "link");
+		super.bind(object, "title", "description", "estimatedCost", "acceptanceCriteria", "priority", "link");
 	}
 
 	@Override
-	public void validate(final Project object) {
+	public void validate(final UserStory object) {
 		assert object != null;
 	}
 
 	@Override
-	public void perform(final Project object) {
+	public void perform(final UserStory object) {
 		assert object != null;
 
 		Collection<Assignation> a;
 
-		a = this.repository.findAssignationsByProjectId(object.getId());
+		a = this.repository.findAssignationsByUserStoryId(object.getId());
 
 		this.repository.delete(object);
 		this.repository.deleteAll(a);
 	}
 
 	@Override
-	public void unbind(final Project object) {
+	public void unbind(final UserStory object) {
 		assert object != null;
 
+		SelectChoices choices;
 		Dataset dataset;
 
-		dataset = super.unbind(object, "code", "title", "abstractDescription", "hasFatalErrors", "cost", "link", "draftMode");
+		choices = SelectChoices.from(Priority.class, object.getPriority());
+
+		dataset = super.unbind(object, "title", "description", "estimatedCost", "acceptanceCriteria", "link", "draftMode");
+		dataset.put("priority", choices.getSelected().getKey());
+		dataset.put("priorities", choices);
 
 		super.getResponse().addData(dataset);
 	}

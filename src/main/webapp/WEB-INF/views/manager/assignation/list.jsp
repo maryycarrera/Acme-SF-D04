@@ -17,12 +17,10 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="manager.user-story.list.label.title" path="title" width="17%"/>
-	<acme:list-column code="manager.user-story.list.label.estimatedCost" path="estimatedCost" width="17%"/>
-	<acme:list-column code="manager.user-story.list.label.priority" path="priority" width="16%"/>
-	<acme:list-column code="manager.user-story.list.label.draftMode" path="draftMode" width="16%"/>
+	<acme:list-column code="manager.assignation.list.label.project" path="project" width="50%"/>
+	<acme:list-column code="manager.assignation.list.label.user-story" path="userStory" width="50%"/>
 </acme:list>
 
 <jstl:if test="${_command == 'list'}">
-	<acme:button code="manager.user-story.list.button.create" action="/manager/user-story/create"/>
+	<acme:button code="manager.assignation.list.button.create" action="/manager/assignation/create"/>
 </jstl:if>
