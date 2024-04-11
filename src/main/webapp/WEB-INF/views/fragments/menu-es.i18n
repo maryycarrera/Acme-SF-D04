@@ -50,6 +50,7 @@ master.menu.manager = Gerente
 master.menu.manager.all-projects = Listar mis proyectos
 master.menu.manager.all-user-stories = Listar mis historias de usuario
 master.menu.manager.all-assignations = Listar mis asignaciones
+master.menu.manager.manager-dashboard = Panel de control de gerente
 
 
 # master.menu.user-account ####################################################

@@ -48,6 +48,7 @@
 			<acme:menu-suboption code="master.menu.manager.all-user-stories" action="/manager/user-story/list"/>		
 			<acme:menu-suboption code="master.menu.manager.all-projects" action="/manager/project/list"/>
 			<acme:menu-suboption code="master.menu.manager.all-assignations" action="/manager/assignation/list"/>
+			<acme:menu-suboption code="master.menu.manager.manager-dashboard" action="/manager/manager-dashboard/show"/>
 		</acme:menu-option>
 	</acme:menu-left>
 
