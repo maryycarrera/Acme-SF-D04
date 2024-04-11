@@ -1,4 +1,4 @@
-# messages-es.i18n
+# messages-en.i18n
 #
 # Copyright (C) 2012-2024 Rafael Corchuelo.
 #
@@ -8,18 +8,30 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-manager.project.form.title = Detalles de Proyecto
-manager.project.list.title = Listado de Projecto
+manager.project.form.title = Project form
+manager.project.list.title = Listing of Projects
 
-manager.project.form.label.code = Código:
-manager.project.form.label.title = Título: 
-manager.project.form.label.abstractDescription = Descripción Abstracta:
-manager.project.form.label.hasFatalErrors = Tiene Errores Fatales:
-manager.project.form.label.cost = Coste:
-manager.project.form.label.link = Enlace:
-manager.project.form.label.draftMode = Modo Borrador:
+manager.project.form.label.code = Code:
+manager.project.form.label.title = Title: 
+manager.project.form.label.abstractDescription = Abstract:
+manager.project.form.label.hasFatalErrors = Has Fatal Errors:
+manager.project.form.label.cost = Cost:
+manager.project.form.label.link = Link:
 
-manager.project.list.label.code = Código
-manager.project.list.label.title = Título
-manager.project.list.label.abstractDescription = Descripción Abstracta
-manager.project.list.label.draftMode = Modo Borrador
+manager.project.form.button.userStories = User Stories
+manager.project.form.button.update = Update
+manager.project.form.button.delete = Delete
+manager.project.form.button.publish = Publish
+manager.project.form.button.create = Create
+
+manager.project.form.error.duplicated = This code is already in use
+manager.project.form.error.hasFatalErrors = You can not publish a project with fatal errors
+manager.project.form.error.no-user-stories = You can not publish a project without user stories
+manager.project.form.error.user-stories-not-published = All user stories of a project must be published for it to be published
+
+manager.project.list.label.code = Code
+manager.project.list.label.title = Title
+manager.project.list.label.abstractDescription = Abstract
+manager.project.list.label.draftMode = Draft Mode
+
+manager.project.list.button.create = Create
