@@ -22,6 +22,10 @@ administrator.banner.form.button.update = Update
 administrator.banner.form.button.delete = Delete
 administrator.banner.form.button.create = Create
 
+administrator.banner.form.error.must-start-after-instantiation = The display period must start after the instantiation moment
+administrator.banner.form.error.must-finish-after-start = The finish date for the display period must be set after its start date
+administrator.banner.form.error.display-period-too-short = The display period must last for at least a week
+
 administrator.banner.list.label.instantiationMoment = Instantiation Moment
 administrator.banner.list.label.startDate = Start Date
 administrator.banner.list.label.finishDate = Finish Date
