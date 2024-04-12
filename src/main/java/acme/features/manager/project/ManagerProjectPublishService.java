@@ -75,6 +75,9 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 			super.state(!userStories.isEmpty(), "code", "manager.project.form.error.no-user-stories");
 			super.state(userStories.stream().allMatch(us -> !us.isDraftMode()), "code", "manager.project.form.error.user-stories-not-published");
 		}
+
+		if (super.getBuffer().getErrors().hasErrors())
+			object.setDraftMode(true);
 	}
 
 	@Override
