@@ -1,14 +1,14 @@
-key,code,moment,startTimeDuration,finishTimeDuration,amount,type,contact,link,key:project,key:sponsor
-sponsorship-01,ABZ-109,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,project-01,sponsor-01
-sponsorship-02,AB-109,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,project-01,sponsor-01
-sponsorship-03,A-109,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,project-01,sponsor-01
-sponsorship-04,ABZ-119,2022/7/29 23:59,2023/12/28 16:00,202/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,project-01,sponsor-01
-sponsorship-05,ABZ-129,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,project-01,sponsor-01
-sponsorship-06,ABZ-139,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,1.0 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,project-01,sponsor-01
-sponsorship-07,ABZ-149,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,123.2 USD,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,project-01,sponsor-01
-sponsorship-08,ABZ-159,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,INKIND,sponsorship@gmail.com,https://www.sponsorship1.es/,project-01,sponsor-01
-sponsorship-09,ABZ-169,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,INKIND,sponsorship@gmail.com,null,project-01,sponsor-01
-sponsorship-10,ABZ-179,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,INKIND,sponsorship@gmail.com,,project-01,sponsor-01
-sponsorship-11,ABZ-189,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,INKIND,sponsorship@gmail.com,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp=Egxnd3Mt,project-01,sponsor-01
-sponsorship-12,ABZ-199,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://github.com/users/maryycarrera/projects/2/views/1?filterQuery=assignee%3AAdrcabmar,project-01,sponsor-01
-sponsorship-013,ACZ-159,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,INKIND,sponsorship@gmail.com,https://www.sponsorship1.es/,project-01,sponsor-01
+key,code,moment,startTimeDuration,finishTimeDuration,amount,type,contact,link,draftMode,key:project,key:sponsor
+sponsorship-01,ABZ-109,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,true,project-01,sponsor-01
+sponsorship-02,AB-109,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,true,project-01,sponsor-01
+sponsorship-03,A-109,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,true,project-01,sponsor-01
+sponsorship-04,ABZ-119,2022/7/29 23:59,2023/12/28 16:00,202/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,true,project-01,sponsor-01
+sponsorship-05,ABZ-129,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,true,project-01,sponsor-01
+sponsorship-06,ABZ-139,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,1.0 EUR,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,false,project-01,sponsor-01
+sponsorship-07,ABZ-149,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,123.2 USD,FINANCIAL,sponsorship@gmail.com,https://www.sponsorship1.es/,false,project-01,sponsor-01
+sponsorship-08,ABZ-159,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,INKIND,sponsorship@gmail.com,https://www.sponsorship1.es/,false,project-01,sponsor-01
+sponsorship-09,ABZ-169,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,INKIND,sponsorship@gmail.com,null,false,project-01,sponsor-01
+sponsorship-10,ABZ-179,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,INKIND,sponsorship@gmail.com,,false,project-01,sponsor-01
+sponsorship-11,ABZ-189,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,INKIND,sponsorship@gmail.com,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp=Egxnd3Mt,false,project-01,sponsor-01
+sponsorship-12,ABZ-199,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,FINANCIAL,sponsorship@gmail.com,https://github.com/users/maryycarrera/projects/2/views/1?filterQuery=assignee%3AAdrcabmar,false,project-01,sponsor-01
+sponsorship-013,ACZ-159,2019/11/28 15:00,2019/12/28 16:00,2020/11/28 15:00,5676.23 EUR,INKIND,sponsorship@gmail.com,https://www.sponsorship1.es/,true,project-01,sponsor-01
