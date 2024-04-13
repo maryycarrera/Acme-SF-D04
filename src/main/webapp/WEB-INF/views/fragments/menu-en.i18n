@@ -53,6 +53,11 @@ master.menu.manager.all-user-stories = List my user stories
 master.menu.manager.all-assignations = List my assignations
 master.menu.manager.manager-dashboard = Manager dashboard
 
+# master.menu.any ##########################################################
+
+master.menu.any = Any Principal
+master.menu.any.published-projects = List all published projects
+
 
 # master.menu.user-account ####################################################
 

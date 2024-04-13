@@ -53,6 +53,11 @@ master.menu.manager.all-user-stories = Listar mis historias de usuario
 master.menu.manager.all-assignations = Listar mis asignaciones
 master.menu.manager.manager-dashboard = Panel de control de gerente
 
+# master.menu.any ##########################################################
+
+master.menu.any = Cualquier Usuario
+master.menu.any.published-projects = Listar todos los proyectos publicados
+
 
 # master.menu.user-account ####################################################
 
