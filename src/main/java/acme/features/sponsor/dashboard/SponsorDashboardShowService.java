@@ -61,6 +61,8 @@ public class SponsorDashboardShowService extends AbstractService<Sponsor, Sponso
 		dashboard.setMinimumQuantityInvoices(minimumQuantityInvoices);
 		dashboard.setMaximumQuantityInvoices(maximumQuantityInvoices);
 
+		super.getBuffer().addData(dashboard);
+
 	}
 
 	@Override

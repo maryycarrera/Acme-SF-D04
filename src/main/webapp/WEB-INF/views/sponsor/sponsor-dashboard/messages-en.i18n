@@ -1,0 +1,31 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+sponsor.sponsor-dashboard.form.title = Sponsor dashboard
+
+sponsor.sponsor-dashboard.form.title.operations = Datos extra
+
+sponsor.sponsor-dashboard.form.label.invoices-tax-below-equal-21 =  Number of Invoices with tax below or equal 0.21%
+sponsor.sponsor-dashboard.form.label.sponsorships-with-link =  Number of Sponsorships with links
+
+
+sponsor.sponsor-dashboard.form.title.amount-sponsorships = Operations with amount of sponsorships  
+
+sponsor.sponsor-dashboard.form.label.average-amount-of-sponsorship =  Average amount of sponsorships
+sponsor.sponsor-dashboard.form.label.deviation-amount-of-sponsorship =  Deviation amount of sponsorships
+sponsor.sponsor-dashboard.form.label.minimum-amount-of-sponsorship = Minimum amount of sponsorships
+sponsor.sponsor-dashboard.form.label.maximum-amount-of-sponsorship = Maximum amount of sponsorships
+
+sponsor.sponsor-dashboard.form.title.quantity-invoice = Operations with quantity of invoices 
+
+sponsor.sponsor-dashboard.form.label.average-quantity-of-invoice =  Average quantity of invoices 
+sponsor.sponsor-dashboard.form.label.deviation-quantity-of-invoice =  Deviation quantity of invoices 
+sponsor.sponsor-dashboard.form.label.minimum-quantity-of-invoice = Minimum quantity of invoices 
+sponsor.sponsor-dashboard.form.label.maximum-quantity-of-invoice = Maximum quantity of invoices 

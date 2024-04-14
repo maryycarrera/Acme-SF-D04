@@ -59,6 +59,7 @@ master.menu.manager.all-projects = List my projects
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.all-sponsorships = List all sponsorships
+master.menu.sponsor.sponsor-dashboard = Sponsor dashboard
 
 # master.menu.user-account ####################################################
 

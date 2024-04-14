@@ -1,0 +1,30 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+sponsor.sponsor-dashboard.form.title = Panel de patrocinadores
+
+sponsor.sponsor-dashboard.form.title.operations = Datos adicionales
+
+sponsor.sponsor-dashboard.form.label.invoices-tax-below-equal-21 = Número de facturas con impuestos iguales o inferiores al 0.21%
+sponsor.sponsor-dashboard.form.label.sponsorships-with-link = Número de patrocinios con enlaces
+
+sponsor.sponsor-dashboard.form.title.amount-sponsorships = Operaciones con precios de patrocinios
+
+sponsor.sponsor-dashboard.form.label.average-amount-of-sponsorship = Promedio de precios de patrocinios
+sponsor.sponsor-dashboard.form.label.deviation-amount-of-sponsorship = Desviación de la precios de patrocinios
+sponsor.sponsor-dashboard.form.label.minimum-amount-of-sponsorship = Precio mínima de patrocinios
+sponsor.sponsor-dashboard.form.label.maximum-amount-of-sponsorship = Precio máxima de patrocinios
+
+sponsor.sponsor-dashboard.form.title.quantity-invoice = Operaciones con cantidad de facturas
+
+sponsor.sponsor-dashboard.form.label.average-quantity-of-invoice = Promedio de precios de facturas
+sponsor.sponsor-dashboard.form.label.deviation-quantity-of-invoice = Desviación de la precios de facturas
+sponsor.sponsor-dashboard.form.label.minimum-quantity-of-invoice = Precio mínima de facturas
+sponsor.sponsor-dashboard.form.label.maximum-quantity-of-invoice = Precio máxima de facturas

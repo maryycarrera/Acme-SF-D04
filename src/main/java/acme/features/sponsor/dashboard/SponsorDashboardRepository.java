@@ -40,11 +40,11 @@ public interface SponsorDashboardRepository extends AbstractRepository {
 
 	Double deviationQuantityInvoices();
 
-	@Query("SELECT min(s.quantity.amount) FROM Invoice i")
+	@Query("SELECT min(i.quantity.amount) FROM Invoice i")
 
 	Double minimumQuantityInvoices();
 
-	@Query("SELECT max(s.quantity.amount) FROM Invoice i")
+	@Query("SELECT max(i.quantity.amount) FROM Invoice i")
 
 	Double maximumQuantityInvoices();
 
