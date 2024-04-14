@@ -42,6 +42,7 @@
 	<jstl:choose>
 		<jstl:when
 			test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+			<acme:button code="sponsor.sponsorship.form.button.invoice" action="/sponsor/invoice/list?masterId=${id}"/>	
 			<acme:submit code="sponsor.sponsorship.form.button.update"
 				action="/sponsor/sponsorship/update" />
 			<acme:submit code="sponsor.sponsorship.form.button.delete"

@@ -21,7 +21,7 @@ sponsor.sponsorship.form.label.type = Type:
 sponsor.sponsorship.form.label.contact = Contact:
 sponsor.sponsorship.form.label.link = Link:
 
-
+sponsor.sponsorship.form.button.invoice = Invoices
 sponsor.sponsorship.form.button.create = Create
 sponsor.sponsorship.form.button.update = Update
 sponsor.sponsorship.form.button.delete = Delete

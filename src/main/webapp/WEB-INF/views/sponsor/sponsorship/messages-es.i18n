@@ -21,14 +21,13 @@ sponsor.sponsorship.form.label.type = Tipo:
 sponsor.sponsorship.form.label.contact = Contacto:
 sponsor.sponsorship.form.label.link = Link:
 
-
+sponsor.sponsorship.form.button.invoice = Facturas
 sponsor.sponsorship.form.button.create = Crear
 sponsor.sponsorship.form.button.update = Actualizar
 sponsor.sponsorship.form.button.delete = Borrar
 sponsor.sponsorship.form.button.publish = Publicar
 
 sponsor.sponsorship.form.error.duplicated = Este código ya se ha usado
-sponsor.contract.form.error.bugdet-major-project-cost = El presupuesto debe ser menor o igual que el coste del proyecto
 
 sponsor.sponsorship.list.label.code = Codigo
 sponsor.sponsorship.list.label.amount = Precio
