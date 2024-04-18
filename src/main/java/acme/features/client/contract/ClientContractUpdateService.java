@@ -33,7 +33,7 @@ public class ClientContractUpdateService extends AbstractService<Client, Contrac
 		masterId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findContractById(masterId);
 		client = contract == null ? null : contract.getClient();
-		status = contract != null && super.getRequest().getPrincipal().hasRole(client);
+		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(client);
 
 		super.getResponse().setAuthorised(status);
 	}
