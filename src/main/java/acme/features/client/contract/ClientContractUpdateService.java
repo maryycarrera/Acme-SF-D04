@@ -51,7 +51,6 @@ public class ClientContractUpdateService extends AbstractService<Client, Contrac
 
 	@Override
 	public void bind(final Contract object) {
-		//TODO: Aquí hay que hacer las reglas de negocio
 		assert object != null;
 
 		int projectId;
@@ -68,6 +67,17 @@ public class ClientContractUpdateService extends AbstractService<Client, Contrac
 	@Override
 	public void validate(final Contract object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			Contract existing;
+
+			existing = this.repository.findOneContractByCode(object.getCode());
+			super.state(existing == null, "code", "client.contract.form.error.duplicated");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("budget")) {
+			super.state(object.getBudget().getAmount() > 0, "budget", "client.contract.form.error.negative-budget");
+			super.state(object.getBudget().getAmount() <= object.getProject().getCost(), "budget", "client.contract.form.error.bugdet-major-project-cost");
+		}
 	}
 
 	@Override

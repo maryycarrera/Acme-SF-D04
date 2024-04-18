@@ -19,4 +19,4 @@ authenticated.client.form.label.link = Link:
 authenticated.client.form.button.create = Register
 authenticated.client.form.button.update = Update
 
-client.form.error.duplicated = This identification is taken
+authenticated.client.form.error.duplicated = This identification is taken

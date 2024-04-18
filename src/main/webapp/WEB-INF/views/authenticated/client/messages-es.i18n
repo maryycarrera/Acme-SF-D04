@@ -19,4 +19,4 @@ authenticated.client.form.label.link = Link:
 authenticated.client.form.button.create = Registrar
 authenticated.client.form.button.update = Actualizar
 
-client.form.error.duplicated = Esta referencia ya está cogida
+authenticated.client.form.error.duplicated = Esta referencia ya está cogida
