@@ -18,6 +18,7 @@
 <acme:list>
 	<acme:list-column code="client.progress-log.list.label.responsiblePerson" path="responsiblePerson" width="80%"/>	
 	<acme:list-column code="client.progress-log.list.label.completeness" path="completeness" width="20%"/>
+	<acme:list-payload path="payload"/>
 </acme:list>
 
 <acme:button test="${showCreate}" code="client.progress-log.list.button.create" action="/client/progress-log/create?masterId=${masterId}"/>

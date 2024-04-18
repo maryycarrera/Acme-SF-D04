@@ -27,6 +27,8 @@ public class ClientDashboardShowService extends AbstractService<Client, ClientDa
 
 	@Override
 	public void load() {
+		int clientId = super.getRequest().getPrincipal().getActiveRoleId();
+
 		ClientDashboard dashboard;
 		int progressLogsCompletenessBelow25;
 		int progressLogsCompletenessBetween25And50;
@@ -37,14 +39,14 @@ public class ClientDashboardShowService extends AbstractService<Client, ClientDa
 		Double minimumBudgetOfContracts;
 		Double maximumBudgetOfContracts;
 
-		progressLogsCompletenessBelow25 = this.repository.progressLogsCompletenessBelow25();
-		progressLogsCompletenessBetween25And50 = this.repository.progressLogsCompletenessBetween25And50();
-		progressLogsCompletenessBetween50And75 = this.repository.progressLogsCompletenessBetween50And75();
-		progressLogsCompletenessAbove75 = this.repository.progressLogsCompletenessAbove75();
-		averageBudgetOfContracts = this.repository.averageBudgetOfContracts();
-		deviationBudgetOfContracts = this.repository.deviationBudgetOfContracts();
-		minimumBudgetOfContracts = this.repository.minimumBudgetOfContracts();
-		maximumBudgetOfContracts = this.repository.maximumBudgetOfContracts();
+		progressLogsCompletenessBelow25 = this.repository.progressLogsCompletenessBelow25(clientId);
+		progressLogsCompletenessBetween25And50 = this.repository.progressLogsCompletenessBetween25And50(clientId);
+		progressLogsCompletenessBetween50And75 = this.repository.progressLogsCompletenessBetween50And75(clientId);
+		progressLogsCompletenessAbove75 = this.repository.progressLogsCompletenessAbove75(clientId);
+		averageBudgetOfContracts = this.repository.averageBudgetOfContracts(clientId);
+		deviationBudgetOfContracts = this.repository.deviationBudgetOfContracts(clientId);
+		minimumBudgetOfContracts = this.repository.minimumBudgetOfContracts(clientId);
+		maximumBudgetOfContracts = this.repository.maximumBudgetOfContracts(clientId);
 
 		dashboard = new ClientDashboard();
 		dashboard.setProgressLogsCompletenessBelow25(progressLogsCompletenessBelow25);
