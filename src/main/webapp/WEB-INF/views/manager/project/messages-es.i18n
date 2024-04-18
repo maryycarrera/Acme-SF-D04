@@ -1,0 +1,36 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+manager.project.form.title = Detalles de Proyecto
+manager.project.list.title = Listado de Projecto
+
+manager.project.form.label.code = Código:
+manager.project.form.label.title = Título: 
+manager.project.form.label.abstractDescription = Descripción Abstracta:
+manager.project.form.label.hasFatalErrors = Tiene Errores Fatales:
+manager.project.form.label.cost = Coste:
+manager.project.form.label.link = Enlace:
+
+manager.project.form.button.update = Actualizar
+manager.project.form.button.delete = Eliminar
+manager.project.form.button.publish = Publicar
+manager.project.form.button.create = Crear
+
+manager.project.form.error.duplicated = Este código ya está en uso
+manager.project.form.error.hasFatalErrors = No puedes publicar un proyecto que tiene errores fatales
+manager.project.form.error.no-user-stories = No puedes publicar un proyecto que no tiene historias de usuario
+manager.project.form.error.user-stories-not-published = Todas las historias de usuario de un proyecto deben estar publicadas para poder publicarlo
+
+manager.project.list.label.code = Código
+manager.project.list.label.title = Título
+manager.project.list.label.abstractDescription = Descripción Abstracta
+manager.project.list.label.draftMode = Modo Borrador
+
+manager.project.list.button.create = Crear

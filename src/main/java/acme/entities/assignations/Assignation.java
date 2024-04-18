@@ -1,5 +1,5 @@
 
-package acme.entities.projectuserstories;
+package acme.entities.assignations;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -15,7 +15,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class ProjectUserStory extends AbstractEntity {
+public class Assignation extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
