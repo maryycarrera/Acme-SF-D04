@@ -120,7 +120,7 @@ bg=ORANGE</panel_attributes>
       <x>456</x>
       <y>256</y>
       <w>280</w>
-      <h>120</h>
+      <h>128</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 User Story
@@ -130,7 +130,8 @@ User Story
 +estimatedCost: int{NotNull, Min(1)}
 +acceptanceCriteria: String{NotBlank, Length(1,100)}
 +priority: Priority
-+link: String{URL}</panel_attributes>
++link: String{URL}
++draftMode: boolean{NotNull}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -250,7 +251,7 @@ Manager Dashboard
       <h>56</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Project User Story
+Assignation
 --</panel_attributes>
     <additional_attributes/>
   </element>
@@ -271,14 +272,14 @@ m2=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>448</x>
-      <y>368</y>
+      <y>376</y>
       <w>120</w>
-      <h>120</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=x-&gt;
 m1=1..*
 m2=1</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;80.0;120.0;80.0;120.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;10.0;70.0;120.0;70.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Text</id>
