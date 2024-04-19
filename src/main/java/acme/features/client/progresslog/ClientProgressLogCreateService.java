@@ -1,6 +1,5 @@
-package acme.features.client.progresslog;
 
-import java.util.Date;
+package acme.features.client.progresslog;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,7 +29,7 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 
 		masterId = super.getRequest().getData("masterId", int.class);
 		contract = this.repository.findOneContractById(masterId);
-		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
+		status = contract != null && !contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -45,11 +44,7 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 		contract = this.repository.findOneContractById(masterId);
 
 		object = new ProgressLog();
-		object.setRecordId("");
-		object.setCompleteness(0.0); //TODO: comprobar si está bien
-		object.setComment("");
-		object.setRegistrationMoment(new Date()); //TODO: comprobar si es así
-		object.setResponsiblePerson("");
+		object.setDraftMode(true);
 		object.setContract(contract);
 
 		super.getBuffer().addData(object);
@@ -71,16 +66,12 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 			existing = this.repository.findOneProgressLogRecordId(object.getRecordId());
 			super.state(existing == null, "recordId", "client.progress-log.form.error.duplicated");
 		}
-		if (!super.getBuffer().getErrors().hasErrors("completeness")) {
-			super.state(object.getCompleteness() > 0, "completeness", "client.progress-log.form.error.negative-completeness");
-			super.state(object.getCompleteness() <= 100, "completeness", "client.progress-log.form.error.major100-completeness");
-		}
 	}
 
 	@Override
 	public void perform(final ProgressLog object) {
 		assert object != null;
-
+		object.setDraftMode(true);
 		this.repository.save(object);
 	}
 
@@ -91,8 +82,8 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 		Dataset dataset;
 
 		dataset = super.unbind(object, "recordId", "completeness", "comment", "registrationMoment", "responsiblePerson");
-		dataset.put("masterId", super.getRequest().getData("masterId", int.class));
-		dataset.put("draftMode", object.getContract().isDraftMode());
+		dataset.put("masterId", object.getContract().getId());
+		dataset.put("draftMode", object.isDraftMode());
 
 		super.getResponse().addData(dataset);
 	}

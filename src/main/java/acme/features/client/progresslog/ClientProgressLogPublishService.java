@@ -11,14 +11,10 @@ import acme.entities.progresslogs.ProgressLog;
 import acme.roles.Client;
 
 @Service
-public class ClientProgressLogUpdateService extends AbstractService<Client, ProgressLog> {
-
-	// Internal state ---------------------------------------------------------
+public class ClientProgressLogPublishService extends AbstractService<Client, ProgressLog> {
 
 	@Autowired
 	private ClientProgressLogRepository repository;
-
-	// AbstractService interface ----------------------------------------------
 
 
 	@Override
@@ -38,6 +34,7 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 
 	@Override
 	public void load() {
+
 		ProgressLog object;
 		int id;
 
@@ -45,10 +42,12 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 		object = this.repository.findOneProgressLogById(id);
 
 		super.getBuffer().addData(object);
+
 	}
 
 	@Override
 	public void bind(final ProgressLog object) {
+
 		assert object != null;
 
 		int progressLogId;
@@ -63,11 +62,12 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 	@Override
 	public void validate(final ProgressLog object) {
 		assert object != null;
+
 		if (!super.getBuffer().getErrors().hasErrors("recordId")) {
 			ProgressLog existing;
 
-			existing = this.repository.findOneProgressLogRecordId(object.getRecordId());
-			super.state(existing == null || existing.equals(object), "recordId", "client.progress-log.form.error.duplicated");
+			existing = this.repository.findOneProgressLogByRecordId(object.getRecordId());
+			super.state(existing == null || existing.equals(object), "recordId", "client.progressLog.form.error.duplicated");
 		}
 	}
 
@@ -75,6 +75,7 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 	public void perform(final ProgressLog object) {
 		assert object != null;
 
+		object.setDraftMode(false);
 		this.repository.save(object);
 	}
 
@@ -85,10 +86,11 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 		Dataset dataset;
 
 		dataset = super.unbind(object, "recordId", "completeness", "comment", "registrationMoment", "responsiblePerson");
+
 		dataset.put("masterId", object.getContract().getId());
 		dataset.put("draftMode", object.isDraftMode());
 
 		super.getResponse().addData(dataset);
-
 	}
+
 }

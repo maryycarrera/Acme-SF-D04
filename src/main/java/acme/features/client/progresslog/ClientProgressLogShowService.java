@@ -1,3 +1,4 @@
+
 package acme.features.client.progresslog;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class ClientProgressLogShowService extends AbstractService<Client, Progre
 
 		progressLogId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findOneContractByProgressLogId(progressLogId);
-		status = contract != null && (!contract.isDraftMode() || super.getRequest().getPrincipal().hasRole(contract.getClient()));
+		status = contract != null && super.getRequest().getPrincipal().hasRole(contract.getClient());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -49,9 +50,8 @@ public class ClientProgressLogShowService extends AbstractService<Client, Progre
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "recordId", "completeness", "comment", "registrationMoment", "responsiblePerson");
+		dataset = super.unbind(object, "recordId", "completeness", "comment", "registrationMoment", "responsiblePerson", "draftMode");
 		dataset.put("masterId", object.getContract().getId());
-		dataset.put("draftMode", object.getContract().isDraftMode());
 
 		super.getResponse().addData(dataset);
 	}
