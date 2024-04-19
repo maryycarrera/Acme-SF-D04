@@ -32,9 +32,11 @@
             <acme:input-textbox code="client.contract.form.label.providerName" path="providerName" readonly="true"/>
             <acme:input-textbox code="client.contract.form.label.customerName" path="customerName" readonly="true"/>
             <acme:input-textbox code="client.contract.form.label.goals" path="goals" readonly="true"/>
-            <acme:input-money code="client.contract.form.label.budget" path="budget" readonly="true"/>		
+            <acme:input-money code="client.contract.form.label.budget" path="budget" readonly="true"/>	
+            <acme:button code="client.contract.form.button.progress-logs" action="/client/progress-log/list?masterId=${id}"/>		
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+		    <acme:button code="client.contract.form.button.progress-logs" action="/client/progress-log/list?masterId=${id}"/>	
 			<acme:submit code="client.contract.form.button.update" action="/client/contract/update"/>
 			<acme:submit code="client.contract.form.button.delete" action="/client/contract/delete"/>
 			<acme:submit code="client.contract.form.button.publish" action="/client/contract/publish"/>

@@ -23,4 +23,5 @@
 	<acme:input-textbox code="any.contract.form.label.customerName" path="customerName"/>
 	<acme:input-textbox code="any.contract.form.label.goals" path="goals"/>
 	<acme:input-money code="any.contract.form.label.budget" path="budget"/>
+	<acme:button code="any.contract.form.button.progress-logs" action="/any/progress-log/list?masterId=${id}"/>	
 </acme:form>

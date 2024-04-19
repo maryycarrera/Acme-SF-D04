@@ -16,9 +16,7 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="client.progress-log.list.label.responsiblePerson" path="responsiblePerson" width="80%"/>	
-	<acme:list-column code="client.progress-log.list.label.completeness" path="completeness" width="20%"/>
-	<acme:list-payload path="payload"/>
+	<acme:list-column code="any.progress-log.list.label.recordId" path="recordId" width="20%"/>	
+	<acme:list-column code="any.progress-log.list.label.completeness" path="completeness" width="30%"/>
+	<acme:list-column code="any.progress-log.list.label.responsiblePerson" path="responsiblePerson" width="50%"/>
 </acme:list>
-
-<acme:button test="${showCreate}" code="client.progress-log.list.button.create" action="/client/progress-log/create?masterId=${masterId}"/>

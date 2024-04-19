@@ -1,5 +1,5 @@
-<%--
-- list.jsp
+	<%--
+- form.jsp
 -
 - Copyright (C) 2012-2024 Rafael Corchuelo.
 -
@@ -15,10 +15,10 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
-<acme:list>
-	<acme:list-column code="client.progress-log.list.label.responsiblePerson" path="responsiblePerson" width="80%"/>	
-	<acme:list-column code="client.progress-log.list.label.completeness" path="completeness" width="20%"/>
-	<acme:list-payload path="payload"/>
-</acme:list>
-
-<acme:button test="${showCreate}" code="client.progress-log.list.button.create" action="/client/progress-log/create?masterId=${masterId}"/>
+<acme:form>
+	<acme:input-textbox code="any.progress-log.form.label.recordId" path="recordId"/>
+	<acme:input-double code="any.progress-log.form.label.completeness" path="completeness" placeholder="client.progress-log.form.placeholder.completeness"/>
+	<acme:input-textbox code="any.progress-log.form.label.comment" path="comment"/>
+	<acme:input-moment code="any.progress-log.form.label.registrationMoment" path="registrationMoment"/>
+	<acme:input-textbox code="any.progress-log.form.label.responsiblePerson" path="responsiblePerson"/>
+</acme:form>

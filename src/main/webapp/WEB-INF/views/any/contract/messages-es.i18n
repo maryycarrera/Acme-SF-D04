@@ -19,6 +19,8 @@ any.contract.form.label.customerName = Nombre del cliente:
 any.contract.form.label.goals = Objetivos:
 any.contract.form.label.budget = Presupuesto:
 
+any.contract.form.button.progress-logs = Informes de progreso
+
 any.contract.list.label.code = Código
 any.contract.list.label.providerName = Nombre del proveedor
 any.contract.list.label.customerName = Nombre del cliente

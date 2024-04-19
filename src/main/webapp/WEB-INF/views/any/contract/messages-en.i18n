@@ -19,6 +19,8 @@ any.contract.form.label.customerName = CustomerName:
 any.contract.form.label.goals = Goals:
 any.contract.form.label.budget = Budget:
 
+any.contract.form.button.progress-logs = Progress Logs
+
 any.contract.list.label.code = Code
 any.contract.list.label.providerName = ProviderName
 any.contract.list.label.customerName = CustomerName
