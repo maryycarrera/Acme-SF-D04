@@ -61,6 +61,7 @@ master.menu.sponsor.all-sponsorships = List all sponsorships
 
 master.menu.client = Client
 master.menu.client.all-contracts = List all contracts
+master.menu.client.client-dashboard = Client dashboard
 
 # master.menu.any ##########################################################
 

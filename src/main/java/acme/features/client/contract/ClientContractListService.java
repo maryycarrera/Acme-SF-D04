@@ -44,9 +44,13 @@ public class ClientContractListService extends AbstractService<Client, Contract>
 		assert object != null;
 
 		Dataset dataset;
+		String payload;
 
 		dataset = super.unbind(object, "code", "providerName", "customerName");
-
+		payload = String.format(//
+			"%s; %s; %s; %s", //
+			object.getInstantiationMoment(), object.getGoals(), object.getBudget(), object.getClient().getIdentification());
+		dataset.put("payload", payload);
 		super.getResponse().addData(dataset);
 	}
 }
