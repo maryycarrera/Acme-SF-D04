@@ -42,7 +42,7 @@ public class AnyProgressLogListService extends AbstractService<Any, ProgressLog>
 		int masterId;
 
 		masterId = super.getRequest().getData("masterId", int.class);
-		objects = this.repository.findManyProgressLogsByMasterId(masterId);
+		objects = this.repository.findManyProgressLogsPublishedByMasterId(masterId);
 
 		super.getBuffer().addData(objects);
 	}

@@ -9,7 +9,9 @@ import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.PrincipalHelper;
 import acme.client.services.AbstractService;
+import acme.client.views.SelectChoices;
 import acme.roles.Client;
+import acme.roles.TypeClient;
 
 @Service
 public class AuthenticatedClientUpdateService extends AbstractService<Authenticated, Client> {
@@ -24,11 +26,7 @@ public class AuthenticatedClientUpdateService extends AbstractService<Authentica
 
 	@Override
 	public void authorise() {
-		boolean status;
-
-		status = super.getRequest().getPrincipal().hasRole(Client.class);
-
-		super.getResponse().setAuthorised(status);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
@@ -58,7 +56,7 @@ public class AuthenticatedClientUpdateService extends AbstractService<Authentica
 			Client existing;
 
 			existing = this.repository.findOneClientByIdentification(object.getIdentification());
-			super.state(existing == null, "code", "client.form.error.duplicated");
+			super.state(existing == null || existing.getId() == object.getId(), "code", "authenticated.client.form.error.duplicated");
 		}
 	}
 
@@ -73,9 +71,15 @@ public class AuthenticatedClientUpdateService extends AbstractService<Authentica
 	public void unbind(final Client object) {
 		assert object != null;
 
+		SelectChoices choices;
+
 		Dataset dataset;
 
+		choices = SelectChoices.from(TypeClient.class, object.getType());
+
 		dataset = super.unbind(object, "identification", "companyName", "type", "email", "link");
+		dataset.put("type", choices.getSelected().getKey());
+		dataset.put("types", choices);
 
 		super.getResponse().addData(dataset);
 	}
