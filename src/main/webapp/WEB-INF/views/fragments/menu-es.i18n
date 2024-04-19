@@ -44,6 +44,10 @@ master.menu.provider.favourite-link = Favourite Link
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Favourite Link
 
+# master.menu.client ########################################################
+
+master.menu.client = Cliente
+master.menu.client.all-contracts = Listar todos los contratos
 # master.menu.manager ########################################################
 
 master.menu.manager = Gerente
@@ -65,6 +69,8 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.client = Datos de client
+master.menu.user-account.become-client = Hazte cliente
 master.menu.user-account.sponsor = Datos del patrocinador
 master.menu.user-account.become-sponsor = Hazte patrocinador
 
