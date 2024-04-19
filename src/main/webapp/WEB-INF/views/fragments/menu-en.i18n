@@ -63,6 +63,10 @@ master.menu.client = Client
 master.menu.client.all-contracts = List all contracts
 master.menu.client.client-dashboard = Client dashboard
 
+# master.menu.any ##########################################################
+
+master.menu.any = Any Principal
+master.menu.any.published-contracts = List all published contracts
 
 # master.menu.user-account ####################################################
 

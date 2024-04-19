@@ -1,4 +1,3 @@
-
 package acme.features.client.progresslog;
 
 import javax.annotation.PostConstruct;
@@ -42,3 +41,4 @@ public class ClientProgressLogController extends AbstractController<Client, Prog
 		super.addBasicCommand("delete", this.deleteService);
 	}
 }
+
