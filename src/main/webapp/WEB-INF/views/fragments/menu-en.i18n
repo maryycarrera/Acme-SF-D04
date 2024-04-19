@@ -62,6 +62,10 @@ master.menu.sponsor.all-sponsorships = List all sponsorships
 master.menu.client = Client
 master.menu.client.all-contracts = List all contracts
 
+# master.menu.any ##########################################################
+
+master.menu.any = Any Principal
+master.menu.any.published-contracts = List all published contracts
 
 # master.menu.user-account ####################################################
 

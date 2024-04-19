@@ -49,6 +49,11 @@ master.menu.consumer.favourite-link = Favourite Link
 master.menu.client = Cliente
 master.menu.client.all-contracts = Listar todos los contratos
 
+# master.menu.any ##########################################################
+
+master.menu.any = Cualquier Usuario
+master.menu.any.published-contracts = Listar todos los contratos publicados
+
 # master.menu.manager ########################################################
 
 master.menu.manager = Gerente

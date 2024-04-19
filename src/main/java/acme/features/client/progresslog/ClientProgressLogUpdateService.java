@@ -1,4 +1,3 @@
-
 package acme.features.client.progresslog;
 
 import org.springframework.beans.factory.annotation.Autowired;

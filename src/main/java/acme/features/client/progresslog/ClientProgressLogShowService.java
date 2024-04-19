@@ -1,4 +1,3 @@
-
 package acme.features.client.progresslog;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,5 +55,4 @@ public class ClientProgressLogShowService extends AbstractService<Client, Progre
 
 		super.getResponse().addData(dataset);
 	}
-
 }

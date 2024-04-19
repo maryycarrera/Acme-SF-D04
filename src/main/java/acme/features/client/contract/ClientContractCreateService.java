@@ -81,7 +81,6 @@ public class ClientContractCreateService extends AbstractService<Client, Contrac
 
 	@Override
 	public void unbind(final Contract object) {
-		//TODO: preguntar si un cliente puede tener varios proyectos porque no viene especificado en ningún lado
 
 		assert object != null;
 

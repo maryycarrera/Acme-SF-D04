@@ -1,4 +1,3 @@
-
 package acme.features.client.progresslog;
 
 import java.util.Date;
