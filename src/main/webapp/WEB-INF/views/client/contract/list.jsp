@@ -19,6 +19,7 @@
 	<acme:list-column code="client.contract.list.label.providerName" path="providerName" width="10%"/>
 	<acme:list-column code="client.contract.list.label.customerName" path="customerName" width="10%"/>
 	<acme:list-column code="client.contract.list.label.code" path="code" width="80%"/>
+	<acme:list-payload path="payload"/>
 </acme:list>
 
 <jstl:if test="${_command == 'list'}">

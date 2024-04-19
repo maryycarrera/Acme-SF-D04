@@ -64,8 +64,13 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 
 	@Override
 	public void validate(final ProgressLog object) {
-		//TODO: la fecha me deja meterla si es 2022
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("recordId")) {
+			ProgressLog existing;
+
+			existing = this.repository.findOneProgressLogRecordId(object.getRecordId());
+			super.state(existing == null, "recordId", "client.progress-log.form.error.duplicated");
+		}
 		if (!super.getBuffer().getErrors().hasErrors("completeness")) {
 			super.state(object.getCompleteness() > 0, "completeness", "client.progress-log.form.error.negative-completeness");
 			super.state(object.getCompleteness() <= 100, "completeness", "client.progress-log.form.error.major100-completeness");
