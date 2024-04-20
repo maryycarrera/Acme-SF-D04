@@ -73,14 +73,17 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 		}
 
 		{
+			//TODO: esta condición comprobarla en crear también en vez de que sea menor o igual que el porject cost?
 			double allBudgets = 0.0;
 			Collection<Contract> contracts;
+			Project project = object.getProject();
 
 			contracts = this.repository.findContractsByClientId(object.getId());
 			for (Contract c : contracts)
-				allBudgets += c.getBudget().getAmount();
+				if (c.getProject() == project)
+					allBudgets += c.getBudget().getAmount();
 
-			super.state(allBudgets <= object.getProject().getCost(), "*", "employer.job.form.error.bad-work-load");
+			super.state(allBudgets <= object.getProject().getCost(), "*", "client.contract.form.error.bugdet-all-contracts-major-project-cost");
 		}
 	}
 

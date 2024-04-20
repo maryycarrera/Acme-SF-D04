@@ -26,8 +26,9 @@ client.contract.form.button.delete = Borrar
 client.contract.form.button.publish = Publicar
 
 client.contract.form.error.duplicated = Este código ya se ha usado
-employer.job.form.error.negative-salary = El salario debe ser positivo
+client.contract.form.error.negative-salary = El salario debe ser positivo
 client.contract.form.error.bugdet-major-project-cost = El presupuesto debe ser menor o igual que el coste del proyecto
+client.contract.form.error.bugdet-all-contracts-major-project-cost = La suma de todos los presupuestos de todos los contratos del mismo proyecto tienen que ser menor o igual que el coste total del proyecto
 
 client.contract.list.label.providerName = Nombre del proveedor
 client.contract.list.label.customerName = Nombre del cliente

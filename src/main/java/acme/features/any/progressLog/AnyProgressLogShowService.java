@@ -54,7 +54,7 @@ public class AnyProgressLogShowService extends AbstractService<Any, ProgressLog>
 
 		dataset = super.unbind(object, "recordId", "completeness", "comment", "registrationMoment", "responsiblePerson");
 		dataset.put("masterId", object.getContract().getId());
-		dataset.put("draftMode", object.getContract().isDraftMode());
+		dataset.put("draftMode", object.isDraftMode());
 
 		super.getResponse().addData(dataset);
 	}
