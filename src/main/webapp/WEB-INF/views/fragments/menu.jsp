@@ -61,6 +61,7 @@
 		
 		<acme:menu-option code="master.menu.any" access="hasRole('Any')">
 		<acme:menu-suboption code="master.menu.any.published-contracts" action="/any/contract/list"/>
+		<acme:menu-suboption code="master.menu.any.notices" action="/any/notice/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 
