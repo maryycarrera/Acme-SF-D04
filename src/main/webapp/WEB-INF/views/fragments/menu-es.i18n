@@ -45,6 +45,17 @@ master.menu.provider.favourite-link = Favourite Link
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Favourite Link
 
+# master.menu.client ########################################################
+
+master.menu.client = Cliente
+master.menu.client.all-contracts = Listar todos los contratos
+master.menu.client.client-dashboard = Panel de control del cliente
+
+# master.menu.any ##########################################################
+
+master.menu.any = Cualquier Usuario
+master.menu.any.published-contracts = Listar todos los contratos publicados
+
 # master.menu.manager ########################################################
 
 master.menu.manager = Gerente
@@ -53,11 +64,16 @@ master.menu.manager.all-user-stories = Listar mis historias de usuario
 master.menu.manager.all-assignations = Listar mis asignaciones
 master.menu.manager.manager-dashboard = Panel de control de gerente
 
+
 # master.menu.any ##########################################################
 
 master.menu.any = Cualquier Usuario
 master.menu.any.published-projects = Listar todos los proyectos publicados
 
+# master.menu.sponsor ########################################################
+
+master.menu.sponsor = Patrocinador
+master.menu.sponsor.all-sponsorships = Listar patrocinios
 
 # master.menu.user-account ####################################################
 
@@ -69,3 +85,8 @@ master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.manager = Datos de gerente
 master.menu.user-account.become-manager = Hazte gerente
+master.menu.user-account.client = Datos de client
+master.menu.user-account.become-client = Hazte cliente
+master.menu.user-account.sponsor = Datos del patrocinador
+master.menu.user-account.become-sponsor = Hazte patrocinador
+
