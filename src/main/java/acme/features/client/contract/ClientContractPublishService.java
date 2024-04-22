@@ -6,11 +6,13 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.data.datatypes.Money;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.contracts.Contract;
 import acme.entities.projects.Project;
+import acme.entities.systemconfigurations.SystemConfiguration;
 import acme.roles.Client;
 
 @Service
@@ -63,6 +65,18 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 		object.setProject(project);
 	}
 
+	public boolean isCurrencyAccepted(final Money moneda) {
+		SystemConfiguration moneys;
+		moneys = this.repository.findSystemConfiguration();
+
+		String[] listaMonedas = moneys.getAcceptedCurrencies().split(",");
+		for (String divisa : listaMonedas)
+			if (moneda.getCurrency().equals(divisa))
+				return true;
+
+		return false;
+	}
+
 	@Override
 	public void validate(final Contract object) {
 		assert object != null;
@@ -82,6 +96,8 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 
 			super.state(allBudgets <= object.getProject().getCost(), "*", "employer.job.form.error.bad-work-load");
 		}
+		if (!super.getBuffer().getErrors().hasErrors("budget"))
+			super.state(this.isCurrencyAccepted(object.getBudget()), "budget", "client.contract.form.error.acceptedCurrency");
 	}
 
 	@Override
