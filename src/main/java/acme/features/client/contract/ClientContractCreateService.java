@@ -83,11 +83,21 @@ public class ClientContractCreateService extends AbstractService<Client, Contrac
 		if (!super.getBuffer().getErrors().hasErrors("budget")) {
 			super.state(object.getBudget().getAmount() > 0, "budget", "client.contract.form.error.negative-budget");
 			super.state(object.getBudget().getAmount() <= object.getProject().getCost(), "budget", "client.contract.form.error.bugdet-major-project-cost");
-		}
+			double allBudgets = 0.0;
+			Collection<Contract> contracts;
 
-		if (!super.getBuffer().getErrors().hasErrors("budget"))
+			contracts = this.repository.findContractsByClientIdAndProjectId(object.getClient().getId(), object.getProject().getId());
+			System.out.println(contracts);
+			for (Contract c : contracts)
+				allBudgets += c.getBudget().getAmount();
+
+			allBudgets += object.getBudget().getAmount();
+
+			System.out.println(allBudgets);
+
+			super.state(allBudgets <= object.getProject().getCost(), "*", "client.contract.form.error.excededBudget");
 			super.state(this.isCurrencyAccepted(object.getBudget()), "budget", "client.contract.form.error.acceptedCurrency");
-
+		}
 	}
 
 	@Override

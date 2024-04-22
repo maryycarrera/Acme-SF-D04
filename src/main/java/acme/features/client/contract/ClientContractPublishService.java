@@ -81,23 +81,29 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 	public void validate(final Contract object) {
 		assert object != null;
 
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			Contract existing;
+
+			existing = this.repository.findOneContractByCode(object.getCode());
+			super.state(existing == null || existing.getId() == object.getId(), "code", "client.contract.form.error.duplicated");
+		}
+
 		if (!super.getBuffer().getErrors().hasErrors("budget")) {
 			super.state(object.getBudget().getAmount() > 0, "budget", "client.contract.form.error.negative-budget");
 			super.state(object.getBudget().getAmount() <= object.getProject().getCost(), "budget", "client.contract.form.error.bugdet-major-project-cost");
-		}
-
-		{
 			double allBudgets = 0.0;
 			Collection<Contract> contracts;
 
-			contracts = this.repository.findContractsByClientId(object.getId());
+			contracts = this.repository.findContractsByClientIdAndProjectId(object.getClient().getId(), object.getProject().getId());
 			for (Contract c : contracts)
 				allBudgets += c.getBudget().getAmount();
 
-			super.state(allBudgets <= object.getProject().getCost(), "*", "employer.job.form.error.bad-work-load");
-		}
-		if (!super.getBuffer().getErrors().hasErrors("budget"))
+			allBudgets += object.getBudget().getAmount();
+
+			super.state(allBudgets <= object.getProject().getCost(), "*", "client.contract.form.error.excededBudget");
 			super.state(this.isCurrencyAccepted(object.getBudget()), "budget", "client.contract.form.error.acceptedCurrency");
+
+		}
 	}
 
 	@Override
