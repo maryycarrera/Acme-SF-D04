@@ -28,6 +28,7 @@ client.contract.form.button.publish = Publicar
 client.contract.form.error.duplicated = Este código ya se ha usado
 employer.job.form.error.negative-salary = El salario debe ser positivo
 client.contract.form.error.bugdet-major-project-cost = El presupuesto debe ser menor o igual que el coste del proyecto
+client.contract.form.error.acceptedCurrency = Esta moneda no es aceptada, por favor introduce EUR,USD,GBP
 
 client.contract.list.label.providerName = Nombre del proveedor
 client.contract.list.label.customerName = Nombre del cliente
