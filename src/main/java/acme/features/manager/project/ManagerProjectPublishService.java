@@ -64,6 +64,13 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 
 		userStories = this.repository.findUserStoriesByProjectId(object.getId());
 
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			Project existing;
+
+			existing = this.repository.findOneProjectByCode(object.getCode());
+			super.state(existing == null || existing.getId() == object.getId(), "code", "manager.project.form.error.duplicated");
+		}
+
 		if (!super.getBuffer().getErrors().hasErrors("hasFatalErrors")) {
 			Project existing;
 
