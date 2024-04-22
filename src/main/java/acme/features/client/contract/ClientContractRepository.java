@@ -16,8 +16,11 @@ import acme.roles.Client;
 @Repository
 public interface ClientContractRepository extends AbstractRepository {
 
-	@Query("select c from Contract c where c.client.id = :id")
-	Collection<Contract> findContractsByClientId(int id);
+	@Query("select c from Contract c where c.client.id = :clientId and c.project.id = :projectId")
+	Collection<Contract> findContractsByClientIdAndProjectId(int clientId, int projectId);
+
+	@Query("select c from Contract c where c.client.id = :clientId")
+	Collection<Contract> findContractsByClientId(int clientId);
 
 	@Query("select c from Contract c where c.id = :id")
 	Contract findContractById(int id);
@@ -39,5 +42,8 @@ public interface ClientContractRepository extends AbstractRepository {
 
 	@Query("select sc from SystemConfiguration sc")
 	SystemConfiguration findSystemConfiguration();
+
+	@Query("select c from Contract c where c.project.id = :projectId")
+	Collection<Contract> findManyContractByProjectId(int projectId);
 
 }
