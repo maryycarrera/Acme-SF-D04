@@ -96,13 +96,12 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 
 			contracts = this.repository.findContractsByClientIdAndProjectId(object.getClient().getId(), object.getProject().getId());
 			for (Contract c : contracts)
-				allBudgets += c.getBudget().getAmount();
+					allBudgets += c.getBudget().getAmount();
 
 			allBudgets += object.getBudget().getAmount();
 
 			super.state(allBudgets <= object.getProject().getCost(), "*", "client.contract.form.error.excededBudget");
 			super.state(this.isCurrencyAccepted(object.getBudget()), "budget", "client.contract.form.error.acceptedCurrency");
-
 		}
 	}
 

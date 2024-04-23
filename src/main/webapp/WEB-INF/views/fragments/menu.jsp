@@ -59,6 +59,7 @@
 		<acme:menu-option code="master.menu.any">
 		<acme:menu-suboption code="master.menu.any.published-projects" action="/any/project/list"/>
 		<acme:menu-suboption code="master.menu.any.published-contracts" action="/any/contract/list"/>
+     <acme:menu-suboption code="master.menu.any.notices" action="/any/notice/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">			

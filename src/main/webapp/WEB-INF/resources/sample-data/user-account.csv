@@ -23,7 +23,6 @@ user-account-sponsor-17,true,"UserIdentity{name: 'Elena', surname: 'Rodríguez',
 user-account-sponsor-18,true,"UserIdentity{name: 'Javier', surname: 'Sánchez', email: 'javier@gmail.com'}",sponsor18,sponsor18
 user-account-client-01,true,"UserIdentity{name: 'Natalia', surname: 'Olmo', email: 'nataliaolmo@acme.com'}",client1,client1
 user-account-client-02,true,"UserIdentity{name: 'María', surname: 'Carrera', email: 'mariacarrera@acme.com'}",client2,client2
-user-account-client-03,true,"UserIdentity{name: 'Pepa', surname: 'Martín', email: 'pepitamartin@acme.com'}",client3,client3
 user-account-developer-01,true,"UserIdentity{name: 'Isais', surname: 'Pérez', email: 'isais@acme.com'}",developer1,developer1
 user-account-developer-02,true,"UserIdentity{name: 'Ángela', surname: 'García', email: 'angygarcia@acme.com'}",developer2,developer2
 user-account-manager-01,true,"UserIdentity{name: 'Carmen', surname: 'García', email: 'carmen@acme.com'}",manager1,manager1
