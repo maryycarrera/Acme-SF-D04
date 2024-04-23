@@ -17,6 +17,7 @@ any.notice.form.label.author = Autor:
 any.notice.form.label.message = Mensaje:
 any.notice.form.label.email = Email:
 any.notice.form.label.link = Link:
+any.notice.form.label.accept = Acepto la licencia
 
 any.notice.form.button.create = Crear
 any.notice.list.button.create = Crear

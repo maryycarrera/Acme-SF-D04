@@ -31,6 +31,7 @@
 			<acme:input-textbox code="any.notice.form.label.message" path="message"/>
 			<acme:input-email code="any.notice.form.label.email" path="email"/>
 			<acme:input-url code="any.notice.form.label.link" path="link"/>
+			<acme:input-checkbox code="any.notice.form.label.accept" path="accept"/>
 			<acme:submit test="${_command == 'create'}" code="any.notice.form.button.create" action="/any/notice/create"/>
 		</jstl:when>
 	</jstl:choose>

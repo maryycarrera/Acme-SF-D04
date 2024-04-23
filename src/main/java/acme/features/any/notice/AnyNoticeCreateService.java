@@ -51,6 +51,11 @@ public class AnyNoticeCreateService extends AbstractService<Any, Notice> {
 	@Override
 	public void validate(final Notice object) {
 		assert object != null;
+		boolean isAccepted;
+
+		isAccepted = this.getRequest().getData("accept", boolean.class);
+		super.state(isAccepted, "accept", "anonymous.user-account.form.error.must-accept");
+
 	}
 
 	@Override
@@ -67,6 +72,11 @@ public class AnyNoticeCreateService extends AbstractService<Any, Notice> {
 		Dataset dataset;
 
 		dataset = super.unbind(object, "title", "author", "message", "email", "link");
+
+		if (super.getRequest().getMethod().equals("POST"))
+			dataset.put("accept", super.getRequest().getData("accept", boolean.class));
+		else
+			dataset.put("accept", "false");
 
 		super.getResponse().addData(dataset);
 
