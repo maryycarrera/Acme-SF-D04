@@ -10,13 +10,17 @@ import acme.client.repositories.AbstractRepository;
 import acme.entities.contracts.Contract;
 import acme.entities.progresslogs.ProgressLog;
 import acme.entities.projects.Project;
+import acme.entities.systemconfigurations.SystemConfiguration;
 import acme.roles.Client;
 
 @Repository
 public interface ClientContractRepository extends AbstractRepository {
 
-	@Query("select c from Contract c where c.client.id = :id")
-	Collection<Contract> findContractsByClientId(int id);
+	@Query("select c from Contract c where c.client.id = :clientId and c.project.id = :projectId")
+	Collection<Contract> findContractsByClientIdAndProjectId(int clientId, int projectId);
+
+	@Query("select c from Contract c where c.client.id = :clientId")
+	Collection<Contract> findContractsByClientId(int clientId);
 
 	@Query("select c from Contract c where c.id = :id")
 	Contract findContractById(int id);
@@ -35,5 +39,11 @@ public interface ClientContractRepository extends AbstractRepository {
 
 	@Query("select p from ProgressLog p where p.contract.id = :jobId")
 	Collection<ProgressLog> findProgressLogsByContractId(int jobId);
+
+	@Query("select sc from SystemConfiguration sc")
+	SystemConfiguration findSystemConfiguration();
+
+	@Query("select c from Contract c where c.project.id = :projectId")
+	Collection<Contract> findManyContractByProjectId(int projectId);
 
 }

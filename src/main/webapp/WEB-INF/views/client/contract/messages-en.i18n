@@ -28,7 +28,8 @@ client.contract.form.button.publish = Publish
 client.contract.form.error.duplicated = This reference is taken
 client.contract.form.error.negative-budget = The budget must be positive
 client.contract.form.error.bugdet-major-project-cost = The budget must be less or equal than the project cost
-client.contract.form.error.bugdet-all-contracts-major-project-cost = The sum of all the budgets of all the contracts of the same project must be less than the project cost
+client.contract.form.error.excededBudget = The sum of all the budgets of all the projects of this project must be less or equal than the project cost
+client.contract.form.error.acceptedCurrency = This currency is not accepted, please enter EUR,USD,GBP
 
 client.contract.list.label.providerName = ProviderName
 client.contract.list.label.customerName = CustomerName
