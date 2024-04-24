@@ -25,6 +25,9 @@ client.progress-log.form.button.publish = Publicar
 client.progress-log.form.placeholder.completeness = 0.00 - 100.00
 
 client.progress-log.form.error.duplicated = Este record ya se ha utilizado
+client.progress-log.form.error.completeness-too-low = Esta completitud tiene que ser mayor que la del último registro de progreso publicado
+client.progress-log.form.error.registration-moment-must-be-later = El momento de registro de los informes de progreso debe después del momento de instanciación del contrato
+
 
 client.progress-log.list.label.responsiblePerson = Persona responsable
 client.progress-log.list.label.completeness = Grado de completitud

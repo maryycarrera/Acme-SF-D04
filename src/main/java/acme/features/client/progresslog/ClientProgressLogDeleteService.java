@@ -1,3 +1,4 @@
+
 package acme.features.client.progresslog;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ class ClientProgressLogDeleteService extends AbstractService<Client, ProgressLog
 
 		progressLogId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findOneContractByProgressLogId(progressLogId);
-		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
+		status = contract != null && super.getRequest().getPrincipal().hasRole(contract.getClient());
 
 		super.getResponse().setAuthorised(status);
 	}
