@@ -33,7 +33,7 @@
 	<acme:input-select code="sponsor.sponsorship.form.label.type"
 		path="type" 
 		choices="${types}" />
-	<acme:input-textbox code="sponsor.sponsorship.form.label.contact"
+	<acme:input-email code="sponsor.sponsorship.form.label.contact"
 		path="contact" />
 	<acme:input-textbox code="sponsor.sponsorship.form.label.link"
 		path="link" />

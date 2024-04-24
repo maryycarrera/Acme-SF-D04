@@ -125,7 +125,7 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 			for (Invoice i : invoices)
 				allAmount += i.totalAmount();
 
-			super.state(allAmount == object.getAmount().getAmount(), "code", "sponsor.sponsorship.form.error.totalAmount-non-correpondent");
+			super.state(allAmount == object.getAmount().getAmount(), "amount", "sponsor.sponsorship.form.error.totalAmount-non-correpondent");
 		}
 
 	}
