@@ -29,6 +29,7 @@ master.menu.anonymous.favourite-link-joagongan = 47566662V: González Ganfornina
 master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.banners = Banners
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
@@ -52,10 +53,24 @@ master.menu.manager.all-user-stories = List my user stories
 master.menu.manager.all-assignations = List my assignations
 master.menu.manager.manager-dashboard = Manager dashboard
 
+
 # master.menu.sponsor ########################################################
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.all-sponsorships = List all sponsorships
+
+# master.menu.client ########################################################
+
+master.menu.client = Client
+master.menu.client.all-contracts = List all contracts
+master.menu.client.client-dashboard = Client dashboard
+
+# master.menu.any ##########################################################
+
+master.menu.any = Any Principal
+master.menu.any.published-projects = List all published projects
+master.menu.any.published-contracts = List all published contracts
+master.menu.any.notices = List all notices
 
 # master.menu.user-account ####################################################
 
@@ -65,5 +80,9 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.manager = Manager data
+master.menu.user-account.become-manager = Become a manager
+master.menu.user-account.client = Client data
+master.menu.user-account.become-client = Become a client
 master.menu.user-account.sponsor = Sponsor data
 master.menu.user-account.become-sponsor = Become a sponsor
