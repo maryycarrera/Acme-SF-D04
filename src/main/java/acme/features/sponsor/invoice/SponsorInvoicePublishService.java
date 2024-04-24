@@ -17,14 +17,10 @@ import acme.entities.systemconfigurations.SystemConfiguration;
 import acme.roles.Sponsor;
 
 @Service
-public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoice> {
-
-	// Internal state ---------------------------------------------------------
+public class SponsorInvoicePublishService extends AbstractService<Sponsor, Invoice> {
 
 	@Autowired
 	private SponsorInvoiceRepository repository;
-
-	// AbstractService interface ----------------------------------------------
 
 
 	@Override
@@ -35,13 +31,16 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 
 		invoiceId = super.getRequest().getData("id", int.class);
 		sponsorship = this.repository.findOneSponsorshipByInvoiceId(invoiceId);
-		status = sponsorship != null && sponsorship.isDraftMode() && super.getRequest().getPrincipal().hasRole(sponsorship.getSponsor());
+		Invoice i = this.repository.findOneInvoiceById(invoiceId);
+		status = i.isDraftMode() && sponsorship != null && sponsorship.isDraftMode() && super.getRequest().getPrincipal().hasRole(sponsorship.getSponsor());
 
 		super.getResponse().setAuthorised(status);
+
 	}
 
 	@Override
 	public void load() {
+
 		Invoice object;
 		int id;
 
@@ -49,13 +48,21 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 		object = this.repository.findOneInvoiceById(id);
 
 		super.getBuffer().addData(object);
+
 	}
 
 	@Override
 	public void bind(final Invoice object) {
+
 		assert object != null;
 
+		int invoiceId;
+
+		invoiceId = super.getRequest().getData("id", int.class);
+		Sponsorship sponsorship = this.repository.findOneSponsorshipByInvoiceId(invoiceId);
+
 		super.bind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link");
+		object.setSponsorship(sponsorship);
 	}
 	public boolean isCurrencyAccepted(final Money moneda) {
 		SystemConfiguration moneys;
@@ -70,13 +77,14 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 	}
 	@Override
 	public void validate(final Invoice object) {
+		assert object != null;
+
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Invoice existing;
 
 			existing = this.repository.findOneInvoiceByCode(object.getCode());
 			super.state(existing == null || existing.getId() == object.getId(), "code", "sponsor.invoice.form.error.duplicated");
 		}
-
 		if (!super.getBuffer().getErrors().hasErrors("quantity"))
 			super.state(object.getQuantity().getAmount() > 0, "quantity", "sponsor.invoice.form.error.quantity-no-positive");
 
@@ -101,6 +109,7 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 	public void perform(final Invoice object) {
 		assert object != null;
 
+		object.setDraftMode(false);
 		this.repository.save(object);
 	}
 
@@ -110,8 +119,11 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link", "draftMode");
+		dataset = super.unbind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link", "drafttMode");
+
 		dataset.put("masterId", object.getSponsorship().getId());
 
+		super.getResponse().addData(dataset);
 	}
+
 }

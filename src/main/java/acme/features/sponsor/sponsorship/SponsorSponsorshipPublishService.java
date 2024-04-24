@@ -1,17 +1,23 @@
 
 package acme.features.sponsor.sponsorship;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.data.datatypes.Money;
 import acme.client.data.models.Dataset;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
+import acme.entities.invoices.Invoice;
 import acme.entities.projects.Project;
 import acme.entities.sponsorships.Sponsorship;
 import acme.entities.sponsorships.TypeSponsorship;
+import acme.entities.systemconfigurations.SystemConfiguration;
 import acme.roles.Sponsor;
 
 @Service
@@ -64,15 +70,64 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 		object.setProject(project);
 	}
 
+	public boolean isCurrencyAccepted(final Money moneda) {
+		SystemConfiguration moneys;
+		moneys = this.repository.findSystemConfiguration();
+
+		String[] listaMonedas = moneys.getAcceptedCurrencies().split(",");
+		for (String divisa : listaMonedas)
+			if (moneda.getCurrency().equals(divisa))
+				return true;
+
+		return false;
+	}
+
 	@Override
 	public void validate(final Sponsorship object) {
 		assert object != null;
+
+		Collection<Invoice> invoices;
+
+		invoices = this.repository.findInvoicesBySponsorshipId(object.getId());
+
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Sponsorship existing;
 
 			existing = this.repository.findOneSponsorshipByCode(object.getCode());
 			super.state(existing == null || existing.getId() == object.getId(), "code", "sponsor.sponsorship.form.error.duplicated");
 		}
+
+		if (!super.getBuffer().getErrors().hasErrors("amount"))
+			super.state(object.getAmount().getAmount() >= 0, "amount", "sponsor.sponsorship.form.error.amount-no-positive-or-zero");
+
+		if (!super.getBuffer().getErrors().hasErrors("startTimeDuration"))
+			super.state(object.getStartTimeDuration().after(object.getMoment()), "startTimeDuration", "sponsor.sponsorship.form.error.moment-after-start");
+
+		if (!super.getBuffer().getErrors().hasErrors("finishTimeDuration"))
+			super.state(object.getFinishTimeDuration().after(object.getStartTimeDuration()), "finishTimeDuration", "sponsor.sponsorship.form.error.start-after-finish");
+
+		if (!super.getBuffer().getErrors().hasErrors("finishTimeDuration")) {
+			Date minimumDeadline;
+
+			minimumDeadline = MomentHelper.deltaFromMoment(object.getStartTimeDuration(), 30, ChronoUnit.DAYS);
+			super.state(object.getFinishTimeDuration().after(minimumDeadline), "finishTimeDuration", "sponsor.sponsorship.form.error.too-close-to-startTime");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors()) {
+			super.state(!invoices.isEmpty(), "code", "manager.project.form.error.no-invoices");
+			super.state(invoices.stream().allMatch(us -> !us.isDraftMode()), "code", "sponsor.sponsorship.form.error.invoices-not-published");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("amount"))
+			super.state(this.isCurrencyAccepted(object.getAmount()), "amount", "sponsor.sponsorship.form.error.acceptedCurrency");
+		{
+			double allAmount = 0.0;
+			for (Invoice i : invoices)
+				allAmount += i.totalAmount();
+
+			super.state(allAmount == object.getAmount().getAmount(), "code", "sponsor.sponsorship.form.error.totalAmount-non-correpondent");
+		}
+
 	}
 
 	@Override

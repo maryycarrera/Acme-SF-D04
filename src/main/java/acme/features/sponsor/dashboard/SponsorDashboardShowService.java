@@ -21,7 +21,9 @@ public class SponsorDashboardShowService extends AbstractService<Sponsor, Sponso
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+		status = super.getRequest().getPrincipal().hasRole(Sponsor.class);
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
@@ -38,16 +40,20 @@ public class SponsorDashboardShowService extends AbstractService<Sponsor, Sponso
 		Double minimumQuantityInvoices;
 		Double maximumQuantityInvoices;
 
-		numberOfInvoicesTaxLessOrEqual21 = this.repository.numberOfInvoicesTaxLessOrEqual21();
-		numberOfSponsorshipsWithLink = this.repository.numberOfSponsorshipsWithLink();
-		averageAmountSponsorships = this.repository.averageAmountSponsorships();
-		deviationAmountSponsorships = this.repository.deviationAmountSponsorships();
-		minimumAmountSponsorships = this.repository.minimumAmountSponsorships();
-		maximumAmountSponsorships = this.repository.maximumAmountSponsorships();
-		averageQuantityInvoices = this.repository.averageQuantityInvoices();
-		deviationQuantityInvoices = this.repository.deviationQuantityInvoices();
-		minimumQuantityInvoices = this.repository.minimumQuantityInvoices();
-		maximumQuantityInvoices = this.repository.maximumQuantityInvoices();
+		int sponsorId;
+
+		sponsorId = super.getRequest().getPrincipal().getActiveRoleId();
+
+		numberOfInvoicesTaxLessOrEqual21 = this.repository.numberOfInvoicesTaxLessOrEqual21(sponsorId);
+		numberOfSponsorshipsWithLink = this.repository.numberOfSponsorshipsWithLink(sponsorId);
+		averageAmountSponsorships = this.repository.averageAmountSponsorships(sponsorId);
+		deviationAmountSponsorships = this.repository.deviationAmountSponsorships(sponsorId);
+		minimumAmountSponsorships = this.repository.minimumAmountSponsorships(sponsorId);
+		maximumAmountSponsorships = this.repository.maximumAmountSponsorships(sponsorId);
+		averageQuantityInvoices = this.repository.averageQuantityInvoices(sponsorId);
+		deviationQuantityInvoices = this.repository.deviationQuantityInvoices(sponsorId);
+		minimumQuantityInvoices = this.repository.minimumQuantityInvoices(sponsorId);
+		maximumQuantityInvoices = this.repository.maximumQuantityInvoices(sponsorId);
 
 		dashboard = new SponsorDashboard();
 		dashboard.setNumberOfInvoicesTaxLessOrEqual21(numberOfInvoicesTaxLessOrEqual21);

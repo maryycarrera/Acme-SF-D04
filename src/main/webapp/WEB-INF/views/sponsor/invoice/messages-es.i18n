@@ -14,16 +14,26 @@ sponsor.invoice.list.title = Listado de Facturas
 sponsor.invoice.form.label.code = Código:
 sponsor.invoice.form.label.registrationTime = Fecha de Registro:
 sponsor.invoice.form.label.dueDate = Fecha de Vencimiento:
-sponsor.invoice.form.label.quantity = Cantidad:
+sponsor.invoice.form.label.quantity = Dinero:
 sponsor.invoice.form.label.tax = Impuesto:
 sponsor.invoice.form.label.link = Enlace:
+sponsor.invoice.form.label.totalAmount= Dinero total:
 
 sponsor.invoice.form.button.create = Crear		
 sponsor.invoice.form.button.update = Actualizar
 sponsor.invoice.form.button.delete = Borrar
+sponsor.invoice.form.button.publish = Publicar
+
 
 sponsor.invoice.list.label.code = Codigo
 sponsor.invoice.list.label.registrationTime = Fecha de registro
 sponsor.invoice.list.label.dueDate = Fecha de Vencimiento
 
 sponsor.invoice.list.button.create = Crear
+
+sponsor.invoice.form.error.duplicated= El código está duplicado o nulo
+sponsor.invoice.form.error.quantity-no-positive= El dinero debe ser positivo
+sponsor.invoice.form.error.tax-no-positive= El impuesto debe ser positivo
+sponsor.invoice.form.error.too-close-to-registrationTime= La fecha de vencimiento debe ser más de 30 días después del momento de registro
+sponsor.quantity.form.error.currency= La moneda debe ser la misma que la del patrocinio
+sponsor.invoice.form.error.registration-before-sponsorship= La fecha de registro debe ser despues que el momento de creacion del patrocinio

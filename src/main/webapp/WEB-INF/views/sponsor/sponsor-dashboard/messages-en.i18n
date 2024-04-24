@@ -10,7 +10,7 @@
 
 sponsor.sponsor-dashboard.form.title = Sponsor dashboard
 
-sponsor.sponsor-dashboard.form.title.operations = Datos extra
+sponsor.sponsor-dashboard.form.title.operations = Other operations
 
 sponsor.sponsor-dashboard.form.label.invoices-tax-below-equal-21 =  Number of Invoices with tax below or equal 0.21%
 sponsor.sponsor-dashboard.form.label.sponsorships-with-link =  Number of Sponsorships with links

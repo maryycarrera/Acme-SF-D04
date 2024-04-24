@@ -9,43 +9,43 @@ import acme.client.repositories.AbstractRepository;
 @Repository
 public interface SponsorDashboardRepository extends AbstractRepository {
 
-	@Query("SELECT count(i) FROM Invoice i WHERE i.tax<=0.21")
-	int numberOfInvoicesTaxLessOrEqual21();
+	@Query("SELECT count(i) FROM Invoice i WHERE i.tax<=0.21 AND i.sponsorship.sponsor.id = :id")
+	int numberOfInvoicesTaxLessOrEqual21(int id);
 
-	@Query("SELECT count(s) FROM Sponsorship s WHERE s.link!=null")
+	@Query("SELECT count(s) FROM Sponsorship s WHERE s.link!=null AND s.sponsor.id = :id")
 
-	int numberOfSponsorshipsWithLink();
+	int numberOfSponsorshipsWithLink(int id);
 
-	@Query("SELECT avg(s.amount.amount) FROM Sponsorship s")
+	@Query("SELECT avg(s.amount.amount) FROM Sponsorship s WHERE s.sponsor.id = :id")
 
-	Double averageAmountSponsorships();
+	Double averageAmountSponsorships(int id);
 
-	@Query("SELECT stddev(s.amount.amount) FROM Sponsorship s")
+	@Query("SELECT stddev(s.amount.amount) FROM Sponsorship s WHERE s.sponsor.id = :id")
 
-	Double deviationAmountSponsorships();
+	Double deviationAmountSponsorships(int id);
 
-	@Query("SELECT min(s.amount.amount) FROM Sponsorship s")
+	@Query("SELECT min(s.amount.amount) FROM Sponsorship s WHERE s.sponsor.id = :id")
 
-	Double minimumAmountSponsorships();
+	Double minimumAmountSponsorships(int id);
 
-	@Query("SELECT max(s.amount.amount) FROM Sponsorship s")
+	@Query("SELECT max(s.amount.amount) FROM Sponsorship s WHERE s.sponsor.id = :id")
 
-	Double maximumAmountSponsorships();
+	Double maximumAmountSponsorships(int id);
 
-	@Query("SELECT avg(i.quantity.amount) FROM Invoice i")
+	@Query("SELECT avg(i.quantity.amount) FROM Invoice i WHERE i.sponsorship.sponsor.id = :id")
 
-	Double averageQuantityInvoices();
+	Double averageQuantityInvoices(int id);
 
-	@Query("SELECT stddev(i.quantity.amount) FROM Invoice i")
+	@Query("SELECT stddev(i.quantity.amount) FROM Invoice i WHERE i.sponsorship.sponsor.id = :id")
 
-	Double deviationQuantityInvoices();
+	Double deviationQuantityInvoices(int id);
 
-	@Query("SELECT min(i.quantity.amount) FROM Invoice i")
+	@Query("SELECT min(i.quantity.amount) FROM Invoice i WHERE i.sponsorship.sponsor.id = :id")
 
-	Double minimumQuantityInvoices();
+	Double minimumQuantityInvoices(int id);
 
-	@Query("SELECT max(i.quantity.amount) FROM Invoice i")
+	@Query("SELECT max(i.quantity.amount) FROM Invoice i WHERE i.sponsorship.sponsor.id = :id")
 
-	Double maximumQuantityInvoices();
+	Double maximumQuantityInvoices(int id);
 
 }
