@@ -53,6 +53,11 @@ master.menu.manager.all-user-stories = List my user stories
 master.menu.manager.all-assignations = List my assignations
 master.menu.manager.manager-dashboard = Manager dashboard
 
+# master.menu.developer ######################################################
+
+master.menu.developer = Developer
+master.menu.developer.list-training-module = List my Training modules
+
 
 # master.menu.sponsor ########################################################
 
@@ -71,6 +76,7 @@ master.menu.any = Any Principal
 master.menu.any.published-projects = List all published projects
 master.menu.any.published-contracts = List all published contracts
 master.menu.any.notices = List all notices
+master.menu.any.published-modules = List all training modules published
 
 # master.menu.user-account ####################################################
 
@@ -82,6 +88,8 @@ master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.manager = Manager data
 master.menu.user-account.become-manager = Become a manager
+master.menu.user-account.developer = Developer data
+master.menu.user-account.become-developer = Become a developer
 master.menu.user-account.client = Client data
 master.menu.user-account.become-client = Become a client
 master.menu.user-account.sponsor = Sponsor data
