@@ -63,6 +63,7 @@ master.menu.manager.manager-dashboard = Panel de control de gerente
 
 master.menu.developer = Desarrollador
 master.menu.developer.list-training-module = Listar mis módulos de entrenamiento
+master.menu.developer.dashboard = Panel de estadísticas
 
 
 # master.menu.any ##########################################################
