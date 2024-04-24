@@ -61,12 +61,13 @@ public class AdministratorBannerUpdateService extends AbstractService<Administra
 		Date finish = object.getFinishDate();
 
 		if (!super.getBuffer().getErrors().hasErrors("startDate"))
-			super.state(start.after(instantiation), //
-				"code", "administrator.banner.form.error.must-start-after-instantiation");
+			super.state(instantiation != null && start.after(instantiation), //
+				"startDate", "administrator.banner.form.error.must-start-after-instantiation");
 
 		if (!super.getBuffer().getErrors().hasErrors("finishDate")) {
-			super.state(finish.after(start), "finishDate", "administrator.banner.form.error.must-finish-after-start");
-			if (finish.after(start)) {
+			super.state(start != null && finish.after(start), "finishDate", "administrator.banner.form.error.must-finish-after-start");
+
+			if (start != null && finish.after(start)) {
 				long diffInMillies = Math.abs(finish.getTime() - start.getTime());
 				long diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
 				super.state(diff >= 7, "finishDate", "administrator.banner.form.error.display-period-too-short");
