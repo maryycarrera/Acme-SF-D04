@@ -23,6 +23,12 @@ master.menu.anonymous.favourite-link-adrcabmar = 77824121X: Cabello Martin, Adri
 master.menu.anonymous.favourite-link-ignblabla = 53962686V: Blanquero Blanco, Ignacio
 master.menu.anonymous.favourite-link-marcartal1 = 77869990V: Carrera Talaverón, María de la Salud
 master.menu.anonymous.favourite-link-joagongan = 47566662V: González Ganfornina, Joaquín
+master.menu.anonymous.published-modules = Ver módulos de entrenamiento publicados
+
+# master.menu.authenticated #######################################################
+
+master.menu.auth = Autenticado
+master.menu.authenticated.published-modules = Ver los módulos de entrenamiento publicados
 
 # master.menu.administrator ###################################################
 
@@ -50,6 +56,11 @@ master.menu.manager = Gerente
 master.menu.manager.all-user-stories = Listar todas mis historias de usuario
 master.menu.manager.all-projects = Listar mis proyectos
 
+# master.menu.developer ######################################################
+
+master.menu.developer = Desarrollador
+master.menu.developer.list-training-module = Listar mis módulos de entrenamiento
+
 
 # master.menu.user-account ####################################################
 
@@ -59,3 +70,5 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.developer = Datos de desarrollador
+master.menu.user-account.become-developer = Hazte desarrollador

@@ -23,6 +23,7 @@ master.menu.anonymous.favourite-link-adrcabmar = 77824121X: Cabello Martin, Adri
 master.menu.anonymous.favourite-link-ignblabla = 53962686V: Blanquero Blanco, Ignacio
 master.menu.anonymous.favourite-link-marcartal1 = 77869990V: Carrera Talaverón, María de la Salud
 master.menu.anonymous.favourite-link-joagongan = 47566662V: González Ganfornina, Joaquín
+master.menu.anonymous.published-modules = List all Training Modules published
 
 # master.menu.administrator ###################################################
 
@@ -32,6 +33,11 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.published-modules = List all Training Modules published
 
 # master.menu.provider ########################################################
 
@@ -49,6 +55,11 @@ master.menu.consumer.favourite-link = Favourite Link
 master.menu.manager = Manager
 master.menu.manager.all-user-stories = List my user stories
 
+# master.menu.developer ######################################################
+
+master.menu.developer = Developer
+master.menu.developer.list-training-module = List my training modules
+
 
 # master.menu.manager ##########################################################
 
@@ -64,3 +75,5 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.developer = Developer data
+master.menu.user-account.become-developer = Become a developer
