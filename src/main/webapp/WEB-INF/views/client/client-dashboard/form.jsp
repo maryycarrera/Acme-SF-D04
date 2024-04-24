@@ -16,13 +16,13 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <h2>
-	<acme:message code="client.client-dashboard.form.title.operations-progress-logs"/>
+    <acme:message code="client.client-dashboard.form.title.operations-progress-logs"/>
 </h2>
 
 <table class="table table-sm">
 	<tr>
 		<th scope="row">
-			<acme:message code="client.client-dashboard.form.label.progress-logs-completeness-below-25"/>
+			<acme:message code="client.dashboard.form.label.progress-log-less-than-25"/>
 		</th>
 		<td>
 			<acme:print value="${progressLogsCompletenessBelow25}"/>
@@ -30,7 +30,7 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="client.client-dashboard.form.label.progress-logs-completeness-between-25-and-50"/>
+			<acme:message code="client.dashboard.form.label.progress-log-between-25-50"/>
 		</th>
 		<td>
 			<acme:print value="${progressLogsCompletenessBetween25And50}"/>
@@ -38,61 +38,60 @@
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="client.client-dashboard.form.label.progress-logs-completeness-between-50-and-75"/>
+			<acme:message code="client.dashboard.form.label.progress-log-between-50-75"/>
 		</th>
 		<td>
 			<acme:print value="${progressLogsCompletenessBetween50And75}"/>
 		</td>
-	</tr>	
-		<tr>
+	</tr>
+	<tr>
 		<th scope="row">
-			<acme:message code="client.client-dashboard.form.label.progress-logs-completeness-above-75"/>
+			<acme:message code="client.dashboard.form.label.progress-log-above-75"/>
 		</th>
 		<td>
 			<acme:print value="${progressLogsCompletenessAbove75}"/>
 		</td>
-	</tr>	
-</table>
-
-<h2>
-	<acme:message code="client.client-dashboard.form.title.budget-contracts"/>
-</h2>
-
-<table class="table table-sm">
-	<tr>
-		<th scope="row">
-			<acme:message code="client.client-dashboard.form.label.average-budget-of-contracts"/>
-		</th>
-		<td>
-			<acme:print value="${averageBudgetOfContracts}"/>
-		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="client.client-dashboard.form.label.deviation-budget-of-contracts"/>
-		</th>
-		<td>
-			<acme:print value="${deviationBudgetOfContracts}"/>
-		</td>
-	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="client.client-dashboard.form.label.minimum-budget-of-contracts"/>
-		</th>
-		<td>
-			<acme:print value="${minimumBudgetOfContracts}"/>
-		</td>
-	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="client.client-dashboard.form.label.maximum-budget-of-contracts"/>
-		</th>
-		<td>
-			<acme:print value="${maximumBudgetOfContracts}"/>
-		</td>
-	</tr>		
-</table>
+	</table>
 
+<jstl:forEach var="currency" items="${supportedCurrencies}">
+    <h2>
+        <acme:message code="client.client-dashboard.form.title.budget-contracts"/>
+        <acme:message code="${currency}"/>
+    </h2>
 
-<acme:return/>
-
+    <table class="table table-sm">
+        <tr>
+            <th scope="row">
+                <acme:message code="client.dashboard.form.label.contract-average"/>
+            </th>
+            <td>
+                <acme:print value="${averageBudgetOfContracts[currency]}"/>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <acme:message code="client.dashboard.form.label.contract-deviation"/>
+            </th>
+            <td>
+                <acme:print value="${deviationBudgetOfContracts[currency]}"/>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <acme:message code="client.dashboard.form.label.contract-minimum"/>
+            </th>
+            <td>
+                <acme:print value="${minimumBudgetOfContracts[currency]}"/>
+            </td>
+        </tr>   
+        <tr>
+            <th scope="row">
+                <acme:message code="client.dashboard.form.label.contract-maximum"/>
+            </th>
+            <td>
+                <acme:print value="${maximumBudgetOfContracts[currency]}"/>
+            </td>
+        </tr>
+    </table>
+</jstl:forEach>

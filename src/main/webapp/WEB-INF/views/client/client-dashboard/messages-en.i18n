@@ -8,19 +8,17 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-client.client-dashboard.form.title = Client dashboard
+client.client-dashboard.form.title = Client Dashboard
 
 client.client-dashboard.form.title.operations-progress-logs = Progress logs by their completeness
 
-client.client-dashboard.form.label.progress-logs-completeness-below-25 =  Completeness below 25
-client.client-dashboard.form.label.progress-logs-completeness-between-25-and-50 =  Completeness between 25 and 50
-client.client-dashboard.form.label.progress-logs-completeness-between-50-and-75 = Completeness between 50 and 75
-client.client-dashboard.form.label.progress-logs-completeness-above-75 =  Completeness above 75
+client.dashboard.form.label.progress-log-less-than-25 = Number of published progress Log with completeness below 25%
+client.dashboard.form.label.progress-log-between-25-50 = Number of published progress Log with completeness between 25%-50%
+client.dashboard.form.label.progress-log-between-50-75 = Number of published progress Log with completeness between 50%-75%
+client.dashboard.form.label.progress-log-above-75 = Number of published progress Log with completeness above 75%
 
-client.client-dashboard.form.title.budget-contracts = Operations with budgets of contracts  
-
-client.client-dashboard.form.label.average-budget-of-contracts =  Average budget of contracts
-client.client-dashboard.form.label.deviation-budget-of-contracts =  Deviation budget of contracts
-client.client-dashboard.form.label.minimum-budget-of-contracts = Minimum budget of contracts
-client.client-dashboard.form.label.maximum-budget-of-contracts = Maximum budget of contracts
-
+client.client-dashboard.form.title.budget-contracts = Operations with budgets of contracts 
+client.dashboard.form.label.contract-average = Average budget of contracts
+client.dashboard.form.label.contract-deviation = Deviation of contracts
+client.dashboard.form.label.contract-minimum = Minimum budget of every contract
+client.dashboard.form.label.contract-maximum = Maximum budget of every contract

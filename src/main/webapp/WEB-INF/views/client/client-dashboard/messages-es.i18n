@@ -1,4 +1,4 @@
-# messages-es.i18n
+# messages-en.i18n
 #
 # Copyright (C) 2012-2024 Rafael Corchuelo.
 #
@@ -8,18 +8,18 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-client.client-dashboard.form.title = Panel del cliente
+client.client-dashboard.form.title = Client Dashboard
 
 client.client-dashboard.form.title.operations-progress-logs = Informes técnicos en función de su completitud 
 
-client.client-dashboard.form.label.progress-logs-completeness-below-25 =  Completitud por debajo de 25
-client.client-dashboard.form.label.progress-logs-completeness-between-25-and-50 =  Completitud entre 25 y 50
-client.client-dashboard.form.label.progress-logs-completeness-between-50-and-75 = Completitud entre 50 y 75
-client.client-dashboard.form.label.progress-logs-completeness-above-75 =  ompletitud por encima de 75
+client.dashboard.form.label.progress-log-less-than-25 = Number of published progress Log with completeness below 25%
+client.dashboard.form.label.progress-log-between-25-50 = Number of published progress Log with completeness between 25%-50%
+client.dashboard.form.label.progress-log-between-50-75 = Number of published progress Log with completeness between 50%-75%
+client.dashboard.form.label.progress-log-above-75 = Number of published progress Log with completeness above 75%
 
-client.client-dashboard.form.title.budget-contracts = Operaciones con los presupuestos de los contratos  
+client.client-dashboard.form.title.budget-contracts = Operaciones con los presupuestos de los contratos 
 
-client.client-dashboard.form.label.average-budget-of-contracts =  Presupuesto medio de los presupuestos de los contratos  
-client.client-dashboard.form.label.deviation-budget-of-contracts =  Desviación de los presupuestos de los contratos  
-client.client-dashboard.form.label.minimum-budget-of-contracts = Presupuesto mínimo de los contratos
-client.client-dashboard.form.label.maximum-budget-of-contracts = Presupuesto máximo de los contratos
+client.dashboard.form.label.contract-average = Average budget of contracts
+client.dashboard.form.label.contract-deviation = Deviation of contracts
+client.dashboard.form.label.contract-minimum = Minimum budget of every contract
+client.dashboard.form.label.contract-maximum = Maximum budget of every contract
