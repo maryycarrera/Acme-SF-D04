@@ -13,10 +13,10 @@ import acme.entities.projects.Project;
 @Repository
 public interface AnyContractRepository extends AbstractRepository {
 
-	@Query("SELECT c FROM Contract c WHERE c.id = :id")
+	@Query("select c from Contract c where c.id = :id")
 	Contract findOneContractById(int id);
 
-	@Query("SELECT c FROM Contract c WHERE c.draftMode = false")
+	@Query("select c from Contract c where c.draftMode = false")
 	Collection<Contract> findPublishedContracts();
 
 	@Query("select p from Project p where p.draftMode = false")

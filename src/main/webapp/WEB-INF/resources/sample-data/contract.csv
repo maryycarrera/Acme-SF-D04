@@ -1,4 +1,4 @@
-key,code,instantiationMoment,providerName,customerName,goals,budget,draft-mode,key:project,key:client
+key,code,instantiationMoment,providerName,customerName,goals,budget,draftMode,key:project,key:client
 contract-01,AC-123,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",false,project-01,client-01
 contract-02,AC-124,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"EUR 1,000,000.00",true,project-05,client-01
 contract-03,AC-125,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"GBP 1.00",false,project-14,client-02

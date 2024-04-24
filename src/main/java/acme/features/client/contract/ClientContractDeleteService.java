@@ -52,7 +52,6 @@ public class ClientContractDeleteService extends AbstractService<Client, Contrac
 
 	@Override
 	public void bind(final Contract object) {
-		//TODO: Aquí hay que hacer las reglas de negocio
 		assert object != null;
 
 		int projectId;

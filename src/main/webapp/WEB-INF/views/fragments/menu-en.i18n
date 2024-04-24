@@ -70,6 +70,7 @@ master.menu.client.client-dashboard = Client dashboard
 master.menu.any = Any Principal
 master.menu.any.published-projects = List all published projects
 master.menu.any.published-contracts = List all published contracts
+master.menu.any.notices = List all notices
 
 # master.menu.user-account ####################################################
 
