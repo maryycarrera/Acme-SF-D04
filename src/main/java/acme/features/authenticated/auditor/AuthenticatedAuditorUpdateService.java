@@ -39,7 +39,7 @@ public class AuthenticatedAuditorUpdateService extends AbstractService<Authentic
 
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
-		object = this.repository.findOneEmployerByUserAccountId(userAccountId);
+		object = this.repository.findOneAuditorByUserAccountId(userAccountId);
 
 		super.getBuffer().addData(object);
 	}
@@ -48,7 +48,7 @@ public class AuthenticatedAuditorUpdateService extends AbstractService<Authentic
 	public void bind(final Auditor object) {
 		assert object != null;
 
-		super.bind(object, "area", "sector");
+		super.bind(object, "firm", "professionalId", "certifications", "link");
 	}
 
 	@Override
@@ -68,8 +68,7 @@ public class AuthenticatedAuditorUpdateService extends AbstractService<Authentic
 		assert object != null;
 
 		Dataset dataset;
-		//CAMBIAR
-		dataset = super.unbind(object, "area", "sector");
+		dataset = super.unbind(object, "firm", "professionalId", "certifications", "link");
 
 		super.getResponse().addData(dataset);
 	}

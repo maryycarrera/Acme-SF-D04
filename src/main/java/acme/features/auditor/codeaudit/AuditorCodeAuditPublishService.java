@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
+import acme.entities.auditrecords.AuditRecord;
 import acme.entities.codeaudits.CodeAudit;
+import acme.entities.codeaudits.CodeType;
 import acme.entities.projects.Project;
 import acme.roles.Auditor;
 
@@ -25,12 +27,12 @@ public class AuditorCodeAuditPublishService extends AbstractService<Auditor, Cod
 	@Override
 	public void authorise() {
 		boolean status;
-		int codeAuditId;
+		int masterId;
 		CodeAudit codeAudit;
 		Auditor auditor;
 
-		codeAuditId = super.getRequest().getData("id", int.class);
-		codeAudit = this.repository.findCodeAuditById(codeAuditId);
+		masterId = super.getRequest().getData("id", int.class);
+		codeAudit = this.repository.findCodeAuditById(masterId);
 		auditor = codeAudit == null ? null : codeAudit.getAuditor();
 		status = codeAudit != null && codeAudit.isDraftMode() && super.getRequest().getPrincipal().hasRole(auditor);
 
@@ -55,10 +57,10 @@ public class AuditorCodeAuditPublishService extends AbstractService<Auditor, Cod
 		int projectId;
 		Project project;
 
-		projectId = super.getRequest().getData("contractor", int.class);
+		projectId = super.getRequest().getData("project", int.class);
 		project = this.repository.findOneProjectById(projectId);
 
-		super.bind(object, "code", "executionDate", "type", "markMode", "correctiveActions", "link");
+		super.bind(object, "code", "executionDate", "type", "correctiveActions", "link");
 		object.setProject(project);
 	}
 
@@ -66,16 +68,27 @@ public class AuditorCodeAuditPublishService extends AbstractService<Auditor, Cod
 	public void validate(final CodeAudit object) {
 		assert object != null;
 
-		if (!super.getBuffer().getErrors().hasErrors("reference")) {
+		Collection<AuditRecord> records;
+		Boolean recordsDraftMode;
+		records = this.repository.findManyAuditRecordsByCodeAuditId(object.getId());
+		recordsDraftMode = records == null ? null : records.stream().allMatch(a -> a.isDraftMode() == false);
+
+		super.state(recordsDraftMode != null && recordsDraftMode, "*", "auditor.codeaudit.form.error.audit-record-draft-mode");
+
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			CodeAudit existing;
 
 			existing = this.repository.findOneCodeAuditByCode(object.getCode());
-			super.state(existing == null, "code", "auditor.codeaudit.form.error.duplicated");
+			super.state(existing == null || existing.getId() == object.getId(), "code", "auditor.codeaudit.form.error.duplicated");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("markMode"))
-			super.state(object.getMarkMode().matches("A\\+|A|B|C"), "markMode", "auditor.codeaudit.form.error.lowerThanC");
+		if (!super.getBuffer().getErrors().hasErrors("markMode")) {
+			Collection<String> marks;
+			marks = this.repository.findMarksOfAuditRecordsByCodeAuditId(object.getId());
+			if (marks != null)
+				super.state(CodeAudit.getMarkMode(marks).matches("A\\+|A|B|C"), "markMode", "auditor.codeaudit.form.error.lower-than-c");
 
+		}
 	}
 
 	@Override
@@ -90,18 +103,21 @@ public class AuditorCodeAuditPublishService extends AbstractService<Auditor, Cod
 	public void unbind(final CodeAudit object) {
 		assert object != null;
 
-		int auditorId;
 		Collection<Project> projects;
 		SelectChoices choices;
 		Dataset dataset;
+		SelectChoices choicesType;
 
-		auditorId = super.getRequest().getPrincipal().getActiveRoleId();
+		choicesType = SelectChoices.from(CodeType.class, object.getType());
+
 		projects = this.repository.findAllProjects();
-		choices = SelectChoices.from(projects, "name", object.getProject());
+		choices = SelectChoices.from(projects, "title", object.getProject());
 
-		dataset = super.unbind(object, "code", "executionDate", "type", "markMode", "correctiveActions", "link", "draftMode");
+		dataset = super.unbind(object, "code", "executionDate", "type", "correctiveActions", "link", "draftMode");
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);
+		dataset.put("type", choicesType.getSelected().getKey());
+		dataset.put("types", choicesType);
 
 		super.getResponse().addData(dataset);
 	}

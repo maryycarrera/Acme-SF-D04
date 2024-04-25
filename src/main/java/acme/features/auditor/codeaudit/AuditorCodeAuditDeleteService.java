@@ -27,12 +27,12 @@ public class AuditorCodeAuditDeleteService extends AbstractService<Auditor, Code
 	@Override
 	public void authorise() {
 		boolean status;
-		int codeAuditId;
+		int masterId;
 		CodeAudit codeAudit;
 		Auditor auditor;
 
-		codeAuditId = super.getRequest().getData("id", int.class);
-		codeAudit = this.repository.findCodeAuditById(codeAuditId);
+		masterId = super.getRequest().getData("id", int.class);
+		codeAudit = this.repository.findCodeAuditById(masterId);
 		auditor = codeAudit == null ? null : codeAudit.getAuditor();
 		status = codeAudit != null && codeAudit.isDraftMode() && super.getRequest().getPrincipal().hasRole(auditor);
 
@@ -57,10 +57,10 @@ public class AuditorCodeAuditDeleteService extends AbstractService<Auditor, Code
 		int projectId;
 		Project project;
 
-		projectId = super.getRequest().getData("contractor", int.class);
+		projectId = super.getRequest().getData("project", int.class);
 		project = this.repository.findOneProjectById(projectId);
 
-		super.bind(object, "code", "executionDate", "type", "markMode", "correctiveActions", "link");
+		super.bind(object, "code", "executionDate", "type", "correctiveActions", "link");
 		object.setProject(project);
 	}
 
@@ -91,9 +91,9 @@ public class AuditorCodeAuditDeleteService extends AbstractService<Auditor, Code
 
 		auditorId = super.getRequest().getPrincipal().getActiveRoleId();
 		projects = this.repository.findAllProjects();
-		choices = SelectChoices.from(projects, "name", object.getProject());
+		choices = SelectChoices.from(projects, "title", object.getProject());
 
-		dataset = super.unbind(object, "code", "executionDate", "type", "markMode", "correctiveActions", "link", "draftMode");
+		dataset = super.unbind(object, "code", "executionDate", "type", "correctiveActions", "link", "draftMode");
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);
 

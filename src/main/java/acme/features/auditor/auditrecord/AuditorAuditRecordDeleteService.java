@@ -24,10 +24,13 @@ public class AuditorAuditRecordDeleteService extends AbstractService<Auditor, Au
 		boolean status;
 		int auditRecordId;
 		CodeAudit codeAudit;
+		AuditRecord auditRecord;
 
 		auditRecordId = super.getRequest().getData("id", int.class);
+
+		auditRecord = this.repository.findAuditRecordById(auditRecordId);
 		codeAudit = this.repository.findOneCodeAuditByAuditRecordId(auditRecordId);
-		status = codeAudit != null && codeAudit.isDraftMode() && super.getRequest().getPrincipal().hasRole(codeAudit.getAuditor());
+		status = codeAudit != null && codeAudit.isDraftMode() && auditRecord.isDraftMode() && super.getRequest().getPrincipal().hasRole(codeAudit.getAuditor());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -68,9 +71,9 @@ public class AuditorAuditRecordDeleteService extends AbstractService<Auditor, Au
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "code", "startDate", "finishDate", "mark", "link");
+		dataset = super.unbind(object, "code", "startDate", "finishDate", "mark", "link", "draftMode");
 		dataset.put("masterId", object.getCodeAudit().getId());
-		dataset.put("draftMode", object.getCodeAudit().isDraftMode());
+		//dataset.put("draftMode", object.getCodeAudit().isDraftMode());
 
 		super.getResponse().addData(dataset);
 	}

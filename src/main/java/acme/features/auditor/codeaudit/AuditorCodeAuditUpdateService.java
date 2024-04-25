@@ -10,6 +10,7 @@ import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.codeaudits.CodeAudit;
+import acme.entities.codeaudits.CodeType;
 import acme.entities.projects.Project;
 import acme.roles.Auditor;
 
@@ -26,12 +27,12 @@ public class AuditorCodeAuditUpdateService extends AbstractService<Auditor, Code
 	@Override
 	public void authorise() {
 		boolean status;
-		int codeAuditId;
+		int masterId;
 		CodeAudit codeAudit;
 		Auditor auditor;
 
-		codeAuditId = super.getRequest().getData("id", int.class);
-		codeAudit = this.repository.findCodeAuditById(codeAuditId);
+		masterId = super.getRequest().getData("id", int.class);
+		codeAudit = this.repository.findCodeAuditById(masterId);
 		auditor = codeAudit == null ? null : codeAudit.getAuditor();
 		status = codeAudit != null && codeAudit.isDraftMode() && super.getRequest().getPrincipal().hasRole(auditor);
 
@@ -56,10 +57,10 @@ public class AuditorCodeAuditUpdateService extends AbstractService<Auditor, Code
 		int projectId;
 		Project project;
 
-		projectId = super.getRequest().getData("contractor", int.class);
+		projectId = super.getRequest().getData("project", int.class);
 		project = this.repository.findOneProjectById(projectId);
 
-		super.bind(object, "code", "executionDate", "type", "markMode", "correctiveActions", "link");
+		super.bind(object, "code", "executionDate", "type", "correctiveActions", "link");
 		object.setProject(project);
 	}
 
@@ -67,11 +68,11 @@ public class AuditorCodeAuditUpdateService extends AbstractService<Auditor, Code
 	public void validate(final CodeAudit object) {
 		assert object != null;
 
-		if (!super.getBuffer().getErrors().hasErrors("reference")) {
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			CodeAudit existing;
 
 			existing = this.repository.findOneCodeAuditByCode(object.getCode());
-			super.state(existing == null, "code", "auditor.codeaudit.form.error.duplicated");
+			super.state(existing == null || existing.getId() == object.getId(), "code", "auditor.codeaudit.form.error.duplicated");
 		}
 
 	}
@@ -87,18 +88,20 @@ public class AuditorCodeAuditUpdateService extends AbstractService<Auditor, Code
 	public void unbind(final CodeAudit object) {
 		assert object != null;
 
-		int auditorId;
 		Collection<Project> projects;
 		SelectChoices choices;
 		Dataset dataset;
+		SelectChoices choicesType;
+		choicesType = SelectChoices.from(CodeType.class, object.getType());
 
-		auditorId = super.getRequest().getPrincipal().getActiveRoleId();
 		projects = this.repository.findAllProjects();
-		choices = SelectChoices.from(projects, "name", object.getProject());
+		choices = SelectChoices.from(projects, "title", object.getProject());
 
-		dataset = super.unbind(object, "code", "executionDate", "type", "markMode", "correctiveActions", "link", "draftMode");
+		dataset = super.unbind(object, "code", "executionDate", "type", "correctiveActions", "link", "draftMode");
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);
+		dataset.put("type", choicesType.getSelected().getKey());
+		dataset.put("types", choicesType);
 
 		super.getResponse().addData(dataset);
 	}

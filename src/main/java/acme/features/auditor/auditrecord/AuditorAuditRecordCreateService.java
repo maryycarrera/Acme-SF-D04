@@ -45,6 +45,7 @@ public class AuditorAuditRecordCreateService extends AbstractService<Auditor, Au
 		codeAudit = this.repository.findOneCodeAuditById(masterId);
 
 		object = new AuditRecord();
+		object.setDraftMode(true);
 		object.setCodeAudit(codeAudit);
 
 		super.getBuffer().addData(object);
@@ -55,25 +56,28 @@ public class AuditorAuditRecordCreateService extends AbstractService<Auditor, Au
 		assert object != null;
 
 		super.bind(object, "code", "startDate", "finishDate", "mark", "link");
+
 	}
 
 	@Override
 	public void validate(final AuditRecord object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			AuditRecord existing;
+
+			existing = this.repository.findOneAuditRecordByCode(object.getCode());
+			super.state(existing == null, "code", "auditor.audit-record.form.error.duplicated");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("finishDate"))
+			super.state(MomentHelper.isBefore(object.getStartDate(), object.getFinishDate()) && MomentHelper.isLongEnough(object.getStartDate(), object.getFinishDate(), 1, ChronoUnit.HOURS), "finishDate", "auditor.audit-record.form.error.low-period");
+
 	}
 
 	@Override
 	public void perform(final AuditRecord object) {
 		assert object != null;
-		if (!super.getBuffer().getErrors().hasErrors("code")) {
-			AuditRecord existing;
 
-			existing = this.repository.findOneAuditRecordByCode(object.getCode());
-			super.state(existing == null, "code", "auditor.auditrecord.form.error.duplicated");
-		}
-
-		if (!super.getBuffer().getErrors().hasErrors("period"))
-			super.state(MomentHelper.isLongEnough(object.getStartDate(), object.getFinishDate(), 1, ChronoUnit.HOURS), "deadline", "auditor.auditrecord.form.error.low-period");
 		this.repository.save(object);
 	}
 

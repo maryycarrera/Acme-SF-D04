@@ -32,13 +32,13 @@ public class AuditorCodeAuditListService extends AbstractService<Auditor, CodeAu
 
 	@Override
 	public void load() {
-		Collection<CodeAudit> object;
+		Collection<CodeAudit> codeAudits;
 		int id;
 
 		id = super.getRequest().getPrincipal().getActiveRoleId();
-		object = this.repository.findCodeAuditsByAuditorId(id);
+		codeAudits = this.repository.findCodeAuditsByAuditorId(id);
 
-		super.getBuffer().addData(object);
+		super.getBuffer().addData(codeAudits);
 	}
 
 	@Override
@@ -46,8 +46,9 @@ public class AuditorCodeAuditListService extends AbstractService<Auditor, CodeAu
 		assert object != null;
 
 		Dataset dataset;
-
-		dataset = super.unbind(object, "code", "executionDate", "type", "markMode", "draftMode");
+		Collection<String> marks = this.repository.findMarksOfAuditRecordsByCodeAuditId(object.getId());
+		dataset = super.unbind(object, "code", "executionDate", "type", "draftMode");
+		dataset.put("markMode", CodeAudit.getMarkMode(marks));
 
 		super.getResponse().addData(dataset);
 	}

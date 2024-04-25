@@ -14,8 +14,7 @@ import acme.entities.codeaudits.CodeAudit;
 import acme.roles.Auditor;
 
 @Service
-public class AuditorAuditRecordUpdateService extends AbstractService<Auditor, AuditRecord> {
-
+public class AuditorAuditRecordPublishService extends AbstractService<Auditor, AuditRecord> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
@@ -32,8 +31,9 @@ public class AuditorAuditRecordUpdateService extends AbstractService<Auditor, Au
 		AuditRecord auditRecord;
 
 		auditRecordId = super.getRequest().getData("id", int.class);
-		codeAudit = this.repository.findOneCodeAuditByAuditRecordId(auditRecordId);
+
 		auditRecord = this.repository.findAuditRecordById(auditRecordId);
+		codeAudit = this.repository.findOneCodeAuditByAuditRecordId(auditRecordId);
 		status = codeAudit != null && codeAudit.isDraftMode() && auditRecord.isDraftMode() && super.getRequest().getPrincipal().hasRole(codeAudit.getAuditor());
 
 		super.getResponse().setAuthorised(status);
@@ -74,7 +74,7 @@ public class AuditorAuditRecordUpdateService extends AbstractService<Auditor, Au
 	@Override
 	public void perform(final AuditRecord object) {
 		assert object != null;
-
+		object.setDraftMode(false);
 		this.repository.save(object);
 	}
 
@@ -86,7 +86,6 @@ public class AuditorAuditRecordUpdateService extends AbstractService<Auditor, Au
 
 		dataset = super.unbind(object, "code", "startDate", "finishDate", "mark", "link", "draftMode");
 		dataset.put("masterId", object.getCodeAudit().getId());
-
 		super.getResponse().addData(dataset);
 	}
 }

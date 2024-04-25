@@ -52,8 +52,7 @@ public class AuthenticatedAuditorCreateService extends AbstractService<Authentic
 	@Override
 	public void bind(final Auditor object) {
 		assert object != null;
-		//CAMBIAR
-		super.bind(object, "area", "sector");
+		super.bind(object, "firm", "professionalId", "certifications", "link");
 	}
 
 	@Override
@@ -74,7 +73,7 @@ public class AuthenticatedAuditorCreateService extends AbstractService<Authentic
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "area", "sector");
+		dataset = super.unbind(object, "firm", "professionalId", "certifications", "link");
 
 		super.getResponse().addData(dataset);
 	}

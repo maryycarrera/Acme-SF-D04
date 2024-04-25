@@ -52,6 +52,12 @@ master.menu.manager.all-user-stories = Listar mis historias de usuario
 master.menu.manager.all-assignations = Listar mis asignaciones
 master.menu.manager.manager-dashboard = Panel de control de gerente
 
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.auditor-dashboard = Panel de control del auditor
+master.menu.auditor.all-code-audits = Mostrar mis auditorías de código
+
 # master.menu.sponsor ########################################################
 
 master.menu.sponsor = Patrocinador

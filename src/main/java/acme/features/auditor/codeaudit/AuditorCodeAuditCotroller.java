@@ -42,8 +42,8 @@ public class AuditorCodeAuditCotroller extends AbstractController<Auditor, CodeA
 		super.addBasicCommand("create", this.createService);
 		super.addBasicCommand("update", this.updateService);
 		super.addBasicCommand("delete", this.deleteService);
+		super.addBasicCommand("list", this.listAllService);
 
-		super.addCustomCommand("list-all", "list", this.listAllService);
 		super.addCustomCommand("publish", "update", this.publishService);
 	}
 
