@@ -19,7 +19,7 @@ developer.training-session.list.label.instructor = Instructor
 
 developer.training-session.form.label.code = Code:
 developer.training-session.form.label.start-period-date = Start Date:
-developer.training-session.form.label.end-period-date = End Date:
+developer.training-session.form.label.finish-period-date = End Date:
 developer.training-session.form.label.location = Location:
 developer.training-session.form.label.instructor = Instructor:
 developer.training-session.form.label.contact-email = Email:
