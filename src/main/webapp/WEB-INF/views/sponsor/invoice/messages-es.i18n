@@ -31,6 +31,8 @@ sponsor.invoice.list.label.dueDate = Fecha de Vencimiento
 
 sponsor.invoice.list.button.create = Crear
 
+sponsor.sponsorship.form.error.no-invoices= Necesitas tener facturas
+sponsor.sponsorship.form.error.invoices-not-published= Las facturas deben estar publicadas
 sponsor.invoice.form.error.duplicated= El código está duplicado o nulo
 sponsor.invoice.form.error.quantity-no-positive= El dinero debe ser positivo
 sponsor.invoice.form.error.tax-no-positive= El impuesto debe ser positivo

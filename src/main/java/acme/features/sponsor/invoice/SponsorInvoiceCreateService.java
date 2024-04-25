@@ -48,18 +48,18 @@ public class SponsorInvoiceCreateService extends AbstractService<Sponsor, Invoic
 
 		masterId = super.getRequest().getData("masterId", int.class);
 		sponsorship = this.repository.findOneSponsorshipById(masterId);
-		Money dinero = new Money();
-
-		dinero.setAmount(0.0);
-		dinero.setCurrency("EUR");
-
+		//Money dinero = new Money();
 		object = new Invoice();
-		object.setCode("");
-		object.setRegistrationTime(new Date());
-		object.setDueDate(new Date());
-		object.setQuantity(dinero);
-		object.setTax(0.0);
-		object.setLink("");
+		//		dinero.setAmount(0.0);
+		//		dinero.setCurrency("EUR");
+		//		
+		//		object = new Invoice();
+		//		object.setCode("");
+		//		object.setRegistrationTime(new Date());
+		//		object.setDueDate(new Date());
+		//		object.setQuantity(dinero);
+		//		object.setTax(0.0);
+		//		object.setLink("");
 		object.setSponsorship(sponsorship);
 		object.setDraftMode(true);
 

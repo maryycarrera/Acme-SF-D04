@@ -114,8 +114,8 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors()) {
-			super.state(!invoices.isEmpty(), "code", "manager.project.form.error.no-invoices");
-			super.state(invoices.stream().allMatch(us -> !us.isDraftMode()), "code", "sponsor.sponsorship.form.error.invoices-not-published");
+			super.state(!invoices.isEmpty(), "*", "sponsor.sponsorship.form.error.no-invoices");
+			super.state(invoices.stream().allMatch(us -> !us.isDraftMode()), "*", "sponsor.sponsorship.form.error.invoices-not-published");
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("amount"))
