@@ -73,6 +73,7 @@ master.menu.any = Cualquier Usuario
 master.menu.any.published-projects = Listar todos los proyectos publicados
 master.menu.any.published-contracts = Listar todos los contratos publicados
 master.menu.any.published-modules = Ver todos los módulos de entrenamiento publicados
+master.menu.any.claims = Listar reclamaciones
 
 # master.menu.sponsor ########################################################
 
