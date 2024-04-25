@@ -35,3 +35,4 @@ developer.training-session.form.button.publish=Publish
 
 developer.training-session.form.error.creation-moment-invalid = Creation moment is invalid
 developer.training-session.form.error.too-close = At least 7 days must pass from the creation date
+developer.training-session.form.error.duplicated = The chosen code is already in use

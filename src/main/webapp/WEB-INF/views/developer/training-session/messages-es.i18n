@@ -36,3 +36,4 @@ developer.training-session.form.button.publish=Publicar
 
 developer.training-session.form.error.creation-moment-invalid = Momento de creación inválido
 developer.training-session.form.error.too-close = Deben pasar al menos 7 dias desde la fecha de creación
+developer.training-session.form.error.duplicated = El código escogido ya está en uso
