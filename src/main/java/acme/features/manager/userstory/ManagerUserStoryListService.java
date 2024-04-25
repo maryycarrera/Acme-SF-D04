@@ -8,11 +8,12 @@ import org.springframework.stereotype.Service;
 
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
+import acme.entities.projects.Project;
 import acme.entities.userstories.UserStory;
 import acme.roles.Manager;
 
 @Service
-public class ManagerUserStoryListAllService extends AbstractService<Manager, UserStory> {
+public class ManagerUserStoryListService extends AbstractService<Manager, UserStory> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -25,8 +26,12 @@ public class ManagerUserStoryListAllService extends AbstractService<Manager, Use
 	@Override
 	public void authorise() {
 		boolean status;
+		Project project;
+		int id;
 
-		status = super.getRequest().getPrincipal().hasRole(Manager.class);
+		id = super.getRequest().getData("masterId", int.class);
+		project = this.repository.findOneProjectById(id);
+		status = project != null && super.getRequest().getPrincipal().hasRole(project.getManager());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -36,8 +41,8 @@ public class ManagerUserStoryListAllService extends AbstractService<Manager, Use
 		Collection<UserStory> object;
 		int id;
 
-		id = super.getRequest().getPrincipal().getActiveRoleId();
-		object = this.repository.findUserStoriesByManagerId(id);
+		id = super.getRequest().getData("masterId", int.class);
+		object = this.repository.findUserStoriesByProjectId(id);
 
 		super.getBuffer().addData(object);
 	}
@@ -50,7 +55,7 @@ public class ManagerUserStoryListAllService extends AbstractService<Manager, Use
 		final boolean showCreate;
 
 		dataset = super.unbind(object, "title", "description", "estimatedCost", "acceptanceCriteria", "priority", "link", "draftMode");
-		showCreate = true;
+		showCreate = false;
 
 		super.getResponse().addData(dataset);
 		super.getResponse().addGlobal("showCreate", showCreate);
