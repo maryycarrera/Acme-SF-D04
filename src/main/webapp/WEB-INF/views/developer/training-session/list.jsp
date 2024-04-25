@@ -17,8 +17,8 @@
 
 <acme:list>
 	<acme:list-column code="developer.training-session.list.label.code" path="code" width="20%"/>
-	<acme:list-column code="developer.training-session.list.label.start-date" path="startPeriodDate" width="20%"/>
-	<acme:list-column code="developer.training-session.list.label.end-date" path="finishPeriodDate" width="20%"/>	
+	<acme:list-column code="developer.training-session.list.label.start-period-date" path="startPeriodDate" width="20%"/>
+	<acme:list-column code="developer.training-session.list.label.finish-period-date" path="finishPeriodDate" width="20%"/>	
 	<acme:list-column code="developer.training-session.list.label.location" path="location" width="20%"/>	
 	<acme:list-column code="developer.training-session.list.label.instructor" path="instructor" width="20%"/>	
 

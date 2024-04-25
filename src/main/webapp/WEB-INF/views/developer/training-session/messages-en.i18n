@@ -19,7 +19,7 @@ developer.training-session.list.label.instructor = Instructor
 
 developer.training-session.form.label.code = Code:
 developer.training-session.form.label.start-period-date = Start Date:
-developer.training-session.form.label.end-period-date = End Date:
+developer.training-session.form.label.finish-period-date = End Date:
 developer.training-session.form.label.location = Location:
 developer.training-session.form.label.instructor = Instructor:
 developer.training-session.form.label.contact-email = Email:
@@ -32,3 +32,7 @@ developer.training-session.form.button.create-training-session= Create
 developer.training-session.form.button.update=Update
 developer.training-session.form.button.delete=Delete
 developer.training-session.form.button.publish=Publish
+
+developer.training-session.form.error.creation-moment-invalid = Creation moment is invalid
+developer.training-session.form.error.too-close = At least 7 days must pass from the creation date
+developer.training-session.form.error.duplicated = The chosen code is already in use

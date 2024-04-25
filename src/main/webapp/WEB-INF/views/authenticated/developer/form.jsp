@@ -17,7 +17,7 @@
 
 <acme:form>
 	<acme:input-textbox code="authenticated.developer.form.label.degree" path="degree"/>
-	<acme:input-textbox code="authenticated.developer.form.label.specialisation" path="specialization"/>
+	<acme:input-textbox code="authenticated.developer.form.label.specialisation" path="specialisation"/>
 	<acme:input-textbox code="authenticated.developer.form.label.skills" path="skills"/>
 	<acme:input-email code="authenticated.developer.form.label.email" path="email"/>
 	<acme:input-url code="authenticated.developer.form.label.link" path="link"/>

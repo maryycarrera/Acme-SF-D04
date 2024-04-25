@@ -11,7 +11,7 @@
 authenticated.developer.form.title = Developer form
 
 authenticated.developer.form.label.degree = Degree: 
-authenticated.developer.form.label.specialisation = Specialization:
+authenticated.developer.form.label.specialisation = Specialisation:
 authenticated.developer.form.label.skills = Skills:
 authenticated.developer.form.label.email = Email:
 authenticated.developer.form.label.link = Link:

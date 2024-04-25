@@ -67,20 +67,20 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 			super.state(existing == null || existing.equals(object), "code", "developer.training-session.form.error.duplicated");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("sessionStart")) {
+		if (!super.getBuffer().getErrors().hasErrors("startPeriodDate")) {
 			TrainingModule module;
 			int masterId;
 
 			masterId = super.getRequest().getData("masterId", int.class);
 			module = this.repository.findOneTrainingModuleById(masterId);
-			super.state(MomentHelper.isAfter(object.getStartPeriodDate(), module.getCreationMoment()), "sessionStart", "developer.training-session.form.error.creation-moment-invalid");
+			super.state(MomentHelper.isAfter(object.getStartPeriodDate(), module.getCreationMoment()), "startPeriodDate", "developer.training-session.form.error.creation-moment-invalid");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("sessionEnd")) {
+		if (!super.getBuffer().getErrors().hasErrors("finishPeriodDate")) {
 			Date minimumEnd;
 
 			minimumEnd = MomentHelper.deltaFromMoment(object.getStartPeriodDate(), 7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfter(object.getFinishPeriodDate(), minimumEnd), "sessionEnd", "developer.training-session.form.error.too-close");
+			super.state(MomentHelper.isAfter(object.getFinishPeriodDate(), minimumEnd), "finishPeriodDate", "developer.training-session.form.error.too-close");
 		}
 
 	}
