@@ -23,6 +23,6 @@
 	<acme:list-column code="manager.user-story.list.label.draftMode" path="draftMode" width="16%"/>
 </acme:list>
 
-<jstl:if test="${_command == 'list'}">
+<jstl:if test="${showCreate}">
 	<acme:button code="manager.user-story.list.button.create" action="/manager/user-story/create"/>
 </jstl:if>

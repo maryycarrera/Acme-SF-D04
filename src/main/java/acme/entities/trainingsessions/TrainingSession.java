@@ -62,6 +62,8 @@ public class TrainingSession extends AbstractEntity {
 	@URL
 	private String				link;
 
+	private boolean				published;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
