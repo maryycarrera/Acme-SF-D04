@@ -18,5 +18,6 @@
 
 <acme:list>
 	<acme:list-column code="any.training-module.list.label.code" path="code"/>
+	<acme:list-column code="any.training-module.list.label.creation-moment" path="creationMoment"/>
 	<acme:list-column code="any.training-module.list.label.draftMode" path="draftMode"/>
 </acme:list>

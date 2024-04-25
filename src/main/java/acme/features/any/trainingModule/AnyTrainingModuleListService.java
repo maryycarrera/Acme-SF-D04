@@ -39,7 +39,7 @@ public class AnyTrainingModuleListService extends AbstractService<Any, TrainingM
 	public void unbind(final TrainingModule object) {
 		assert object != null;
 
-		final Dataset dataset = super.unbind(object, "code");
+		final Dataset dataset = super.unbind(object, "code", "creationMoment");
 
 		if (object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();

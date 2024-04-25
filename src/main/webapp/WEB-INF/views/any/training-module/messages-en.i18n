@@ -20,4 +20,5 @@ any.training-module.form.title = Training Module
 any.training-module.list.title = Training Modules
 
 any.training-module.list.label.code = Code
+any.training-module.list.label.creation-moment = Creation moment
 any.training-module.list.label.draftMode = Editable

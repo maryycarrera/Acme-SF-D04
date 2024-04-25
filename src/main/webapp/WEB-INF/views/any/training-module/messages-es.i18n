@@ -21,3 +21,4 @@ any.training-module.list.title = Módulos de entrenamiento
 
 any.training-module.list.label.code = Código
 any.training-module.list.label.draftMode = Editable
+any.training-module.list.label.creation-moment = Momento de creación
