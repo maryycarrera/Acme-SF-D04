@@ -15,16 +15,16 @@ sponsor.sponsor-dashboard.form.title.operations = Datos adicionales
 sponsor.sponsor-dashboard.form.label.invoices-tax-below-equal-21 = Número de facturas con impuestos iguales o inferiores al 0.21%
 sponsor.sponsor-dashboard.form.label.sponsorships-with-link = Número de patrocinios con enlaces
 
-sponsor.sponsor-dashboard.form.title.amount-sponsorships = Operaciones con precios de patrocinios
+sponsor.sponsor-dashboard.form.title.amount-sponsorships = Operaciones con precio de patrocinios  
 
-sponsor.sponsor-dashboard.form.label.average-amount-of-sponsorship = Promedio de precios de patrocinios
-sponsor.sponsor-dashboard.form.label.deviation-amount-of-sponsorship = Desviación de la precios de patrocinios
-sponsor.sponsor-dashboard.form.label.minimum-amount-of-sponsorship = Precio mínima de patrocinios
-sponsor.sponsor-dashboard.form.label.maximum-amount-of-sponsorship = Precio máxima de patrocinios
+sponsor.dashboard.form.label.amount-average =  Precio promedio de patrocinios
+sponsor.dashboard.form.label.amount-deviation=  Desviación del precio de patrocinios
+sponsor.dashboard.form.label.amount-minimum = Precio mínimo de patrocinios
+sponsor.dashboard.form.label.amount-maximum = Precio máximo de patrocinios
 
-sponsor.sponsor-dashboard.form.title.quantity-invoice = Operaciones con cantidad de facturas
+sponsor.sponsor-dashboard.form.title.quantity-invoices = Operaciones con precio de facturas 
 
-sponsor.sponsor-dashboard.form.label.average-quantity-of-invoice = Promedio de precios de facturas
-sponsor.sponsor-dashboard.form.label.deviation-quantity-of-invoice = Desviación de la precios de facturas
-sponsor.sponsor-dashboard.form.label.minimum-quantity-of-invoice = Precio mínima de facturas
-sponsor.sponsor-dashboard.form.label.maximum-quantity-of-invoice = Precio máxima de facturas
+sponsor.dashboard.form.label.quantity-average =  Precio promedio de facturas 
+sponsor.dashboard.form.label.quantity-deviation=  Desviación del precio de facturas 
+sponsor.dashboard.form.label.quantity-minimum = Precio mínimo de facturas 
+sponsor.dashboard.form.label.quantity-maximum = Precio máximo de facturas

@@ -7,13 +7,11 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.datatypes.Money;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.invoices.Invoice;
 import acme.entities.sponsorships.Sponsorship;
-import acme.entities.systemconfigurations.SystemConfiguration;
 import acme.roles.Sponsor;
 
 @Service
@@ -35,7 +33,8 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 
 		invoiceId = super.getRequest().getData("id", int.class);
 		sponsorship = this.repository.findOneSponsorshipByInvoiceId(invoiceId);
-		status = sponsorship != null && sponsorship.isDraftMode() && super.getRequest().getPrincipal().hasRole(sponsorship.getSponsor());
+		Invoice i = this.repository.findOneInvoiceById(invoiceId);
+		status = sponsorship != null && sponsorship.isDraftMode() && i.isDraftMode() && super.getRequest().getPrincipal().hasRole(sponsorship.getSponsor());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -55,19 +54,15 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 	public void bind(final Invoice object) {
 		assert object != null;
 
+		int invoiceId;
+
+		invoiceId = super.getRequest().getData("id", int.class);
+		Sponsorship sponsorship = this.repository.findOneSponsorshipByInvoiceId(invoiceId);
+
 		super.bind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link");
+		object.setSponsorship(sponsorship);
 	}
-	public boolean isCurrencyAccepted(final Money moneda) {
-		SystemConfiguration moneys;
-		moneys = this.repository.findSystemConfiguration();
 
-		String[] listaMonedas = moneys.getAcceptedCurrencies().split(",");
-		for (String divisa : listaMonedas)
-			if (moneda.getCurrency().equals(divisa))
-				return true;
-
-		return false;
-	}
 	@Override
 	public void validate(final Invoice object) {
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
@@ -93,7 +88,7 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 			super.state(object.getDueDate().after(minimumDeadline), "dueDate", "sponsor.invoice.form.error.too-close-to-registrationTime");
 		}
 		if (!super.getBuffer().getErrors().hasErrors("quantity"))
-			super.state(object.getQuantity().getCurrency().equals(object.getSponsorship().getAmount().getCurrency()), "quantity", "sponsor.quantity.form.error.currency");
+			super.state(object.getQuantity().getCurrency().equals(object.getSponsorship().getAmount().getCurrency()), "quantity", "sponsor.invoice.form.error.currency");
 
 	}
 
@@ -109,9 +104,10 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 		assert object != null;
 
 		Dataset dataset;
-
 		dataset = super.unbind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link", "draftMode");
 		dataset.put("masterId", object.getSponsorship().getId());
+
+		super.getResponse().addData(dataset);
 
 	}
 }

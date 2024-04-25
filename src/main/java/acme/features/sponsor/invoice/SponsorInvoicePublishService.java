@@ -7,13 +7,11 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.datatypes.Money;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.invoices.Invoice;
 import acme.entities.sponsorships.Sponsorship;
-import acme.entities.systemconfigurations.SystemConfiguration;
 import acme.roles.Sponsor;
 
 @Service
@@ -64,17 +62,7 @@ public class SponsorInvoicePublishService extends AbstractService<Sponsor, Invoi
 		super.bind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link");
 		object.setSponsorship(sponsorship);
 	}
-	public boolean isCurrencyAccepted(final Money moneda) {
-		SystemConfiguration moneys;
-		moneys = this.repository.findSystemConfiguration();
 
-		String[] listaMonedas = moneys.getAcceptedCurrencies().split(",");
-		for (String divisa : listaMonedas)
-			if (moneda.getCurrency().equals(divisa))
-				return true;
-
-		return false;
-	}
 	@Override
 	public void validate(final Invoice object) {
 		assert object != null;
@@ -101,7 +89,7 @@ public class SponsorInvoicePublishService extends AbstractService<Sponsor, Invoi
 			super.state(object.getDueDate().after(minimumDeadline), "dueDate", "sponsor.invoice.form.error.too-close-to-registrationTime");
 		}
 		if (!super.getBuffer().getErrors().hasErrors("quantity"))
-			super.state(object.getQuantity().getCurrency().equals(object.getSponsorship().getAmount().getCurrency()), "quantity", "sponsor.quantity.form.error.currency");
+			super.state(object.getQuantity().getCurrency().equals(object.getSponsorship().getAmount().getCurrency()), "quantity", "sponsor.invoice.form.error.currency");
 
 	}
 
@@ -119,10 +107,9 @@ public class SponsorInvoicePublishService extends AbstractService<Sponsor, Invoi
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link", "drafttMode");
-
+		dataset = super.unbind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link", "draftMode");
 		dataset.put("masterId", object.getSponsorship().getId());
-
+		System.out.println(dataset);
 		super.getResponse().addData(dataset);
 	}
 

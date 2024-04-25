@@ -18,14 +18,14 @@ sponsor.sponsor-dashboard.form.label.sponsorships-with-link =  Number of Sponsor
 
 sponsor.sponsor-dashboard.form.title.amount-sponsorships = Operations with amount of sponsorships  
 
-sponsor.sponsor-dashboard.form.label.average-amount-of-sponsorship =  Average amount of sponsorships
-sponsor.sponsor-dashboard.form.label.deviation-amount-of-sponsorship =  Deviation amount of sponsorships
-sponsor.sponsor-dashboard.form.label.minimum-amount-of-sponsorship = Minimum amount of sponsorships
-sponsor.sponsor-dashboard.form.label.maximum-amount-of-sponsorship = Maximum amount of sponsorships
+sponsor.dashboard.form.label.amount-average =  Average amount of sponsorships
+sponsor.dashboard.form.label.amount-deviation =  Deviation amount of sponsorships
+sponsor.dashboard.form.label.amount-minimum = Minimum amount of sponsorships
+sponsor.dashboard.form.label.amount-maximum = Maximum amount of sponsorships
 
-sponsor.sponsor-dashboard.form.title.quantity-invoice = Operations with quantity of invoices 
+sponsor.sponsor-dashboard.form.title.quantity-invoices = Operations with quantity of invoices 
 
-sponsor.sponsor-dashboard.form.label.average-quantity-of-invoice =  Average quantity of invoices 
-sponsor.sponsor-dashboard.form.label.deviation-quantity-of-invoice =  Deviation quantity of invoices 
-sponsor.sponsor-dashboard.form.label.minimum-quantity-of-invoice = Minimum quantity of invoices 
-sponsor.sponsor-dashboard.form.label.maximum-quantity-of-invoice = Maximum quantity of invoices 
+sponsor.dashboard.form.label.quantity-average =  Average quantity of invoices 
+sponsor.dashboard.form.label.quantity-deviation=  Deviation quantity of invoices 
+sponsor.dashboard.form.label.quantity-minimum = Minimum quantity of invoices 
+sponsor.dashboard.form.label.quantity-maximum = Maximum quantity of invoices 

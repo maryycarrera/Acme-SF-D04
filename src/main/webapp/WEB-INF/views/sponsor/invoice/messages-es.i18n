@@ -35,5 +35,5 @@ sponsor.invoice.form.error.duplicated= El código está duplicado o nulo
 sponsor.invoice.form.error.quantity-no-positive= El dinero debe ser positivo
 sponsor.invoice.form.error.tax-no-positive= El impuesto debe ser positivo
 sponsor.invoice.form.error.too-close-to-registrationTime= La fecha de vencimiento debe ser más de 30 días después del momento de registro
-sponsor.quantity.form.error.currency= La moneda debe ser la misma que la del patrocinio
+sponsor.invoice.form.error.currency= La moneda debe ser la misma que la del patrocinio
 sponsor.invoice.form.error.registration-before-sponsorship= La fecha de registro debe ser despues que el momento de creacion del patrocinio
