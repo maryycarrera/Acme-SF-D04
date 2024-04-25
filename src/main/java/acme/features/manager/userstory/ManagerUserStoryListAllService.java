@@ -12,7 +12,7 @@ import acme.entities.userstories.UserStory;
 import acme.roles.Manager;
 
 @Service
-public class ManagerUserStoryListService extends AbstractService<Manager, UserStory> {
+public class ManagerUserStoryListAllService extends AbstractService<Manager, UserStory> {
 
 	// Internal state ---------------------------------------------------------
 
