@@ -64,6 +64,9 @@ public class AuthenticatedDeveloperUpdateService extends AbstractService<Authent
 
 	@Override
 	public void unbind(final Developer object) {
+
+		assert object != null;
+
 		Dataset dataset;
 
 		dataset = super.unbind(object, "degree", "specialisation", "skills", "email", "link");

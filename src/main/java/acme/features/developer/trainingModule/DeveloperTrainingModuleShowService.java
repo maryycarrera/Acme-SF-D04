@@ -20,18 +20,30 @@ public class DeveloperTrainingModuleShowService extends AbstractService<Develope
 	@Autowired
 	private DeveloperTrainingModuleRepository trainingModuleRepository;
 
+	//@Override
+	//public void authorise() {
+	//		Boolean status;
+	//		int masterId;
+	//		TrainingModule trainingModule;
+	//		Developer developer;
+	//
+	//		masterId = super.getRequest().getData("id", int.class);
+	//		trainingModule = this.trainingModuleRepository.findTrainingModuleById(masterId);
+	//		developer = trainingModule == null ? null : trainingModule.getDeveloper();
+	//		status = super.getRequest().getPrincipal().hasRole(developer) || trainingModule != null && !trainingModule.isDraftMode();
+	//
+	//		super.getResponse().setAuthorised(status);
+
 
 	@Override
 	public void authorise() {
-		Boolean status;
-		int masterId;
+		boolean status;
+		int trainingModuleId;
 		TrainingModule trainingModule;
-		Developer developer;
 
-		masterId = super.getRequest().getData("id", int.class);
-		trainingModule = this.trainingModuleRepository.findTrainingModuleById(masterId);
-		developer = trainingModule == null ? null : trainingModule.getDeveloper();
-		status = super.getRequest().getPrincipal().hasRole(developer) || trainingModule != null && !trainingModule.isDraftMode();
+		trainingModuleId = super.getRequest().getData("id", int.class);
+		trainingModule = this.trainingModuleRepository.findTrainingModuleById(trainingModuleId);
+		status = super.getRequest().getPrincipal().hasRole(trainingModule.getDeveloper()) || trainingModule != null && !trainingModule.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}
