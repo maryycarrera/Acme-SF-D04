@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
 import acme.entities.assignations.Assignation;
+import acme.entities.projects.Project;
 import acme.entities.userstories.UserStory;
 import acme.roles.Manager;
 
@@ -25,5 +26,11 @@ public interface ManagerUserStoryRepository extends AbstractRepository {
 
 	@Query("SELECT a FROM Assignation a WHERE a.userStory.id = :id")
 	Collection<Assignation> findAssignationsByUserStoryId(int id);
+
+	@Query("SELECT a.userStory FROM Assignation a WHERE a.project.id = :id")
+	Collection<UserStory> findUserStoriesByProjectId(int id);
+
+	@Query("SELECT p FROM Project p WHERE p.id = :id")
+	Project findOneProjectById(int id);
 
 }
