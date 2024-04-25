@@ -18,10 +18,10 @@
 <acme:form>
 	<acme:input-textbox code="developer.training-session.form.label.code" path="code"/>
 	<acme:input-moment code="developer.training-session.form.label.start-period-date" path="startPeriodDate"/>
-	<acme:input-moment code="developer.training-session.form.label.finish-period-date" path="endPeriodDate"/>
+	<acme:input-moment code="developer.training-session.form.label.finish-period-date" path="finishPeriodDate"/>
 	<acme:input-textbox code="developer.training-session.form.label.location" path="location"/>	
 	<acme:input-textbox code="developer.training-session.form.label.instructor" path="instructor"/>	
-	<acme:input-email code="developer.training-session.form.label.email" path="email"/>
+	<acme:input-email code="developer.training-session.form.label.contact-email" path="contactEmail"/>
 	<acme:input-url code="developer.training-session.form.label.link" path="link"/>	
 	
 	
