@@ -1,6 +1,8 @@
 
 package acme.features.auditor.dashboard;
 
+import java.util.Collection;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -16,9 +18,12 @@ public interface AuditorDashboardRepository extends AbstractRepository {
 	@Query("SELECT AVG(SELECT COUNT(ar) FROM AuditRecord ar WHERE ar.codeAudit = ca) FROM CodeAudit ca WHERE ca.auditor.id=:auditorId")
 	Double averageNumberOfAuditRecords(int auditorId);
 
+	//@Query("SELECT STDDEV(SELECT COUNT(ar) FROM AuditRecord ar WHERE ar.codeAudit = ca) FROM CodeAudit ca WHERE ca.auditor.id=:auditorId")
 	@Query("SELECT AVG(SELECT COUNT(ar) FROM AuditRecord ar WHERE ar.codeAudit = ca) FROM CodeAudit ca WHERE ca.auditor.id=:auditorId")
-	//@Query("SELECT STDDEV(COUNT(ar)) FROM AuditRecord ar WHERE ar.codeAudit.auditor.id = :auditorId GROUP BY ar.codeAudit")
 	Double deviationNumberOfAuditRecords(int auditorId);
+
+	@Query("SELECT (SELECT COUNT(ar) from AuditRecord ar where ar.codeAudit = ca) FROM CodeAudit ca WHERE ca.auditor.id = :auditorId")
+	Collection<Double> auditRecordsForCodeAudit(int auditorId);
 
 	@Query("SELECT MIN(SELECT COUNT(ar) FROM AuditRecord ar WHERE ar.codeAudit = ca) FROM CodeAudit ca WHERE ca.auditor.id=:auditorId")
 	Integer minumumNumberOfAuditRecords(int auditorId);

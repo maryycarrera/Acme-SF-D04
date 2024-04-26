@@ -1,6 +1,8 @@
 
 package acme.features.auditor.dashboard;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,11 +43,13 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		Double deviationPeriodLengthOfAuditRecords;
 		Double minumumPeriodLengthOfAuditRecords;
 		Double maximumPeriodLengthOfAuditRecords;
+		Collection<Double> auditRecordsForCodeAudit;
 
 		totalStaticCodeAudits = this.repository.totalCodeAuditsForType(auditorId, CodeType.STATIC);
 		totalDynamicCodeAudits = this.repository.totalCodeAuditsForType(auditorId, CodeType.DYNAMIC);
 		averageNumberOfAuditRecords = this.repository.averageNumberOfAuditRecords(auditorId);
-		deviationNumberOfAuditRecords = this.repository.deviationNumberOfAuditRecords(auditorId);
+		auditRecordsForCodeAudit = this.repository.auditRecordsForCodeAudit(auditorId);
+		deviationNumberOfAuditRecords = this.deviation(auditRecordsForCodeAudit);
 		minumumNumberOfAuditRecords = this.repository.minumumNumberOfAuditRecords(auditorId);
 		maximumNumberOfAuditRecords = this.repository.maximumNumberOfAuditRecords(auditorId);
 		averagePeriodLengthOfAuditRecords = this.repository.averagePeriodLengthOfAuditRecords(auditorId);
@@ -77,4 +81,26 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 
 		super.getResponse().addData(dataset);
 	}
+
+	public Double deviation(final Collection<Double> auditRecordsNumber) {
+		Double res;
+		Double aux;
+		res = 0.0;
+		if (auditRecordsNumber.isEmpty())
+			return null;
+
+		if (!auditRecordsNumber.isEmpty()) {
+			double sum = 0.0;
+			for (final Double value : auditRecordsNumber)
+				sum += value;
+			double average = sum / auditRecordsNumber.size();
+
+			aux = 0.0;
+			for (final Double number : auditRecordsNumber)
+				aux += Math.pow(number - average, 2);
+			res = Math.sqrt(aux / auditRecordsNumber.size());
+		}
+		return res;
+	}
+
 }
