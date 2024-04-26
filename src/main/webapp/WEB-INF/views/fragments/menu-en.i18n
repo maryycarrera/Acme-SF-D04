@@ -54,13 +54,6 @@ master.menu.manager.all-user-stories = List my user stories
 master.menu.manager.all-assignations = List my assignations
 master.menu.manager.manager-dashboard = Manager dashboard
 
-
-# master.menu.auditor ##########################################################
-
-master.menu.auditor = Auditor
-master.menu.auditor.auditor-dashboard = Auditor dashboard
-master.menu.auditor.all-code-audits = List my code audits
-
 # master.menu.developer ######################################################
 
 master.menu.developer = Developer
@@ -105,5 +98,3 @@ master.menu.user-account.client = Client data
 master.menu.user-account.become-client = Become a client
 master.menu.user-account.sponsor = Sponsor data
 master.menu.user-account.become-sponsor = Become a sponsor
-master.menu.user-account.auditor = Auditor data
-master.menu.user-account.become-auditor = Become an auditor
