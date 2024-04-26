@@ -33,15 +33,21 @@
 	<acme:input-select code="sponsor.sponsorship.form.label.type"
 		path="type" 
 		choices="${types}" />
-	<acme:input-textbox code="sponsor.sponsorship.form.label.contact"
+	<acme:input-email code="sponsor.sponsorship.form.label.contact"
 		path="contact" />
 	<acme:input-textbox code="sponsor.sponsorship.form.label.link"
 		path="link" />
 
 
 	<jstl:choose>
+	<jstl:when
+			test="${_command == 'show' && draftMode == false}">
+			<acme:button code="sponsor.sponsorship.form.button.invoice" action="/sponsor/invoice/list?masterId=${id}"/>	
+			
+	</jstl:when>
 		<jstl:when
 			test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+			<acme:button code="sponsor.sponsorship.form.button.invoice" action="/sponsor/invoice/list?masterId=${id}"/>	
 			<acme:submit code="sponsor.sponsorship.form.button.update"
 				action="/sponsor/sponsorship/update" />
 			<acme:submit code="sponsor.sponsorship.form.button.delete"
