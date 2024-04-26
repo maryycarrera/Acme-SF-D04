@@ -17,28 +17,28 @@ public class ManagerDashboard extends AbstractForm {
 
 	// Response attributes ----------------------------------------------------
 
-	public int					numberOfMustUserStories;
+	int							numberOfMustUserStories;
 
-	public int					numberOfShouldUserStories;
+	int							numberOfShouldUserStories;
 
-	public int					numberOfCouldUserStories;
+	int							numberOfCouldUserStories;
 
-	public int					numberOfWontUserStories;
+	int							numberOfWontUserStories;
 
-	public Double				averageCostUserStories;
+	Double						averageCostUserStories;
 
-	public Double				deviationCostUserStories;
+	Double						deviationCostUserStories;
 
-	public Double				minimumCostUserStories;
+	Double						minimumCostUserStories;
 
-	public Double				maximumCostUserStories;
+	Double						maximumCostUserStories;
 
-	public Double				averageCostProjects;
+	Double						averageCostProjects;
 
-	public Double				deviationCostProjects;
+	Double						deviationCostProjects;
 
-	public Double				minimumCostProjects;
+	Double						minimumCostProjects;
 
-	public Double				maximumCostProjects;
+	Double						maximumCostProjects;
 
 }

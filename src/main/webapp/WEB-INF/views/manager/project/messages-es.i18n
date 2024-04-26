@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 manager.project.form.title = Detalles de Proyecto
-manager.project.list.title = Listado de Projecto
+manager.project.list.title = Listado de Proyectos
 
 manager.project.form.label.code = Código:
 manager.project.form.label.title = Título: 
@@ -18,6 +18,7 @@ manager.project.form.label.hasFatalErrors = Tiene Errores Fatales:
 manager.project.form.label.cost = Coste:
 manager.project.form.label.link = Enlace:
 
+manager.project.form.button.user-stories = Historias de Usuario
 manager.project.form.button.update = Actualizar
 manager.project.form.button.delete = Eliminar
 manager.project.form.button.publish = Publicar

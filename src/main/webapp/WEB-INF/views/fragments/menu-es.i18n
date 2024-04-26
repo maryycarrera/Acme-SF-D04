@@ -29,9 +29,11 @@ master.menu.anonymous.favourite-link-joagongan = 47566662V: González Ganfornina
 master.menu.administrator = Administrador
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.banners = Banners
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
+master.menu.administrator.show.system-configuration = Mostrar la configuración del sistema
 
 # master.menu.provider ########################################################
 
@@ -44,6 +46,12 @@ master.menu.provider.favourite-link = Favourite Link
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Favourite Link
 
+# master.menu.client ########################################################
+
+master.menu.client = Cliente
+master.menu.client.all-contracts = Listar todos los contratos
+master.menu.client.client-dashboard = Panel de control del cliente
+
 # master.menu.manager ########################################################
 
 master.menu.manager = Gerente
@@ -52,16 +60,35 @@ master.menu.manager.all-user-stories = Listar mis historias de usuario
 master.menu.manager.all-assignations = Listar mis asignaciones
 master.menu.manager.manager-dashboard = Panel de control de gerente
 
+
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.auditor-dashboard = Panel de control del auditor
 master.menu.auditor.all-code-audits = Mostrar mis auditorías de código
 
+# master.menu.developer ######################################################
+
+master.menu.developer = Desarrollador
+master.menu.developer.list-training-module = Listar mis módulos de entrenamiento
+master.menu.developer.dashboard = Panel de estadísticas
+
+
+# master.menu.any ##########################################################
+
+master.menu.any = Cualquier Usuario
+master.menu.any.published-projects = Listar todos los proyectos publicados
+master.menu.any.published-contracts = Listar todos los contratos publicados
+master.menu.any.published-modules = Ver todos los módulos de entrenamiento publicados
+master.menu.any.claims = Listar reclamaciones
+
+
 # master.menu.sponsor ########################################################
 
 master.menu.sponsor = Patrocinador
 master.menu.sponsor.all-sponsorships = Listar patrocinios
+master.menu.sponsor.sponsor-dashboard = Panel de control del patrocinador
+
 
 # master.menu.user-account ####################################################
 
@@ -71,6 +98,12 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.manager = Datos de gerente
+master.menu.user-account.become-manager = Hazte gerente
+master.menu.user-account.developer = Datos de desarrollador
+master.menu.user-account.become-developer = Hazte desarrollador
+master.menu.user-account.client = Datos de client
+master.menu.user-account.become-client = Hazte cliente
 master.menu.user-account.sponsor = Datos del patrocinador
 master.menu.user-account.become-sponsor = Hazte patrocinador
 
