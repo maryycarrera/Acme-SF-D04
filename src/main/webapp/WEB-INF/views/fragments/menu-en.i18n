@@ -72,6 +72,7 @@ master.menu.developer.dashboard = Dashboard
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.all-sponsorships = List all sponsorships
+master.menu.sponsor.sponsor-dashboard = Sponsor dashboard
 
 # master.menu.client ########################################################
 
