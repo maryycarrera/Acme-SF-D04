@@ -60,6 +60,13 @@ master.menu.manager.all-user-stories = Listar mis historias de usuario
 master.menu.manager.all-assignations = Listar mis asignaciones
 master.menu.manager.manager-dashboard = Panel de control de gerente
 
+
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.auditor-dashboard = Panel de control del auditor
+master.menu.auditor.all-code-audits = Mostrar mis auditorías de código
+
 # master.menu.developer ######################################################
 
 master.menu.developer = Desarrollador
@@ -74,6 +81,7 @@ master.menu.any.published-projects = Listar todos los proyectos publicados
 master.menu.any.published-contracts = Listar todos los contratos publicados
 master.menu.any.published-modules = Ver todos los módulos de entrenamiento publicados
 master.menu.any.claims = Listar reclamaciones
+
 
 # master.menu.sponsor ########################################################
 

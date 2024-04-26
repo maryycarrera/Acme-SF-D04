@@ -1,7 +1,10 @@
 
 package acme.entities.codeaudits;
 
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -51,24 +54,43 @@ public class CodeAudit extends AbstractEntity {
 	@Length(max = 100)
 	private String				correctiveActions;
 
-	@NotNull
-	@Pattern(regexp = "A\\+|A|B|C|F|F-")
-	private String				markMode;
-
 	@URL
 	private String				link;
 
+	private boolean				draftMode;
+
 	// Derived attributes -----------------------------------------------------	
 
+
+	public static String getMarkMode(final Collection<String> marks) {
+		Map<String, Integer> modeMap = new HashMap<>();
+		Integer value = 0;
+		String mode = "";
+		for (String mark : marks)
+			if (modeMap.containsKey(mark)) {
+				value = modeMap.get(mark);
+				value += 1;
+				modeMap.put(mark, value);
+			} else
+				modeMap.put(mark, 1);
+		int maxFrequency = 0;
+		for (Map.Entry<String, Integer> entry : modeMap.entrySet())
+			if (entry.getValue() > maxFrequency) {
+				mode = entry.getKey();
+				maxFrequency = entry.getValue();
+			}
+		return mode;
+	}
 	//	// Relationships ----------------------------------------------------------
 
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	private Project				project;
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Auditor				auditor;
+	private Project	project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Auditor	auditor;
 }
