@@ -16,32 +16,24 @@ sponsor.sponsorship.form.label.project = Proyecto:
 sponsor.sponsorship.form.label.moment = Momento del patroticinio:
 sponsor.sponsorship.form.label.startTimeDuration =  Inicio fecha:
 sponsor.sponsorship.form.label.finishTimeDuration = Fin fecha:
-sponsor.sponsorship.form.label.amount = Dinero:
+sponsor.sponsorship.form.label.amount = Precio:
 sponsor.sponsorship.form.label.type = Tipo:
 sponsor.sponsorship.form.label.contact = Contacto:
 sponsor.sponsorship.form.label.link = Link:
 
-sponsor.sponsorship.form.button.invoice = Facturas
+
 sponsor.sponsorship.form.button.create = Crear
 sponsor.sponsorship.form.button.update = Actualizar
 sponsor.sponsorship.form.button.delete = Borrar
 sponsor.sponsorship.form.button.publish = Publicar
 
 sponsor.sponsorship.form.error.duplicated = Este código ya se ha usado
+sponsor.contract.form.error.bugdet-major-project-cost = El presupuesto debe ser menor o igual que el coste del proyecto
 
 sponsor.sponsorship.list.label.code = Codigo
-sponsor.sponsorship.list.label.amount = Dinero
+sponsor.sponsorship.list.label.amount = Precio
 sponsor.sponsorship.list.label.moment = Momento
 sponsor.sponsorship.list.label.type = Tipo
 
 
 sponsor.sponsorship.list.button.create = Crear
-
-sponsor.sponsorship.form.error.duplicated= Código duplicado o nulo
-sponsor.sponsorship.form.error.amount-no-positive-or-zero= La cantidad debe ser positivo o cero
-sponsor.sponsorship.form.error.moment-after-start= El momento debe ser antes de la hora de inicio
-sponsor.sponsorship.form.error.start-after-finish= La hora final debe ser después de la hora de inicio
-sponsorship.form.error.too-close-to-startTime= La fecha de finalización debe ser más de 30 días después de la fecha de inicio
-sponsor.sponsorship.form.error.acceptedCurrency= Esta moneda no es aceptada, use USD, EUR o GBP
-sponsor.sponsorship.form.error.invoices-not-published= Todas las facturas deben estar publicadas
-sponsor.sponsorship.form.error.totalAmount-non-correpondent= La cantidad total del patrocinio no es igual a la de la suma de las facturas

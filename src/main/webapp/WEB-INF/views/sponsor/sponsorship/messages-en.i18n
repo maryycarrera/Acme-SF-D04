@@ -16,12 +16,12 @@ sponsor.sponsorship.form.label.project = Project:
 sponsor.sponsorship.form.label.moment = Moment:
 sponsor.sponsorship.form.label.startTimeDuration =  Start time:
 sponsor.sponsorship.form.label.finishTimeDuration = Finish time:
-sponsor.sponsorship.form.label.amount = Money:
+sponsor.sponsorship.form.label.amount = Amount:
 sponsor.sponsorship.form.label.type = Type:
 sponsor.sponsorship.form.label.contact = Contact:
 sponsor.sponsorship.form.label.link = Link:
 
-sponsor.sponsorship.form.button.invoice = Invoices
+
 sponsor.sponsorship.form.button.create = Create
 sponsor.sponsorship.form.button.update = Update
 sponsor.sponsorship.form.button.delete = Delete
@@ -30,19 +30,9 @@ sponsor.sponsorship.form.button.publish = Publish
 sponsor.sponsorship.form.error.duplicated = Duplicated code
 
 sponsor.sponsorship.list.label.code = code
-sponsor.sponsorship.list.label.amount = money
+sponsor.sponsorship.list.label.amount = price
 sponsor.sponsorship.list.label.moment = moment
 sponsor.sponsorship.list.label.type = type
 
 
 sponsor.sponsorship.list.button.create = Create
-
-
-sponsor.sponsorship.form.error.duplicated= Code is duplicated or null
-sponsor.sponsorship.form.error.amount-no-positive-or-zero= Amount must be positive or zero
-sponsor.sponsorship.form.error.moment-after-start= Moment must be before start time
-sponsor.sponsorship.form.error.start-after-finish=  Finish time must be after start time
-sponsor.sponsorship.form.error.too-close-to-startTime= Finish date must be more than 30 days from the start date
-sponsor.sponsorship.form.error.acceptedCurrency= This currency is not accepted, use USD EUR or GBP
-sponsor.sponsorship.form.error.invoices-not-published= All invoices must be published
-sponsor.sponsorship.form.error.totalAmount-non-correpondent= The total amount of the sponsorship is not equal is not equal to the sum of the invoices
