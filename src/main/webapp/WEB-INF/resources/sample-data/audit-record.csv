@@ -1,11 +1,11 @@
-key,code,startDate,finishDate,mark,link,key:codeAudit
-audit-record-01,AU-0000-000,2000/01/01 00:00,2000/01/01 01:00,A+,http://www.example.com,code-audit-01
-audit-record-02,AU-9999-999,2000/01/1 01:00,2000/01/01 02:00,F-,null,code-audit-01
-audit-record-03,AU-1111-111,2022/05/23 16:00,2022/05/24 16:00,B,,code-audit-01
-audit-record-04,AU-1111-112,2022/07/29 22:59,2022/07/29 23:59,B,,code-audit-01
-audit-record-05,AU-1111-113,2022/07/29 21:59,2022/07/29 22:59,B,,code-audit-02
-audit-record-06,AU-1111-114,2022/07/29 20:59,2022/07/29 21:59,C,http://www.example2.com,code-audit-02
-audit-record-07,AU-1111-115,2022/07/29 19:59,2022/07/29 20:59,A,null,code-audit-02
-audit-record-08,AU-1111-116,2022/07/29 18:59,2022/07/29 19:59,F,http://www.example3.com,code-audit-03
-audit-record-09,AU-1111-117,2022/07/29 17:59,2022/07/29 18:59,F,null,code-audit-03
-audit-record-10,AU-1111-118,2022/07/29 16:59,2022/07/29 17:59,A+,null,code-audit-04
+key,code,startDate,finishDate,mark,link,draftMode,key:codeAudit
+audit-record-01,AU-0000-000,2000/01/01 00:00,2000/01/01 01:00,A+,http://www.example.com,true,code-audit-01
+audit-record-02,AU-9999-999,2000/01/1 01:00,2000/01/01 02:00,F-,null,true,code-audit-01
+audit-record-03,AU-1111-111,2022/05/23 16:00,2022/05/24 16:00,B,,true,code-audit-01
+audit-record-04,AU-1111-112,2022/07/29 22:59,2022/07/29 23:59,B,,true,code-audit-01
+audit-record-05,AU-1111-113,2022/07/29 21:59,2022/07/29 22:59,B,,true,code-audit-02
+audit-record-06,AU-1111-114,2022/07/29 20:59,2022/07/29 21:59,C,http://www.example2.com,true,code-audit-02
+audit-record-07,AU-1111-115,2022/07/29 19:59,2022/07/29 20:59,A,null,true,code-audit-02
+audit-record-08,AU-1111-116,2022/07/29 18:59,2022/07/29 19:59,F,http://www.example3.com,true,code-audit-03
+audit-record-09,AU-1111-117,2022/07/29 17:59,2022/07/29 18:59,F,null,false,code-audit-03
+audit-record-10,AU-1111-118,2022/07/29 16:59,2022/07/29 17:59,A+,null,true,code-audit-04
