@@ -22,7 +22,7 @@ public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Spon
 	@Autowired
 	private SponsorSponsorshipRepository repository;
 
-	// AbstractService<Manager, Project> ---------------------------
+	// AbstractService<Sponsor, Sponsorship> ---------------------------
 
 
 	@Override
