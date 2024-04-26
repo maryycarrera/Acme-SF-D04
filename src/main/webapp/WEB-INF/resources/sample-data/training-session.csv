@@ -1,37 +1,37 @@
-key,code,start-period-date,finish-period-date,location,instructor,contact-email,link,key:trainingModule
-training-session-01,TS-A-000,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-02,TS-B-001,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-03,TS-R-548,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-03
-training-session-04,TS-AA-001,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-05,TS-LK-698,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-06,TS-FJG-894,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-05
-training-session-07,TS-MCV-847,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-08,TS-ZZY-998,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-09,TS-ZZZ-999,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-07
-training-session-10,TS-LPS-203,2001/08/01 00:00,2001/08/05 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-11,TS-LPS-204,2000/06/28 00:00,2001/10/14 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-12,TS-LPS-205,2015/03/17 00:00,2016/12/05 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-04
-training-session-13,TS-LPS-206,2020/01/12 00:00,2020/11/30 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-14,TS-LPS-207,2022/07/28 00:00,2022/07/29 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-12
-training-session-15,TS-LPS-208,2019/07/13 00:00,2019/09/10 00:00,A,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-16,TS-LPS-209,2019/07/13 00:00,2019/09/10 00:00,Ab,Wuan,wuani@acme.com,http://example.com,training-module-20
-training-session-17,TS-LPS-210,2019/07/13 00:00,2019/09/10 00:00,Matalascañas,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-18,TS-LPS-211,2019/07/13 00:00,2019/09/10 00:00,Θεσσαλονίκη,Wuan,wuani@acme.com,http://example.com,training-module-19
-training-session-19,TS-LPS-212,2019/07/13 00:00,2019/09/10 00:00,Äteritsiputeritsipuolilautatsijänkä,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-20,TS-LPS-213,2019/07/13 00:00,2019/09/10 00:00,مكة المكرمة,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-21,TS-LPS-214,2019/07/13 00:00,2019/09/10 00:00,Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenua,Wuan,wuani@acme.com,http://example.com,training-module-01
-training-session-22,TS-LPS-215,2019/07/13 00:00,2019/09/10 00:00,Sevilla,A,wuani@acme.com,http://example.com,training-module-01
-training-session-23,TS-LPS-216,2019/07/13 00:00,2019/09/10 00:00,Sevilla,王磊,wuani@acme.com,http://example.com,training-module-01
-training-session-24,TS-LPS-217,2019/07/13 00:00,2019/09/10 00:00,Sevilla,محمد,wuani@acme.com,http://example.com,training-module-08
-training-session-25,TS-LPS-218,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Δημήτριος,wuani@acme.com,http://example.com,training-module-08
-training-session-26,TS-LPS-219,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Guadalupe Concepción Esmeralda del Rosario Montserrat García Martínez López,wuani@acme.com,http://example.com,training-module-08
-training-session-27,TS-LPS-220,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,a@gmailcom,http://example.com,training-module-25
-training-session-28,TS-LPS-221,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,zhangsan@acme.com,http://example.com,training-module-08
-training-session-29,TS-LPS-222,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,elprimoderodolfotieneunbulldogdecolorblancoynegro@acme.com,http://example.com,training-module-08
-training-session-30,TS-LPS-223,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,http://example.com,training-module-08
-training-session-31,TS-LPS-224,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,null,training-module-08
-training-session-32,TS-LPS-225,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,,training-module-07
-training-session-33,TS-LPS-226,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,https://hermandaddesangonzalo.es/,training-module-04
-training-session-34,TS-LPS-227,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,https://github.com/users/maryycarrera/projects/2/views/1?filterQuery=assignee%3Aignblabla,training-module-10
-training-session-35,TS-LPS-228,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp=Egxnd3Mt,training-module-10
-training-session-36,TS-LPS-229,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,https://www.apple.com,training-module-07
+key,code,start-period-date,finish-period-date,location,instructor,contact-email,link,key:trainingModule,draft-Mode
+training-session-01,TS-A-000,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-02,TS-B-001,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-03,TS-R-548,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-03,true
+training-session-04,TS-AA-001,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-05,TS-LK-698,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-06,TS-FJG-894,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-05,true
+training-session-07,TS-MCV-847,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-08,TS-ZZY-998,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-09,TS-ZZZ-999,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-07,true
+training-session-10,TS-LPS-203,2001/08/01 00:00,2001/08/05 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-11,TS-LPS-204,2000/06/28 00:00,2001/10/14 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-12,TS-LPS-205,2015/03/17 00:00,2016/12/05 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-04,true
+training-session-13,TS-LPS-206,2020/01/12 00:00,2020/11/30 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-14,TS-LPS-207,2022/07/28 00:00,2022/07/29 00:00,Sevilla,Wuan,wuani@acme.com,http://example.com,training-module-12,true
+training-session-15,TS-LPS-208,2019/07/13 00:00,2019/09/10 00:00,A,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-16,TS-LPS-209,2019/07/13 00:00,2019/09/10 00:00,Ab,Wuan,wuani@acme.com,http://example.com,training-module-20,true
+training-session-17,TS-LPS-210,2019/07/13 00:00,2019/09/10 00:00,Matalascañas,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-18,TS-LPS-211,2019/07/13 00:00,2019/09/10 00:00,Θεσσαλονίκη,Wuan,wuani@acme.com,http://example.com,training-module-19,true
+training-session-19,TS-LPS-212,2019/07/13 00:00,2019/09/10 00:00,Äteritsiputeritsipuolilautatsijänkä,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-20,TS-LPS-213,2019/07/13 00:00,2019/09/10 00:00,مكة المكرمة,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-21,TS-LPS-214,2019/07/13 00:00,2019/09/10 00:00,Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenua,Wuan,wuani@acme.com,http://example.com,training-module-01,true
+training-session-22,TS-LPS-215,2019/07/13 00:00,2019/09/10 00:00,Sevilla,A,wuani@acme.com,http://example.com,training-module-01,true
+training-session-23,TS-LPS-216,2019/07/13 00:00,2019/09/10 00:00,Sevilla,王磊,wuani@acme.com,http://example.com,training-module-01,true
+training-session-24,TS-LPS-217,2019/07/13 00:00,2019/09/10 00:00,Sevilla,محمد,wuani@acme.com,http://example.com,training-module-08,true
+training-session-25,TS-LPS-218,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Δημήτριος,wuani@acme.com,http://example.com,training-module-08,true
+training-session-26,TS-LPS-219,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Guadalupe Concepción Esmeralda del Rosario Montserrat García Martínez López,wuani@acme.com,http://example.com,training-module-08,true
+training-session-27,TS-LPS-220,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,a@gmailcom,http://example.com,training-module-25,true
+training-session-28,TS-LPS-221,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,zhangsan@acme.com,http://example.com,training-module-08,true
+training-session-29,TS-LPS-222,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,elprimoderodolfotieneunbulldogdecolorblancoynegro@acme.com,http://example.com,training-module-08,true
+training-session-30,TS-LPS-223,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,http://example.com,training-module-08,true
+training-session-31,TS-LPS-224,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,null,training-module-08,true
+training-session-32,TS-LPS-225,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,,training-module-07,true
+training-session-33,TS-LPS-226,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,https://hermandaddesangonzalo.es/,training-module-04,true
+training-session-34,TS-LPS-227,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,https://github.com/users/maryycarrera/projects/2/views/1?filterQuery=assignee%3Aignblabla,training-module-10,true
+training-session-35,TS-LPS-228,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp=Egxnd3Mt,training-module-10,true
+training-session-36,TS-LPS-229,2019/07/13 00:00,2019/09/10 00:00,Sevilla,Wuan,rodolfo@gmail.com,https://www.apple.com,training-module-07,true
