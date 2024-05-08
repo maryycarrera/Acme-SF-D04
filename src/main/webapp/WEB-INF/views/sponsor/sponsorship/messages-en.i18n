@@ -37,7 +37,7 @@ sponsor.sponsorship.list.label.type = type
 
 sponsor.sponsorship.list.button.create = Create
 
-
+sponsor.sponsorship.form.error.totalAmount-lessThanSumInvoices= You cannot change the sponsorship price if the new price is lower than the sum of the already created invoices
 sponsor.sponsorship.form.error.duplicated= Code is duplicated or null
 sponsor.sponsorship.form.error.amount-no-positive-or-zero= Amount must be positive or zero
 sponsor.sponsorship.form.error.moment-after-start= Moment must be before start time
