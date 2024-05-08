@@ -85,16 +85,17 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 			super.state(object.getAmount().getAmount() >= 0, "amount", "sponsor.sponsorship.form.error.amount-no-positive-or-zero");
 
 		if (!super.getBuffer().getErrors().hasErrors("startTimeDuration"))
-			super.state(object.getStartTimeDuration().after(object.getMoment()), "startTimeDuration", "sponsor.sponsorship.form.error.moment-after-start");
-
-		if (!super.getBuffer().getErrors().hasErrors("finishTimeDuration"))
-			super.state(object.getFinishTimeDuration().after(object.getStartTimeDuration()), "finishTimeDuration", "sponsor.sponsorship.form.error.start-after-finish");
+			super.state(object.getMoment() != null && object.getStartTimeDuration().after(object.getMoment()), "startTimeDuration", "sponsor.sponsorship.form.error.moment-after-start");
 
 		if (!super.getBuffer().getErrors().hasErrors("finishTimeDuration")) {
-			Date minimumDeadline;
+			super.state(object.getStartTimeDuration() != null && object.getFinishTimeDuration().after(object.getStartTimeDuration()), "finishTimeDuration", "sponsor.sponsorship.form.error.start-after-finish");
+			if (object.getStartTimeDuration() != null && object.getFinishTimeDuration().after(object.getStartTimeDuration())) {
+				Date minimumDeadline;
 
-			minimumDeadline = MomentHelper.deltaFromMoment(object.getStartTimeDuration(), 30, ChronoUnit.DAYS);
-			super.state(object.getFinishTimeDuration().after(minimumDeadline), "finishTimeDuration", "sponsor.sponsorship.form.error.too-close-to-startTime");
+				minimumDeadline = MomentHelper.deltaFromMoment(object.getStartTimeDuration(), 30, ChronoUnit.DAYS);
+				super.state(object.getFinishTimeDuration().after(minimumDeadline), "finishTimeDuration", "sponsor.sponsorship.form.error.too-close-to-startTime");
+
+			}
 		}
 		if (!super.getBuffer().getErrors().hasErrors("amount"))
 			super.state(this.isCurrencyAccepted(object.getAmount()), "amount", "sponsor.sponsorship.form.error.acceptedCurrency");

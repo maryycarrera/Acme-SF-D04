@@ -39,3 +39,4 @@ sponsor.invoice.form.error.tax-no-positive= Tax must be positive
 sponsor.invoice.form.error.too-close-to-registrationTime= Due date must be more than 30 days after registration time
 sponsor.invoice.form.error.currency= The currency must be the same as the money of the sponsorship
 sponsor.invoice.form.error.registration-before-sponsorship= The registration time must be after the moment of the sponsorship
+sponsor.invoice.form.error.bad-cost= The cost of all invoices must not be higher than the money of the sponsorship

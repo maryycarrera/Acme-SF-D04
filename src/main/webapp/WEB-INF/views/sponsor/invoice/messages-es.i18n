@@ -31,6 +31,7 @@ sponsor.invoice.list.label.dueDate = Fecha de Vencimiento
 
 sponsor.invoice.list.button.create = Crear
 
+sponsor.invoice.form.error.bad-cost= El coste de todas las facturas no puede ser mayor que el coste del patrocinio
 sponsor.sponsorship.form.error.no-invoices= Necesitas tener facturas
 sponsor.sponsorship.form.error.invoices-not-published= Las facturas deben estar publicadas
 sponsor.invoice.form.error.duplicated= El código está duplicado o nulo
