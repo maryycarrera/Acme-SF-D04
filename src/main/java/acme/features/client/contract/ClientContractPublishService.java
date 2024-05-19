@@ -101,7 +101,7 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 				allBudgets += object.getBudget().getAmount();
 
 				super.state(allBudgets <= object.getProject().getCost(), "*", "client.contract.form.error.excededBudget");
-				super.state(object.getBudget().getAmount() > 0, "budget", "client.contract.form.error.negative-budget");
+				super.state(object.getBudget().getAmount() >= 0, "budget", "client.contract.form.error.negative-budget");
 				super.state(object.getBudget().getAmount() <= object.getProject().getCost(), "budget", "client.contract.form.error.bugdet-major-project-cost");
 				super.state(this.isCurrencyAccepted(object.getBudget()), "budget", "client.contract.form.error.acceptedCurrency");
 
