@@ -50,6 +50,7 @@ public class AuditorCodeAuditListService extends AbstractService<Auditor, CodeAu
 		dataset = super.unbind(object, "code", "executionDate", "type", "draftMode");
 		dataset.put("markMode", CodeAudit.getMarkMode(marks));
 
+		super.addPayload(dataset, object, "correctiveActions", "link", "project.code");
 		super.getResponse().addData(dataset);
 	}
 
