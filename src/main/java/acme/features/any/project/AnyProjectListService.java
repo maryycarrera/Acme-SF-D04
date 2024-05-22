@@ -47,6 +47,7 @@ public class AnyProjectListService extends AbstractService<Any, Project> {
 		Dataset dataset;
 
 		dataset = super.unbind(object, "code", "title", "abstractDescription");
+		super.addPayload(dataset, object, "hasFatalErrors", "cost", "link", "draftMode");
 
 		super.getResponse().addData(dataset);
 	}

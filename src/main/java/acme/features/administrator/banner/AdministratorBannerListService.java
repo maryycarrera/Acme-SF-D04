@@ -47,6 +47,7 @@ public class AdministratorBannerListService extends AbstractService<Administrato
 		Dataset dataset;
 
 		dataset = super.unbind(object, "instantiationMoment", "startDate", "finishDate", "slogan");
+		super.addPayload(dataset, object, "picture", "targetWebDocument");
 
 		super.getResponse().addData(dataset);
 	}

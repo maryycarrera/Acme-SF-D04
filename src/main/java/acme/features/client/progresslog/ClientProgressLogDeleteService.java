@@ -4,7 +4,6 @@ package acme.features.client.progresslog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.contracts.Contract;
 import acme.entities.progresslogs.ProgressLog;
@@ -66,14 +65,6 @@ class ClientProgressLogDeleteService extends AbstractService<Client, ProgressLog
 
 	@Override
 	public void unbind(final ProgressLog object) {
-		assert object != null;
 
-		Dataset dataset;
-
-		dataset = super.unbind(object, "recordId", "completeness", "comment", "registrationMoment", "responsiblePerson");
-		dataset.put("masterId", object.getContract().getId());
-		dataset.put("draftMode", object.getContract().isDraftMode());
-
-		super.getResponse().addData(dataset);
 	}
 }

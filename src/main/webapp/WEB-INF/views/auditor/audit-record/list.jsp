@@ -19,6 +19,7 @@
 	<acme:list-column code="auditor.audit-record.list.label.code" path="code"/>
 	<acme:list-column code="auditor.audit-record.list.label.mark" path="mark"/>
 	<acme:list-column code="auditor.audit-record.list.label.draftMode" path="draftMode"/>
+	<acme:list-payload path="payload"/>
 </acme:list>
 
 <jstl:if test="${_command == 'list' && showCreate == true}">
