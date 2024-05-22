@@ -59,24 +59,14 @@ public class ManagerAssignationCreateService extends AbstractService<Manager, As
 		project = object.getProject();
 		userStory = object.getUserStory();
 
-		if (!super.getBuffer().getErrors().hasErrors("project")) {
+		if (!super.getBuffer().getErrors().hasErrors("project") && !super.getBuffer().getErrors().hasErrors("userStory")) {
 			Assignation existing;
 
 			existing = this.repository.findOneAssignationByProjectIdAndUserStoryId(project.getId(), userStory.getId());
-			super.state(existing == null, "project", "manager.assignation.form.error.existing-project-assignation");
+			super.state(existing == null, "*", "manager.assignation.form.error.existing-project-assignation");
 
-			super.state(project.isDraftMode() || !userStory.isDraftMode(), "project", "manager.assignation.form.error.published-project");
+			super.state(project.isDraftMode() || !userStory.isDraftMode(), "*", "manager.assignation.form.error.published-project");
 		}
-
-		if (!super.getBuffer().getErrors().hasErrors("userStory")) {
-			Assignation existing;
-
-			existing = this.repository.findOneAssignationByProjectIdAndUserStoryId(project.getId(), userStory.getId());
-			super.state(existing == null, "userStory", "manager.assignation.form.error.existing-project-assignation");
-
-			super.state(project.isDraftMode() || !userStory.isDraftMode(), "userStory", "manager.assignation.form.error.published-project");
-		}
-
 	}
 
 	@Override

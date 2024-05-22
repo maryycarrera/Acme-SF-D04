@@ -36,6 +36,6 @@ public interface ClientProgressLogRepository extends AbstractRepository {
 	Client findOneClientById(int clientId);
 
 	@Query("select max(pg.completeness) from ProgressLog pg where pg.contract.id = :contractId and pg.draftMode = false")
-	double findPublishedProgressLogWithMaxCompletenessPublished(int contractId);
+	Double findPublishedProgressLogWithMaxCompletenessPublished(int contractId);
 
 }

@@ -37,6 +37,7 @@ sponsor.sponsorship.list.label.type = Tipo
 
 sponsor.sponsorship.list.button.create = Crear
 
+sponsor.sponsorship.form.error.totalAmount-lessThanSumInvoices= No puedes cambiar el precio del patrocinio si es el precio nuevo es menor que el precio de la suma de las facturas ya creadas
 sponsor.sponsorship.form.error.duplicated= Código duplicado o nulo
 sponsor.sponsorship.form.error.amount-no-positive-or-zero= La cantidad debe ser positivo o cero
 sponsor.sponsorship.form.error.moment-after-start= El momento debe ser antes de la hora de inicio

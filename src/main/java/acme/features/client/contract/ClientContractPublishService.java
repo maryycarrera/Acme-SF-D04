@@ -89,19 +89,23 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("budget")) {
-			super.state(object.getBudget().getAmount() > 0, "budget", "client.contract.form.error.negative-budget");
-			super.state(object.getBudget().getAmount() <= object.getProject().getCost(), "budget", "client.contract.form.error.bugdet-major-project-cost");
-			double allBudgets = 0.0;
-			Collection<Contract> contracts;
+			super.state(object.getProject() != null, "budget", "client.contract.form.error.no-budget");
+			if (object.getProject() != null) {
+				double allBudgets = 0.0;
+				Collection<Contract> contracts;
 
-			contracts = this.repository.findContractsByClientIdAndProjectId(object.getClient().getId(), object.getProject().getId());
-			for (Contract c : contracts)
+				contracts = this.repository.findContractsByClientIdAndProjectId(object.getClient().getId(), object.getProject().getId());
+				for (Contract c : contracts)
 					allBudgets += c.getBudget().getAmount();
 
-			allBudgets += object.getBudget().getAmount();
+				allBudgets += object.getBudget().getAmount();
 
-			super.state(allBudgets <= object.getProject().getCost(), "*", "client.contract.form.error.excededBudget");
-			super.state(this.isCurrencyAccepted(object.getBudget()), "budget", "client.contract.form.error.acceptedCurrency");
+				super.state(allBudgets <= object.getProject().getCost(), "*", "client.contract.form.error.excededBudget");
+				super.state(object.getBudget().getAmount() >= 0, "budget", "client.contract.form.error.negative-budget");
+				super.state(object.getBudget().getAmount() <= object.getProject().getCost(), "budget", "client.contract.form.error.bugdet-major-project-cost");
+				super.state(this.isCurrencyAccepted(object.getBudget()), "budget", "client.contract.form.error.acceptedCurrency");
+
+			}
 		}
 	}
 

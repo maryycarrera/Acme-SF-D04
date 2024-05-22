@@ -53,6 +53,7 @@ public class ClientProgressLogListService extends AbstractService<Client, Progre
 		Dataset dataset;
 
 		dataset = super.unbind(object, "responsiblePerson", "completeness");
+		super.addPayload(dataset, object, "recordId", "comment", "registrationMoment", "responsiblePerson");
 
 		super.getResponse().addData(dataset);
 	}
