@@ -21,6 +21,7 @@
 	<acme:list-column code="auditor.code-audit.list.label.type" path="type"/>
 	<acme:list-column code="auditor.code-audit.list.label.markMode" path="markMode"/>
 	<acme:list-column code="auditor.code-audit.list.label.draftMode" path="draftMode"/>
+	<acme:list-payload path="payload"/>
 </acme:list>
 
 <jstl:if test="${_command == 'list'}">
