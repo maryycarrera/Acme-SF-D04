@@ -81,30 +81,26 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 		if (!super.getBuffer().getErrors().hasErrors("quantity"))
 			super.state(object.getQuantity().getAmount() > 0, "quantity", "sponsor.invoice.form.error.quantity-no-positive");
 
-		if (!super.getBuffer().getErrors().hasErrors("tax"))
-			super.state(object.getTax() > 0, "tax", "sponsor.invoice.form.error.tax-no-positive");
-
 		if (!super.getBuffer().getErrors().hasErrors("registrationTime"))
-			super.state(object.getSponsorship().getMoment() != null && object.getRegistrationTime().after(object.getSponsorship().getMoment()), "registrationTime", "sponsor.invoice.form.error.registration-before-sponsorship");
+			super.state(object.getRegistrationTime().after(object.getSponsorship().getMoment()), "registrationTime", "sponsor.invoice.form.error.registration-before-sponsorship");
 
 		if (!super.getBuffer().getErrors().hasErrors("dueDate"))
 			if (object.getRegistrationTime() != null) {
 				Date minimumDeadline;
 
 				minimumDeadline = MomentHelper.deltaFromMoment(object.getRegistrationTime(), 30, ChronoUnit.DAYS);
-				super.state(object.getRegistrationTime() != null && object.getDueDate().after(minimumDeadline), "dueDate", "sponsor.invoice.form.error.too-close-to-registrationTime");
+				super.state(object.getDueDate().after(minimumDeadline), "dueDate", "sponsor.invoice.form.error.too-close-to-registrationTime");
 			}
 		if (!super.getBuffer().getErrors().hasErrors("quantity"))
 			super.state(object.getQuantity().getCurrency().equals(object.getSponsorship().getAmount().getCurrency()), "quantity", "sponsor.invoice.form.error.currency");
 
-		if (!super.getBuffer().getErrors().hasErrors())
-			if (object.getTax() != null && object.getQuantity() != null && object.totalAmount() != null) {
-				double valorAnterior = this.repository.findOneInvoiceById(object.getId()).totalAmount();
-				double totalActual = object.totalAmount() - valorAnterior;
-				for (Invoice i : invoices)
-					totalActual += i.totalAmount();
-				super.state(totalActual <= object.getSponsorship().getAmount().getAmount(), "*", "sponsor.invoice.form.error.bad-cost");
-			}
+		if (!super.getBuffer().getErrors().hasErrors()) {
+			double valorAnterior = this.repository.findOneInvoiceById(object.getId()).totalAmount();
+			double totalActual = object.totalAmount() - valorAnterior;
+			for (Invoice i : invoices)
+				totalActual += i.totalAmount();
+			super.state(totalActual <= object.getSponsorship().getAmount().getAmount(), "*", "sponsor.invoice.form.error.bad-cost");
+		}
 	}
 
 	@Override
