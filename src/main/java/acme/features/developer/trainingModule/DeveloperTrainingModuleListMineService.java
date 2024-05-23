@@ -49,12 +49,12 @@ public class DeveloperTrainingModuleListMineService extends AbstractService<Deve
 		choices = SelectChoices.from(DifficultyLevel.class, object.getDifficultyLevel());
 		projects = this.trainingModuleRepository.findAllProjects();
 		projectsChoices = SelectChoices.from(projects, "code", object.getProject());
-		dataset = super.unbind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "estimatedTotalTime", "draftMode", "project");
+		dataset = super.unbind(object, "code", "details", "difficultyLevel", "estimatedTotalTime", "draftMode", "project");
+		super.addPayload(dataset, object, "creationMoment", "updateMoment", "link");
 
 		dataset.put("difficulty", choices);
 		dataset.put("project", projectsChoices.getSelected().getKey());
 		dataset.put("projects", projectsChoices);
-		super.addPayload(dataset, object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "estimatedTotalTime", "draftMode", "project");
 		super.getResponse().addData(dataset);
 	}
 

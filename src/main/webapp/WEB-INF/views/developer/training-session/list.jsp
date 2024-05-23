@@ -21,7 +21,7 @@
 	<acme:list-column code="developer.training-session.list.label.finish-period-date" path="finishPeriodDate" width="20%"/>	
 	<acme:list-column code="developer.training-session.list.label.location" path="location" width="20%"/>	
 	<acme:list-column code="developer.training-session.list.label.instructor" path="instructor" width="20%"/>	
-
+	<acme:list-payload path="payload"/>
 
 </acme:list>
 
