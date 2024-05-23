@@ -82,7 +82,7 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("amount"))
-			super.state(object.getAmount().getAmount() >= 0, "amount", "sponsor.sponsorship.form.error.amount-no-positive-or-zero");
+			super.state(object.getAmount().getAmount() > 0, "amount", "sponsor.sponsorship.form.error.amount-no-positive-or-zero");
 
 		if (!super.getBuffer().getErrors().hasErrors("startTimeDuration"))
 			super.state(object.getMoment() != null && object.getStartTimeDuration().after(object.getMoment()), "startTimeDuration", "sponsor.sponsorship.form.error.moment-after-start");

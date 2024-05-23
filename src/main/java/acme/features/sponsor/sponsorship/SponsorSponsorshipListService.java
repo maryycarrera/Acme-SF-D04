@@ -49,7 +49,7 @@ public class SponsorSponsorshipListService extends AbstractService<Sponsor, Spon
 		Dataset dataset;
 
 		dataset = super.unbind(object, "code", "moment", "amount", "type");
-
+		super.addPayload(dataset, object, "startTimeDuration", "finishTimeDuration", "contact", "link");
 		super.getResponse().addData(dataset);
 	}
 

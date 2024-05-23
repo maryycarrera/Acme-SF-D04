@@ -54,6 +54,7 @@ public class SponsorInvoiceListService extends AbstractService<Sponsor, Invoice>
 
 		dataset = super.unbind(object, "code", "registrationTime", "dueDate");
 
+		super.addPayload(dataset, object, "quantity", "tax", "link", "sponsorship");
 		super.getResponse().addData(dataset);
 	}
 
