@@ -24,3 +24,46 @@ contract-22,A-000,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato
 contract-23,ABC-492,2000/12/11 00:00,Ροντρίγκο Ροντρίγκεζ,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",true,project-18,client-01
 contract-24,AZ-101,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",true,project-01,client-02
 contract-25,Z-333,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000,000.00",true,project-01,client-02
+contract-26,A-001,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-27,AA-000,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",false,project-03,client-02
+contract-28,AA-001,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 0.01",true,project-07,client-02
+contract-29,AAA-000,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-30,AAA-001,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1.00",true,project-03,client-02
+contract-31,A-999,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",false,project-07,client-02
+contract-32,AA-999,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-33,AA-998,2019/06/24 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 99999.99",false,project-07,client-02
+contract-34,AAA-999,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",false,project-03,client-02
+contract-35,AAA-998,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-36,A-998,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",false,project-03,client-02
+contract-37,Z-000,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-38,Z-001,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-39,ZZ-000,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 999,999.99",false,project-06,client-02
+contract-40,ZZ-001,2022/07/30 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-03,client-02
+contract-41,ZZZ-000,2022/07/29 23:59,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",false,project-07,client-02
+contract-42,ZZZ-001,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",false,project-07,client-02
+contract-43,Z-999,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 555.55",false,project-07,client-02
+contract-44,ZZ-999,2000/12/11 00:01,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-03,client-02
+contract-45,ZZ-998,2000/12/11 00:00,Ro,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-46,ZZZ-999,2000/12/11 00:00,Roberto OlmoOOOOOOOOOOOOOOOOOOOOOOOOO,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-47,ZZZ-998,2007/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-48,M-000,2000/04/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-49,M-001,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-03,client-02
+contract-50,MM-000,2020/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-51,MM-001,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-52,MMM-000,2000/12/11 00:00,Roberto Olmo,Pepe Martín,buenobonitobaratooooooooooooooooooooooooooooooooo,"USD 1,000.00",true,project-07,client-02
+contract-53,MMM-001,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-03,client-02
+contract-54,M-999,2010/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-55,M-998,2000/12/08 00:00,Roberto Olmo,罗德里戈·罗德里格斯,bueno bonito barato,"USD 0.02",true,project-07,client-02
+contract-56,MM-999,2000/12/11 00:00,Roberto Olmo,Pe,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-57,MM-998,2000/12/11 00:00,Marta,Roberto OlmoOOOOOOOOOOOOOOOOOOOOOOOOO,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-58,MMM-999,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-59,MMM-998,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-03,client-02
+contract-60,AB-000,2020/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-61,AB-001,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-62,AB-999,2000/12/11 00:00,Roberto Olmo,Pe,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-63,AB-998,2000/12/11 00:00,Marta,Roberto OlmoOOOOOOOOOOOOOOOOOOOOOOOOO,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-64,ZY-000,2020/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-65,ZY-001,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-03,client-02
+contract-66,ZY-999,2000/12/11 00:00,Roberto Olmo,Pe,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-67,ZY-998,2000/12/11 00:00,Marta,Roberto OlmoOOOOOOOOOOOOOOOOOOOOOOOOO,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
+contract-68,Z-998,2000/12/11 00:00,Roberto Olmo,Pepe Martín,bueno bonito barato,"USD 1,000.00",true,project-07,client-02
