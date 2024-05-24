@@ -30,13 +30,11 @@ public class ManagerAssignationShowService extends AbstractService<Manager, Assi
 		boolean status;
 		int assignationId;
 		Assignation assignation;
-		Manager manager;
 
 		assignationId = super.getRequest().getData("id", int.class);
 		assignation = this.repository.findOneAssignationById(assignationId);
-		manager = assignation == null ? null : assignation.getProject().getManager();
 
-		status = assignation != null && super.getRequest().getPrincipal().hasRole(manager);
+		status = assignation != null && super.getRequest().getPrincipal().hasRole(assignation.getProject().getManager());
 
 		super.getResponse().setAuthorised(status);
 	}
