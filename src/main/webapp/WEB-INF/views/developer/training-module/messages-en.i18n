@@ -13,11 +13,8 @@ developer.training-module.form.title = Training Module form
 
 
 developer.training-module.list.label.code = Code
-developer.training-module.list.label.creation-moment = Creation Moment
 developer.training-module.list.label.details = Details
 developer.training-module.list.label.difficulty-level = Difficulty Level
-developer.training-module.list.label.update-moment = Update Moment
-developer.training-module.list.label.link = Link
 developer.training-module.list.label.estimated-total-time = Estimated Total Time
 developer.training-module.list.label.project = Project
 developer.training-module.list.label.draftMode = Editable
