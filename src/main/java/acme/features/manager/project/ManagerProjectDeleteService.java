@@ -69,8 +69,8 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 
 		a = this.repository.findAssignationsByProjectId(object.getId());
 
-		this.repository.delete(object);
 		this.repository.deleteAll(a);
+		this.repository.delete(object);
 	}
 
 	@Override
