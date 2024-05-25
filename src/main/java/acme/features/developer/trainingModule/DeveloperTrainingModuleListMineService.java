@@ -50,10 +50,12 @@ public class DeveloperTrainingModuleListMineService extends AbstractService<Deve
 		choices = SelectChoices.from(DifficultyLevel.class, object.getDifficultyLevel());
 		projects = this.trainingModuleRepository.findAllProjects();
 		projectsChoices = SelectChoices.from(projects, "code", object.getProject());
-		dataset = super.unbind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "estimatedTotalTime", "draftMode", "project");
+		dataset = super.unbind(object, "code", "details", "difficultyLevel", "estimatedTotalTime", "draftMode", "project");
+		super.addPayload(dataset, object, "creationMoment", "updateMoment", "link");
 
 		if (object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();
+
 			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");
 		} else
 			dataset.put("draftMode", "No");

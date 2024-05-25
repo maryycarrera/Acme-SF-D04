@@ -8,13 +8,11 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.datatypes.Money;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.invoices.Invoice;
 import acme.entities.sponsorships.Sponsorship;
-import acme.entities.systemconfigurations.SystemConfiguration;
 import acme.roles.Sponsor;
 
 @Service
@@ -49,18 +47,7 @@ public class SponsorInvoiceCreateService extends AbstractService<Sponsor, Invoic
 
 		masterId = super.getRequest().getData("masterId", int.class);
 		sponsorship = this.repository.findOneSponsorshipById(masterId);
-		//Money dinero = new Money();
 		object = new Invoice();
-		//		dinero.setAmount(0.0);
-		//		dinero.setCurrency("EUR");
-		//		
-		//		object = new Invoice();
-		//		object.setCode("");
-		//		object.setRegistrationTime(new Date());
-		//		object.setDueDate(new Date());
-		//		object.setQuantity(dinero);
-		//		object.setTax(0.0);
-		//		object.setLink("");
 		object.setSponsorship(sponsorship);
 		object.setDraftMode(true);
 
@@ -73,18 +60,6 @@ public class SponsorInvoiceCreateService extends AbstractService<Sponsor, Invoic
 
 		super.bind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link");
 	}
-	public boolean isCurrencyAccepted(final Money moneda) {
-		SystemConfiguration moneys;
-		moneys = this.repository.findSystemConfiguration();
-
-		String[] listaMonedas = moneys.getAcceptedCurrencies().split(",");
-		for (String divisa : listaMonedas)
-			if (moneda.getCurrency().equals(divisa))
-				return true;
-
-		return false;
-	}
-
 	@Override
 	public void validate(final Invoice object) {
 		assert object != null;
@@ -102,30 +77,25 @@ public class SponsorInvoiceCreateService extends AbstractService<Sponsor, Invoic
 		if (!super.getBuffer().getErrors().hasErrors("quantity"))
 			super.state(object.getQuantity().getAmount() > 0, "quantity", "sponsor.invoice.form.error.quantity-no-positive");
 
-		if (!super.getBuffer().getErrors().hasErrors("tax"))
-			super.state(object.getTax() > 0, "tax", "sponsor.invoice.form.error.tax-no-positive");
-
 		if (!super.getBuffer().getErrors().hasErrors("registrationTime"))
-			super.state(object.getSponsorship().getMoment() != null && object.getRegistrationTime().after(object.getSponsorship().getMoment()), "registrationTime", "sponsor.invoice.form.error.registration-before-sponsorship");
+			super.state(object.getRegistrationTime().after(object.getSponsorship().getMoment()), "registrationTime", "sponsor.invoice.form.error.registration-before-sponsorship");
 
 		if (!super.getBuffer().getErrors().hasErrors("dueDate"))
 			if (object.getRegistrationTime() != null) {
 				Date minimumDeadline;
 
 				minimumDeadline = MomentHelper.deltaFromMoment(object.getRegistrationTime(), 30, ChronoUnit.DAYS);
-				super.state(object.getRegistrationTime() != null && object.getDueDate().after(minimumDeadline), "dueDate", "sponsor.invoice.form.error.too-close-to-registrationTime");
+				super.state(object.getDueDate().after(minimumDeadline), "dueDate", "sponsor.invoice.form.error.too-close-to-registrationTime");
 			}
 		if (!super.getBuffer().getErrors().hasErrors("quantity"))
 			super.state(object.getQuantity().getCurrency().equals(object.getSponsorship().getAmount().getCurrency()), "quantity", "sponsor.invoice.form.error.currency");
 
-		if (!super.getBuffer().getErrors().hasErrors())
-			if (object.getTax() != null && object.getQuantity() != null && object.totalAmount() != null) {
-				double totalActual = object.totalAmount();
-				for (Invoice i : invoices)
-					totalActual += i.totalAmount();
-				System.out.println(totalActual);
-				super.state(totalActual <= object.getSponsorship().getAmount().getAmount(), "*", "sponsor.invoice.form.error.bad-cost");
-			}
+		if (!super.getBuffer().getErrors().hasErrors()) {
+			double totalActual = object.totalAmount();
+			for (Invoice i : invoices)
+				totalActual += i.totalAmount();
+			super.state(totalActual <= object.getSponsorship().getAmount().getAmount(), "*", "sponsor.invoice.form.error.bad-cost");
+		}
 	}
 
 	@Override

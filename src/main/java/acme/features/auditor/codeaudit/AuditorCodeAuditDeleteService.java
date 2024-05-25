@@ -6,9 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
-import acme.client.views.SelectChoices;
 import acme.entities.auditrecords.AuditRecord;
 import acme.entities.codeaudits.CodeAudit;
 import acme.entities.projects.Project;
@@ -80,23 +78,4 @@ public class AuditorCodeAuditDeleteService extends AbstractService<Auditor, Code
 		this.repository.delete(object);
 	}
 
-	@Override
-	public void unbind(final CodeAudit object) {
-		assert object != null;
-
-		int auditorId;
-		Collection<Project> projects;
-		SelectChoices choices;
-		Dataset dataset;
-
-		auditorId = super.getRequest().getPrincipal().getActiveRoleId();
-		projects = this.repository.findAllProjects();
-		choices = SelectChoices.from(projects, "title", object.getProject());
-
-		dataset = super.unbind(object, "code", "executionDate", "type", "correctiveActions", "link", "draftMode");
-		dataset.put("project", choices.getSelected().getKey());
-		dataset.put("projects", choices);
-
-		super.getResponse().addData(dataset);
-	}
 }

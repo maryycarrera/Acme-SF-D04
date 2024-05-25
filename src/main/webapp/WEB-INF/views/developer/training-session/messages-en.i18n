@@ -13,7 +13,7 @@ developer.training-session.form.title = Training session form
 
 developer.training-session.list.label.code = Code
 developer.training-session.list.label.start-period-date = Start Date
-developer.training-session.list.label.end-period-date = End Date
+developer.training-session.list.label.finish-period-date = End Date
 developer.training-session.list.label.location = Location
 developer.training-session.list.label.instructor = Instructor
 

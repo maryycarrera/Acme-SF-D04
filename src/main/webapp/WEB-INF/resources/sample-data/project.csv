@@ -1,11 +1,11 @@
 key,code,title,abstractDescription,hasFatalErrors,cost,link,draftMode,key:manager
 project-01,AAA-0000,Sample title,This is a sample abstract,false,11000000,http://www.samplelink.com,false,manager-01
 project-02,AAA-0001,S,This is a sample abstract,false,41400000,http://www.samplelink.com,false,manager-01
-project-03,AAA-0002,Sa,This is a sample abstract,false,100,http://www.samplelink.com,false,manager-01
+project-03,AAA-0002,Sa,This is a sample abstract,false,10000000,http://www.samplelink.com,false,manager-01
 project-04,AAA-0003,Sample title...............................................................,This is a sample abstract,false,5000000,http://www.samplelink.com,false,manager-01
 project-05,AAA-0004,Sample title...........................................................,This is a sample abstract,false,8370000,http://www.samplelink.com,false,manager-01
-project-06,AAA-0005,Sample title,T,false,180,http://www.samplelink.com,false,manager-02
-project-07,AAA-0006,Sample title,This,false,293,http://www.samplelink.com,false,manager-02
+project-06,AAA-0005,Sample title,T,false,1800000,http://www.samplelink.com,false,manager-02
+project-07,AAA-0006,Sample title,This,false,78400000,http://www.samplelink.com,false,manager-02
 project-08,AAA-0007,Sample title,This is a sample abstract...........................................................................,false,7423000,http://www.samplelink.com,false,manager-02
 project-09,AAA-0008,Sample title,This is a sample abstract.........................................................................,false,37,http://www.samplelink.com,false,manager-02
 project-10,AAA-0009,Sample title,This is a sample abstract,true,88383,http://www.samplelink.com,true,manager-02
