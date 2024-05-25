@@ -6,8 +6,8 @@ training-module-04,M-000,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,htt
 training-module-05,M-323,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
 training-module-06,O-617,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
 training-module-07,R-864,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
-training-module-08,Z-997,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
-training-module-09,Z-998,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-08,Z-997,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,false,project-01,developer-02
+training-module-09,Z-998,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,false,project-01,developer-01
 training-module-10,Z-999,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
 training-module-11,AA-000,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
 training-module-12,AA-001,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
@@ -117,6 +117,6 @@ training-module-115,MCT-439,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,
 training-module-116,MCT-440,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,50,true,project-01,developer-01
 training-module-117,MCT-441,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,100,true,project-01,developer-01
 training-module-118,MCT-442,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,5000,true,project-01,developer-01
-training-module-119,MCT-443,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10000,true,project-01,developer-02
-training-module-120,MCT-444,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,1000,true,project-01,developer-02
-training-module-121,MCT-445,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,20000,true,project-01,developer-02
+training-module-119,MCT-443,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10000,false,project-01,developer-02
+training-module-120,MCT-444,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,1000,false,project-01,developer-02
+training-module-121,MCT-445,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,20000,false,project-01,developer-02
