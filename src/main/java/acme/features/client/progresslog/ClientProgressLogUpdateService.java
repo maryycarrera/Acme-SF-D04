@@ -30,7 +30,7 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 		progressLogId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findOneContractByProgressLogId(progressLogId);
 		ProgressLog pl = this.repository.findOneProgressLogById(progressLogId);
-		status = pl.isDraftMode() && contract != null && !contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
+		status = pl.isDraftMode() && !contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
 
 		super.getResponse().setAuthorised(status);
 
