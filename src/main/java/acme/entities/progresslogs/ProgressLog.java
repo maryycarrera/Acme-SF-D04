@@ -28,6 +28,7 @@ import lombok.Setter;
 @Setter
 public class ProgressLog extends AbstractEntity {
 
+	
 	private final static long	serialVersionUID	= 1L;
 
 	@NotBlank
