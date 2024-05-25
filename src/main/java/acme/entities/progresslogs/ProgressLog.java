@@ -58,4 +58,5 @@ public class ProgressLog extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Contract			contract;
+
 }

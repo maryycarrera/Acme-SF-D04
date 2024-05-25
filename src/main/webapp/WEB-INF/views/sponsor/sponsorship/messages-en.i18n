@@ -37,9 +37,10 @@ sponsor.sponsorship.list.label.type = type
 
 sponsor.sponsorship.list.button.create = Create
 
-sponsor.sponsorship.form.error.totalAmount-lessThanSumInvoices= You cannot change the sponsorship price if the new price is lower than the sum of the already created invoices
+sponsor.sponsorship.form.error.changeDivisa= You can not change the currency of a sponsorship which have invoices
+sponsor.sponsorship.form.error.totalAmount-lessThanSumInvoices= You can not change the sponsorship price if the new price is lower than the sum of the already created invoices
 sponsor.sponsorship.form.error.duplicated= Code is duplicated or null
-sponsor.sponsorship.form.error.amount-no-positive-or-zero= Amount must be positive or zero
+sponsor.sponsorship.form.error.amount-no-positive-or-zero= Amount must be positive
 sponsor.sponsorship.form.error.moment-after-start= Moment must be before start time
 sponsor.sponsorship.form.error.start-after-finish=  Finish time must be after start time
 sponsor.sponsorship.form.error.too-close-to-startTime= Finish date must be more than 30 days from the start date

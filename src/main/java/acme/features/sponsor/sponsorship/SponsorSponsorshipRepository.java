@@ -34,7 +34,6 @@ public interface SponsorSponsorshipRepository extends AbstractRepository {
 	@Query("SELECT s FROM Sponsorship s WHERE s.code = :code")
 	Sponsorship findOneSponsorshipByCode(String code);
 
-	//Duda, se puede utilizar una derivada aqui?
 	@Query("SELECT sum(i.quantity*i.tax) FROM Invoice i WHERE i.sponsorship= :id")
 	Double findCostInvoicesFromSponsorshipId(int id);
 

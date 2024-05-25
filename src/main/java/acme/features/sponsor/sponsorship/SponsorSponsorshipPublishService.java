@@ -98,7 +98,7 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("amount"))
-			super.state(object.getAmount().getAmount() >= 0, "amount", "sponsor.sponsorship.form.error.amount-no-positive-or-zero");
+			super.state(object.getAmount().getAmount() > 0, "amount", "sponsor.sponsorship.form.error.amount-no-positive-or-zero");
 
 		if (!super.getBuffer().getErrors().hasErrors("startTimeDuration"))
 			super.state(object.getMoment() != null && object.getStartTimeDuration().after(object.getMoment()), "startTimeDuration", "sponsor.sponsorship.form.error.moment-after-start");
@@ -121,14 +121,18 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 
 		if (!super.getBuffer().getErrors().hasErrors("amount"))
 			super.state(this.isCurrencyAccepted(object.getAmount()), "amount", "sponsor.sponsorship.form.error.acceptedCurrency");
-		{
-			double allAmount = 0.0;
-			for (Invoice i : invoices)
-				allAmount += i.totalAmount();
-
-			super.state(allAmount == object.getAmount().getAmount(), "amount", "sponsor.sponsorship.form.error.totalAmount-non-correpondent");
+		double allAmount = 0.0;
+		int cantidadInvoices = 0;
+		Money m = new Money();
+		m.setAmount(0.0);
+		for (Invoice i : invoices) {
+			allAmount += i.totalAmount();
+			cantidadInvoices += 1;
+			m.setCurrency(i.getQuantity().getCurrency());
 		}
-
+		if (cantidadInvoices >= 1)
+			super.state(object.getAmount().getCurrency().equals(m.getCurrency()), "amount", "sponsor.sponsorship.form.error.changeDivisa");
+		super.state(allAmount == object.getAmount().getAmount(), "amount", "sponsor.sponsorship.form.error.totalAmount-non-correpondent");
 	}
 
 	@Override
