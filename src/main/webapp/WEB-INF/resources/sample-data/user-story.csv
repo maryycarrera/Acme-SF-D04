@@ -23,3 +23,7 @@ user-story-21,Sample title,This is a sample description,24,This is a sample acce
 user-story-22,Sample title,This is a sample description,24,This is a sample acceptance criteria,MUST,null,manager-02,false
 user-story-23,Sample title,This is a sample description,24,This is a sample acceptance criteria,MUST,https://www.sephora.es/marcas/marcas-de-a-z/rare-beauty-rare/?scgid=C301,manager-02,false
 user-story-24,Sample title,This is a sample description,24,This is a sample acceptance criteria,MUST,http://www.sample-url.com,manager-01,true
+user-story-25,Sample title,This is a sample description,24,This is a sample acceptance criteria,MUST,ftp://a,manager-02,true
+user-story-26,Sample title,This is a sample description,24,This is a sample acceptance criteria,MUST,ftp://a.b,manager-02,true
+user-story-27,Sample title,This is a sample description,24,This is a sample acceptance criteria,MUST,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",manager-02,true
+user-story-28,Sample title,This is a sample description,24,This is a sample acceptance criteria,MUST,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",manager-02,true

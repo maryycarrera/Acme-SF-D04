@@ -35,11 +35,14 @@ public class ManagerUserStoryListAllService extends AbstractService<Manager, Use
 	public void load() {
 		Collection<UserStory> object;
 		int id;
+		final boolean showCreate;
 
 		id = super.getRequest().getPrincipal().getActiveRoleId();
 		object = this.repository.findUserStoriesByManagerId(id);
+		showCreate = true;
 
 		super.getBuffer().addData(object);
+		super.getResponse().addGlobal("showCreate", showCreate);
 	}
 
 	@Override
@@ -47,13 +50,10 @@ public class ManagerUserStoryListAllService extends AbstractService<Manager, Use
 		assert object != null;
 
 		Dataset dataset;
-		final boolean showCreate;
 
 		dataset = super.unbind(object, "title", "description", "estimatedCost", "acceptanceCriteria", "priority", "link", "draftMode");
-		showCreate = true;
 
 		super.getResponse().addData(dataset);
-		super.getResponse().addGlobal("showCreate", showCreate);
 	}
 
 }

@@ -1,11 +1,64 @@
 key,code,executionDate,type,correctiveActions,link,draftMode,key:project,key:auditor
-code-audit-01,AAA-000,2000/01/01 00:00,STATIC,a,http://www.example.com,true,project-01,auditor-01
-code-audit-02,A-000,2000/01/1 01:00,DYNAMIC,ab,null,true,project-02,auditor-02
-code-audit-03,AA-000,2010/05/23 16:00,DYNAMIC,"Corrective action1, Corrective action2",,false,project-02,auditor-02
-code-audit-04,ZZ-999,2022/07/29 23:59,DYNAMIC,100 characters......................................................................................,,true,project-02,auditor-02
-code-audit-05,ZZZ-999,2022/07/29 22:59,DYNAMIC,99 characters......................................................................................,,true,project-02,auditor-02
-code-audit-06,XYZ-123,2022/03/15 12:30,STATIC,"Action1, Action2",http://www.example2.com,true,project-03,auditor-03
-code-audit-07,ABC-456,2022/03/16 14:45,DYNAMIC,"Mitigation action",null,true,project-03,auditor-03
-code-audit-08,LMN-789,2022/03/17 09:20,STATIC,"New Action1, New Action2",http://www.example3.com,true,project-04,auditor-04
-code-audit-09,PQR-987,2022/03/18 18:00,DYNAMIC,"Updated Action1, Updated Action2",null,true,project-04,auditor-04
-code-audit-10,DEF-321,2022/03/19 20:10,DYNAMIC,"Action3, Action4",null,true,project-05,auditor-05
+code-audit-01,AAA-000,2010/01/01 00:00,STATIC,Corrective action,"http://www.example.com",true,project-01,auditor-01
+code-audit-02,A-000,2010/01/1 01:00,DYNAMIC,Corrective action,"http://www.example2.com",true,project-02,auditor-02
+code-audit-03,Z-000,2010/05/23 16:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example3.com",false,project-02,auditor-02
+code-audit-04,ZZ-000,2010/05/23 16:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example4.com",true,project-02,auditor-02
+code-audit-05,ZZZ-999,2010/05/23 16:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example5.com",true,project-02,auditor-02
+code-audit-06,ABC-999,2000/01/01 00:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example6.com",true,project-02,auditor-01
+code-audit-07,ABB-999,2000/01/01 00:01,DYNAMIC,"Corrective action1, Corrective action2","http://www.example7.com",true,project-02,auditor-01
+code-audit-08,BBB-001,2022/07/29 23:59,DYNAMIC,"Corrective action1, Corrective action2","http://www.example8.com",true,project-02,auditor-01
+code-audit-09,FBB-001,2022/07/29 23:58,DYNAMIC,"Corrective action1, Corrective action2","http://www.example9.com",true,project-02,auditor-01
+code-audit-10,FBB-010,2022/07/29 23:58,DYNAMIC,a,"http://www.example10.com",true,project-02,auditor-01
+code-audit-11,FBB-011,2022/07/29 23:58,DYNAMIC,ab,"http://www.example11.com",true,project-02,auditor-01
+code-audit-12,ABC-123,2010/01/01 00:00,DYNAMIC,100 characters......................................................................................,"http://www.example12.com",true,project-02,auditor-02
+code-audit-13,ZZZ-921,2022/07/29 22:59,DYNAMIC,99 characters......................................................................................,"http://www.example13.com",true,project-02,auditor-02
+code-audit-14,AHF-921,2022/07/29 22:59,DYNAMIC,' or 'A'='A',"http://www.example14.com",true,project-02,auditor-02
+code-audit-15,BBC-002,2005/03/15 10:00,STATIC,"Исправительное действие","http://www.example15.com",true,project-03,auditor-03
+code-audit-16,XYZ-003,2012/08/12 12:00,DYNAMIC,"措施纠正","http://www.example16.com",true,project-04,auditor-04
+code-audit-17,MNO-004,2008/11/11 11:00,DYNAMIC,"Acción correctiva importante","http://www.example17.com",true,project-05,auditor-05
+code-audit-18,JKL-005,2015/07/07 07:00,STATIC,sdwdas;,"http://www.example18.com",true,project-06,auditor-06
+code-audit-19,DEF-006,2021/06/06 06:00,DYNAMIC,"الإجراء التصحيحي المهم","ftp://a",true,project-07,auditor-07
+code-audit-20,GHI-007,2019/04/04 04:00,DYNAMIC,"दुरुस्त करने वाली कार्रवाई","http://www.example19.com",true,project-08,auditor-08
+code-audit-21,UVW-008,2018/02/02 02:00,STATIC,"Corrigir ação crítica","http://www.example20.com",false,project-09,auditor-09
+code-audit-22,STU-009,2016/01/20 20:00,DYNAMIC,asdasdad,"http://www.example21.com",true,project-01,auditor-10
+code-audit-23,LMN-010,2014/03/30 13:00,STATIC,"Corrective action 1 critical","http://www.example22.com",true,project-01,auditor-01
+code-audit-24,KLM-011,2020/05/05 15:00,DYNAMIC,"Corrective action with ^ and ¨ characters","http://www.example23.com",true,project-12,auditor-02
+code-audit-25,NOP-012,2013/02/22 14:30,STATIC,"asdasdad","http://www.example24.com",true,project-13,auditor-03
+code-audit-26,OPQ-013,2017/08/18 09:45,DYNAMIC,"Test with ; and -- to comment SQL","http://www.example25.com",true,project-14,auditor-04
+code-audit-27,PQR-014,2011/12/12 20:20,STATIC, A,"http://www.example26.com",true,project-15,auditor-05
+code-audit-28,QRS-015,2009/10/10 10:10,DYNAMIC,"Use of special characters: !@#$%^&*()","ftp://a.b",true,project-16,auditor-06
+code-audit-29,STV-016,2006/11/11 11:11,STATIC,"Mixed languages: English and 中文 with ;","http://www.example27.com",true,project-17,auditor-07
+code-audit-30,TUV-017,2018/07/07 07:07,DYNAMIC,"Parentheses ( ) and quotes ' \" in action","http://www.example28.com",true,project-18,auditor-08
+code-audit-31,VWX-018,2013/10/10 10:10,STATIC,"Major action required","http://www.example29.com",true,project-01,auditor-09
+code-audit-32,WXY-019,2020/11/11 11:11,DYNAMIC,"Vital action required","http://www.example30.com",true,project-01,auditor-10
+code-audit-33,XYZ-020,2007/12/12 12:12,STATIC,"Crucial action required","http://www.example31.com",true,project-11,auditor-01
+code-audit-34,YZA-021,2015/01/01 01:01,DYNAMIC,"Necessary action required","http://www.example32.com",true,project-12,auditor-02
+code-audit-35,ZAB-022,2019/02/02 02:02,STATIC,"Mandatory action required","http://www.example33.com",true,project-13,auditor-03
+code-audit-36,ABC-023,2016/03/03 03:03,DYNAMIC,"Urgent corrective action required","http://www.example34.com",true,project-14,auditor-04
+code-audit-37,BCD-024,2010/04/04 04:04,STATIC,"Immediate corrective action required","http://www.example35.com",true,project-15,auditor-05
+code-audit-38,CDE-025,2018/05/05 05:05,DYNAMIC,"Critical corrective action required","http://www.example36.com",true,project-16,auditor-06
+code-audit-39,DEF-026,2012/06/06 06:06,STATIC,"Serious corrective action required","http://www.example37.com",true,project-17,auditor-07
+code-audit-40,EFG-027,2022/07/07 07:07,DYNAMIC,"Important corrective action required","http://www.example38.com",true,project-18,auditor-08
+code-audit-41,FGB-028,2013/08/08 08:08,STATIC,"Major corrective action required","http://www.example39.com",true,project-01,auditor-09
+code-audit-42,GBC-029,2020/09/09 09:09,DYNAMIC,"Vital corrective action required","http://www.example40.com",true,project-01,auditor-10
+code-audit-43,HCD-030,2007/10/10 10:10,STATIC,"Crucial corrective action required","http://www.example41.com",true,project-11,auditor-01
+code-audit-44,IDE-031,2015/11/11 11:11,DYNAMIC,"Necessary corrective action required","http://www.example42.com",true,project-12,auditor-02
+code-audit-45,JEF-032,2019/12/12 12:12,STATIC,"Mandatory corrective action required","http://www.example43.com",true,project-13,auditor-03
+code-audit-46,KFG-033,2016/01/01 01:01,DYNAMIC,"Urgent action required","http://www.example44.com",true,project-14,auditor-04
+code-audit-47,LGH-034,2010/02/02 02:02,STATIC,"Immediate action required","http://www.example45.com",true,project-15,auditor-05
+code-audit-48,MHI-035,2018/03/03 03:03,DYNAMIC,"Critical action required","http://www.example46.com",true,project-16,auditor-06
+code-audit-49,NJI-036,2012/04/04 04:04,STATIC,"Serious action required","http://www.example47.com",true,project-17,auditor-07
+code-audit-50,OIJ-037,2022/05/05 05:05,DYNAMIC,"Important action required","http://www.example48.com",true,project-18,auditor-08
+code-audit-51,PJK-038,2013/06/06 06:06,STATIC,"Major action required","http://www.example49.com",true,project-01,auditor-09
+code-audit-52,QKL-039,2020/07/07 07:07,DYNAMIC,"Vital action required","http://www.example50.com",true,project-01,auditor-10
+code-audit-53,RLM-040,2007/08/08 08:08,STATIC,"Crucial action required","http://www.example51.com",true,project-11,auditor-01
+code-audit-54,SMN-041,2015/09/09 09:09,DYNAMIC,"Necessary action required","http://www.example52.com",true,project-12,auditor-02
+code-audit-55,TNO-042,2019/10/10 10:10,STATIC,"Mandatory action required","http://www.example53.com",true,project-13,auditor-03
+code-audit-56,UOP-043,2016/11/11 11:11,DYNAMIC,"Urgent action","http://www.example54.com",true,project-14,auditor-04
+code-audit-57,PQR-044,2010/12/12 12:12,STATIC,"Immediate action","http://www.example55.com",true,project-15,auditor-05
+code-audit-58,LMN-045,2018/01/01 01:01,DYNAMIC,"Critical action","http://www.example56.com",true,project-16,auditor-06
+code-audit-59,MNO-046,2012/02/02 02:02,STATIC,"Serious action","http://www.example57.com",true,project-17,auditor-07
+code-audit-60,NOP-047,2022/03/03 03:03,DYNAMIC,"Important action","http://www.example58.com",true,project-18,auditor-08
+code-audit-61,OPQ-048,2013/04/04 04:04,STATIC,"Major action","http://www.example59.com",true,project-01,auditor-09
+code-audit-62,PQR-049,2020/05/05 05:05,DYNAMIC,"Vital action","http://www.example60.com",true,project-01,auditor-10
+code-audit-63,QRS-050,2007/06/06 06:06,STATIC,"Crucial action","http://www.example61.com",true,project-11,auditor-01

@@ -14,15 +14,11 @@ developer.training-module.form.title = Formulario
 #Cabecera de listado de módulos de entrenamiento
 
 developer.training-module.list.label.code = Código
-developer.training-module.list.label.creation-moment = Momento de creación
 developer.training-module.list.label.details = Detalles
 developer.training-module.list.label.difficulty-level = Nivel de dificultad
-developer.training-module.list.label.update-moment = Momento de actualización
-developer.training-module.list.label.link = Enlace
 developer.training-module.list.label.estimated-total-time = Tiempo total estimado
 developer.training-module.list.label.project = Proyecto
 developer.training-module.list.label.draftMode = Editable
-
 
 developer.training-module.form.label.code = Código:
 developer.training-module.form.label.creation-moment = Momento de creación:

@@ -1,79 +1,122 @@
 key,code,creation-moment,details,difficulty-level,update-moment,link,estimated-total-time,draftMode,key:project,key:developer
-training-module-01,A-000,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-02,A-001,1999/05/27 15:48,Lorem ipsum dolor sit amet,BASIC,2001/06/20 00:00,http://example.com,10,true,project-01,developer-02
-training-module-03,A-002,2005/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2006/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-04,M-000,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-05,M-323,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-06,O-617,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-07,R-864,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-08,Z-997,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-09,Z-998,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-10,Z-999,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-11,AA-000,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-12,AA-001,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-13,AA-002,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-14,MN-000,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-15,MO-314,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-16,PQ-674,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-17,RS-850,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-18,ZZ-997,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-19,ZZ-998,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-20,ZZ-999,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-21,AAA-000,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-22,AAA-001,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-23,AAA-002,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-24,ZZZ-997,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-25,ZZZ-998,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-26,ZZZ-999,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-02
-training-module-27,ABC-123,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/16 00:00,http://example.com,10,true,project-01,developer-01
-training-module-28,NOV-387,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-29,IFR-147,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-30,A-789,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-31,ZY-998,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-32,MCT-356,2022/07/30 00:00,Lorem ipsum dolor sit amet,BASIC,,http://example.com,10,true,project-01,developer-01
-training-module-33,MCT-357,2022/07/29 23:59,Lorem ipsum dolor sit amet,BASIC,,http://example.com,10,true,project-01,developer-01
-training-module-34,MCT-358,2022/07/29 23:59,Lorem ipsum dolor sit amet,BASIC,2022/07/30 00:00,http://example.com,10,true,project-01,developer-01
-training-module-35,MCT-359,2022/07/29 23:58,Lorem ipsum dolor sit amet,BASIC,2022/07/29 23:59,http://example.com,10,true,project-01,developer-01
-training-module-36,MCT-360,2018/12/31 23:59,Lorem ipsum dolor sit amet,BASIC,2019/01/01 00:00,http://example.com,10,true,project-01,developer-01
-training-module-37,MCT-361,2017/10/07 10:15,Lorem ipsum dolor sit amet,BASIC,2017/10/14 13:25,http://example.com,10,true,project-01,developer-01
-training-module-38,MCT-362,1999/08/20 07:03,Lorem ipsum dolor sit amet,BASIC,2000/02/03 16:29,http://example.com,10,true,project-01,developer-01
-training-module-39,MCT-363,2003/01/24 14:56,Lorem ipsum dolor sit amet,BASIC,2004/03/17 19:42,http://example.com,10,true,project-01,developer-01
-training-module-40,MCT-364,2006/04/28 14:27,Lorem ipsum dolor sit amet,BASIC,2007/05/18 21:30,http://example.com,10,true,project-01,developer-01
-training-module-41,MCT-365,2008/06/30 16:06,Lorem ipsum dolor sit amet,BASIC,2009/07/21 02:38,http://example.com,10,true,project-01,developer-01
-training-module-42,MCT-366,2010/08/30 22:40,Lorem ipsum dolor sit amet,BASIC,2015/09/25 06:10,http://example.com,10,true,project-01,developer-01
-training-module-43,MCT-367,1966/11/14 22:40,Lorem ipsum dolor sit amet,BASIC,1994/08/06 06:10,http://example.com,10,true,project-01,developer-01
-training-module-44,MCT-368,2021/09/20 00:00,a,BASIC,2022/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-45,MCT-369,2021/09/20 00:00,ey,BASIC,2022/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-46,MCT-370,2021/09/20 00:00,HoLa BuEnoS dIaS,BASIC,2022/01/06 00:00,http://example.com,10,false,project-01,developer-01
-training-module-47,MCT-371,2021/09/20 00:00,这是一百个字符的中文句子,BASIC,2022/01/06 00:00,http://example.com,10,false,project-01,developer-01
-training-module-48,MCT-372,2021/09/20 00:00,"El equipo se esfuerza por alcanzar la victoria en el campo demostrando habilidades y estrategias en1",BASIC,2022/01/06 00:00,http://example.com,10,false,project-01,developer-01
-training-module-49,MCT-373,2021/09/20 00:00,Энэ өдөр хайртай бол та нарын цагаараа амьдралд баяртай болохыг хүсье,BASIC,2022/01/06 00:00,http://example.com,10,false,project-01,developer-01
-training-module-50,MCT-374,2021/09/20 00:00,오늘 하루도 행복하고 즐겁게 보내세요 건강하고 행복하세요,BASIC,2022/01/06 00:00,http://example.com,10,false,project-01,developer-01
-training-module-51,MCT-375,2021/09/20 00:00,Disfruté de un día soleado y relajante,BASIC,2022/01/06 00:00,http://example.com,10,false,project-01,developer-01
-training-module-52,MCT-376,2021/09/20 00:00,Este texto es el único que contiene una longitud adecuada (en verdad es para probar los paréntesiss),BASIC,2022/01/06 00:00,http://example.com,10,false,project-01,developer-01
-training-module-53,MCT-377,2021/09/20 00:00,SELECT * FROM usuarios WHERE nombre_usuario = 'usuario' AND contraseña = 'contraseña_introducida',BASIC,2022/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-54,MCT-378,2021/09/20 00:00,<h1>hola</h1>,BASIC,2022/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-55,MCT-379,2021/09/20 00:00,<script>alert("hola")</script>,BASIC,2022/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-56,MCT-380,2021/09/20 00:00,http://example.com/login?username=john&password=password123,BASIC,2022/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-57,MCT-381,2021/09/20 00:00,¿Eres más de que el costero caiga un poquito hacia atrás o prefieres que se quede arribita?,BASIC,2022/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-58,MCT-382,2021/09/20 00:00,Que caiga hacia atrás como en San Gonzalo,BASIC,2022/01/06 00:00,http://example.com,10,true,project-01,developer-01
-training-module-59,MCT-383,2021/09/20 00:00,Lorem ipsum dolor sit amet,BASIC,2022/01/06 00:00,http://example.com,10,false,project-01,developer-01
-training-module-60,MCT-384,2021/09/20 00:00,Lorem ipsum dolor sit amet,INTERMEDIATE,2022/01/06 00:00,http://example.com,10,false,project-01,developer-01
-training-module-61,MCT-385,2021/09/20 00:00,Lorem ipsum dolor sit amet,ADVANCED,2022/01/06 00:00,http://example.com,10,false,project-01,developer-01
-training-module-62,MCT-386,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,null,10,false,project-01,developer-01
-training-module-63,MCT-387,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,,10,false,project-01,developer-01
-training-module-64,MCT-388,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://hermandaddesangonzalo.es/,10,false,project-01,developer-01
-training-module-65,MCT-389,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://github.com/users/maryycarrera/projects/2/views/1?filterQuery=assignee%3Aignblabla,10,false,project-01,developer-01
-training-module-66,MCT-390,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp=Egxnd3Mt,10,false,project-01,developer-01
-training-module-67,MCT-391,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp=Egxnd3M,10,false,project-01,developer-01
-training-module-68,MCT-392,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp,10,false,project-01,developer-01
-training-module-69,MCT-393,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.apple.com,1,false,project-01,developer-01
-training-module-70,MCT-394,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.apple.com,2,false,project-01,developer-01
-training-module-71,MCT-395,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.apple.com,5,false,project-01,developer-01
-training-module-72,MCT-396,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.apple.com,25,false,project-01,developer-01
-training-module-73,MCT-397,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.apple.com,50,false,project-01,developer-01
-training-module-74,MCT-398,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.apple.com,100,false,project-01,developer-01
-training-module-75,MCT-399,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.apple.com,5000,false,project-01,developer-01
-training-module-76,MCT-400,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.apple.com,10000,false,project-01,developer-02
-training-module-77,MCT-401,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.apple.com,1000000,false,project-01,developer-02
-training-module-78,MCT-402,2019/01/01 00:00,Lorem ipsum dolor sit amet,BASIC,2019/01/06 00:00,https://www.apple.com,20000000,false,project-01,developer-02
+training-module-01,A-000,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/16 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-02,A-001,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-03,A-002,2019/01/01 00:00,Lorem ipsum,BASIC,2006/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-04,M-000,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-05,M-323,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-06,O-617,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-07,R-864,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-08,Z-997,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,false,project-01,developer-02
+training-module-09,Z-998,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,false,project-01,developer-01
+training-module-10,Z-999,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-11,AA-000,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-12,AA-001,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-13,AA-002,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-14,MN-000,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-15,MO-314,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-16,PQ-674,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-17,RS-850,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-18,ZZ-997,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-19,ZZ-998,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-20,ZZ-999,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-21,AAA-000,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-22,AAA-001,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-23,AAA-002,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-24,ZZZ-997,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-25,ZZZ-998,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-26,ZZZ-999,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-27,ABC-123,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-28,NOV-387,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-29,IFR-147,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-30,A-789,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-31,ZY-998,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-32,MCT-356,2022/07/30 00:00,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-33,MCT-357,2022/07/29 23:59,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-34,MCT-358,2022/07/29 23:59,Lorem ipsum,BASIC,2022/07/30 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-35,MCT-359,2022/07/29 21:58,Lorem ipsum,BASIC,2022/07/29 23:59,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-36,MCT-360,2018/12/31 23:59,Lorem ipsum,BASIC,2019/01/01 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-37,MCT-361,2017/10/07 10:15,Lorem ipsum,BASIC,2017/10/14 13:25,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-38,MCT-362,2000/08/20 07:03,Lorem ipsum,BASIC,2000/10/03 16:29,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-39,MCT-363,2003/01/24 14:56,Lorem ipsum,BASIC,2004/03/17 19:42,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-40,MCT-364,2006/04/28 14:27,Lorem ipsum,BASIC,2007/05/18 21:30,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-41,MCT-365,2008/06/30 16:06,Lorem ipsum,BASIC,2009/07/21 02:38,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-42,MCT-366,2010/08/30 22:40,Lorem ipsum,BASIC,2015/09/25 06:10,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-43,MCT-367,2013/11/14 22:40,Lorem ipsum,BASIC,2014/08/06 06:10,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-44,MCT-368,2019/01/01 00:00,Lorem ipsum,BASIC,2020/02/29 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-45,MCT-369,2021/02/28 00:00,Lorem ipsum,BASIC,2021/01/29 15:30,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-46,MCT-370,2017/02/28 23:59,Lorem ipsum,BASIC,2020/02/29 23:59,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-47,MCT-371,2022/07/30 00:00,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-48,MCT-372,2000/01/01 00:00,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-49,MCT-373,2022/07/29 23:00,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-50,MCT-374,2000/12/31 23:59,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-51,MCT-375,2000/01/01 00:00,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-52,MCT-376,2000/01/01 00:01,Lorem ipsum,BASIC,,http://www.lorem-ipsum.orgm,10,true,project-01,developer-01
+training-module-53,MCT-377,2022/07/29 23:59,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-54,MCT-378,2022/07/30 00:00,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-55,MCT-379,2022/06/30 00:01,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-56,MCT-380,2020/02/28 00:00,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-57,MCT-381,2020/02/29 00:00,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-58,MCT-382,2020/02/29 23:59,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-59,MCT-383,2020/03/01 00:00,Lorem ipsum,BASIC,,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-60,MCT-384,2019/01/01 00:00,a,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-61,MCT-385,2019/01/01 00:00,ey,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-62,MCT-386,2019/01/01 00:00,HoLa BuEnoS dIaS,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-63,MCT-387,2019/01/01 00:00,这是一百个字符的中文句子,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-64,MCT-388,2019/01/01 00:00,"El equipo se esfuerza por alcanzar la victoria en el campo demostrando habilidades y estrategias en1",BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-65,MCT-389,2019/01/01 00:00,Энэ өдөр хайртай бол та нарын цагаараа амьдралд баяртай болохыг хүсье,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-66,MCT-390,2019/01/01 00:00,오늘 하루도 행복하고 즐겁게 보내세요 건강하고 행복하세요,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-67,MCT-391,2019/01/01 00:00,Disfruté de un día soleado y relajante,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-68,MCT-392,2019/01/01 00:00,Este texto es el único que contiene una longitud adecuada (en verdad es para probar los paréntesiss),BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-69,MCT-393,2019/01/01 00:00,SELECT * FROM usuarios WHERE nombre_usuario = 'usuario' AND contraseña = 'contraseña_introducida',BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-70,MCT-394,2019/01/01 00:00,<h1>hola</h1>,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-71,MCT-395,2019/01/01 00:00,<script>alert("hola")</script>,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-72,MCT-396,2019/01/01 00:00,http://example.com/login?username=john&password=password123,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-73,MCT-397,2019/01/01 00:00,¿Eres más de que el costero caiga un poquito hacia atrás o prefieres que se quede arribita?,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-74,MCT-398,2019/01/01 00:00,Que caiga hacia atrás como en San Gonzalo,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-75,MCT-399,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-76,MCT-400,2019/01/01 00:00,L,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-77,MCT-401,2019/01/01 00:00,Lo,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-78,MCT-402,2019/01/01 00:00,Lorem ipsum dolor sit amet; consectetur adipiscing elit; sed do eiusmod te,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-79,MCT-403,2019/01/01 00:00,Lorem ipsum dolor sit amet; consectetur adipiscing elit; sed do eiusmod tem,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-80,MCT-404,2019/01/01 00:00,Lorem ipsum dolor sit amet; consectetur adipiscing elit; sed do eiusmod temp,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-81,MCT-405,2019/01/01 00:00,<h1>!</h1>,BASIC,2019/01/16 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-82,MCT-406,2019/01/01 00:00,'' or 'A'='A,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-83,MCT-407,2019/01/01 00:00,국민경제의 발전을,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-84,MCT-408,2019/01/06 00:00,العظمى واعتلاء,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-85,MCT-409,2019/01/06 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-86,MCT-410,2019/01/06 00:00,Lorem ipsum,INTERMEDIATE,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-87,MCT-411,2019/01/06 00:00,Lorem ipsum,ADVANCED,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-01
+training-module-88,MCT-412,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,null,10,true,project-01,developer-01
+training-module-89,MCT-413,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,,10,true,project-01,developer-01
+training-module-90,MCT-414,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,https://hermandaddesangonzalo.es/,10,true,project-01,developer-01
+training-module-91,MCT-415,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,https://github.com/users/maryycarrera/projects/2/views/1?filterQuery=assignee%3Aignblabla,10,true,project-01,developer-01
+training-module-92,MCT-416,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp=Egxnd3Mt,10,true,project-01,developer-01
+training-module-93,MCT-417,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp=Egxnd3M,10,true,project-01,developer-01
+training-module-94,MCT-418,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,https://www.google.com/search?q=url+de+254+caracteres&sca_esv=373b249675fd824a&sxsrf=ACQVn0_BaglrVRDQoGxu2gltIl7r6rpopg%3A1709827582366&ei=_uXpZdXbFb2B9u8PvPSw2AI&ved=0ahUKEwjV0rGNxOKEAxW9gP0HHTw6DCsQ4dUDCBA&uact=5&oq=url+de+254+caracteres&gs_lp,10,true,project-01,developer-01
+training-module-95,MCT-419,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-96,MCT-420,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,ftp://a,10,true,project-01,developer-02
+training-module-97,MCT-421,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,ftp://a.b,10,true,project-01,developer-02
+training-module-98,MCT-422,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org/dolor/sit/amet;/consectetur/adipiscing/elit;/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/,10,true,project-01,developer-02
+training-module-99,MCT-423,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org/dolor/sit/amet;/consectetur/adipiscing/elit;/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X,10,true,project-01,developer-02
+training-module-100,MCT-424,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,https://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-101,MCT-425,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,ftp://www.lorem-ipsum.org,10,true,project-01,developer-02
+training-module-102,MCT-426,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org/dolor/sit.html,10,true,project-01,developer-02
+training-module-103,MCT-427,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org/dolor/sit.html#dolor,10,true,project-01,developer-02
+training-module-104,MCT-428,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://example.org?a=1&b=2,10,true,project-01,developer-02
+training-module-105,MCT-429,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://example.org?,10,true,project-01,developer-02
+training-module-106,MCT-430,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://example.org?a,10,true,project-01,developer-02
+training-module-107,MCT-431,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://example.org?a&b,10,true,project-01,developer-02
+training-module-108,MCT-432,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://example.org/,10,true,project-01,developer-02
+training-module-109,MCT-433,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://example.org/a,10,true,project-01,developer-02
+training-module-110,MCT-434,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://example.org/a/b,10,true,project-01,developer-02
+training-module-111,MCT-435,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://example.org/a/b?,10,true,project-01,developer-02
+training-module-112,MCT-436,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,1,true,project-01,developer-01
+training-module-113,MCT-437,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,2,true,project-01,developer-01
+training-module-114,MCT-438,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,5,true,project-01,developer-01
+training-module-115,MCT-439,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,25,true,project-01,developer-01
+training-module-116,MCT-440,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,50,true,project-01,developer-01
+training-module-117,MCT-441,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,100,true,project-01,developer-01
+training-module-118,MCT-442,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,5000,true,project-01,developer-01
+training-module-119,MCT-443,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,10000,true,project-01,developer-02
+training-module-120,MCT-444,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,1000,true,project-01,developer-02
+training-module-121,MCT-445,2019/01/01 00:00,Lorem ipsum,BASIC,2019/01/06 00:00,http://www.lorem-ipsum.org,20000,true,project-01,developer-02

@@ -1,17 +1,11 @@
 
 package acme.features.manager.assignation;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
-import acme.client.views.SelectChoices;
 import acme.entities.assignations.Assignation;
-import acme.entities.projects.Project;
-import acme.entities.userstories.UserStory;
 import acme.roles.Manager;
 
 @Service
@@ -70,32 +64,32 @@ public class ManagerAssignationDeleteService extends AbstractService<Manager, As
 		this.repository.delete(object);
 	}
 
-	@Override
-	public void unbind(final Assignation object) {
-		assert object != null;
-
-		Collection<UserStory> userStories;
-		Collection<Project> projects;
-		SelectChoices choicesUS;
-		SelectChoices choicesP;
-		Dataset dataset;
-		int managerId;
-
-		managerId = super.getRequest().getPrincipal().getActiveRoleId();
-
-		userStories = this.repository.findUserStoriesByManagerId(managerId);
-		choicesUS = SelectChoices.from(userStories, "title", object.getUserStory());
-
-		projects = this.repository.findProjectsByManagerId(managerId);
-		choicesP = SelectChoices.from(projects, "code", object.getProject());
-
-		dataset = super.unbind(object, "userStory", "project");
-		dataset.put("userStory", choicesUS.getSelected().getKey());
-		dataset.put("userStories", choicesUS);
-		dataset.put("project", choicesP.getSelected().getKey());
-		dataset.put("projects", choicesP);
-
-		super.getResponse().addData(dataset);
-	}
+	//	@Override
+	//	public void unbind(final Assignation object) {
+	//		assert object != null;
+	//
+	//		Collection<UserStory> userStories;
+	//		Collection<Project> projects;
+	//		SelectChoices choicesUS;
+	//		SelectChoices choicesP;
+	//		Dataset dataset;
+	//		int managerId;
+	//
+	//		managerId = super.getRequest().getPrincipal().getActiveRoleId();
+	//
+	//		userStories = this.repository.findUserStoriesByManagerId(managerId);
+	//		choicesUS = SelectChoices.from(userStories, "title", object.getUserStory());
+	//
+	//		projects = this.repository.findProjectsByManagerId(managerId);
+	//		choicesP = SelectChoices.from(projects, "code", object.getProject());
+	//
+	//		dataset = super.unbind(object, "userStory", "project");
+	//		dataset.put("userStory", choicesUS.getSelected().getKey());
+	//		dataset.put("userStories", choicesUS);
+	//		dataset.put("project", choicesP.getSelected().getKey());
+	//		dataset.put("projects", choicesP);
+	//
+	//		super.getResponse().addData(dataset);
+	//	}
 
 }

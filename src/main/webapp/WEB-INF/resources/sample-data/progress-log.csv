@@ -2,15 +2,15 @@ key,recordId,completeness,comment,registrationMoment,responsiblePerson,draftMode
 progress-log-01,PG-NC-1234,80,bien,2003/07/13 00:00,Blanca Blanco Blanquero,false,contract-01
 progress-log-02,PG-NC-0000,30,bien,2003/07/13 00:00,María del Carmen Doloroso de todos Los Santos de lla Fuente González Martín,false,contract-01
 progress-log-03,PG-NC-0001,53,bien,2003/07/13 00:00,María del Carmen Doloroso de todos Los Santos de la Fuente González Martín,false,contract-01
-progress-log-04,PG-NC-0002,32,bien,2003/07/13 00:00,B,false,contract-25
+progress-log-04,PG-NC-0002,32,bien,2003/07/13 00:00,B,true,contract-36
 progress-log-05,PG-NC-0003,75,bien,2003/07/13 00:00,Lucía Villegas Martín,false,contract-01
 progress-log-06,PG-NC-0004,58,bien,2022/03/06 00:00,Blanca Blanco Blanquero,false,contract-01
 progress-log-07,PG-NC-0005,83,bien,2022/03/05 00:00,Blanca Blanco Blanquero,false,contract-25
-progress-log-08,PG-NC-0006,18,bien,1980/05/11 00:00,Blanca Blanco Blanquero,false,contract-01
-progress-log-09,PG-NC-0007,32,bien,2000/01/18 00:00,Blanca Blanco Blanquero,false,contract-12
+progress-log-08,PG-NC-0006,18,bien,2019/05/11 00:00,Blanca Blanco Blanquero,false,contract-01
+progress-log-09,PG-NC-0007,32,bien,2020/01/18 00:00,Blanca Blanco Blanquero,true,contract-36
 progress-log-10,PG-NC-0008,4,"Proceso completado con gran éxito, resultados finales almacenados en el sistema. Listo para revisar.",2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-20
 progress-log-11,PG-NC-0009,50,"Proceso completado con gran éxito, resultados finales almacenados en el sistema. Listo para revisar",2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-20
-progress-log-12,PG-NC-0010,94,B,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-17
+progress-log-12,PG-NC-0010,94,B,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
 progress-log-13,PG-NC-0011,89,Correcto,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-01
 progress-log-14,PG-NC-0012,90,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-01
 progress-log-15,PG-NC-0013,1,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-04
@@ -20,3 +20,25 @@ progress-log-18,PG-A-0000,81,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,
 progress-log-19,PG-Z-9999,68,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-04
 progress-log-20,PG-AZ-7439,85,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-01
 progress-log-21,PG-GH-5684,72,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-08
+progress-log-22,PG-A-0001,10,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-23,PG-AA-0000,20,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-24,PG-AA-0001,2,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-25,PG-A-9999,30,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-26,PG-AA-9999,21,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-27,PG-AA-9998,11,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-28,PG-Z-0000,13,bien,2022/07/30 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-29,PG-Z-0001,14,bien,2021/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-30,PG-ZZ-0000,15,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-31,PG-ZZ-0001,16,bien,2010/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-32,PG-Z-9998,17,bien,2010/12/11 00:01,Blanca Blanco Blanquerooooooooooooooo,true,contract-36
+progress-log-33,PG-ZZ-9999,42,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-34,PG-ZZ-9998,43,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-43
+progress-log-35,PG-AB-0000,44,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-36,PG-AB-0001,45,bien,2010/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-37,PG-AB-9999,62,bien,2022/07/29 23:59,Blanca Blanco Blanquero,true,contract-36
+progress-log-38,PG-AB-9998,68,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-39,PG-ZY-0000,74,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-43
+progress-log-40,PG-ZY-0001,79,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-41,PG-ZY-9999,82,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-42,PG-ZY-9998,91,bien,2021/07/13 00:00,Blanca Blanco Blanquero,true,contract-36
+progress-log-43,PG-A-9998,12,bien,2003/07/13 00:00,Blanca Blanco Blanquero,true,contract-43
