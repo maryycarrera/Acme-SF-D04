@@ -119,20 +119,21 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 			super.state(invoices.stream().allMatch(us -> !us.isDraftMode()), "*", "sponsor.sponsorship.form.error.invoices-not-published");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("amount"))
+		if (!super.getBuffer().getErrors().hasErrors("amount")) {
 			super.state(this.isCurrencyAccepted(object.getAmount()), "amount", "sponsor.sponsorship.form.error.acceptedCurrency");
-		double allAmount = 0.0;
-		int cantidadInvoices = 0;
-		Money m = new Money();
-		m.setAmount(0.0);
-		for (Invoice i : invoices) {
-			allAmount += i.totalAmount();
-			cantidadInvoices += 1;
-			m.setCurrency(i.getQuantity().getCurrency());
+			double allAmount = 0.0;
+			int cantidadInvoices = 0;
+			Money m = new Money();
+			m.setAmount(0.0);
+			for (Invoice i : invoices) {
+				allAmount += i.totalAmount();
+				cantidadInvoices += 1;
+				m.setCurrency(i.getQuantity().getCurrency());
+			}
+			if (cantidadInvoices >= 1)
+				super.state(object.getAmount().getCurrency().equals(m.getCurrency()), "amount", "sponsor.sponsorship.form.error.changeDivisa");
+			super.state(allAmount == object.getAmount().getAmount(), "amount", "sponsor.sponsorship.form.error.totalAmount-non-correpondent");
 		}
-		if (cantidadInvoices >= 1)
-			super.state(object.getAmount().getCurrency().equals(m.getCurrency()), "amount", "sponsor.sponsorship.form.error.changeDivisa");
-		super.state(allAmount == object.getAmount().getAmount(), "amount", "sponsor.sponsorship.form.error.totalAmount-non-correpondent");
 	}
 
 	@Override
