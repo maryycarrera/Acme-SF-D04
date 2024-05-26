@@ -28,7 +28,7 @@ class ClientProgressLogDeleteService extends AbstractService<Client, ProgressLog
 
 		progressLogId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findOneContractByProgressLogId(progressLogId);
-		status = contract != null && super.getRequest().getPrincipal().hasRole(contract.getClient());
+		status = super.getRequest().getPrincipal().hasRole(contract.getClient());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -63,8 +63,4 @@ class ClientProgressLogDeleteService extends AbstractService<Client, ProgressLog
 		this.repository.delete(object);
 	}
 
-	@Override
-	public void unbind(final ProgressLog object) {
-
-	}
 }

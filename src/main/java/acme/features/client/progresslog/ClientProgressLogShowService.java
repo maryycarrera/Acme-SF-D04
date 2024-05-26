@@ -28,7 +28,7 @@ public class ClientProgressLogShowService extends AbstractService<Client, Progre
 
 		progressLogId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findOneContractByProgressLogId(progressLogId);
-		status = contract != null && super.getRequest().getPrincipal().hasRole(contract.getClient());
+		status = super.getRequest().getPrincipal().hasRole(contract.getClient());
 
 		super.getResponse().setAuthorised(status);
 	}

@@ -28,7 +28,11 @@ public class ClientContractCreateService extends AbstractService<Client, Contrac
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+
+		status = super.getRequest().getPrincipal().hasRole(Client.class);
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override

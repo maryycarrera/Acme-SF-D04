@@ -30,7 +30,7 @@ public class ClientContractDeleteService extends AbstractService<Client, Contrac
 
 		masterId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findContractById(masterId);
-		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
+		status = contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -75,11 +75,6 @@ public class ClientContractDeleteService extends AbstractService<Client, Contrac
 		progressLogs = this.repository.findProgressLogsByContractId(object.getId());
 		this.repository.deleteAll(progressLogs);
 		this.repository.delete(object);
-	}
-
-	@Override
-	public void unbind(final Contract object) {
-
 	}
 
 }
