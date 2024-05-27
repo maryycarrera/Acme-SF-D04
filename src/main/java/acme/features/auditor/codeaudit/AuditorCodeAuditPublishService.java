@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.models.Dataset;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.auditrecords.AuditRecord;
@@ -88,6 +89,14 @@ public class AuditorCodeAuditPublishService extends AbstractService<Auditor, Cod
 			if (marks != null)
 				super.state(CodeAudit.getMarkMode(marks).matches("A\\+|A|B|C"), "markMode", "auditor.codeaudit.form.error.lower-than-c");
 
+		}
+		if (!super.getBuffer().getErrors().hasErrors("executionDate")) {
+			Collection<AuditRecord> auditRecords = this.repository.findManyAuditRecordsByCodeAuditId(object.getId());
+			boolean auditRecordPosterior = false;
+			for (AuditRecord ar : auditRecords)
+				if (MomentHelper.isBefore(ar.getStartDate(), object.getExecutionDate()))
+					auditRecordPosterior = true;
+			super.state(auditRecordPosterior, "executionDate", "auditor.codeaudit.form.error.audit-records-posterior");
 		}
 	}
 

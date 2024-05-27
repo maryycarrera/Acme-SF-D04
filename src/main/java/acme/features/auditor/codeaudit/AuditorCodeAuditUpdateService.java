@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.models.Dataset;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
+import acme.entities.auditrecords.AuditRecord;
 import acme.entities.codeaudits.CodeAudit;
 import acme.entities.codeaudits.CodeType;
 import acme.entities.projects.Project;
@@ -73,6 +75,14 @@ public class AuditorCodeAuditUpdateService extends AbstractService<Auditor, Code
 
 			existing = this.repository.findOneCodeAuditByCode(object.getCode());
 			super.state(existing == null || existing.getId() == object.getId(), "code", "auditor.codeaudit.form.error.duplicated");
+		}
+		if (!super.getBuffer().getErrors().hasErrors("executionDate")) {
+			Collection<AuditRecord> auditRecords = this.repository.findManyAuditRecordsByCodeAuditId(object.getId());
+			boolean auditRecordPosterior = true;
+			for (AuditRecord ar : auditRecords)
+				if (MomentHelper.isBefore(ar.getStartDate(), object.getExecutionDate()))
+					auditRecordPosterior = false;
+			super.state(auditRecordPosterior, "executionDate", "auditor.codeaudit.form.error.audit-records-posterior");
 		}
 
 	}

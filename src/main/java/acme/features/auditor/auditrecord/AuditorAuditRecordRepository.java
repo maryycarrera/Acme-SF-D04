@@ -13,7 +13,7 @@ import acme.entities.codeaudits.CodeAudit;
 @Repository
 public interface AuditorAuditRecordRepository extends AbstractRepository {
 
-	@Query("select ca from CodeAudit ca where ca.id = :id")
+	@Query("SELECT ca FROM CodeAudit ca WHERE ca.id = :id")
 	CodeAudit findOneCodeAuditById(int id);
 
 	@Query("SELECT ar FROM AuditRecord ar WHERE ar.id = :id")
@@ -22,10 +22,10 @@ public interface AuditorAuditRecordRepository extends AbstractRepository {
 	@Query("SELECT ar FROM AuditRecord ar WHERE ar.codeAudit.id = :id")
 	Collection<AuditRecord> findManyAuditRecordsByCodeAuditId(int id);
 
-	@Query("select ar.codeAudit from AuditRecord ar where ar.id = :id")
+	@Query("SELECT ar.codeAudit FROM AuditRecord ar where ar.id = :id")
 	CodeAudit findOneCodeAuditByAuditRecordId(int id);
 
-	@Query("SELECT ar FROM AuditRecord ar WHERE ar.code = :code")
+	@Query("SELECT ar FROM AuditRecord ar WHERE ar.code = :code ORDER BY ar.id")
 	AuditRecord findOneAuditRecordByCode(String code);
 
 	@Query("SELECT ca FROM CodeAudit ca")
