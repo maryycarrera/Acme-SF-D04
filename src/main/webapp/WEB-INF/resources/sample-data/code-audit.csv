@@ -1,5 +1,5 @@
 key,code,executionDate,type,correctiveActions,link,draftMode,key:project,key:auditor
-code-audit-01,AAA-000,2010/01/01 00:00,STATIC,Corrective action,"http://www.example.com",true,project-01,auditor-01
+code-audit-01,AAA-000,2000/01/01 00:00,STATIC,Corrective action,"http://www.example.com",true,project-01,auditor-01
 code-audit-02,A-000,2010/01/1 01:00,DYNAMIC,Corrective action,"http://www.example2.com",false,project-02,auditor-01
 code-audit-03,Z-000,2010/05/23 16:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example3.com",true,project-02,auditor-02
 code-audit-04,ZZ-000,2010/05/23 16:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example4.com",true,project-02,auditor-02
