@@ -15,7 +15,7 @@ public interface AdministratorBannerRepository extends AbstractRepository {
 	@Query("SELECT b FROM Banner b WHERE b.id = :id")
 	Banner findOneBannerById(int id);
 
-	@Query("SELECT b FROM Banner b")
+	@Query("SELECT b FROM Banner b ORDER BY b.id")
 	Collection<Banner> findBanners();
 
 }

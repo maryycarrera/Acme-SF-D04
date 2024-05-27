@@ -1,7 +1,7 @@
 key,code,executionDate,type,correctiveActions,link,draftMode,key:project,key:auditor
-code-audit-01,AAA-000,2010/01/01 00:00,STATIC,Corrective action,"http://www.example.com",true,project-01,auditor-01
-code-audit-02,A-000,2010/01/1 01:00,DYNAMIC,Corrective action,"http://www.example2.com",true,project-02,auditor-02
-code-audit-03,Z-000,2010/05/23 16:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example3.com",false,project-02,auditor-02
+code-audit-01,AAA-000,2000/01/01 00:00,STATIC,Corrective action,"http://www.example.com",true,project-01,auditor-01
+code-audit-02,A-000,2010/01/1 01:00,DYNAMIC,Corrective action,"http://www.example2.com",false,project-02,auditor-01
+code-audit-03,Z-000,2010/05/23 16:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example3.com",true,project-02,auditor-02
 code-audit-04,ZZ-000,2010/05/23 16:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example4.com",true,project-02,auditor-02
 code-audit-05,ZZZ-999,2010/05/23 16:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example5.com",true,project-02,auditor-02
 code-audit-06,ABC-999,2000/01/01 00:00,DYNAMIC,"Corrective action1, Corrective action2","http://www.example6.com",true,project-02,auditor-01
@@ -21,14 +21,14 @@ code-audit-19,DEF-006,2021/06/06 06:00,DYNAMIC,"الإجراء التصحيحي 
 code-audit-20,GHI-007,2019/04/04 04:00,DYNAMIC,"दुरुस्त करने वाली कार्रवाई","http://www.example19.com",true,project-08,auditor-08
 code-audit-21,UVW-008,2018/02/02 02:00,STATIC,"Corrigir ação crítica","http://www.example20.com",false,project-09,auditor-09
 code-audit-22,STU-009,2016/01/20 20:00,DYNAMIC,asdasdad,"http://www.example21.com",true,project-01,auditor-10
-code-audit-23,LMN-010,2014/03/30 13:00,STATIC,"Corrective action 1 critical","http://www.example22.com",true,project-01,auditor-01
+code-audit-23,LMN-010,2014/03/30 13:00,STATIC,"Corrective action 1 critical","http://www.example22.com",false,project-01,auditor-01
 code-audit-24,KLM-011,2020/05/05 15:00,DYNAMIC,"Corrective action with ^ and ¨ characters","http://www.example23.com",true,project-12,auditor-02
-code-audit-25,NOP-012,2013/02/22 14:30,STATIC,"asdasdad","http://www.example24.com",true,project-13,auditor-03
-code-audit-26,OPQ-013,2017/08/18 09:45,DYNAMIC,"Test with ; and -- to comment SQL","http://www.example25.com",true,project-14,auditor-04
-code-audit-27,PQR-014,2011/12/12 20:20,STATIC, A,"http://www.example26.com",true,project-15,auditor-05
+code-audit-25,NOP-012,2013/02/22 14:30,STATIC,"asdasdad","http://www.example24.com",false,project-13,auditor-03
+code-audit-26,OPQ-013,2017/08/18 09:45,DYNAMIC,"Use of special characters: !@#$%^&*()","http://www.example25.com",true,project-14,auditor-04
+code-audit-27,PQR-014,2011/12/12 20:20,STATIC, A,"http://www.example26.com",false,project-15,auditor-05
 code-audit-28,QRS-015,2009/10/10 10:10,DYNAMIC,"Use of special characters: !@#$%^&*()","ftp://a.b",true,project-16,auditor-06
 code-audit-29,STV-016,2006/11/11 11:11,STATIC,"Mixed languages: English and 中文 with ;","http://www.example27.com",true,project-17,auditor-07
-code-audit-30,TUV-017,2018/07/07 07:07,DYNAMIC,"Parentheses ( ) and quotes ' \" in action","http://www.example28.com",true,project-18,auditor-08
+code-audit-30,TUV-017,2018/07/07 07:07,DYNAMIC,"Parentheses ( ) and quotes ' \" in action","http://www.example28.com",false,project-18,auditor-08
 code-audit-31,VWX-018,2013/10/10 10:10,STATIC,"Major action required","http://www.example29.com",true,project-01,auditor-09
 code-audit-32,WXY-019,2020/11/11 11:11,DYNAMIC,"Vital action required","http://www.example30.com",true,project-01,auditor-10
 code-audit-33,XYZ-020,2007/12/12 12:12,STATIC,"Crucial action required","http://www.example31.com",true,project-11,auditor-01
