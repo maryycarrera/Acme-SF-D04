@@ -3,13 +3,13 @@ audit-record-01,AU-1111-001,2000/05/23 00:00,2000/05/23 01:00,B,"http://www.exam
 audit-record-02,AU-2222-002,2000/05/23 00:00,2000/05/23 01:00,F,null,true,code-audit-01
 audit-record-03,AU-3333-003,2000/05/23 00:00,2000/05/23 01:00,F,null,true,code-audit-01
 audit-record-04,AU-4444-004,2000/05/23 00:00,2000/05/23 01:00,F,null,true,code-audit-01
-audit-record-05,AU-5555-005,2000/01/01 00:00,2000/01/01 01:00,F,null,true,code-audit-01
+audit-record-05,AU-5555-005,2000/01/01 00:01,2000/01/02 01:00,F,null,true,code-audit-01
 audit-record-06,AU-1111-006,2022/07/29 23:00,2022/07/30 00:00,B,"ftp://a",false,code-audit-01
 audit-record-07,AU-1111-007,2022/07/29 22:58,2022/07/29 23:58,B,"ftp://a.b",false,code-audit-01
 audit-record-08,AU-1234-008,2000/01/01 00:01,2000/01/01 01:01,F,null,true,code-audit-01
-audit-record-09,AU-1234-009,2000/01/01 00:10,2000/01/01 01:00,A+,"http://www.example3.com",false,code-audit-01
-audit-record-10,AU-1234-010,2000/01/01 00:10,2000/01/01 01:00,F-,"http://www.example4.com",true,code-audit-01
-audit-record-11,AU-1234-011,2000/01/01 00:10,2000/01/01 01:00,F-,"http://www.example5.com",false,code-audit-01
+audit-record-09,AU-1234-009,2000/01/01 00:10,2000/01/02 01:00,A+,"http://www.example3.com",false,code-audit-01
+audit-record-10,AU-1234-010,2000/01/01 00:10,2000/01/02 01:00,F-,"http://www.example4.com",true,code-audit-01
+audit-record-11,AU-1234-011,2000/01/01 00:10,2000/01/02 01:00,F-,"http://www.example5.com",false,code-audit-01
 audit-record-12,AU-1111-012,2022/07/29 18:59,2022/07/29 19:59,B,"ftp://a",false,code-audit-03
 audit-record-13,AU-1111-013,2022/07/29 17:59,2022/07/29 18:59,A,null,true,code-audit-03
 audit-record-14,AU-2222-014,2000/02/01 00:00,2000/02/01 01:00,C,"http://www.example2.com",false,code-audit-02
