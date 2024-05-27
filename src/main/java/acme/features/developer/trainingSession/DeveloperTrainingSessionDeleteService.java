@@ -4,6 +4,7 @@ package acme.features.developer.trainingSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.trainingmodules.TrainingModule;
 import acme.entities.trainingsessions.TrainingSession;
@@ -59,6 +60,19 @@ public class DeveloperTrainingSessionDeleteService extends AbstractService<Devel
 		assert object != null;
 
 		this.repository.delete(object);
+	}
+
+	@Override
+	public void unbind(final TrainingSession object) {
+
+		assert object != null;
+
+		Dataset dataset;
+
+		dataset = super.unbind(object, "code", "startPeriodDate", "finishPeriodDate", "location", "instructor", "contactEmail", "link", "draftMode");
+		dataset.put("masterId", object.getTrainingModule().getId());
+
+		super.getResponse().addData(dataset);
 	}
 
 }
