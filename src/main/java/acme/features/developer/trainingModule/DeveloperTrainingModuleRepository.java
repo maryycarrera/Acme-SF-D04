@@ -16,7 +16,7 @@ import acme.roles.Developer;
 @Repository
 public interface DeveloperTrainingModuleRepository extends AbstractRepository {
 
-	@Query("select project from Project project")
+	@Query("select project from Project project where project.draftMode = false")
 	Collection<Project> findAllProjects();
 
 	@Query("select trainingModule from TrainingModule trainingModule where trainingModule.developer.id = :developerId")
