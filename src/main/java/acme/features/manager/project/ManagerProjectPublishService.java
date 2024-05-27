@@ -71,12 +71,8 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 			super.state(existing == null || existing.getId() == object.getId(), "code", "manager.project.form.error.duplicated");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("hasFatalErrors")) {
-			Project existing;
-
-			existing = this.repository.findOneProjectByCode(object.getCode());
-			super.state(!existing.isHasFatalErrors(), "hasFatalErrors", "manager.project.form.error.hasFatalErrors");
-		}
+		if (!super.getBuffer().getErrors().hasErrors("hasFatalErrors"))
+			super.state(!object.isHasFatalErrors(), "hasFatalErrors", "manager.project.form.error.hasFatalErrors");
 
 		if (!super.getBuffer().getErrors().hasErrors()) {
 			super.state(!userStories.isEmpty(), "*", "manager.project.form.error.no-user-stories");

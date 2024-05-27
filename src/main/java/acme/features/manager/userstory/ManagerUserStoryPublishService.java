@@ -59,6 +59,9 @@ public class ManagerUserStoryPublishService extends AbstractService<Manager, Use
 	@Override
 	public void validate(final UserStory object) {
 		assert object != null;
+
+		if (super.getBuffer().getErrors().hasErrors())
+			object.setDraftMode(true);
 	}
 
 	@Override

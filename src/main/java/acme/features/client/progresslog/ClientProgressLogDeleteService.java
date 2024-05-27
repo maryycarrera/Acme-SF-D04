@@ -4,6 +4,7 @@ package acme.features.client.progresslog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.contracts.Contract;
 import acme.entities.progresslogs.ProgressLog;
@@ -28,7 +29,8 @@ class ClientProgressLogDeleteService extends AbstractService<Client, ProgressLog
 
 		progressLogId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findOneContractByProgressLogId(progressLogId);
-		status = super.getRequest().getPrincipal().hasRole(contract.getClient());
+		ProgressLog pl = this.repository.findOneProgressLogById(progressLogId);
+		status = pl != null && pl.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -49,6 +51,7 @@ class ClientProgressLogDeleteService extends AbstractService<Client, ProgressLog
 		assert object != null;
 
 		super.bind(object, "recordId", "completeness", "comment", "registrationMoment", "responsiblePerson");
+
 	}
 
 	@Override
@@ -61,6 +64,19 @@ class ClientProgressLogDeleteService extends AbstractService<Client, ProgressLog
 		assert object != null;
 
 		this.repository.delete(object);
+	}
+
+	@Override
+	public void unbind(final ProgressLog object) {
+		assert object != null;
+
+		Dataset dataset;
+
+		dataset = super.unbind(object, "recordId", "completeness", "comment", "registrationMoment", "responsiblePerson");
+		dataset.put("masterId", object.getContract().getId());
+		dataset.put("draftMode", object.isDraftMode());
+
+		super.getResponse().addData(dataset);
 	}
 
 }

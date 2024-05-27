@@ -16,13 +16,13 @@ import acme.roles.Developer;
 @Repository
 public interface DeveloperTrainingModuleRepository extends AbstractRepository {
 
-	@Query("select project from Project project where project.draftMode = false")
+	@Query("select project from Project project where project.draftMode = false order by project.id")
 	Collection<Project> findAllProjects();
 
-	@Query("select trainingModule from TrainingModule trainingModule where trainingModule.developer.id = :developerId")
+	@Query("select trainingModule from TrainingModule trainingModule where trainingModule.developer.id = :developerId order by trainingModule.id")
 	List<TrainingModule> findAllTrainingModulesByDeveloperId(int developerId);
 
-	@Query("select trainingModule.details from TrainingModule trainingModule where trainingModule.developer.id = :developerId")
+	@Query("select trainingModule.details from TrainingModule trainingModule where trainingModule.developer.id = :developerId order by trainingModule.id")
 	List<String> findAllTrainingModuleDetailsByDeveloperId(int developerId);
 
 	@Query("select trainingModule from TrainingModule trainingModule where trainingModule.id = :trainingModuleId")
@@ -37,7 +37,7 @@ public interface DeveloperTrainingModuleRepository extends AbstractRepository {
 	@Query("select trainingModule from TrainingModule trainingModule where trainingModule.code = :trainingModuleCode")
 	TrainingModule findTrainingModuleByCode(String trainingModuleCode);
 
-	@Query("select trainingSession from TrainingSession trainingSession where trainingSession.trainingModule.id = :trainingModuleId")
+	@Query("select trainingSession from TrainingSession trainingSession where trainingSession.trainingModule.id = :trainingModuleId order by trainingSession.id")
 	Collection<TrainingSession> findAllTrainingSessionsByTrainingModuleId(int trainingModuleId);
 
 }

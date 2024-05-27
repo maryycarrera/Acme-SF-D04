@@ -29,13 +29,13 @@ public class ManagerUserStoryDeleteService extends AbstractService<Manager, User
 	public void authorise() {
 		boolean status;
 		int masterId;
-		UserStory project;
+		UserStory userStory;
 		Manager manager;
 
 		masterId = super.getRequest().getData("id", int.class);
-		project = this.repository.findOneUserStoryById(masterId);
-		manager = project == null ? null : project.getManager();
-		status = project != null && project.isDraftMode() && super.getRequest().getPrincipal().hasRole(manager);
+		userStory = this.repository.findOneUserStoryById(masterId);
+		manager = userStory == null ? null : userStory.getManager();
+		status = userStory != null && userStory.isDraftMode() && super.getRequest().getPrincipal().hasRole(manager);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -71,8 +71,8 @@ public class ManagerUserStoryDeleteService extends AbstractService<Manager, User
 
 		a = this.repository.findAssignationsByUserStoryId(object.getId());
 
-		this.repository.delete(object);
 		this.repository.deleteAll(a);
+		this.repository.delete(object);
 	}
 
 	@Override
