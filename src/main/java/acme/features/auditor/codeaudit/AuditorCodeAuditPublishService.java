@@ -92,10 +92,10 @@ public class AuditorCodeAuditPublishService extends AbstractService<Auditor, Cod
 		}
 		if (!super.getBuffer().getErrors().hasErrors("executionDate")) {
 			Collection<AuditRecord> auditRecords = this.repository.findManyAuditRecordsByCodeAuditId(object.getId());
-			boolean auditRecordPosterior = false;
+			boolean auditRecordPosterior = true;
 			for (AuditRecord ar : auditRecords)
 				if (MomentHelper.isBefore(ar.getStartDate(), object.getExecutionDate()))
-					auditRecordPosterior = true;
+					auditRecordPosterior = false;
 			super.state(auditRecordPosterior, "executionDate", "auditor.codeaudit.form.error.audit-records-posterior");
 		}
 	}
