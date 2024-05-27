@@ -6,8 +6,11 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
+import acme.client.views.SelectChoices;
 import acme.entities.assignations.Assignation;
+import acme.entities.userstories.Priority;
 import acme.entities.userstories.UserStory;
 import acme.roles.Manager;
 
@@ -72,20 +75,20 @@ public class ManagerUserStoryDeleteService extends AbstractService<Manager, User
 		this.repository.delete(object);
 	}
 
-	//	@Override
-	//	public void unbind(final UserStory object) {
-	//		assert object != null;
-	//
-	//		SelectChoices choices;
-	//		Dataset dataset;
-	//
-	//		choices = SelectChoices.from(Priority.class, object.getPriority());
-	//
-	//		dataset = super.unbind(object, "title", "description", "estimatedCost", "acceptanceCriteria", "link", "draftMode");
-	//		dataset.put("priority", choices.getSelected().getKey());
-	//		dataset.put("priorities", choices);
-	//
-	//		super.getResponse().addData(dataset);
-	//	}
+	@Override
+	public void unbind(final UserStory object) {
+		assert object != null;
+
+		SelectChoices choices;
+		Dataset dataset;
+
+		choices = SelectChoices.from(Priority.class, object.getPriority());
+
+		dataset = super.unbind(object, "title", "description", "estimatedCost", "acceptanceCriteria", "link", "draftMode");
+		dataset.put("priority", choices.getSelected().getKey());
+		dataset.put("priorities", choices);
+
+		super.getResponse().addData(dataset);
+	}
 
 }
