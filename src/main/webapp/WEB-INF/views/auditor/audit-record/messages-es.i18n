@@ -24,6 +24,7 @@ auditor.audit-record.form.button.create = Crear
 
 auditor.audit-record.form.error.duplicated = Este código ya está en uso
 auditor.audit-record.form.error.low-period = El periodo debe ser al menos de una hora
+auditor.audit-record.form.error.code-audit-time = La fecha de inicio debe ser posterior a la fecha de la auditoría de código
 
 
 auditor.audit-record.list.label.code = Código

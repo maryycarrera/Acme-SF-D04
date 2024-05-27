@@ -21,21 +21,21 @@ public interface AuditorCodeAuditRepository extends AbstractRepository {
 	@Query("SELECT c FROM CodeAudit c WHERE c.auditor.id = :id")
 	Collection<CodeAudit> findCodeAuditsByAuditorId(int id);
 
-	@Query("select p from Project p where p.draftMode = false")
+	@Query("SELECT p FROM Project p WHERE p.draftMode = false")
 	Collection<Project> findAllProjects();
 
-	@Query("select a from Auditor a where a.id = :id")
+	@Query("SELECT a FROM Auditor a WHERE a.id = :id")
 	Auditor findOneAuditorById(int id);
 
-	@Query("select p from Project p where p.id = :id")
+	@Query("SELECT p FROM Project p WHERE p.id = :id")
 	Project findOneProjectById(int id);
 
-	@Query("SELECT c FROM CodeAudit c WHERE c.code = :code")
+	@Query("SELECT c FROM CodeAudit c WHERE c.code = :code ORDER BY c.id")
 	CodeAudit findOneCodeAuditByCode(String code);
 
-	@Query("select a from AuditRecord a where a.codeAudit.id = :codeAuditId")
+	@Query("SELECT a FROM AuditRecord a WHERE a.codeAudit.id = :codeAuditId")
 	Collection<AuditRecord> findManyAuditRecordsByCodeAuditId(int codeAuditId);
 
-	@Query("select a.mark from AuditRecord a where a.codeAudit.id = :codeAuditId")
+	@Query("SELECT a.mark FROM AuditRecord a WHERE a.codeAudit.id = :codeAuditId")
 	Collection<String> findMarksOfAuditRecordsByCodeAuditId(int codeAuditId);
 }

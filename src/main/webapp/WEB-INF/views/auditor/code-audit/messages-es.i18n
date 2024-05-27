@@ -28,6 +28,7 @@ auditor.code-audit.form.button.audit-records = Mostrar los registros de auditor�
 auditor.codeaudit.form.error.duplicated = Este código ya está en uso
 auditor.codeaudit.form.error.lower-than-c = No puedes pubicar una auditoría de código cuya moda de las notas sea inferior a C
 auditor.codeaudit.form.error.audit-record-draft-mode = No puedes publicar una auditoría de código que tiene algún registro de auditoría en modo borrador
+auditor.codeaudit.form.error.audit-records-posterior = La fecha de ejecución no puede ser posterior a ninguna de las fechas de inicio de sus registros de auditorías
 
 
 auditor.code-audit.list.label.code = Código
