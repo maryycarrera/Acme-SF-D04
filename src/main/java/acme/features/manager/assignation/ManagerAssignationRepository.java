@@ -18,25 +18,25 @@ public interface ManagerAssignationRepository extends AbstractRepository {
 	@Query("SELECT a FROM Assignation a WHERE a.id = :id")
 	Assignation findOneAssignationById(int id);
 
-	@Query("SELECT a FROM Assignation a WHERE a.project.manager.id = :id AND a.userStory.manager.id = :id")
+	@Query("SELECT a FROM Assignation a WHERE a.project.manager.id = :id AND a.userStory.manager.id = :id ORDER BY a.id")
 	Collection<Assignation> findAssignationsByManagerId(int id);
 
 	@Query("SELECT m FROM Manager m WHERE m.id = :id")
 	Manager findOneManagerById(int id);
 
-	@Query("SELECT a FROM Assignation a WHERE a.project.id = :id")
+	@Query("SELECT a FROM Assignation a WHERE a.project.id = :id ORDER BY a.id")
 	Collection<Assignation> findAssignationsByProjectId(int id);
 
-	@Query("SELECT a FROM Assignation a WHERE a.userStory.id = :id")
+	@Query("SELECT a FROM Assignation a WHERE a.userStory.id = :id ORDER BY a.id")
 	Collection<Assignation> findAssignationsByUserStoryId(int id);
 
 	@Query("SELECT a FROM Assignation a WHERE a.project.id = :projectId AND a.userStory.id = :userStoryId")
 	Assignation findOneAssignationByProjectIdAndUserStoryId(int projectId, int userStoryId);
 
-	@Query("SELECT us FROM UserStory us WHERE us.manager.id = :id")
+	@Query("SELECT us FROM UserStory us WHERE us.manager.id = :id ORDER BY us.id")
 	Collection<UserStory> findUserStoriesByManagerId(int id);
 
-	@Query("SELECT p FROM Project p WHERE p.manager.id = :id")
+	@Query("SELECT p FROM Project p WHERE p.manager.id = :id ORDER BY p.id")
 	Collection<Project> findProjectsByManagerId(int id);
 
 	@Query("SELECT a.project FROM Assignation a WHERE a.id = :id")
