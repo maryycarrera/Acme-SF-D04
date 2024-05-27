@@ -28,7 +28,7 @@ auditor.code-audit.form.button.audit-records = List audit records
 auditor.codeaudit.form.error.duplicated = This code is already in use
 auditor.codeaudit.form.error.lower-than-c = You can't publish a code audit which mark mode is lower than C
 auditor.codeaudit.form.error.audit-record-draft-mode = You can't publish a code audit that has any audit record in draft mode
-auditor.codeaudit.form.error.audit-records-posterior = The execution time can't be before any of its audit records start time
+auditor.codeaudit.form.error.audit-records-posterior = The execution time can't be after any of its audit records start time
 
 
 auditor.code-audit.list.label.code = Code
