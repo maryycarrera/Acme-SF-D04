@@ -98,7 +98,7 @@ bg=ORANGE</panel_attributes>
       <x>504</x>
       <y>392</y>
       <w>400</w>
-      <h>104</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 ProgressLog
@@ -108,6 +108,7 @@ ProgressLog
 +comment: String{NotBlank, Length(1,100)}
 +registrationMoment: Date{NotNull,Past,Temporal(TIMESTAMP)}
 +responsiblePerson: String{NotBlank, Length(1,75)}
++draftMode:Boolean{NotNull}
 bg=CYAN</panel_attributes>
     <additional_attributes/>
   </element>
