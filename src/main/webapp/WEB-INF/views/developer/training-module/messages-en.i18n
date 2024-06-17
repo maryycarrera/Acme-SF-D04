@@ -42,4 +42,5 @@ developer.training-module.form.button.sessions = Training sessions list
 
 developer.training-module.form.error.duplicated = A Training Module with that code already exists
 developer.training-module.form.error.update-date-not-valid = The update date needs to come after the creation date
-developer.training-module.form.error.not-enough-training-sessions = A Training Module must contain at least one Training Session
+developer.training-module.form.error.not-enough-training-sessions = A training module must contain at least one training session to be published
+developer.training-module.form.error.all-training-sessions-must-be-published = All training sessions must be published in order to publish the training module
