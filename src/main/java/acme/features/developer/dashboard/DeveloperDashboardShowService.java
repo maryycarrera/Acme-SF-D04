@@ -1,5 +1,5 @@
 
-package acme.features.developer.developerDashboard;
+package acme.features.developer.dashboard;
 
 import java.util.Collection;
 
