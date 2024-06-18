@@ -2,7 +2,6 @@
 package acme.features.any.trainingModule;
 
 import java.util.Collection;
-import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,9 +22,7 @@ public class AnyTrainingModuleListService extends AbstractService<Any, TrainingM
 
 	@Override
 	public void authorise() {
-		boolean status;
-		status = super.getRequest().getPrincipal().hasRole(Any.class);
-		super.getResponse().setAuthorised(status);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
@@ -39,13 +36,7 @@ public class AnyTrainingModuleListService extends AbstractService<Any, TrainingM
 	public void unbind(final TrainingModule object) {
 		assert object != null;
 
-		final Dataset dataset = super.unbind(object, "code");
-
-		if (object.isDraftMode()) {
-			final Locale local = super.getRequest().getLocale();
-			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");
-		} else
-			dataset.put("draftMode", "No");
+		final Dataset dataset = super.unbind(object, "code", "details", "difficultyLevel", "estimatedTotalTime", "project");
 
 		super.getResponse().addData(dataset);
 	}

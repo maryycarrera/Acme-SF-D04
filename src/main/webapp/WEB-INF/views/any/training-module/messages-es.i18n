@@ -20,4 +20,7 @@ any.training-module.form.title = Módulo de entrenamiento
 any.training-module.list.title = Módulos de entrenamiento
 
 any.training-module.list.label.code = Código
-any.training-module.list.label.draftMode = Editable
+any.training-module.list.label.details = Detalles
+any.training-module.list.label.difficultyLevel = Nivel de dificultad
+any.training-module.list.label.estimatedTotalTime = Tiempo total estimado
+any.training-module.list.label.project = Proyecto
