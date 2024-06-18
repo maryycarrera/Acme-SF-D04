@@ -18,5 +18,8 @@
 
 <acme:list>
 	<acme:list-column code="any.training-module.list.label.code" path="code"/>
-	<acme:list-column code="any.training-module.list.label.draftMode" path="draftMode"/>
+	<acme:list-column code="any.training-module.list.label.details" path="details"/>
+	<acme:list-column code="any.training-module.list.label.difficultyLevel" path="difficultyLevel"/>
+	<acme:list-column code="any.training-module.list.label.estimatedTotalTime" path="estimatedTotalTime"/>
+	<acme:list-column code="any.training-module.list.label.project" path="project"/>
 </acme:list>
