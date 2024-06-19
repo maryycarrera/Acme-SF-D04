@@ -24,15 +24,13 @@ public class DeveloperTrainingModuleUpdateService extends AbstractService<Develo
 
 	@Override
 	public void authorise() {
-		Boolean status;
+		boolean status;
 		int masterId;
 		TrainingModule trainingModule;
-		Developer developer;
 
 		masterId = super.getRequest().getData("id", int.class);
 		trainingModule = this.trainingModuleRepository.findTrainingModuleById(masterId);
-		developer = trainingModule == null ? null : trainingModule.getDeveloper();
-		status = trainingModule != null && trainingModule.isDraftMode() && super.getRequest().getPrincipal().hasRole(developer);
+		status = trainingModule.isDraftMode() && super.getRequest().getPrincipal().hasRole(trainingModule.getDeveloper());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -73,7 +71,7 @@ public class DeveloperTrainingModuleUpdateService extends AbstractService<Develo
 			super.state(existe == null || existe.equals(object), "code", "developer.training-module.form.error.duplicated");
 		}
 
-		if (object.getUpdateMoment() != null && !super.getBuffer().getErrors().hasErrors("updateMoment"))
+		if (object.getUpdateMoment() != null && object.getCreationMoment() != null && !super.getBuffer().getErrors().hasErrors("updateMoment"))
 			super.state(MomentHelper.isAfter(object.getUpdateMoment(), object.getCreationMoment()), "updateMoment", "developer.training-module.form.error.update-date-not-valid");
 	}
 
