@@ -28,7 +28,7 @@ public class DeveloperDashboardShowService extends AbstractService<Developer, De
 		boolean status;
 
 		Principal principal = super.getRequest().getPrincipal();
-		int id = principal.getActiveRoleId();
+		int id = principal.getAccountId();
 		Developer developer = this.dashboardRepository.findDeveloperById(id);
 		status = developer != null && principal.hasRole(Developer.class);
 
@@ -38,7 +38,7 @@ public class DeveloperDashboardShowService extends AbstractService<Developer, De
 	@Override
 	public void load() {
 		final Principal principal = super.getRequest().getPrincipal();
-		int id = principal.getActiveRoleId();
+		int id = principal.getAccountId();
 		DeveloperDashboard developerDashboard = new DeveloperDashboard();
 		Collection<TrainingModule> modules = this.dashboardRepository.findAllTrainingModulesByDeveloperId(id);
 		Collection<TrainingSession> sessions = this.dashboardRepository.findAllTrainingSessionsByDeveloperId(id);
@@ -62,7 +62,6 @@ public class DeveloperDashboardShowService extends AbstractService<Developer, De
 			developerDashboard.setTotalNumberTrainingSessionsWithLink(this.dashboardRepository.totalTrainingSessionsWithLink(id));
 
 		super.getBuffer().addData(developerDashboard);
-		System.out.println(this.dashboardRepository.deviatonTrainingModulesTime(id));
 
 	}
 
