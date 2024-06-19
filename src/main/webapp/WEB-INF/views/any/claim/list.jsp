@@ -18,6 +18,9 @@
 
 <acme:list>
 	<acme:list-column code="any.claim.list.label.code" path="code" width="10%"/>
-	<acme:list-column code="any.claim.list.label.moment" path="moment" width="10%"/>
 	<acme:list-column code="any.claim.list.label.heading" path="heading" width="10%"/>	
 </acme:list>
+
+<jstl:if test="${_command == 'list'}">
+	<acme:button code="any.claim.list.button.create" action="/any/claim/create"/>
+</jstl:if>

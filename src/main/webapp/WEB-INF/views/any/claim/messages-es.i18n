@@ -8,23 +8,23 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.claim.form.title = Formulario de Reclamación
+any.claim.form.title = Reclamación
+any.claim.list.title = Listado de reclamaciones
+
 any.claim.form.label.code = Código
-any.claim.form.label.heading = Título
-any.claim.form.label.moment = Creación
+any.claim.form.label.instantiation-moment = Momento de instanciación
+any.claim.form.label.heading = Cabecera
 any.claim.form.label.description = Descripción
 any.claim.form.label.department = Departamento
-any.claim.form.label.email = Email
-any.claim.form.label.link = Enlace
-any.claim.form.label.confirmation = Por favor, confirme que la reclamación es correcta.
+any.claim.form.label.email-address = Email
+any.claim.form.label.link = Link
 
-any.claim.list.title = Lista de Reclamaciones
-any.claim.list.label.moment = Creación
 any.claim.list.label.code = Código
-any.claim.list.label.heading = Título
+any.claim.list.label.heading = Cabecera
 
-any.claim.form.button.create = Publicar
+any.claim.form.button.create = Crear
+any.claim.form.button.publish = Publicar
 any.claim.list.button.create = Crear
 
-validation.claim.publish.message = Tiene que confirmar la reclamación antes de publicarla
-validation.claim.code.duplicate = Este código ya está siendo utilizado
+any.claim.form.label.confirm = Confirmar
+any.claim.form.error.not-confirmed = Tienes que confirmarlo
