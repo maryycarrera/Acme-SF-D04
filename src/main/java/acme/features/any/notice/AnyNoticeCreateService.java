@@ -32,7 +32,18 @@ public class AnyNoticeCreateService extends AbstractService<Any, Notice> {
 	public void load() {
 		Notice object;
 
+		Date instantiationMoment;
+		String username;
+		String fullName;
+
+		instantiationMoment = MomentHelper.getCurrentMoment();
+		username = super.getRequest().getPrincipal().getUsername();
+		fullName = this.repository.findOneUserAccountByUsername(username).getIdentity().getFullName();
+
 		object = new Notice();
+		object.setInstantiationMoment(instantiationMoment);
+		object.setUsername(username);
+		object.setFullName(fullName);
 
 		super.getBuffer().addData(object);
 	}
@@ -40,18 +51,19 @@ public class AnyNoticeCreateService extends AbstractService<Any, Notice> {
 	@Override
 	public void bind(final Notice object) {
 		assert object != null;
-
-		Date instantiationMoment;
-
-		instantiationMoment = MomentHelper.getCurrentMoment();
-		super.bind(object, "title", "author", "message", "email", "link");
-		object.setInstantiationMoment(instantiationMoment);
+		super.bind(object, "title", "message", "email", "link");
 	}
 
 	@Override
 	public void validate(final Notice object) {
 		assert object != null;
 		boolean isAccepted;
+
+		if (!super.getBuffer().getErrors().hasErrors("author")) {
+			int length = object.author().length();
+			super.state(length < 76, "*", "any.notice.form.error.too-long");
+			super.state(length > 3, "*", "any.notice.form.error.blank");
+		}
 
 		isAccepted = this.getRequest().getData("accept", boolean.class);
 		super.state(isAccepted, "accept", "anonymous.user-account.form.error.must-accept");
@@ -71,7 +83,7 @@ public class AnyNoticeCreateService extends AbstractService<Any, Notice> {
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "title", "author", "message", "email", "link");
+		dataset = super.unbind(object, "title", "message", "email", "link");
 
 		if (super.getRequest().getMethod().equals("POST"))
 			dataset.put("accept", super.getRequest().getData("accept", boolean.class));

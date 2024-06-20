@@ -25,3 +25,6 @@ any.notice.list.button.create = Crear
 any.notice.list.label.instantiationMoment = Momento de instanciación
 any.notice.list.label.title = Título
 any.notice.list.label.author = Autor
+
+any.notice.form.error.too-long = Tu nombre de usuario y nombre completo son demasiado largos para crear una noticia
+any.notice.form.error.blank = Tu nombre de usuario y nombre completo no pueden estar en blanco para crear una noticia
