@@ -66,6 +66,7 @@ public class TrainingSession extends AbstractEntity {
 	@URL
 	private String				link;
 
+	@NotNull
 	private boolean				draftMode;
 
 	// Derived attributes -----------------------------------------------------
