@@ -67,7 +67,7 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 			super.state(existing == null || existing.equals(object), "code", "developer.training-session.form.error.duplicated");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("startPeriodDate")) {
+		if (object.getStartPeriodDate() != null && object.getFinishPeriodDate() != null && !super.getBuffer().getErrors().hasErrors("startPeriodDate")) {
 			TrainingModule module;
 			int masterId;
 
@@ -76,7 +76,7 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 			super.state(MomentHelper.isAfter(object.getStartPeriodDate(), module.getCreationMoment()), "startPeriodDate", "developer.training-session.form.error.creation-moment-invalid");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("finishPeriodDate")) {
+		if (object.getFinishPeriodDate() != null && object.getStartPeriodDate() != null && !super.getBuffer().getErrors().hasErrors("finishPeriodDate")) {
 			Date minimumEnd;
 
 			minimumEnd = MomentHelper.deltaFromMoment(object.getStartPeriodDate(), 7, ChronoUnit.DAYS);
