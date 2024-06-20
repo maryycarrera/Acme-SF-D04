@@ -51,7 +51,9 @@ public class AnyNoticeShowService extends AbstractService<Any, Notice> {
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "instantiationMoment", "title", "author", "message", "email", "link");
+		dataset = super.unbind(object, "instantiationMoment", "title", "message", "email", "link");
+		String author = object.author();
+		dataset.put("author", author);
 
 		super.getResponse().addData(dataset);
 	}

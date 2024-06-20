@@ -20,14 +20,13 @@
 		<jstl:when test="${_command == 'show'}">
 			<acme:input-moment code="any.notice.form.label.instantiationMoment" path="instantiationMoment"/>
 			<acme:input-textbox code="any.notice.form.label.title" path="title"/>
-			<acme:input-textbox code="any.notice.form.label.author" path="author"/>
 			<acme:input-textbox code="any.notice.form.label.message" path="message"/>
 			<acme:input-email code="any.notice.form.label.email" path="email"/>
 			<acme:input-url code="any.notice.form.label.link" path="link"/>
+			<acme:input-textbox code="any.notice.form.label.author" path="author"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:input-textbox code="any.notice.form.label.title" path="title"/>
-			<acme:input-textbox code="any.notice.form.label.author" path="author"/>
 			<acme:input-textbox code="any.notice.form.label.message" path="message"/>
 			<acme:input-email code="any.notice.form.label.email" path="email"/>
 			<acme:input-url code="any.notice.form.label.link" path="link"/>

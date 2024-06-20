@@ -16,10 +16,10 @@ public class AnyNoticeController extends AbstractController<Any, Notice> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyNoticeListService	listService;
+	private AnyNoticeListService		listService;
 
 	@Autowired
-	private AnyNoticeShowService	showService;
+	private AnyNoticeShowService				showService;
 
 	@Autowired
 	private AnyNoticeCreateService	createService;
