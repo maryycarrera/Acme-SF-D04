@@ -33,13 +33,6 @@ public class AnyNoticeListService extends AbstractService<Any, Notice> {
 	public void load() {
 		Collection<Notice> objects;
 
-		//TODO: teniendo en cuenta la fecha que tienen como presente aquí que quera julio 2022 o la fecha presente de ahora??
-		/*
-		 * Calendar cal = Calendar.getInstance();
-		 * cal.add(Calendar.MONTH, -1);
-		 * Date oneMonthAgo = cal.getTime();
-		 **/
-
 		Calendar calendar = Calendar.getInstance();
 		calendar.set(Calendar.YEAR, 2022);
 		calendar.set(Calendar.MONTH, Calendar.JUNE);
@@ -58,7 +51,9 @@ public class AnyNoticeListService extends AbstractService<Any, Notice> {
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "instantiationMoment", "title", "author");
+		dataset = super.unbind(object, "instantiationMoment", "title");
+		String author = object.author();
+		dataset.put("author", author);
 
 		super.getResponse().addData(dataset);
 	}

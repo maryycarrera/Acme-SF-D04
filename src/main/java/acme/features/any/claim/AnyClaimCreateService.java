@@ -1,14 +1,11 @@
 
 package acme.features.any.claim;
 
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Any;
 import acme.client.data.models.Dataset;
-import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.claims.Claim;
 
@@ -30,21 +27,16 @@ public class AnyClaimCreateService extends AbstractService<Any, Claim> {
 
 	@Override
 	public void load() {
-		Claim object;
-		Date moment;
+		Claim claim = new Claim();
 
-		moment = MomentHelper.getCurrentMoment();
-		object = new Claim();
-		object.setInstantiationMoment(moment);
-
-		super.getBuffer().addData(object);
+		super.getBuffer().addData(claim);
 	}
 
 	@Override
 	public void bind(final Claim object) {
 		assert object != null;
 
-		super.bind(object, "heading", "description", "department", "emailAddress", "link");
+		super.bind(object, "code", "instantiationMoment", "heading", "description", "department", "emailAddress", "link");
 	}
 
 	@Override
@@ -52,15 +44,19 @@ public class AnyClaimCreateService extends AbstractService<Any, Claim> {
 		assert object != null;
 
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
-			Claim uniqueCode;
-			uniqueCode = this.claimRepository.findClaimByCode(object.getCode());
-			super.state(uniqueCode == null, "code", "validation.claim.code.cuplicate");
+			boolean duplicatedCode = false;
+			for (Claim claim : this.claimRepository.findAllClaims())
+				if (claim.getCode().equals(object.getCode())) {
+					duplicatedCode = true;
+					break;
+				}
+			super.state(!duplicatedCode, "code", "manager.project.form.error.duplicated");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("confirmation")) {
-			boolean confirmation;
-			confirmation = super.getRequest().getData("confirmation", boolean.class);
-			super.state(confirmation, "confirmation", "validation.claim.publish.message");
+		if (!super.getBuffer().getErrors().hasErrors("confirm")) {
+			final boolean confirm = super.getRequest().getData("confirm", boolean.class);
+
+			super.state(confirm, "confirm", "any.claim.form.error.not-confirmed");
 		}
 	}
 
@@ -76,8 +72,8 @@ public class AnyClaimCreateService extends AbstractService<Any, Claim> {
 		assert object != null;
 		Dataset dataset;
 
-		dataset = super.unbind(object, "code", "heading", "description", "department", "emailAddress", "link");
-		dataset.put("confirmation", false);
+		dataset = super.unbind(object, "code", "instantiationMoment", "heading", "description", "department", "emailAddress", "link");
+		dataset.put("confirm", false);
 
 		super.getResponse().addData(dataset);
 	}
