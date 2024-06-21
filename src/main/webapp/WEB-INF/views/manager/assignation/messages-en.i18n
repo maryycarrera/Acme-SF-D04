@@ -19,6 +19,7 @@ manager.assignation.form.button.create = Create
 
 manager.assignation.form.error.existing-project-assignation = There is already an assignation between this project and this user story
 manager.assignation.form.error.published-project = You can not assign an un-published user story to a published project
+manager.assignation.form.error.last-published-project-assignation = You can not delete this assignation as a published project must have at least one published user story
 
 manager.assignation.list.label.project = Project
 manager.assignation.list.label.user-story = User Story
