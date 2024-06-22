@@ -19,6 +19,7 @@ manager.assignation.form.button.create = Crear
 
 manager.assignation.form.error.existing-project-assignation = Ya existe una asignación entre este proyecto y esta historia de usuario
 manager.assignation.form.error.published-project = No puedes asignar una historia de usuario sin publicar a un proyecto publicado
+manager.assignation.form.error.last-published-project-assignation = No puedes borrar esta asignación porque un proyecto publicado debe tener al menos una historia de usuario publicada
 
 manager.assignation.list.label.project = Projecto
 manager.assignation.list.label.user-story = Historia de Usuario
