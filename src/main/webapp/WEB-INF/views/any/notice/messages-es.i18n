@@ -8,8 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.notice.form.title = Formulario de Noticia
-any.notice.list.title = Listado de noticias
+any.notice.form.title = Formulario de Notificación
+any.notice.list.title = Listado de Notificaciones
 
 any.notice.form.label.instantiationMoment = Momento de instanciación:
 any.notice.form.label.title = Título:
@@ -26,5 +26,5 @@ any.notice.list.label.instantiationMoment = Momento de instanciación
 any.notice.list.label.title = Título
 any.notice.list.label.author = Autor
 
-any.notice.form.error.too-long = Tu nombre de usuario y nombre completo son demasiado largos para crear una noticia
-any.notice.form.error.blank = Tu nombre de usuario y nombre completo no pueden estar en blanco para crear una noticia
+any.notice.form.error.too-long = Tu nombre de usuario y nombre completo son demasiado largos para crear una notificación
+any.notice.form.error.blank = Tu nombre de usuario y nombre completo no pueden estar en blanco para crear una notificación
