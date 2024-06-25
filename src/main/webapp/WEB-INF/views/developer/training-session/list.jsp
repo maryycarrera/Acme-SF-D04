@@ -20,7 +20,10 @@
 	<acme:list-column code="developer.training-session.list.label.start-period-date" path="startPeriodDate" width="20%"/>
 	<acme:list-column code="developer.training-session.list.label.finish-period-date" path="finishPeriodDate" width="20%"/>	
 	<acme:list-column code="developer.training-session.list.label.location" path="location" width="20%"/>	
-	<acme:list-column code="developer.training-session.list.label.instructor" path="instructor" width="20%"/>	
+	<acme:list-column code="developer.training-session.list.label.instructor" path="instructor" width="20%"/>
+	<acme:list-column code="developer.training-session.list.label.contactEmail" path="contactEmail" width="20%"/>
+	<acme:list-column code="developer.training-session.list.label.link" path="link" width="20%"/>	
+	<acme:list-column code="developer.training-session.list.label.draftMode" path="draftMode" width="10%"/>
 	<acme:list-payload path="payload"/>
 
 </acme:list>
