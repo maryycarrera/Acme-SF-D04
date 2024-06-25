@@ -64,24 +64,27 @@
 		
 		<acme:menu-option code="master.menu.developer" access="hasRole('Developer')">
 			<acme:menu-suboption code="master.menu.developer.list-training-module" action="/developer/training-module/list-mine"/>
-<acme:menu-separator/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.developer.dashboard" action="/developer/developer-dashboard/show"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.any">
-		<acme:menu-suboption code="master.menu.any.published-projects" action="/any/project/list"/>
-		<acme:menu-suboption code="master.menu.any.published-contracts" action="/any/contract/list"/>
-     <acme:menu-suboption code="master.menu.any.notices" action="/any/notice/list"/>
-     <acme:menu-suboption code="master.menu.any.published-modules" action="/any/training-module/list"/>
-     <acme:menu-suboption code="master.menu.any.claims" action="/any/claim/list"/>
-		</acme:menu-option>
-    <acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">			
+    	<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">			
 			<acme:menu-suboption code="master.menu.auditor.auditor-dashboard" action="/auditor/auditor-dashboard/show"/>
 			<acme:menu-suboption code="master.menu.auditor.all-code-audits" action="/auditor/code-audit/list"/>
 		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">			
 			<acme:menu-suboption code="master.menu.sponsor.all-sponsorships" action="/sponsor/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.sponsor.sponsor-dashboard" action="/sponsor/sponsor-dashboard/show"/>	
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.any">
+			<acme:menu-suboption code="master.menu.any.published-projects" action="/any/project/list"/>
+			<acme:menu-suboption code="master.menu.any.published-contracts" action="/any/contract/list"/>
+	     	<acme:menu-suboption code="master.menu.any.notices" action="/any/notice/list"/>
+	     	<acme:menu-suboption code="master.menu.any.published-modules" action="/any/training-module/list"/>
+	     	<acme:menu-suboption code="master.menu.any.claims" action="/any/claim/list"/>
+	     	<acme:menu-suboption code="master.manu.any.risks" action="/any/risk/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 

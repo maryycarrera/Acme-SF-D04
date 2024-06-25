@@ -61,13 +61,14 @@ public class Risk extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 	@Transient
-	private Double value() {
+	public Double value() {
 		Double v;
 
 		v = this.impact * this.probability;
 
 		return v;
 	}
-	//	// Relationships ----------------------------------------------------------
+
+	// Relationships ----------------------------------------------------------
 
 };

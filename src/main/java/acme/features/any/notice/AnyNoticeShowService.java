@@ -17,7 +17,7 @@ public class AnyNoticeShowService extends AbstractService<Any, Notice> {
 	@Autowired
 	private AnyNoticeRepository repository;
 
-	// AbstractService<Any, Project> ---------------------------
+	// AbstractService<Any, Notice> ---------------------------
 
 
 	@Override
