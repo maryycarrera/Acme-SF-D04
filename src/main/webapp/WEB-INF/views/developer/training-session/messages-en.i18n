@@ -16,6 +16,9 @@ developer.training-session.list.label.start-period-date = Start Date
 developer.training-session.list.label.finish-period-date = End Date
 developer.training-session.list.label.location = Location
 developer.training-session.list.label.instructor = Instructor
+developer.training-session.list.label.contactEmail = Contact email
+developer.training-session.list.label.link = Link
+developer.training-session.list.label.draftMode = Editable
 
 developer.training-session.form.label.code = Code:
 developer.training-session.form.label.start-period-date = Start Date:
@@ -24,7 +27,6 @@ developer.training-session.form.label.location = Location:
 developer.training-session.form.label.instructor = Instructor:
 developer.training-session.form.label.contact-email = Email:
 developer.training-session.form.label.link = Link (Optional):
-developer.training-session.form.label.published = Published:
 
 developer.training-session.list.button.create-form=Create Training session
 

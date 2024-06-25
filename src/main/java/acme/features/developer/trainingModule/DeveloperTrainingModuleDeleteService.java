@@ -27,11 +27,12 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 		Boolean status;
 		int masterId;
 		TrainingModule trainingModule;
+		Developer developer;
 
 		masterId = super.getRequest().getData("id", int.class);
 		trainingModule = this.trainingModuleRepository.findTrainingModuleById(masterId);
-
-		status = trainingModule != null && trainingModule.isDraftMode() && super.getRequest().getPrincipal().hasRole(trainingModule.getDeveloper());
+		developer = trainingModule == null ? null : trainingModule.getDeveloper();
+		status = trainingModule != null && trainingModule.isDraftMode() && super.getRequest().getPrincipal().hasRole(developer);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -69,12 +70,7 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 		boolean canBeDeleted;
 
 		trainingSessions = this.trainingModuleRepository.findAllTrainingSessionsByTrainingModuleId(object.getId());
-		canBeDeleted = false;
-		for (TrainingSession ts : trainingSessions)
-			if (ts.isDraftMode()) {
-				canBeDeleted = true;
-				break;
-			}
+		canBeDeleted = trainingSessions.stream().allMatch(trainingSession -> trainingSession.isDraftMode() == true);
 
 		if (!canBeDeleted && trainingSessions.size() > 0)
 			super.state(canBeDeleted, "*", "developer.training-module.form.error.can't-delete-published-training-session");
