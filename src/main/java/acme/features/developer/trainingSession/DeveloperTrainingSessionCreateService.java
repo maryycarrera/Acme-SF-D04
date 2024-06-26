@@ -67,21 +67,24 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 			super.state(existing == null || existing.equals(object), "code", "developer.training-session.form.error.duplicated");
 		}
 
-		if (object.getStartPeriodDate() != null && object.getFinishPeriodDate() != null && !super.getBuffer().getErrors().hasErrors("startPeriodDate")) {
-			TrainingModule module;
-			int masterId;
+		if (object.getStartPeriodDate() != null)
+			if (!super.getBuffer().getErrors().hasErrors("startPeriodDate")) {
+				TrainingModule module;
+				int masterId;
 
-			masterId = super.getRequest().getData("masterId", int.class);
-			module = this.repository.findOneTrainingModuleById(masterId);
-			super.state(MomentHelper.isAfter(object.getStartPeriodDate(), module.getCreationMoment()), "startPeriodDate", "developer.training-session.form.error.creation-moment-invalid");
-		}
+				masterId = super.getRequest().getData("masterId", int.class);
+				module = this.repository.findOneTrainingModuleById(masterId);
 
-		if (object.getFinishPeriodDate() != null && object.getStartPeriodDate() != null && !super.getBuffer().getErrors().hasErrors("finishPeriodDate")) {
-			Date minimumEnd;
+				Date creationMoment = module.getCreationMoment();
+				Date minimumStartDate = MomentHelper.deltaFromMoment(creationMoment, 7, ChronoUnit.DAYS);
+				super.state(MomentHelper.isAfter(object.getStartPeriodDate(), minimumStartDate), "startPeriodDate", "developer.training-session.form.error.creation-moment-invalid");
+			}
 
-			minimumEnd = MomentHelper.deltaFromMoment(object.getStartPeriodDate(), 7, ChronoUnit.DAYS);
-			super.state(MomentHelper.isAfter(object.getFinishPeriodDate(), minimumEnd), "finishPeriodDate", "developer.training-session.form.error.too-close");
-		}
+		if (object.getStartPeriodDate() != null && object.getFinishPeriodDate() != null)
+			if (!super.getBuffer().getErrors().hasErrors("finishPeriodDate")) {
+				Date minimumEndDate = MomentHelper.deltaFromMoment(object.getStartPeriodDate(), 7, ChronoUnit.DAYS);
+				super.state(MomentHelper.isAfter(object.getFinishPeriodDate(), minimumEndDate), "finishPeriodDate", "developer.training-session.form.error.too-close");
+			}
 
 	}
 

@@ -35,6 +35,6 @@ developer.training-session.form.button.update=Update
 developer.training-session.form.button.delete=Delete
 developer.training-session.form.button.publish=Publish
 
-developer.training-session.form.error.creation-moment-invalid = Creation moment is invalid
-developer.training-session.form.error.too-close = At least 7 days must pass from the creation date
-developer.training-session.form.error.duplicated = The chosen code is already in use
+developer.training-session.form.error.creation-moment-invalid = The start date of the period must be at least one week after the training module creation moment
+developer.training-session.form.error.too-close = The end date of the period must be at least 7 days after the start date of the period
+developer.training-session.form.error.duplicated = A training session with that code already exists
