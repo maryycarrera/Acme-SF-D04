@@ -21,7 +21,7 @@ training-session-19,TS-LPS-201,2019/02/17 14:37,2019/03/25 13:27,Lorem ipsum,Lor
 training-session-20,TS-LPS-202,2021/04/30 23:05,2021/05/25 19:45,Lorem ipsum,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-10,false
 training-session-21,TS-LPS-203,2022/07/22 06:20,2022/07/29 09:00,Lorem ipsum,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-01,true
 training-session-22,TS-LPS-204,2020/03/25 13:00,2019/03/25 23:15,Lorem ipsum,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-03,true
-training-session-23,TS-LPS-205,2005/06/14 12:15,2007/07/28 06:20,Lorem ipsum,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-24,true
+training-session-23,TS-LPS-205,2005/06/14 12:15,2007/07/28 06:20,Lorem ipsum,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-24,false
 training-session-24,TS-LPS-206,2005/01/07 00:08,2014/03/25 00:27,Lorem ipsum,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-23,true
 training-session-25,TS-LPS-207,2005/10/21 18:56,2005/11/01 23:13,Lorem ipsum,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-32,true
 training-session-26,TS-LPS-208,1999/06/04 12:15,2000/08/19 06:20,Lorem ipsum,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-36,true
@@ -38,11 +38,11 @@ training-session-36,TS-LPS-218,2019/07/13 00:00,2020/03/01 00:00,Lorem ipsum,Lor
 training-session-37,TS-LPS-219,2019/07/13 00:00,2020/03/01 00:00,L,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-04,true
 training-session-38,TS-LPS-220,2019/07/13 00:00,2020/03/01 00:00,Lo,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-04,true
 training-session-39,TS-LPS-221,2019/07/13 00:00,2020/03/01 00:00,Lorem ipsum dolor sit amet; consectetur adipiscing elit; sed do eiusmod te,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-10,false
-training-session-40,TS-LPS-222,2019/07/13 00:00,2020/03/01 00:00,Lorem ipsum dolor sit amet; consectetur adipiscing elit; sed do eiusmod tem,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-11,true
+training-session-40,TS-LPS-222,2019/07/13 00:00,2020/03/01 00:00,Lorem ipsum dolor sit amet; consectetur adipiscing elit; sed do eiusmod tem,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-11,false
 training-session-41,TS-LPS-223,2019/07/13 00:00,2020/03/01 00:00,<h1>!</h1>,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-12,true
 training-session-42,TS-LPS-224,2019/07/13 00:00,2020/03/01 00:00,국민경제의 발전을,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-10,false
 training-session-43,TS-LPS-225,2019/07/13 00:00,2020/03/01 00:00,العظمى واعتلاء,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-10,false
-training-session-44,TS-LPS-226,2019/07/13 00:00,2020/03/01 00:00,Θεσσαλονίκη,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-11,true
+training-session-44,TS-LPS-226,2019/07/13 00:00,2020/03/01 00:00,Θεσσαλονίκη,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-11,false
 training-session-45,TS-LPS-227,2019/07/13 00:00,2020/03/01 00:00,'' or 'A'='A,Lorem ipsum,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-12,false
 training-session-46,TS-LPS-228,2019/07/13 00:00,2020/03/01 00:00,Lorem ipsum,L,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-13,false
 training-session-47,TS-LPS-229,2019/07/13 00:00,2020/03/01 00:00,Lorem ipsum,Lo,acme@lorem-ipsum.org,http://www.lorem-ipsum.org,training-module-14,true
