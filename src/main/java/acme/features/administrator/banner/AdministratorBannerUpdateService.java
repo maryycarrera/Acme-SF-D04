@@ -61,7 +61,7 @@ public class AdministratorBannerUpdateService extends AbstractService<Administra
 		Date finish = object.getFinishDate();
 
 		if (!super.getBuffer().getErrors().hasErrors("startDate"))
-			super.state(instantiation != null && start.after(instantiation), //
+			super.state(instantiation != null && start.after(instantiation), //esta línea nunca se va a cubrir entera porque desde la aplicación no se puede modificar el campo instantiationDate
 				"startDate", "administrator.banner.form.error.must-start-after-instantiation");
 
 		if (!super.getBuffer().getErrors().hasErrors("finishDate")) {
