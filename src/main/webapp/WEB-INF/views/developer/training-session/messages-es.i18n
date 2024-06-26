@@ -36,6 +36,6 @@ developer.training-session.form.button.update=Actualizar
 developer.training-session.form.button.delete=Eliminar
 developer.training-session.form.button.publish=Publicar
 
-developer.training-session.form.error.creation-moment-invalid = Momento de creación inválido
-developer.training-session.form.error.too-close = Deben pasar al menos 7 dias desde la fecha de creación
-developer.training-session.form.error.duplicated = El código escogido ya está en uso
+developer.training-session.form.error.creation-moment-invalid = La fecha de inicio del período debe ser al menos una semana después del momento de creación del módulo de entrenamiento
+developer.training-session.form.error.too-close = La fecha de finalización del período debe ser al menos siete días posterior a la fecha de inicio del mismo
+developer.training-session.form.error.duplicated = Ya existe una sesión de entrenamiento con ese código
