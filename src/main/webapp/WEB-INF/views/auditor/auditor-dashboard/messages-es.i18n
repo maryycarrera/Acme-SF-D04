@@ -25,3 +25,4 @@ auditor.auditor-dashboard.form.label.average-period-length-of-audit-records = Me
 auditor.auditor-dashboard.form.label.deviation-period-length-of-audit-records = Desviación de la longitud del periodo de auditorías de código en horas
 auditor.auditor-dashboard.form.label.minimum-period-length-of-audit-records = Mínimo de la longitud del periodo de auditorías de código en horas
 auditor.auditor-dashboard.form.label.maximum-period-length-of-audit-records = Máximo de la longitud del periodo de auditorías de código en horas
+auditor.auditor-dashboard.form.label.no-audit-records = No hay ningún registro de auditoría
