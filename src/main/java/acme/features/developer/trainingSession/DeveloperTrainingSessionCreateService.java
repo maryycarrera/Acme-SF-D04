@@ -67,7 +67,7 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 			super.state(existing == null || existing.equals(object), "code", "developer.training-session.form.error.duplicated");
 		}
 
-		if (object.getStartPeriodDate() != null && !super.getBuffer().getErrors().hasErrors("startPeriodDate")) {
+		if (object.getStartPeriodDate() != null && object.getFinishPeriodDate() != null && !super.getBuffer().getErrors().hasErrors("startPeriodDate")) {
 			TrainingModule module;
 			int masterId;
 
@@ -80,14 +80,11 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 
 		}
 
-		if (object.getFinishPeriodDate() != null && object.getStartPeriodDate() != null) {
-			super.state(MomentHelper.isAfter(object.getFinishPeriodDate(), object.getStartPeriodDate()), "finishPeriodDate", "developer.training-session.form.error.finish-before-start");
-			if (!super.getBuffer().getErrors().hasErrors("finishPeriodDate")) {
-				Date minimumEnd;
+		if (object.getFinishPeriodDate() != null && object.getStartPeriodDate() != null && !super.getBuffer().getErrors().hasErrors("finishPeriodDate")) {
+			Date minimumEnd;
 
-				minimumEnd = MomentHelper.deltaFromMoment(object.getStartPeriodDate(), 7, ChronoUnit.DAYS);
-				super.state(MomentHelper.isAfter(object.getFinishPeriodDate(), minimumEnd), "finishPeriodDate", "developer.training-session.form.error.too-close");
-			}
+			minimumEnd = MomentHelper.deltaFromMoment(object.getStartPeriodDate(), 7, ChronoUnit.DAYS);
+			super.state(MomentHelper.isAfter(object.getFinishPeriodDate(), minimumEnd), "finishPeriodDate", "developer.training-session.form.error.too-close");
 		}
 	}
 
