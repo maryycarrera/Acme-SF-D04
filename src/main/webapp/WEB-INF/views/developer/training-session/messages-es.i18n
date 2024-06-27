@@ -36,7 +36,7 @@ developer.training-session.form.button.update=Actualizar
 developer.training-session.form.button.delete=Eliminar
 developer.training-session.form.button.publish=Publicar
 
-developer.training-session.form.error.creation-moment-invalid = La fecha de inicio del período debe ser al menos una semana después del momento de creación del módulo de entrenamiento
+developer.training-session.form.error.start-too-early = La fecha de inicio del período debe ser al menos una semana después del momento de creación del módulo de entrenamiento
 developer.training-session.form.error.too-close = La fecha de finalización del período debe ser al menos siete días posterior a la fecha de inicio del mismo
 developer.training-session.form.error.duplicated = Ya existe una sesión de entrenamiento con ese código
 developer.training-session.form.error.finish-before-start = La fecha de finalización debe ser posterior a la fecha de inicio del periodo
