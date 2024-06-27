@@ -65,7 +65,7 @@ master.menu.manager.manager-dashboard = Panel de control de gerente
 
 master.menu.auditor = Auditor
 master.menu.auditor.auditor-dashboard = Panel de control del auditor
-master.menu.auditor.all-code-audits = Mostrar mis auditorías de código
+master.menu.auditor.all-code-audits = Listar mis auditorías de código
 
 # master.menu.developer ######################################################
 
@@ -83,6 +83,7 @@ master.menu.any.published-modules = Listar todos los módulos de entrenamiento p
 master.menu.any.claims = Listar todas las reclamaciones
 master.menu.any.notices = Listar todas las notificaciones
 master.manu.any.risks = Listar todos los riesgos
+master.manu.any.published-code-audits = Listar todas las auditorías de código publicadas
 
 # master.menu.sponsor ########################################################
 

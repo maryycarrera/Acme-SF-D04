@@ -1,25 +1,25 @@
 
-package acme.features.auditor.auditrecord;
+package acme.features.any.auditRecords;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.data.accounts.Any;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.auditrecords.AuditRecord;
 import acme.entities.codeaudits.CodeAudit;
-import acme.roles.Auditor;
 
 @Service
-public class AuditorAuditRecordListService extends AbstractService<Auditor, AuditRecord> {
+public class AnyAuditRecordListService extends AbstractService<Any, AuditRecord> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuditorAuditRecordRepository repository;
+	private AnyAuditRecordRepository repository;
 
-	// AbstractService interface ----------------------------------------------
+	// AbstractService<Any, AuditRecord> ---------------------------
 
 
 	@Override
@@ -30,7 +30,7 @@ public class AuditorAuditRecordListService extends AbstractService<Auditor, Audi
 
 		masterId = super.getRequest().getData("masterId", int.class);
 		codeAudit = this.repository.findOneCodeAuditById(masterId);
-		status = codeAudit != null && super.getRequest().getPrincipal().hasRole(codeAudit.getAuditor());
+		status = codeAudit != null && !codeAudit.isDraftMode() && super.getRequest().getPrincipal().hasRole(Any.class);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -56,22 +56,6 @@ public class AuditorAuditRecordListService extends AbstractService<Auditor, Audi
 
 		super.addPayload(dataset, object, "startDate", "finishDate", "link", "codeAudit.code");
 		super.getResponse().addData(dataset);
-	}
-
-	@Override
-	public void unbind(final Collection<AuditRecord> objects) {
-		assert objects != null;
-
-		int masterId;
-		CodeAudit codeAudit;
-		final boolean showCreate;
-
-		masterId = super.getRequest().getData("masterId", int.class);
-		codeAudit = this.repository.findOneCodeAuditById(masterId);
-		showCreate = codeAudit.isDraftMode() && super.getRequest().getPrincipal().hasRole(codeAudit.getAuditor());
-
-		super.getResponse().addGlobal("masterId", masterId);
-		super.getResponse().addGlobal("showCreate", showCreate);
 	}
 
 }

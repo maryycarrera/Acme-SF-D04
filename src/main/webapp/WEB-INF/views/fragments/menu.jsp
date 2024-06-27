@@ -85,6 +85,7 @@
 	     	<acme:menu-suboption code="master.menu.any.published-modules" action="/any/training-module/list"/>
 	     	<acme:menu-suboption code="master.menu.any.claims" action="/any/claim/list"/>
 	     	<acme:menu-suboption code="master.manu.any.risks" action="/any/risk/list"/>
+	     	<acme:menu-suboption code="master.manu.any.published-code-audits" action="/any/code-audit/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 

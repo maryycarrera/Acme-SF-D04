@@ -89,6 +89,7 @@ master.menu.any.notices = List all notices
 master.menu.any.published-modules = List all training modules published
 master.menu.any.claims = List all claims
 master.manu.any.risks = List all risks
+master.manu.any.published-code-audits = List all published code audits
 
 # master.menu.user-account ####################################################
 
