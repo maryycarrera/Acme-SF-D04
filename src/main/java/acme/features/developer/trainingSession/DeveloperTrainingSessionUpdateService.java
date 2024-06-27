@@ -2,7 +2,6 @@
 package acme.features.developer.trainingSession;
 
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -66,27 +65,13 @@ public class DeveloperTrainingSessionUpdateService extends AbstractService<Devel
 			super.state(existing == null || existing.equals(object), "code", "developer.training-session.form.error.duplicated");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("startPeriodDate")) {
-			TrainingModule module;
-			int id;
+		if (!super.getBuffer().getErrors().hasErrors("finishPeriodDate"))
+			super.state(object.getStartPeriodDate() != null && object.getFinishPeriodDate() != null && MomentHelper.isAfter(object.getFinishPeriodDate(), object.getStartPeriodDate())
+				&& MomentHelper.isLongEnough(object.getStartPeriodDate(), object.getFinishPeriodDate(), 7, ChronoUnit.DAYS), "finishPeriodDate", "developer.training-session.form.error.too-close");
 
-			id = super.getRequest().getData("id", int.class);
-			module = this.repository.findOneTrainingModuleByTrainingSessionId(id);
-
-			Date minimumStart = MomentHelper.deltaFromMoment(module.getCreationMoment(), 7, ChronoUnit.DAYS);
-
-			boolean isStartValid = object.getStartPeriodDate() != null && object.getStartPeriodDate().after(minimumStart);
-			super.state(isStartValid, "startPeriodDate", "developer.training-session.form.error.creation-moment-invalid");
-		}
-
-		if (!super.getBuffer().getErrors().hasErrors("finishsPeriodDate")) {
-			super.state(object.getStartPeriodDate() != null && object.getFinishPeriodDate() != null && object.getFinishPeriodDate().after(object.getStartPeriodDate()), "finishPeriodDate", "developer.training-session.form.error.finish-before-start");
-
-			if (object.getStartPeriodDate() != null && object.getFinishPeriodDate() != null && object.getFinishPeriodDate().after(object.getStartPeriodDate())) {
-				Date minimumDeadline = MomentHelper.deltaFromMoment(object.getStartPeriodDate(), 7, ChronoUnit.DAYS);
-				super.state(object.getFinishPeriodDate().after(minimumDeadline), "finishPeriodDate", "developer.training-session.form.error.too-close");
-			}
-		}
+		if (!super.getBuffer().getErrors().hasErrors("startPeriodDate"))
+			super.state(object.getStartPeriodDate() != null && MomentHelper.isAfter(object.getStartPeriodDate(), object.getTrainingModule().getCreationMoment())
+				&& MomentHelper.isLongEnough(object.getTrainingModule().getCreationMoment(), object.getStartPeriodDate(), 7, ChronoUnit.DAYS), "startPeriodDate", "developer.training-session.form.error.start-too-early");
 
 	}
 
