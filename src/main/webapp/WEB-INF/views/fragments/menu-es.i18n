@@ -109,3 +109,7 @@ master.menu.user-account.become-client = Hazte cliente
 master.menu.user-account.sponsor = Datos del patrocinador
 master.menu.user-account.become-sponsor = Hazte patrocinador
 
+# master.menu.authenticated-principal ####################################################
+master.menu.authenticated = Autentificado
+master.menu.authenticated.all-objectives = Listar todos los objetivos
+
