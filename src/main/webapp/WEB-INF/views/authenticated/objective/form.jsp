@@ -17,9 +17,8 @@
 
 <acme:form>
 	<acme:input-textbox code="authenticated.objective.form.label.title" path="title"/>
-	<acme:input-select code="authenticated.objective.form.label.project" path="project" choices="${projects}"/>
 	<acme:input-moment code="authenticated.objective.form.label.instantiationMoment" path="instantiationMoment"/>
-	<acme:input-select code="authenticated.objective.form.label.priority" path="priority" choices="${priorities}" />s
+	<acme:input-select code="authenticated.objective.form.label.priority" path="priority" choices="${priorities}" />
 	<acme:input-moment code="authenticated.objective.form.label.startTimeDuration" path="startTimeDuration"/>
 	<acme:input-moment code="authenticated.objective.form.label.finishTimeDuration" path="finishTimeDuration"/>
 	<acme:input-url code="authenticated.objective.form.label.link" path="link"/>

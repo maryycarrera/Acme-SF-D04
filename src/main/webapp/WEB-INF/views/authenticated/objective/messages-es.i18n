@@ -12,7 +12,6 @@ authenticated.objective.form.title = Objetivos
 authenticated.objective.list.title = Lista de objetivos
 
 authenticated.objective.form.label.title = Título:
-authenticated.objective.form.label.project = Proyecto:
 authenticated.objective.form.label.instantiationMoment = Momento de instanciación: 
 authenticated.objective.form.label.priority = Prioridad:
 authenticated.objective.form.label.status = Estatus:
