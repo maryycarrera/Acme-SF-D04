@@ -24,8 +24,13 @@ public class AuthenticatedObjectiveShowService extends AbstractService<Authentic
 	@Override
 	public void authorise() {
 		boolean status;
+		int objectiveId;
+		Objective objective;
 
-		status = super.getRequest().getPrincipal().isAuthenticated();
+		objectiveId = super.getRequest().getData("id", int.class);
+		objective = this.repository.findObjectiveById(objectiveId);
+
+		status = objective != null && super.getRequest().getPrincipal().isAuthenticated();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -35,7 +40,7 @@ public class AuthenticatedObjectiveShowService extends AbstractService<Authentic
 		Objective object;
 		int masterId;
 
-		masterId = super.getRequest().getData("masterId", int.class);
+		masterId = super.getRequest().getData("id", int.class);
 		object = this.repository.findObjectiveById(masterId);
 
 		super.getBuffer().addData(object);

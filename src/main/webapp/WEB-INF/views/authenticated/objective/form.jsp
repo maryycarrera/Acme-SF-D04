@@ -18,6 +18,7 @@
 <acme:form>
 	<acme:input-textbox code="authenticated.objective.form.label.title" path="title"/>
 	<acme:input-moment code="authenticated.objective.form.label.instantiationMoment" path="instantiationMoment"/>
+	<acme:input-textbox code="authenticated.objective.form.label.status" path="status"/>
 	<acme:input-select code="authenticated.objective.form.label.priority" path="priority" choices="${priorities}" />
 	<acme:input-moment code="authenticated.objective.form.label.startTimeDuration" path="startTimeDuration"/>
 	<acme:input-moment code="authenticated.objective.form.label.finishTimeDuration" path="finishTimeDuration"/>
