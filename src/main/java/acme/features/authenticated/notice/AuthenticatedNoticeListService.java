@@ -1,5 +1,5 @@
 
-package acme.features.any.notice;
+package acme.features.authenticated.notice;
 
 import java.util.Calendar;
 import java.util.Collection;
@@ -8,25 +8,29 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.accounts.Any;
+import acme.client.data.accounts.Authenticated;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.notices.Notice;
 
 @Service
-public class AnyNoticeListService extends AbstractService<Any, Notice> {
+public class AuthenticatedNoticeListService extends AbstractService<Authenticated, Notice> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyNoticeRepository repository;
+	private AuthenticatedNoticeRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+
+		status = super.getRequest().getPrincipal().hasRole(Authenticated.class);
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override

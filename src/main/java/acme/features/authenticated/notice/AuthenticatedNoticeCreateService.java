@@ -1,31 +1,35 @@
 
-package acme.features.any.notice;
+package acme.features.authenticated.notice;
 
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.accounts.Any;
+import acme.client.data.accounts.Authenticated;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.notices.Notice;
 
 @Service
-public class AnyNoticeCreateService extends AbstractService<Any, Notice> {
+public class AuthenticatedNoticeCreateService extends AbstractService<Authenticated, Notice> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyNoticeRepository repository;
+	private AuthenticatedNoticeRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+
+		status = super.getRequest().getPrincipal().hasRole(Authenticated.class);
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
@@ -61,8 +65,8 @@ public class AnyNoticeCreateService extends AbstractService<Any, Notice> {
 
 		if (!super.getBuffer().getErrors().hasErrors("author")) {
 			int length = object.author().length();
-			super.state(length < 76, "*", "any.notice.form.error.too-long");
-			super.state(length > 3, "*", "any.notice.form.error.blank");
+			super.state(length < 76, "*", "authenticated.notice.form.error.too-long");
+			super.state(length > 3, "*", "authenticated.notice.form.error.blank");
 		}
 
 		isAccepted = this.getRequest().getData("accept", boolean.class);

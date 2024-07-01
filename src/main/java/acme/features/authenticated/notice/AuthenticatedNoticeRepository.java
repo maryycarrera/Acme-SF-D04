@@ -1,5 +1,5 @@
 
-package acme.features.any.notice;
+package acme.features.authenticated.notice;
 
 import java.util.Collection;
 import java.util.Date;
@@ -12,7 +12,7 @@ import acme.client.repositories.AbstractRepository;
 import acme.entities.notices.Notice;
 
 @Repository
-public interface AnyNoticeRepository extends AbstractRepository {
+public interface AuthenticatedNoticeRepository extends AbstractRepository {
 
 	@Query("select n from Notice n where n.instantiationMoment >= :oneMonthAgo")
 	Collection<Notice> findNoticesWithinOneMonth(Date oneMonthAgo);

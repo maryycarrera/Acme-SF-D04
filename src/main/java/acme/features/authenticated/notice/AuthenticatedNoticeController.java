@@ -1,5 +1,5 @@
 
-package acme.features.any.notice;
+package acme.features.authenticated.notice;
 
 import javax.annotation.PostConstruct;
 
@@ -7,22 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import acme.client.controllers.AbstractController;
-import acme.client.data.accounts.Any;
+import acme.client.data.accounts.Authenticated;
 import acme.entities.notices.Notice;
 
 @Controller
-public class AnyNoticeController extends AbstractController<Any, Notice> {
+public class AuthenticatedNoticeController extends AbstractController<Authenticated, Notice> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyNoticeListService		listService;
+	private AuthenticatedNoticeListService		listService;
 
 	@Autowired
-	private AnyNoticeShowService				showService;
+	private AuthenticatedNoticeShowService		showService;
 
 	@Autowired
-	private AnyNoticeCreateService	createService;
+	private AuthenticatedNoticeCreateService	createService;
 
 	// Constructors -----------------------------------------------------------
 
