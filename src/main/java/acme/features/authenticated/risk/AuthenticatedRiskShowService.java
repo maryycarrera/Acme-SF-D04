@@ -1,23 +1,23 @@
 
-package acme.features.any.risk;
+package acme.features.authenticated.risk;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.accounts.Any;
+import acme.client.data.accounts.Authenticated;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.risks.Risk;
 
 @Service
-public class AnyRiskShowService extends AbstractService<Any, Risk> {
+public class AuthenticatedRiskShowService extends AbstractService<Authenticated, Risk> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyRiskRepository repository;
+	private AuthenticatedRiskRepository repository;
 
-	// AbstractService<Any, Risk> ---------------------------
+	// AbstractService<Authenticated, Risk> ---------------------------
 
 
 	@Override
@@ -29,7 +29,7 @@ public class AnyRiskShowService extends AbstractService<Any, Risk> {
 		riskId = super.getRequest().getData("id", int.class);
 		risk = this.repository.findOneRiskById(riskId);
 
-		status = risk != null && super.getRequest().getPrincipal().hasRole(Any.class);
+		status = risk != null && super.getRequest().getPrincipal().hasRole(Authenticated.class);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -52,7 +52,7 @@ public class AnyRiskShowService extends AbstractService<Any, Risk> {
 		Dataset dataset;
 
 		dataset = super.unbind(object, "code", "identificationDate", "description", "link");
-		Double value = object.value();
+		double value = object.value();
 		dataset.put("value", value);
 
 		super.getResponse().addData(dataset);

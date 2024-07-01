@@ -1,5 +1,5 @@
 
-package acme.features.any.risk;
+package acme.features.authenticated.risk;
 
 import java.util.Collection;
 
@@ -10,7 +10,7 @@ import acme.client.repositories.AbstractRepository;
 import acme.entities.risks.Risk;
 
 @Repository
-public interface AnyRiskRepository extends AbstractRepository {
+public interface AuthenticatedRiskRepository extends AbstractRepository {
 
 	@Query("SELECT r FROM Risk r")
 	Collection<Risk> findAllRisks();

@@ -14,6 +14,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -42,14 +43,12 @@ public class Risk extends AbstractEntity {
 	@Past
 	private Date				identificationDate;
 
-	@NotNull
-	@Min(1)
-	private Integer				impact;
+	@Positive
+	private double				impact;
 
-	@NotNull
 	@Min(0)
 	@Max(1)
-	private Double				probability;
+	private double				probability;
 
 	@NotBlank
 	@Length(max = 100)
@@ -61,8 +60,8 @@ public class Risk extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 	@Transient
-	public Double value() {
-		Double v;
+	public double value() {
+		double v;
 
 		v = this.impact * this.probability;
 

@@ -82,8 +82,7 @@ master.menu.any.published-contracts = Listar todos los contratos publicados
 master.menu.any.published-modules = Listar todos los módulos de entrenamiento publicados
 master.menu.any.claims = Listar todas las reclamaciones
 master.menu.any.notices = Listar todas las notificaciones
-master.manu.any.risks = Listar todos los riesgos
-master.manu.any.published-code-audits = Listar todas las auditorías de código publicadas
+master.menu.any.published-code-audits = Listar todas las auditorías de código publicadas
 
 # master.menu.sponsor ########################################################
 
@@ -112,4 +111,4 @@ master.menu.user-account.become-sponsor = Hazte patrocinador
 # master.menu.authenticated-principal ####################################################
 master.menu.authenticated = Autentificado
 master.menu.authenticated.all-objectives = Listar todos los objetivos
-
+master.menu.authenticated.risks = Listar todos los riesgos

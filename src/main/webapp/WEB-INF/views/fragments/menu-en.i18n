@@ -86,10 +86,9 @@ master.menu.any = Any
 master.menu.any.published-projects = List all published projects
 master.menu.any.published-contracts = List all published contracts
 master.menu.any.notices = List all notices
-master.menu.any.published-modules = List all training modules published
+master.menu.any.published-modules = List all published training modules
 master.menu.any.claims = List all claims
-master.manu.any.risks = List all risks
-master.manu.any.published-code-audits = List all published code audits
+master.menu.any.published-code-audits = List all published code audits
 
 # master.menu.user-account ####################################################
 
@@ -113,3 +112,4 @@ master.menu.user-account.become-auditor = Become an auditor
 # master.menu.authenticated-principal ####################################################
 master.menu.authenticated = Authenticated
 master.menu.authenticated.all-objectives = List all objectives
+master.menu.authenticated.risks = List all risks
