@@ -13,6 +13,7 @@ authenticated.objective.list.title = Listing of Objectives
 
 authenticated.objective.form.label.title = Title:
 authenticated.objective.form.label.instantiationMoment = Instantiation Moment: 
+authenticated.objective.form.label.description = Description:
 authenticated.objective.form.label.priority = Priority:
 authenticated.objective.form.label.status = Status:
 authenticated.objective.form.label.startTimeDuration = Start Time:
