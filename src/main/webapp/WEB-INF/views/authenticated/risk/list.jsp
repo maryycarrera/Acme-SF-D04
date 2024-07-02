@@ -20,4 +20,5 @@
 	<acme:list-column code="authenticated.risk.list.label.code" path="code"/>
 	<acme:list-column code="authenticated.risk.list.label.identificationDate" path="identificationDate"/>
 	<acme:list-column code="authenticated.risk.list.label.value" path="value"/>
+	<acme:list-payload path="payload"/>
 </acme:list>

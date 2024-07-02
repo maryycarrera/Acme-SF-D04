@@ -19,6 +19,7 @@
 	<acme:list-column code="authenticated.notice.list.label.instantiationMoment" path="instantiationMoment"/>
 	<acme:list-column code="authenticated.notice.list.label.title" path="title" width="20%"/>
 	<acme:list-column code="authenticated.notice.list.label.author" path="author" width="20%"/>
+	<acme:list-payload path="payload"/>
 </acme:list>
 
 <jstl:if test="${_command == 'list'}">

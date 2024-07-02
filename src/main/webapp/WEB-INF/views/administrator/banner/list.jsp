@@ -21,6 +21,7 @@
 	<acme:list-column code="administrator.banner.list.label.startDate" path="startDate"/>
 	<acme:list-column code="administrator.banner.list.label.finishDate" path="finishDate"/>
 	<acme:list-column code="administrator.banner.list.label.slogan" path="slogan"/>
+	<acme:list-payload path="payload"/>
 </acme:list>
 
 <jstl:if test="${_command == 'list'}">

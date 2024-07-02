@@ -21,6 +21,7 @@
 	<acme:list-column code="manager.project.list.label.title" path="title"/>
 	<acme:list-column code="manager.project.list.label.abstractDescription" path="abstractDescription" width="20%"/>
 	<acme:list-column code="manager.project.list.label.draftMode" path="draftMode"/>
+	<acme:list-payload path="payload"/>
 </acme:list>
 
 <jstl:if test="${_command == 'list'}">
