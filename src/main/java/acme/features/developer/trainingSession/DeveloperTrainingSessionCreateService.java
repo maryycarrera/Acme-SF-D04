@@ -24,11 +24,14 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 	public void authorise() {
 		boolean status;
 		int masterId;
+		int developerId;
 		TrainingModule trainingModule;
 
 		masterId = super.getRequest().getData("masterId", int.class);
+		developerId = super.getRequest().getPrincipal().getActiveRoleId();
 		trainingModule = this.repository.findOneTrainingModuleById(masterId);
-		status = trainingModule != null && trainingModule.isDraftMode() && super.getRequest().getPrincipal().hasRole(trainingModule.getDeveloper());
+
+		status = trainingModule != null && trainingModule.isDraftMode() && developerId == trainingModule.getDeveloper().getId();
 
 		super.getResponse().setAuthorised(status);
 	}

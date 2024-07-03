@@ -24,14 +24,21 @@ public class DeveloperTrainingSessionUpdateService extends AbstractService<Devel
 	public void authorise() {
 
 		boolean status;
-		int sessionId;
+		int id;
+		int developerId;
 		TrainingModule module;
 		TrainingSession session;
 
-		sessionId = super.getRequest().getData("id", int.class);
-		module = this.repository.findOneTrainingModuleByTrainingSessionId(sessionId);
-		session = this.repository.findOneTrainingSessionById(sessionId);
-		status = module != null && module.isDraftMode() && super.getRequest().getPrincipal().hasRole(module.getDeveloper()) && session.isDraftMode();
+		id = super.getRequest().getData("id", int.class);
+		module = this.repository.findOneTrainingModuleByTrainingSessionId(id);
+		session = this.repository.findOneTrainingSessionById(id);
+
+		developerId = super.getRequest().getPrincipal().getActiveRoleId();
+
+		boolean moduleValid = module != null && module.isDraftMode() && developerId == module.getDeveloper().getId();
+		boolean sessionValid = session != null && session.isDraftMode() && developerId == session.getTrainingModule().getDeveloper().getId();
+
+		status = moduleValid && sessionValid;
 
 		super.getResponse().setAuthorised(status);
 	}
