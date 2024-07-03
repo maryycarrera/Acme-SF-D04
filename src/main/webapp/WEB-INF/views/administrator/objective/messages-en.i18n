@@ -1,0 +1,29 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.objective.form.title = Objectives
+administrator.objective.list.title = Listing of Objectives
+
+administrator.objective.form.label.title = Title:
+administrator.objective.form.label.instantiationMoment = Instantiation Moment:
+administrator.objective.form.label.description = Description: 
+administrator.objective.form.label.priority = Priority:
+administrator.objective.form.label.status = Status:
+administrator.objective.form.label.startTimeDuration = Start Time:
+administrator.objective.form.label.finishTimeDuration = Finish Time:
+administrator.objective.form.label.link= Link:
+administrator.objective.form.label.confirm = Confirm
+
+administrator.objective.form.button.create = Create
+
+administrator.objective.form.error.low-period = The finish date must be after the start date
+administrator.objective.form.error.istantiation-after-start = The start date must be after the instantation date
+administrator.objective.form.error.not-confirmed = You must confirm it
+

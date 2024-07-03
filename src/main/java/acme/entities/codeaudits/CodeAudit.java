@@ -4,6 +4,7 @@ package acme.entities.codeaudits;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.persistence.Column;
@@ -13,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -67,7 +69,9 @@ public class CodeAudit extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------	
 
 
+	@Transient
 	public static String getMarkMode(final Collection<String> marks) {
+		List<String> priorityOrder = List.of("A+", "A", "B", "C", "F", "F-");
 		Map<String, Integer> modeMap = new HashMap<>();
 		Integer value = 0;
 		String mode = "";
@@ -83,7 +87,8 @@ public class CodeAudit extends AbstractEntity {
 			if (entry.getValue() > maxFrequency) {
 				mode = entry.getKey();
 				maxFrequency = entry.getValue();
-			}
+			} else if (entry.getValue() == maxFrequency && priorityOrder.indexOf(mode) < priorityOrder.indexOf(entry.getKey()))
+				mode = entry.getKey();
 		return mode;
 	}
 	//	// Relationships ----------------------------------------------------------

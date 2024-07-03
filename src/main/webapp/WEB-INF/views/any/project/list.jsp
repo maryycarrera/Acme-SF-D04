@@ -20,4 +20,5 @@
 	<acme:list-column code="any.project.list.label.code" path="code"/>
 	<acme:list-column code="any.project.list.label.title" path="title"/>
 	<acme:list-column code="any.project.list.label.abstractDescription" path="abstractDescription" width="20%"/>
+	<acme:list-payload path="payload"/>
 </acme:list>

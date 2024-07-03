@@ -25,10 +25,6 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-marcartal1" action="https://www.twitch.tv/illojuan"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-joagongan" action="https://buscaminas.eu/"/>
 		</acme:menu-option>
-		
-<%-- 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-			<acme:menu-suboption code= "master.menu.authenticated.published-modules" action="/any/training-module/list"/>
-		</acme:menu-option> --%>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
@@ -40,6 +36,8 @@
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/system/shut-down"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.show.system-configuration" action="/administrator/system-configuration/show" access="isAuthenticated()"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.create.objective" action="/administrator/objective/create" access="isAuthenticated()"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
@@ -81,10 +79,15 @@
 		<acme:menu-option code="master.menu.any">
 			<acme:menu-suboption code="master.menu.any.published-projects" action="/any/project/list"/>
 			<acme:menu-suboption code="master.menu.any.published-contracts" action="/any/contract/list"/>
-	     	<acme:menu-suboption code="master.menu.any.notices" action="/any/notice/list"/>
 	     	<acme:menu-suboption code="master.menu.any.published-modules" action="/any/training-module/list"/>
 	     	<acme:menu-suboption code="master.menu.any.claims" action="/any/claim/list"/>
-	     	<acme:menu-suboption code="master.manu.any.risks" action="/any/risk/list"/>
+	     	<acme:menu-suboption code="master.menu.any.published-code-audits" action="/any/code-audit/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.all-objectives" action="/authenticated/objective/list"/>
+	     	<acme:menu-suboption code="master.menu.authenticated.risks" action="/authenticated/risk/list"/>
+	     	<acme:menu-suboption code="master.menu.authenticated.notices" action="/authenticated/notice/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 
@@ -108,6 +111,7 @@
 			<acme:menu-suboption code="master.menu.user-account.sponsor" action="/authenticated/sponsor/update" access="hasRole('Sponsor')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor/create" access="!hasRole('Auditor')"/>
 			<acme:menu-suboption code="master.menu.user-account.auditor" action="/authenticated/auditor/update" access="hasRole('Auditor')"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/authenticated/system/sign-out" access="isAuthenticated()"/>

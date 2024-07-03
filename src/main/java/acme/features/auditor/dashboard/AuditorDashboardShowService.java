@@ -35,6 +35,7 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		AuditorDashboard dashboard;
 		int totalStaticCodeAudits;
 		int totalDynamicCodeAudits;
+		int totalAuditRecords;
 		Double averageNumberOfAuditRecords;
 		Double deviationNumberOfAuditRecords;
 		Integer minumumNumberOfAuditRecords;
@@ -45,6 +46,7 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		Double maximumPeriodLengthOfAuditRecords;
 		Collection<Double> auditRecordsForCodeAudit;
 
+		totalAuditRecords = this.repository.totalAuditRecordsForAuditor(auditorId);
 		totalStaticCodeAudits = this.repository.totalCodeAuditsForType(auditorId, CodeType.STATIC);
 		totalDynamicCodeAudits = this.repository.totalCodeAuditsForType(auditorId, CodeType.DYNAMIC);
 		averageNumberOfAuditRecords = this.repository.averageNumberOfAuditRecords(auditorId);
@@ -58,17 +60,29 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		maximumPeriodLengthOfAuditRecords = this.repository.maximumPeriodLengthOfAuditRecords(auditorId);
 
 		dashboard = new AuditorDashboard();
+
 		dashboard.setTotalStaticCodeAudits(totalStaticCodeAudits);
 		dashboard.setTotalDynamicCodeAudits(totalDynamicCodeAudits);
-		dashboard.setAverageNumberOfAuditRecords(averageNumberOfAuditRecords);
-		dashboard.setDeviationNumberOfAuditRecords(deviationNumberOfAuditRecords);
-		dashboard.setMinumumNumberOfAuditRecords(minumumNumberOfAuditRecords);
-		dashboard.setMaximumNumberOfAuditRecords(maximumNumberOfAuditRecords);
-		dashboard.setAveragePeriodLengthOfAuditRecords(averagePeriodLengthOfAuditRecords / 3600);
-		dashboard.setDeviationPeriodLengthOfAuditRecords(deviationPeriodLengthOfAuditRecords / 3600);
-		dashboard.setMaximumPeriodLengthOfAuditRecords(maximumPeriodLengthOfAuditRecords / 3600);
-		dashboard.setMinumumPeriodLengthOfAuditRecords(minumumPeriodLengthOfAuditRecords / 3600);
+		if (totalAuditRecords == 0) {
+			dashboard.setMinumumNumberOfAuditRecords(null);
+			dashboard.setMaximumNumberOfAuditRecords(null);
+			dashboard.setAverageNumberOfAuditRecords(null);
+			dashboard.setDeviationNumberOfAuditRecords(null);
+			dashboard.setAveragePeriodLengthOfAuditRecords(null);
+			dashboard.setDeviationPeriodLengthOfAuditRecords(null);
+			dashboard.setMaximumPeriodLengthOfAuditRecords(null);
+			dashboard.setMinumumPeriodLengthOfAuditRecords(null);
 
+		} else {
+			dashboard.setAverageNumberOfAuditRecords(averageNumberOfAuditRecords);
+			dashboard.setDeviationNumberOfAuditRecords(deviationNumberOfAuditRecords);
+			dashboard.setMinumumNumberOfAuditRecords(minumumNumberOfAuditRecords);
+			dashboard.setMaximumNumberOfAuditRecords(maximumNumberOfAuditRecords);
+			dashboard.setAveragePeriodLengthOfAuditRecords(averagePeriodLengthOfAuditRecords / 3600);
+			dashboard.setDeviationPeriodLengthOfAuditRecords(deviationPeriodLengthOfAuditRecords / 3600);
+			dashboard.setMaximumPeriodLengthOfAuditRecords(maximumPeriodLengthOfAuditRecords / 3600);
+			dashboard.setMinumumPeriodLengthOfAuditRecords(minumumPeriodLengthOfAuditRecords / 3600);
+		}
 		super.getBuffer().addData(dashboard);
 	}
 

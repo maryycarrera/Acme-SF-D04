@@ -25,3 +25,4 @@ auditor.auditor-dashboard.form.label.average-period-length-of-audit-records = Av
 auditor.auditor-dashboard.form.label.deviation-period-length-of-audit-records = Deviation hours period length of audit records
 auditor.auditor-dashboard.form.label.minimum-period-length-of-audit-records = Minimum hours period length of audit records
 auditor.auditor-dashboard.form.label.maximum-period-length-of-audit-records = Maximum hours period length of audit records
+auditor.auditor-dashboard.form.label.no-audit-records = There isn't any audit record
