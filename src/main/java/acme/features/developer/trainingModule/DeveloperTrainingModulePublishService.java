@@ -28,12 +28,10 @@ public class DeveloperTrainingModulePublishService extends AbstractService<Devel
 		Boolean status;
 		int masterId;
 		TrainingModule trainingModule;
-		Developer developer;
 
 		masterId = super.getRequest().getData("id", int.class);
 		trainingModule = this.trainingModuleRepository.findTrainingModuleById(masterId);
-		developer = trainingModule == null ? null : trainingModule.getDeveloper();
-		status = trainingModule != null && trainingModule.isDraftMode() && super.getRequest().getPrincipal().hasRole(developer);
+		status = trainingModule != null && trainingModule.isDraftMode() && super.getRequest().getPrincipal().hasRole(trainingModule.getDeveloper());
 
 		super.getResponse().setAuthorised(status);
 	}

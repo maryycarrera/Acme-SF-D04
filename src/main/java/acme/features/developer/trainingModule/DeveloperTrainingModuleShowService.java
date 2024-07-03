@@ -24,13 +24,14 @@ public class DeveloperTrainingModuleShowService extends AbstractService<Develope
 	@Override
 	public void authorise() {
 		boolean status;
-		int trainingModuleId;
+		int id;
+		int developerId;
 		TrainingModule trainingModule;
 
-		trainingModuleId = super.getRequest().getData("id", int.class);
-		trainingModule = this.trainingModuleRepository.findTrainingModuleById(trainingModuleId);
-		//status = super.getRequest().getPrincipal().hasRole(trainingModule.getDeveloper()) || trainingModule != null && !trainingModule.isDraftMode();
-		status = super.getRequest().getPrincipal().hasRole(trainingModule.getDeveloper());
+		id = super.getRequest().getData("id", int.class);
+		trainingModule = this.trainingModuleRepository.findTrainingModuleById(id);
+		developerId = super.getRequest().getPrincipal().getActiveRoleId();
+		status = trainingModule != null && developerId == trainingModule.getDeveloper().getId();
 
 		super.getResponse().setAuthorised(status);
 	}

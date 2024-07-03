@@ -64,7 +64,7 @@ master.menu.auditor.all-code-audits = List my code audits
 # master.menu.developer ######################################################
 
 master.menu.developer = Developer
-master.menu.developer.list-training-module = List my Training modules
+master.menu.developer.list-training-module = List my training modules
 master.menu.developer.dashboard = Dashboard
 
 
@@ -86,7 +86,7 @@ master.menu.any = Any
 master.menu.any.published-projects = List all published projects
 master.menu.any.published-contracts = List all published contracts
 master.menu.any.notices = List all notices
-master.menu.any.published-modules = List all training modules published
+master.menu.any.published-modules = List all published training modules
 master.menu.any.claims = List all claims
 master.manu.any.risks = List all risks
 
