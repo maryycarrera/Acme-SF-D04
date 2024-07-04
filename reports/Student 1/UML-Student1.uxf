@@ -95,11 +95,14 @@ fg=GRAY</panel_attributes>
       <x>56</x>
       <y>424</y>
       <w>152</w>
-      <h>56</h>
+      <h>88</h>
     </coordinates>
     <panel_attributes>draftMode
 If the project has fatal errors,
-draftMode must be true
+draftMode must be true.
+If a project is not assigned to
+any published user story,
+draftMode must be true.
 bg=ORANGE</panel_attributes>
     <additional_attributes/>
   </element>
@@ -185,11 +188,14 @@ fg=GRAY</panel_attributes>
       <x>344</x>
       <y>576</y>
       <w>152</w>
-      <h>56</h>
+      <h>88</h>
     </coordinates>
     <panel_attributes>All the user stories of a
 project must be elicited by
-the same manager
+the same manager.
+You cannot assign a
+published project to an
+unpublised user story.
 bg=ORANGE</panel_attributes>
     <additional_attributes/>
   </element>
