@@ -24,8 +24,10 @@ public class AdministratorObjectiveCreateService extends AbstractService<Adminis
 
 	@Override
 	public void authorise() {
+		boolean status;
 
-		super.getResponse().setAuthorised(true);
+		status = super.getRequest().getPrincipal().hasRole(Administrator.class);
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
