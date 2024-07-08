@@ -8,6 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+5.0 Required fixes are implemented for the second call deliverable.
 4.0 All the required features are tested and those tests are analysed.
 3.0 All the required features are implemented.
 2.0 All the required entities, roles and forms are implemented. There is sample data for each of them.
